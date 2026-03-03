@@ -1,8 +1,9 @@
-import { getProviderConnectionById, updateProviderConnection } from "@/lib/localDb";
+import { getProviderConnectionById, updateProviderConnection, resolveProxyForConnection } from "@/lib/localDb";
 import { getMachineId } from "@/shared/utils/machine";
 import { getUsageForProvider } from "@omniroute/open-sse/services/usage.ts";
 import { getExecutor } from "@omniroute/open-sse/executors/index.ts";
 import { syncToCloud } from "@/lib/cloudSync";
+import { runWithProxyContext } from "@omniroute/open-sse/utils/proxyFetch.ts";
 
 /**
  * Sync to cloud if enabled
@@ -139,8 +140,13 @@ export async function GET(request: Request, { params }: { params: Promise<{ conn
       );
     }
 
-    // Fetch usage from provider API
-    const usage = await getUsageForProvider(connection);
+    // Resolve proxy for this connection (key → combo → provider → global → direct)
+    const proxyInfo = await resolveProxyForConnection(connectionId);
+
+    // Fetch usage from provider API, wrapped in proxy context
+    const usage = await runWithProxyContext(proxyInfo?.proxy || null, () =>
+      getUsageForProvider(connection)
+    );
     return Response.json(usage);
   } catch (error) {
     console.error("[Usage API] Error fetching usage:", error);
