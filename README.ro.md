@@ -110,6 +110,35 @@ _Conectați orice instrument IDE sau CLI alimentat de AI prin OmniRoute — gate
 
 ---
 
+## 🖼️
+
+<div align="center">
+  <img src="./docs/screenshots/MainOmniRoute.png" alt="OmniRoute" width="800"/>
+</div>
+
+---
+
+## 📸
+
+<details>
+<summary><b>...</b></summary>
+
+| #     | #                                        |
+| ----- | ---------------------------------------- |
+| **1** | ![1](docs/screenshots/01-providers.png)  |
+| **2** | ![2](docs/screenshots/02-combos.png)     |
+| **3** | ![3](docs/screenshots/03-analytics.png)  |
+| **4** | ![4](docs/screenshots/04-health.png)     |
+| **5** | ![5](docs/screenshots/05-translator.png) |
+| **6** | ![6](docs/screenshots/06-settings.png)   |
+| **7** | ![7](docs/screenshots/07-cli-tools.png)  |
+| **8** | ![8](docs/screenshots/08-usage.png)      |
+| **9** | ![9](docs/screenshots/09-endpoint.png)   |
+
+</details>
+
+---
+
 ## 🤔 De ce OmniRoute?
 
 **Nu mai risipi banii și nu mai atingeți limitele:**
@@ -125,6 +154,18 @@ _Conectați orice instrument IDE sau CLI alimentat de AI prin OmniRoute — gate
 - ✅ **Auto de rezervă** - Abonament → Cheie API → Ieftin → Gratuit, timp de nefuncționare zero
 - ✅ **Multi-cont** - Round-robin între conturi pentru fiecare furnizor
 - ✅ **Universal** - Funcționează cu Claude Code, Codex, Gemini CLI, Cursor, Cline, OpenClaw, orice instrument CLI
+
+---
+
+## 📧 Suport
+
+> 💬 **Alăturați-vă comunității noastre!** [WhatsApp Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t) — Obțineți ajutor, împărtășiți sfaturi și fiți la curent.
+
+- **Site web**: [omniroute.online](https://omniroute.online)
+- **GitHub**: [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)
+- **Probleme**: [github.com/diegosouzapw/OmniRoute/issues](https://github.com/diegosouzapw/OmniRoute/issues)
+- **WhatsApp**: [Community Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t)
+- **Proiect original**: [9router by decolua](https://github.com/decolua/9router)
 
 ---
 
@@ -157,262 +198,496 @@ Result: Never stop coding, minimal cost
 
 ---
 
-## 🎯 What OmniRoute Solves — 16 Real Pain Points
+## 🎯 Ce rezolvă OmniRoute — 30 de puncte reale de durere și cazuri de utilizare
 
-> **Every developer using AI tools faces these problems daily.** OmniRoute was built to solve them all — from cost overruns to regional blocks, from broken OAuth flows to zero observability.
+> **Fiecare dezvoltator care folosește instrumente AI se confruntă zilnic cu aceste probleme.** OmniRoute a fost creat pentru a le rezolva pe toate - de la depășiri de costuri la blocaje regionale, de la fluxuri OAuth întrerupte la operațiuni de protocol și observabilitate a întreprinderii.
 
 <details>
-<summary><b>💸 1. "I pay for an expensive subscription but still get interrupted by limits"</b></summary>
+<summary><b>💸 1. „Plătesc pentru un abonament scump, dar tot sunt întrerupt de limite”</b></summary>
 
-Developers pay $20–200/month for Claude Pro, Codex Pro, or GitHub Copilot. Even paying, quota has a ceiling — 5h of usage, weekly limits, or per-minute rate limits. Mid-coding session, the provider stops responding and the developer loses flow and productivity.
+Dezvoltatorii plătesc 20–200 USD/lună pentru Claude Pro, Codex Pro sau GitHub Copilot. Chiar și plătind, cota are un plafon - 5 ore de utilizare, limite săptămânale sau limite de tarif pe minut. La mijlocul sesiunii de codare, furnizorul nu mai răspunde și dezvoltatorul își pierde fluxul și productivitatea.
 
-**How OmniRoute solves it:**
+**Cum o rezolvă OmniRoute:**
 
-- **Smart 4-Tier Fallback** — If subscription quota runs out, automatically redirects to API Key → Cheap → Free with zero manual intervention
-- **Real-Time Quota Tracking** — Shows token consumption in real-time with reset countdown (5h, daily, weekly)
-- **Multi-Account Support** — Multiple accounts per provider with auto round-robin — when one runs out, switches to the next
-- **Custom Combos** — Customizable fallback chains with 6 balancing strategies (fill-first, round-robin, P2C, random, least-used, cost-optimized)
-- **Codex Business Quotas** — Business/Team workspace quota monitoring directly in the dashboard
+- **Smart 4-Tier Fallback** — Dacă cota de abonament se epuizează, redirecționează automat la cheia API → Ieftin → Gratuit fără intervenție manuală
+- **Urmărirea cotelor în timp real** — Afișează consumul de simboluri în timp real cu numărătoarea inversă de resetare (5 ore, zilnic, săptămânal)
+- **Asistență pentru mai multe conturi** — Conturi multiple per furnizor cu turneu automat automat — când unul se epuizează, trece la următorul
+- **Combinații personalizate** — Lanțuri de rezervă personalizabile cu 6 strategii de echilibrare (fill-first, round-robin, P2C, aleatoriu, cel mai puțin utilizat, optimizat din punct de vedere al costurilor)
+- **Cote de afaceri Codex** — Monitorizarea cotelor de spațiu de lucru pentru afaceri/echipe direct în tabloul de bord
 
 </details>
 
 <details>
-<summary><b>🔌 2. "I need to use multiple providers but each has a different API"</b></summary>
+<summary><b>🔌 2. „Trebuie să folosesc mai mulți furnizori, dar fiecare are un API diferit”</b></summary>
 
-OpenAI uses one format, Claude (Anthropic) uses another, Gemini yet another. If a dev wants to test models from different providers or fallback between them, they need to reconfigure SDKs, change endpoints, deal with incompatible formats. Custom providers (FriendLI, NIM) have non-standard model endpoints.
+OpenAI folosește un format, Claude (Anthropic) folosește altul, Gemini încă altul. Dacă un dezvoltator dorește să testeze modele de la diferiți furnizori sau să se retragă între aceștia, trebuie să reconfigureze SDK-urile, să schimbe punctele finale, să se ocupe de formate incompatibile. Furnizorii personalizați (FriendLI, NIM) au puncte finale de model non-standard.
 
-**How OmniRoute solves it:**
+**Cum o rezolvă OmniRoute:**
 
-- **Unified Endpoint** — A single `http://localhost:20128/v1` serves as proxy for all 36+ providers
-- **Format Translation** — Automatic and transparent: OpenAI ↔ Claude ↔ Gemini ↔ Responses API
-- **Response Sanitization** — Strips non-standard fields (`x_groq`, `usage_breakdown`, `service_tier`) that break OpenAI SDK v1.83+
-- **Role Normalization** — Converts `developer` → `system` for non-OpenAI providers; `system` → `user` for GLM/ERNIE
-- **Think Tag Extraction** — Extracts `<think>` blocks from models like DeepSeek R1 into standardized `reasoning_content`
-- **Structured Output for Gemini** — `json_schema` → `responseMimeType`/`responseSchema` automatic conversion
-- **`stream` defaults to `false`** — Aligns with OpenAI spec, avoiding unexpected SSE in Python/Rust/Go SDKs
-
-</details>
-
-<details>
-<summary><b>🌐 3. "My AI provider blocks my region/country"</b></summary>
-
-Providers like OpenAI/Codex block access from certain geographic regions. Users get errors like `unsupported_country_region_territory` during OAuth and API connections. This is especially frustrating for developers from developing countries.
-
-**How OmniRoute solves it:**
-
-- **3-Level Proxy Config** — Configurable proxy at 3 levels: global (all traffic), per-provider (one provider only), and per-connection/key
-- **Color-Coded Proxy Badges** — Visual indicators: 🟢 global proxy, 🟡 provider proxy, 🔵 connection proxy, always showing the IP
-- **OAuth Token Exchange Through Proxy** — OAuth flow also goes through the proxy, solving `unsupported_country_region_territory`
-- **Connection Tests via Proxy** — Connection tests use the configured proxy (no more direct bypass)
-- **SOCKS5 Support** — Full SOCKS5 proxy support for outbound routing
-- **TLS Fingerprint Spoofing** — Browser-like TLS fingerprint via `wreq-js` to bypass bot detection
+- **Unified Endpoint** — Un singur `http://localhost:20128/v1` servește drept proxy pentru toți cei 36 de furnizori și mai sus
+- **Traducerea formatului** — Automată și transparentă: OpenAI ↔ Claude ↔ Gemeni ↔ Responses API
+- **Response Sanitization** — Elimina câmpurile nestandard (`x_groq`, `usage_breakdown`, `service_tier`) care încalcă OpenAI SDK v1.83+
+- **Normalizarea rolurilor** — Convertește `developer` → `system` pentru furnizorii non-OpenAI; `system` → `user` pentru GLM/ERNIE
+- **Think Tag Extraction** — Extrage blocurile `<think>` de la modele precum DeepSeek R1 în `reasoning_content` standardizat
+- **Ieșire structurată pentru Gemeni** — `json_schema` → `responseMimeType`/`responseSchema` conversie automată
+- **`stream` este implicit `false`** — Se aliniază cu specificațiile OpenAI, evitând SSE neașteptat în SDK-urile Python/Rust/Go
 
 </details>
 
 <details>
-<summary><b>🆓 4. "I want to use AI for coding but I have no money"</b></summary>
+<summary><b>🌐 3. „Furnizorul meu AI îmi blochează regiunea/țara”</b></summary>
 
-Not everyone can pay $20–200/month for AI subscriptions. Students, devs from emerging countries, hobbyists, and freelancers need access to quality models at zero cost.
+Furnizori precum OpenAI/Codex blochează accesul din anumite regiuni geografice. Utilizatorii primesc erori precum `unsupported_country_region_territory` în timpul conexiunilor OAuth și API. Acest lucru este frustrant în special pentru dezvoltatorii din țările în curs de dezvoltare.
 
-**How OmniRoute solves it:**
+**Cum o rezolvă OmniRoute:**
 
-- **Free Tier Providers Built-in** — Native support for 100% free providers: iFlow (8 unlimited models), Qwen (3 unlimited models), Kiro (Claude for free), Gemini CLI (180K/month free)
-- **Free-Only Combos** — Chain `gc/gemini-3-flash → if/kimi-k2-thinking → qw/qwen3-coder-plus` = $0/month with zero downtime
-- **NVIDIA NIM Free Credits** — 1000 free credits integrated
-- **Cost Optimized Strategy** — Routing strategy that automatically chooses the cheapest available provider
-
-</details>
-
-<details>
-<summary><b>🔒 5. "I need to protect my AI gateway from unauthorized access"</b></summary>
-
-When exposing an AI gateway to the network (LAN, VPS, Docker), anyone with the address can consume the developer's tokens/quota. Without protection, APIs are vulnerable to misuse, prompt injection, and abuse.
-
-**How OmniRoute solves it:**
-
-- **API Key Management** — Generation, rotation, and scoping per provider with a dedicated `/dashboard/api-manager` page
-- **Model-Level Permissions** — Restrict API keys to specific models (`openai/*`, wildcard patterns), with Allow All/Restrict toggle
-- **API Endpoint Protection** — Require a key for `/v1/models` and block specific providers from the listing
-- **Auth Guard + CSRF Protection** — All dashboard routes protected with `withAuth` middleware + CSRF tokens
-- **Rate Limiter** — Per-IP rate limiting with configurable windows
-- **IP Filtering** — Allowlist/blocklist for access control
-- **Prompt Injection Guard** — Sanitization against malicious prompt patterns
-- **AES-256-GCM Encryption** — Credentials encrypted at rest
+- **3-Level Proxy Config** — Proxy configurabil la 3 niveluri: global (tot traficul), per furnizor (doar un singur furnizor) și per conexiune/cheie
+- **Insigne de proxy cu coduri de culoare** — Indicatori vizuali: 🟢 proxy global, 🟡 proxy furnizor, 🔵 proxy de conexiune, indicând întotdeauna IP-ul
+- **Schimb de jetoane OAuth prin proxy** — fluxul OAuth trece și prin proxy, rezolvând `unsupported_country_region_territory`
+- **Teste de conexiune prin proxy** — Testele de conexiune folosesc proxy-ul configurat (nu mai este ocolire directă)
+- **Support SOCKS5** — Suport complet SOCKS5 proxy pentru rutarea de ieșire
+- **TLS Fingerprint Spoofing** — Amprenta TLS asemănătoare unui browser prin `wreq-js` pentru a ocoli detectarea botului
 
 </details>
 
 <details>
-<summary><b>🛑 6. "My provider went down and I lost my coding flow"</b></summary>
+<summary><b>🆓 4. „Vreau să folosesc AI pentru codare, dar nu am bani”</b></summary>
 
-AI providers can become unstable, return 5xx errors, or hit temporary rate limits. If a dev depends on a single provider, they're interrupted. Without circuit breakers, repeated retries can crash the application.
+Nu toată lumea poate plăti 20–200 USD/lună pentru abonamentele AI. Studenții, dezvoltatorii din țările emergente, pasionații și freelancerii au nevoie de acces la modele de calitate la cost zero.
 
-**How OmniRoute solves it:**
+**Cum o rezolvă OmniRoute:**
 
-- **Circuit Breaker per-provider** — Auto-open/close with configurable thresholds and cooldown (Closed/Open/Half-Open)
-- **Exponential Backoff** — Progressive retry delays
-- **Anti-Thundering Herd** — Mutex + semaphore protection against concurrent retry storms
-- **Combo Fallback Chains** — If the primary provider fails, automatically falls through the chain with no intervention
-- **Combo Circuit Breaker** — Auto-disables failing providers within a combo chain
-- **Health Dashboard** — Uptime monitoring, circuit breaker states, lockouts, cache stats, p50/p95/p99 latency
+- **Free Tier Providers Built-in** — Suport nativ pentru furnizori 100% gratuiti: iFlow (8 modele nelimitate), Qwen (3 modele nelimitate), Kiro (Claude gratuit), Gemini CLI (180K/lună gratuit)
+- **Combinații numai gratuite** — Lanțul `gc/gemini-3-flash → if/kimi-k2-thinking → qw/qwen3-coder-plus` = 0 USD/lună fără timp de nefuncționare
+- **Credite gratuite NVIDIA NIM** — 1000 de credite gratuite integrate
+- **Cost Optimized Strategy** — Strategie de rutare care alege automat cel mai ieftin furnizor disponibil
 
 </details>
 
 <details>
-<summary><b>🔧 7. "Configuring each AI tool is tedious and repetitive"</b></summary>
+<summary><b>🔒 5. „Trebuie să-mi protejez poarta AI de accesul neautorizat”</b></summary>
 
-Developers use Cursor, Claude Code, Codex CLI, OpenClaw, Gemini CLI, Kilo Code... Each tool needs a different config (API endpoint, key, model). Reconfiguring when switching providers or models is a waste of time.
+Când expuneți un gateway AI în rețea (LAN, VPS, Docker), oricine are adresa poate consuma jetoanele/cota dezvoltatorului. Fără protecție, API-urile sunt vulnerabile la utilizare greșită, injectare promptă și abuz.
 
-**How OmniRoute solves it:**
+**Cum o rezolvă OmniRoute:**
 
-- **CLI Tools Dashboard** — Dedicated page with one-click setup for Claude Code, Codex CLI, OpenClaw, Kilo Code, Antigravity, Cline
-- **GitHub Copilot Config Generator** — Generates `chatLanguageModels.json` for VS Code with bulk model selection
-- **Onboarding Wizard** — Guided 4-step setup for first-time users
-- **One endpoint, all models** — Configure `http://localhost:20128/v1` once, access 36+ providers
-
-</details>
-
-<details>
-<summary><b>🔑 8. "Managing OAuth tokens from multiple providers is hell"</b></summary>
-
-Claude Code, Codex, Gemini CLI, Copilot — all use OAuth 2.0 with expiring tokens. Developers need to re-authenticate constantly, deal with `client_secret is missing`, `redirect_uri_mismatch`, and failures on remote servers. OAuth on LAN/VPS is particularly problematic.
-
-**How OmniRoute solves it:**
-
-- **Auto Token Refresh** — OAuth tokens refresh in background before expiration
-- **OAuth 2.0 (PKCE) Built-in** — Automatic flow for Claude Code, Codex, Gemini CLI, Copilot, Kiro, Qwen, iFlow
-- **Multi-Account OAuth** — Multiple accounts per provider via JWT/ID token extraction
-- **OAuth LAN/Remote Fix** — Private IP detection for `redirect_uri` + manual URL mode for remote servers
-- **OAuth Behind Nginx** — Uses `window.location.origin` for reverse proxy compatibility
-- **Remote OAuth Guide** — Step-by-step guide for Google Cloud credentials on VPS/Docker
+- **Gestionarea cheilor API** — Generare, rotație și definire pentru fiecare furnizor cu o pagină dedicată `/dashboard/api-manager`
+- **Permisiuni la nivel de model** — Restricționați cheile API la anumite modele (`openai/*`, modele cu caractere metalice), cu comutatorul Permite toate/Restricționați
+- **API Endpoint Protection** — Solicitați o cheie pentru `/v1/models` și blocați anumiți furnizori din listă
+- **Auth Guard + CSRF Protection** — Toate rutele tabloului de bord sunt protejate cu middleware `withAuth` + jetoane CSRF
+- **Rate Limiter** — Limitarea ratei per-IP cu ferestre configurabile
+- **Filtrare IP** — Lista permisă/lista blocată pentru controlul accesului
+- **Prompt Injection Guard** — Igienizare împotriva tiparelor de prompte rău intenționate
+- **Criptare AES-256-GCM** — Acreditări criptate în repaus
 
 </details>
 
 <details>
-<summary><b>📊 9. "I don't know how much I'm spending or where"</b></summary>
+<summary><b>🛑 6. „Furnizorul meu a căzut și mi-am pierdut fluxul de codare”</b></summary>
 
-Developers use multiple paid providers but have no unified view of spending. Each provider has its own billing dashboard, but there's no consolidated view. Unexpected costs can pile up.
+Furnizorii de AI pot deveni instabili, pot returna erori 5xx sau pot atinge limitele temporare ale ratei. Dacă un dezvoltator depinde de un singur furnizor, acesta este întrerupt. Fără întreruptoare, reîncercări repetate pot bloca aplicația.
 
-**How OmniRoute solves it:**
+**Cum o rezolvă OmniRoute:**
 
-- **Cost Analytics Dashboard** — Per-token cost tracking and budget management per provider
-- **Budget Limits per Tier** — Spending ceiling per tier that triggers automatic fallback
-- **Per-Model Pricing Configuration** — Configurable prices per model
-- **Usage Statistics Per API Key** — Request count and last-used timestamp per key
-- **Analytics Dashboard** — Stat cards, model usage chart, provider table with success rates and latency
-
-</details>
-
-<details>
-<summary><b>🐛 10. "I can't diagnose errors and problems in AI calls"</b></summary>
-
-When a call fails, the dev doesn't know if it was a rate limit, expired token, wrong format, or provider error. Fragmented logs across different terminals. Without observability, debugging is trial-and-error.
-
-**How OmniRoute solves it:**
-
-- **Unified Logs Dashboard** — 4 tabs: Request Logs, Proxy Logs, Audit Logs, Console
-- **Console Log Viewer** — Real-time terminal-style viewer with color-coded levels, auto-scroll, search, filter
-- **SQLite Proxy Logs** — Persistent logs that survive server restarts
-- **Translator Playground** — 4 debugging modes: Playground (format translation), Chat Tester (round-trip), Test Bench (batch), Live Monitor (real-time)
-- **Request Telemetry** — p50/p95/p99 latency + X-Request-Id tracing
-- **File-Based Logging with Rotation** — Console interceptor captures everything to JSON log with size-based rotation
+- **Circuit Breaker per furnizor** - Deschidere/închidere automată cu praguri configurabile și răcire (Închis/Deschis/Pe jumătate deschis)
+- **Backoff exponențial** — Întârzieri progresive ale reîncercării
+- **Anti-Thundering Herd** — Mutex + protecție semafor împotriva furtunilor concurente de reîncercare
+- **Combo Fallback Chains** — Dacă furnizorul principal eșuează, trece automat prin lanț fără nicio intervenție
+- **Combo Circuit Breaker** — Dezactivează automat furnizorii care eșuează dintr-un lanț combinat
+- **Tabloul de bord pentru sănătate** — Monitorizare timp de funcționare, stări întrerupătoare de circuit, blocări, statistici cache, latență p50/p95/p99
 
 </details>
 
 <details>
-<summary><b>🏗️ 11. "Deploying and maintaining the gateway is complex"</b></summary>
+<summary><b>🔧 7. „Configurarea fiecărui instrument AI este plictisitoare și repetitivă”</b></summary>
 
-Installing, configuring, and maintaining an AI proxy across different environments (local, VPS, Docker, cloud) is labor-intensive. Problems like hardcoded paths, `EACCES` on directories, port conflicts, and cross-platform builds add friction.
+Dezvoltatorii folosesc Cursor, Claude Code, Codex CLI, OpenClaw, Gemini CLI, Kilo Code... Fiecare instrument are nevoie de o configurație diferită (punct final API, cheie, model). Reconfigurarea la schimbarea de furnizor sau de model este o pierdere de timp.
 
-**How OmniRoute solves it:**
+**Cum o rezolvă OmniRoute:**
 
-- **npm global install** — `npm install -g omniroute && omniroute` — done
-- **Docker Multi-Platform** — AMD64 + ARM64 native (Apple Silicon, AWS Graviton, Raspberry Pi)
-- **Docker Compose Profiles** — `base` (no CLI tools) and `cli` (with Claude Code, Codex, OpenClaw)
-- **Electron Desktop App** — Native app for Windows/macOS/Linux with system tray, auto-start, offline mode
-- **Split-Port Mode** — API and Dashboard on separate ports for advanced scenarios (reverse proxy, container networking)
-- **Cloud Sync** — Config synchronization across devices via Cloudflare Workers
-- **DB Backups** — Automatic backup, restore, export and import of all settings
+- **CLI Tools Dashboard** — pagină dedicată cu setare cu un singur clic pentru Claude Code, Codex CLI, OpenClaw, Kilo Code, Antigravity, Cline
+- **GitHub Copilot Config Generator** — generează `chatLanguageModels.json` pentru VS Code cu selecția în bloc a modelului
+- **Onboarding Wizard** — Configurare ghidată în 4 pași pentru utilizatorii debutanți
+- **Un punct final, toate modelele** — Configurați `http://localhost:20128/v1` o dată, accesați peste 36 de furnizori
 
 </details>
 
 <details>
-<summary><b>🌍 12. "The interface is English-only and my team doesn't speak English"</b></summary>
+<summary><b>🔑 8. „Gestionarea jetoanelor OAuth de la mai mulți furnizori este un iad” </b></summary>
 
-Teams in non-English-speaking countries, especially in Latin America, Asia, and Europe, struggle with English-only interfaces. Language barriers reduce adoption and increase configuration errors.
+Claude Code, Codex, Gemini CLI, Copilot - toate folosesc OAuth 2.0 cu token-uri care expiră. Dezvoltatorii trebuie să se reautentifice în mod constant, să se ocupe de `client_secret is missing`, `redirect_uri_mismatch` și defecțiunile de pe serverele de la distanță. OAuth pe LAN/VPS este deosebit de problematică.
 
-**How OmniRoute solves it:**
+**Cum o rezolvă OmniRoute:**
 
-- **Dashboard i18n — 30 Languages** — All 500+ keys translated including Arabic, Bulgarian, Danish, German, Spanish, Finnish, French, Hebrew, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Malay, Dutch, Norwegian, Polish, Portuguese (PT/BR), Romanian, Russian, Slovak, Swedish, Thai, Ukrainian, Vietnamese, Chinese, Filipino, English
-- **RTL Support** — Right-to-left support for Arabic and Hebrew
-- **Multi-Language READMEs** — 30 complete documentation translations
-- **Language Selector** — Globe icon in header for real-time switching
-
-</details>
-
-<details>
-<summary><b>🔄 13. "I need more than chat — I need embeddings, images, audio"</b></summary>
-
-AI isn't just chat completion. Devs need to generate images, transcribe audio, create embeddings for RAG, rerank documents, and moderate content. Each API has a different endpoint and format.
-
-**How OmniRoute solves it:**
-
-- **Embeddings** — `/v1/embeddings` with 6 providers and 9+ models
-- **Image Generation** — `/v1/images/generations` with 4 providers and 9+ models
-- **Audio Transcription** — `/v1/audio/transcriptions` — Whisper-compatible
-- **Text-to-Speech** — `/v1/audio/speech` — Multi-provider audio synthesis
-- **Moderations** — `/v1/moderations` — Content safety checks
-- **Reranking** — `/v1/rerank` — Document relevance reranking
-- **Responses API** — Full `/v1/responses` support for Codex
+- **Reîmprospătare automată a simbolurilor** — jetoanele OAuth se reîmprospătează în fundal înainte de expirare
+- **OAuth 2.0 (PKCE) încorporat** — Flux automat pentru Claude Code, Codex, Gemini CLI, Copilot, Kiro, Qwen, iFlow
+- **OAuth cu mai multe conturi** — Conturi multiple per furnizor prin extragerea jetonului JWT/ID
+- **OAuth LAN/Remediere la distanță** — Detectare IP privată pentru `redirect_uri` + modul URL manual pentru servere la distanță
+- **OAuth în spatele Nginx** — Utilizează `window.location.origin` pentru compatibilitatea cu proxy invers
+- **Ghid OAuth la distanță** — Ghid pas cu pas pentru acreditările Google Cloud pe VPS/Docker
 
 </details>
 
 <details>
-<summary><b>🧪 14. "I have no way to test and compare quality across models"</b></summary>
+<summary><b>📊 9. „Nu știu cât cheltuiesc sau unde”</b></summary>
 
-Developers want to know which model is best for their use case — code, translation, reasoning — but comparing manually is slow. No integrated eval tools exist.
+Dezvoltatorii folosesc mai mulți furnizori plătiți, dar nu au o viziune unificată asupra cheltuielilor. Fiecare furnizor are propriul tablou de bord de facturare, dar nu există o vizualizare consolidată. Costurile neașteptate se pot acumula.
 
-**How OmniRoute solves it:**
+**Cum o rezolvă OmniRoute:**
 
-- **LLM Evaluations** — Golden set testing with 10 pre-loaded cases covering greetings, math, geography, code generation, JSON compliance, translation, markdown, safety refusal
-- **4 Match Strategies** — `exact`, `contains`, `regex`, `custom` (JS function)
-- **Translator Playground Test Bench** — Batch testing with multiple inputs and expected outputs, cross-provider comparison
-- **Chat Tester** — Full round-trip with visual response rendering
-- **Live Monitor** — Real-time stream of all requests flowing through the proxy
-
-</details>
-
-<details>
-<summary><b>📈 15. "I need to scale without losing performance"</b></summary>
-
-As request volume grows, without caching the same questions generate duplicate costs. Without idempotency, duplicate requests waste processing. Per-provider rate limits must be respected.
-
-**How OmniRoute solves it:**
-
-- **Semantic Cache** — Two-tier cache (signature + semantic) reduces cost and latency
-- **Request Idempotency** — 5s deduplication window for identical requests
-- **Rate Limit Detection** — Per-provider RPM, min gap, and max concurrent tracking
-- **Editable Rate Limits** — Configurable defaults in Settings → Resilience with persistence
-- **API Key Validation Cache** — 3-tier cache for production performance
-- **Health Dashboard with Telemetry** — p50/p95/p99 latency, cache stats, uptime
+- **Tabloul de bord pentru analiza costurilor** — Urmărirea costurilor pe token și gestionarea bugetului per furnizor
+- **Limite bugetare pe nivel** — Plafonul de cheltuieli pe nivel care declanșează o rezervă automată
+- **Configurație de preț pe model** — Prețuri configurabile pe model
+- **Statistici de utilizare per cheie API** — Numărul de solicitări și marcajul temporal al ultimei utilizări per cheie
+- **Tabloul de bord de analiză** — Carduri cu statistici, diagramă de utilizare a modelului, tabel cu furnizori cu rate de succes și latență
 
 </details>
 
 <details>
-<summary><b>🤖 16. "I want to control model behavior globally"</b></summary>
+<summary><b>🐛 10. „Nu pot diagnostica erorile și problemele în apelurile AI”</b></summary>
 
-Developers who want all responses in a specific language, with a specific tone, or want to limit reasoning tokens. Configuring this in every tool/request is impractical.
+Când un apel eșuează, dezvoltatorul nu știe dacă a fost o limită de rată, un simbol expirat, un format greșit sau o eroare a furnizorului. Jurnalele fragmentate pe diferite terminale. Fără observabilitate, depanarea este o încercare și eroare.
 
-**How OmniRoute solves it:**
+**Cum o rezolvă OmniRoute:**
 
-- **System Prompt Injection** — Global prompt applied to all requests
-- **Thinking Budget Validation** — Reasoning token allocation control per request (passthrough, auto, custom, adaptive)
-- **6 Routing Strategies** — Global strategies that determine how requests are distributed
-- **Wildcard Router** — `provider/*` patterns route dynamically to any provider
-- **Combo Enable/Disable Toggle** — Toggle combos directly from the dashboard
-- **Provider Toggle** — Enable/disable all connections for a provider with one click
-- **Blocked Providers** — Exclude specific providers from `/v1/models` listing
+- **Tabloul de bord pentru jurnalele unificate** — 4 file: jurnalele de solicitare, jurnalele proxy, jurnalele de audit, consolă
+- **Console Log Viewer** — Vizualizator în timp real în stil terminal cu niveluri codificate în culori, defilare automată, căutare, filtru
+- **SQLite Proxy Logs** — Jurnale persistente care supraviețuiesc repornirilor serverului
+- **Translator Playground** — 4 moduri de depanare: Playground (traducere format), Chat Tester (dus-întors), Test Bench (lot), Live Monitor (în timp real)
+- **Solicitare telemetrie** — latență p50/p95/p99 + urmărire X-Request-Id
+- **Înregistrare bazată pe fișiere cu rotație** — Interceptor de consolă captează totul în jurnalul JSON cu rotație bazată pe dimensiune
 
 </details>
+
+<details>
+<summary><b>🏗️ 11. „Implementarea și întreținerea gateway-ului este complexă”</b></summary>
+
+Instalarea, configurarea și menținerea unui proxy AI în diferite medii (local, VPS, Docker, cloud) necesită multă muncă. Probleme precum căile codificate hard, `EACCES` pe directoare, conflictele de porturi și versiunile pe mai multe platforme adaugă fricțiuni.
+
+**Cum o rezolvă OmniRoute:**
+
+- **npm global install** — `npm install -g omniroute && omniroute` — finalizat
+- **Docker Multi-Platform** - AMD64 + ARM64 nativ (Apple Silicon, AWS Graviton, Raspberry Pi)
+- **Docker Compose Profiles** — `base` (fără instrumente CLI) și `cli` (cu Claude Code, Codex, OpenClaw)
+- **Electron Desktop App** — aplicație nativă pentru Windows/macOS/Linux cu bară de sistem, pornire automată, mod offline
+- **Split-Port Mode** — API și tablou de bord pe porturi separate pentru scenarii avansate (reverse proxy, rețea container)
+- **Cloud Sync** — Configurați sincronizarea între dispozitive prin Cloudflare Workers
+- **Backups DB** — Backup automat, restaurare, export și import al tuturor setărilor
+
+</details>
+
+<details>
+<summary><b>🌍 12. „Interfața este doar în limba engleză și echipa mea nu vorbește engleză” </b></summary>
+
+Echipele din țările care nu vorbesc engleza, în special din America Latină, Asia și Europa, se luptă cu interfețele doar în limba engleză. Barierele lingvistice reduc adoptarea și cresc erorile de configurare.
+
+**Cum o rezolvă OmniRoute:**
+
+- **Tabloul de bord i18n — 30 de limbi** — Toate cele peste 500 de taste traduse, inclusiv arabă, bulgară, daneză, germană, spaniolă, finlandeză, franceză, ebraică, hindi, maghiară, indoneziană, italiană, japoneză, coreeană, malay, olandeză, norvegiană, poloneză, portugheză (PT/BR), română, rusă, slovacă, suedeză, thailandeză, ucraineană, filipineză, engleză, chineză, vietnameză,
+- ** Suport RTL** — Suport de la dreapta la stânga pentru arabă și ebraică
+- **ReadME-uri în mai multe limbi** — 30 de traduceri complete de documentație
+- **Selector de limbă** — Pictograma glob în antet pentru comutare în timp real
+
+</details>
+
+<details>
+<summary><b>🔄 13. „Am nevoie de mai mult decât de chat — am nevoie de încorporare, imagini, audio” </b></summary>
+
+AI nu este doar finalizarea chatului. Dezvoltatorii trebuie să genereze imagini, să transcrie sunetul, să creeze înglobări pentru RAG, să reclasifice documentele și să modereze conținutul. Fiecare API are un punct final și un format diferit.
+
+**Cum o rezolvă OmniRoute:**
+
+- **Embeddings** — `/v1/embeddings` cu 6 furnizori și peste 9 modele
+- **Generarea imaginii** — `/v1/images/generations` cu 10 furnizori și peste 20 de modele (OpenAI, xAI, Together, Fireworks, Nebius, Hyperbolic, NanoBanana, Antigravity, SD WebUI, ComfyUI)
+- **Text-to-Video** — `/v1/videos/generations` — ComfyUI (AnimateDiff, SVD) și SD WebUI
+- **Text-to-Music** — `/v1/music/generations` — ComfyUI (Stable Audio Open, MusicGen)
+- **Transcriere audio** — `/v1/audio/transcriptions` — Whisper + Nvidia NIM, HuggingFace, Qwen3
+- **Text-to-Speech** — `/v1/audio/speech` — ElevenLabs, Nvidia NIM, HuggingFace, Coqui, Tortoise, Qwen3, + furnizori existenți
+- **Moderări** — `/v1/moderations` — Verificări de siguranță a conținutului
+- **Reclasificare** — `/v1/rerank` — Reclasificarea relevanței documentului
+- **Responses API** — Suport complet `/v1/responses` pentru Codex
+
+</details>
+
+<details>
+<summary><b>🧪 14. „Nu am cum să testez și să compar calitatea între modele” </b></summary>
+
+Dezvoltatorii vor să știe care model este cel mai bun pentru cazul lor de utilizare - cod, traducere, raționament - dar compararea manuală este lentă. Nu există instrumente de evaluare integrate.
+
+**Cum o rezolvă OmniRoute:**
+
+- **Evaluări LLM** — Testarea setului de aur cu 10 cazuri preîncărcate care acoperă salutări, matematică, geografie, generare de cod, conformitate cu JSON, traducere, reducere, refuz de siguranță
+- **4 strategii de potrivire** — `exact`, `contains`, `regex`, `custom` (funcția JS)
+- **Translator Playground Test Bench** — Testare în loturi cu mai multe intrări și rezultate așteptate, comparație între furnizori
+- **Tester de chat** — Tur complet dus-întors cu randare vizuală a răspunsului
+- **Live Monitor** — Flux în timp real al tuturor solicitărilor care circulă prin proxy
+
+</details>
+
+<details>
+<summary><b>📈 15. „Trebuie să mă scalez fără a pierde performanța”</b></summary>
+
+Pe măsură ce volumul cererilor crește, fără memorarea în cache aceleași întrebări generează costuri duplicate. Fara idempotenta, cererile duplicate procesarea deseurilor. Limitele de tarife pentru fiecare furnizor trebuie respectate.
+
+**Cum o rezolvă OmniRoute:**
+
+- **Cache semantic** — Cache-ul pe două niveluri (semnătură + semantică) reduce costurile și latența
+- **Request Idempotency** — fereastră de deduplicare 5s pentru cereri identice
+- **Rate Limit Detection** — RPM per furnizor, interval minim și urmărire simultană maximă
+- **Limite de rată editabile** — Valori implicite configurabile în Setări → Reziliență cu persistență
+- **API Key Validation Cache** — cache pe 3 niveluri pentru performanța producției
+- **Tabloul de bord pentru sănătate cu telemetrie** — latență p50/p95/p99, statistici cache, timp de funcționare
+
+</details>
+
+<details>
+<summary><b>🤖 16. „Vreau să controlez comportamentul modelului la nivel global”</b></summary>
+
+Dezvoltatori care doresc toate răspunsurile într-o anumită limbă, cu un anumit ton sau care doresc să limiteze simbolurile de raționament. Configurarea acestui lucru în fiecare instrument/cerere nu este practică.
+
+**Cum o rezolvă OmniRoute:**
+
+- **System Prompt Injection** — Prompt global aplicat tuturor solicitărilor
+- **Thinking Budget Validation** — Controlul raționării alocării token-ului per cerere (transmis, automat, personalizat, adaptiv)
+- **6 Strategii de rutare** — Strategii globale care determină modul în care sunt distribuite cererile
+- **Wildcard Router** — modelele `provider/*` sunt direcționate dinamic către orice furnizor
+- **Combo Activare/Dezactivare Comutare** — Comută combo direct din tabloul de bord
+- **Comutare furnizor** — Activați/dezactivați toate conexiunile pentru un furnizor cu un singur clic
+- **Furnizori blocați** — Excludeți anumiți furnizori din lista `/v1/models`
+
+</details>
+
+<details>
+<summary><b>🧰 17. „Am nevoie de instrumente MCP ca capabilități de produs de primă clasă”</b></summary>
+
+Multe gateway-uri AI expun MCP doar ca un detaliu ascuns de implementare. Echipele au nevoie de un nivel de operare vizibil și ușor de gestionat.
+
+**Cum o rezolvă OmniRoute:**
+
+- MCP apare în panoul de bord de navigare și fila de protocol final
+- Pagina de management MCP dedicată cu proces, instrumente, domenii și audit
+- Pornire rapidă încorporată pentru `omniroute --mcp` și integrarea clientului
+
+</details>
+
+<details>
+<summary><b>🧠 18. „Am nevoie de orchestrare A2A cu sincronizare + căi de activități de flux” </b></summary>
+
+Fluxurile de lucru ale agenților necesită atât răspunsuri directe, cât și execuție în flux de lungă durată, cu control ciclului de viață.
+
+**Cum o rezolvă OmniRoute:**
+
+- Punct final A2A JSON-RPC (`POST /a2a`) cu `message/send` și `message/stream`
+- Streaming SSE cu propagare a stării terminale
+- API-uri pentru ciclul de viață al sarcinilor pentru `tasks/get` și `tasks/cancel`
+
+</details>
+
+<details>
+<summary><b>🛰️ 19. „Am nevoie de sănătate reală a procesului MCP, nu de stare ghicită” </b></summary>
+
+Echipele operaționale trebuie să știe dacă MCP este de fapt în viață, nu doar dacă un API este accesibil.
+
+**Cum o rezolvă OmniRoute:**
+
+- Fișier runtime heartbeat cu PID, marcaje de timp, transport, număr de instrumente și modul de aplicare
+- API de stare MCP care combină bătăile inimii + activitatea recentă
+- Carduri de stare a interfeței de utilizare pentru prospețimea procesului/uptime/inima
+
+</details>
+
+<details>
+<summary><b>📋 20. „Am nevoie de o execuție auditabilă a instrumentului MCP” </b></summary>
+
+Când instrumentele modifică configurația sau declanșează acțiuni operaționale, echipele au nevoie de trasabilitate criminalistică.
+
+**Cum o rezolvă OmniRoute:**
+
+- Înregistrare de audit susținută de SQLite pentru apelurile instrumentelor MCP
+- Filtrează după instrument, succes/eșec, cheie API și paginare
+- Tabelul de audit al tabloului de bord + punctele finale de statistici pentru automatizare
+
+</details>
+
+<details>
+<summary><b>🔐 21. „Am nevoie de permisiuni MCP pentru fiecare integrare” </b></summary>
+
+Clienții diferiți ar trebui să aibă cel mai mic privilegiu de acces la categoriile de instrumente.
+
+**Cum o rezolvă OmniRoute:**
+
+- 9 lunete MCP granulare pentru acces controlat la instrumente
+- Aplicarea domeniului de aplicare și vizibilitatea în interfața de utilizare a managementului MCP
+- Poziție implicită sigură pentru instrumentele operaționale
+
+</details>
+
+<details>
+<summary><b>⚙️ 22. „Am nevoie de controale operaționale fără redistribuire”</b></summary>
+
+Echipele au nevoie de modificări rapide ale timpului de rulare în timpul incidentelor sau evenimentelor de cost.
+
+**Cum o rezolvă OmniRoute:**
+
+- Comutați activarea comboi direct din tabloul de bord MCP
+- Aplicați profiluri de rezistență din pachetele de politici predefinite
+- Resetați starea întreruptorului de la același panou de operare
+
+</details>
+
+<details>
+<summary><b>🔄 23. „Am nevoie de vizibilitate și anulare a ciclului de viață a sarcinii A2A live”</b></summary>
+
+Fără vizibilitatea ciclului de viață, incidentele sarcinilor devin greu de triat.
+
+**Cum o rezolvă OmniRoute:**
+
+- Listarea sarcinilor/filtrarea după stare/abilitate cu paginare
+- Detaliați metadatele sarcinii, evenimentele și artefactele
+- Punct final de anulare a sarcinii și acțiune UI cu confirmare
+
+</details>
+
+<details>
+<summary><b>🌊 24. „Am nevoie de valori de flux active pentru încărcarea A2A”</b></summary>
+
+Fluxurile de lucru în flux necesită o perspectivă operațională privind concurența și conexiunile live.
+
+**Cum o rezolvă OmniRoute:**
+
+- Contoare active de flux integrate în starea A2A
+- Marcaj de timp pentru ultima sarcină și numărătoare pentru fiecare stat
+- Carduri de bord A2A pentru monitorizarea operațiunilor în timp real
+
+</details>
+
+<details>
+<summary><b>🪪 25. „Am nevoie de descoperire de agenți standard pentru clienți”</b></summary>
+
+Clienții externi și orchestratorii au nevoie de metadate care pot fi citite de mașină pentru integrare.
+
+**Cum o rezolvă OmniRoute:**
+
+- Card de agent expus la `/.well-known/agent.json`
+- Capacități și abilități afișate în UI de management
+- API-ul de stare A2A include metadate de descoperire pentru automatizare
+
+</details>
+
+<details>
+<summary><b>🧭 26. „Am nevoie de descoperirea protocolului în produsul UX”</b></summary>
+
+Dacă utilizatorii nu pot descoperi suprafețele de protocol, calitatea adoptării și a suportului scade.
+
+**Cum o rezolvă OmniRoute:**
+
+- Intrări din bara laterală pentru MCP și A2A
+- Pagina Endpoint Fila Protocoale cu pornire rapidă și stare
+- Link-uri de la prezentare generală la tablouri de bord dedicate de management
+
+</details>
+
+<details>
+<summary><b>🧪 27. „Am nevoie de validarea protocolului end-to-end cu clienți reali”</b></summary>
+
+Testele simulate nu sunt suficiente pentru a valida compatibilitatea protocolului înainte de lansare.
+
+**Cum o rezolvă OmniRoute:**
+
+- Suita E2E care pornește aplicația și utilizează transportul clientului MCP SDK real
+- Testele client A2A pentru descoperirea, trimiterea, transmiterea în flux, obținerea și anularea fluxurilor
+- Verificați încrucișați afirmațiile cu auditul MCP și API-urile pentru sarcini A2A
+
+</details>
+
+<details>
+<summary><b>📡 28. „Am nevoie de observabilitate unificată pe toate interfețele”</b></summary>
+
+Împărțirea observabilității în funcție de protocol creează puncte oarbe și MTTR mai lung.
+
+**Cum o rezolvă OmniRoute:**
+
+- Tablouri de bord/jurnale/analitice unificate într-un singur produs
+- Sănătate + audit + solicitare de telemetrie în straturi OpenAI, MCP și A2A
+- API-uri operaționale pentru stare și automatizare
+
+</details>
+
+<details>
+<summary><b>💼 29. „Am nevoie de un timp de rulare pentru proxy + instrumente + orchestrare agent”</b></summary>
+
+Rularea multor servicii separate crește costurile operaționale și modurile de eșec.
+
+**Cum o rezolvă OmniRoute:**
+
+- Proxy compatibil OpenAI, server MCP și server A2A într-o singură stivă
+- Autentificare partajată, rezistență, stocare de date și observabilitate
+- Model de politică consistent pe toate suprafețele de interacțiune
+
+</details>
+
+<details>
+<summary><b>🚀 30. „Trebuie să trimit fluxuri de lucru agentice fără extinderea codului lipici”</b></summary>
+
+Echipele își pierd din viteza atunci când realizează mai multe servicii și scripturi ad-hoc.
+
+**Cum o rezolvă OmniRoute:**
+
+- Strategie unificată pentru clienți și agenți
+- Interfețe de utilizare a protocolului încorporate și căi de validare a fumului
+- Baze pregătite pentru producție (securitate, logare, rezistență, backup)
+
+</details>
+
+### Exemple de manuale (cazuri de utilizare integrate)
+
+**Playbook A: Maximizați abonamentul plătit + backup ieftin**
+
+```txt
+Combo: "maximize-claude"
+  1. cc/claude-opus-4-6
+  2. glm/glm-4.7
+  3. if/kimi-k2-thinking
+
+Monthly cost: $20 + small backup spend
+Outcome: higher quality, near-zero interruption
+```
+
+**Playbook B: teanc de codare cu costuri zero**
+
+```txt
+Combo: "free-forever"
+  1. gc/gemini-3-flash
+  2. if/kimi-k2-thinking
+  3. qw/qwen3-coder-plus
+
+Monthly cost: $0
+Outcome: stable free coding workflow
+```
+
+**Playbook C: lanț alternativ permanent activ 24/7**
+
+```txt
+Combo: "always-on"
+  1. cc/claude-opus-4-6
+  2. cx/gpt-5.2-codex
+  3. glm/glm-4.7
+  4. minimax/MiniMax-M2.1
+  5. if/kimi-k2-thinking
+
+Outcome: deep fallback depth for deadline-critical workloads
+```
+
+**Playbook D: Agentul operează cu MCP + A2A**
+
+```txt
+1) Start MCP transport (`omniroute --mcp`) for tool-driven operations
+2) Run A2A tasks via `message/send` and `message/stream`
+3) Observe via /dashboard/mcp and /dashboard/a2a
+4) Control incidents with resilience profile + task cancellation
+```
+
+---
 
 ## ⚡ Pornire rapidă
 
@@ -506,7 +781,7 @@ docker compose --profile cli up -d
 
 ---
 
-## 🖥️ Desktop App — Offline & Always-On
+## 🖥️
 
 > 🆕 **NEW!** OmniRoute is now available as a **native desktop application** for Windows, macOS, and Linux.
 
@@ -715,66 +990,26 @@ OmniRoute include un puternic Translator Playground încorporat cu **4 moduri** 
 
 </details>
 
----
+## 🧪 Evaluări (Evaluări)
 
-## 🎯 Cazuri de utilizare
+OmniRoute include un cadru de evaluare încorporat pentru a testa calitatea răspunsului LLM față de un set de aur. Accesați-l prin **Analitice → Evaluări** în tabloul de bord.
 
-### Cazul 1: „Am abonament Claude Pro”
+### Set de aur încorporat
 
-**Problemă:** Cota expiră neutilizată, limitele ratei în timpul codării grele
+„Setul de Aur OmniRoute” preîncărcat conține 10 cazuri de testare care acoperă:
 
-```
-Combo: "maximize-claude"
-  1. cc/claude-opus-4-6        (use subscription fully)
-  2. glm/glm-4.7               (cheap backup when quota out)
-  3. if/kimi-k2-thinking       (free emergency fallback)
+- Salutări, matematică, geografie, generare de cod
+- Conformitatea formatului JSON, traducere, reducere
+- Refuz de siguranță (conținut dăunător), numărare, logică booleană
 
-Monthly cost: $20 (subscription) + ~$5 (backup) = $25 total
-vs. $20 + hitting limits = frustration
-```
+### Strategii de evaluare
 
-### Cazul 2: „Vreau cost zero”
-
-**Problemă:** Nu-mi permit abonamente, au nevoie de codare AI de încredere
-
-```
-Combo: "free-forever"
-  1. gc/gemini-3-flash         (180K free/month)
-  2. if/kimi-k2-thinking       (unlimited free)
-  3. qw/qwen3-coder-plus       (unlimited free)
-
-Monthly cost: $0
-Quality: Production-ready models
-```
-
-### Cazul 3: „Am nevoie de codare 24/7, fără întreruperi”
-
-**Problemă:** Termenele limită, nu-mi permit timpi de nefuncționare
-
-```
-Combo: "always-on"
-  1. cc/claude-opus-4-6        (best quality)
-  2. cx/gpt-5.2-codex          (second subscription)
-  3. glm/glm-4.7               (cheap, resets daily)
-  4. minimax/MiniMax-M2.1      (cheapest, 5h reset)
-  5. if/kimi-k2-thinking       (free unlimited)
-
-Result: 5 layers of fallback = zero downtime
-```
-
-### Cazul 4: „Vreau AI GRATUIT în OpenClaw”
-
-**Problemă:** Aveți nevoie de asistent AI în aplicațiile de mesagerie, complet gratuit
-
-```
-Combo: "openclaw-free"
-  1. if/glm-4.7                (unlimited free)
-  2. if/minimax-m2.1           (unlimited free)
-  3. if/kimi-k2-thinking       (unlimited free)
-
-Monthly cost: $0
-Access via: WhatsApp, Telegram, Slack, Discord, iMessage, Signal...
-```
+| Strategie  | Descriere                                                                 | Exemplu                          |
+| ---------- | ------------------------------------------------------------------------- | -------------------------------- |
+| `exact`    | Ieșirea trebuie să se potrivească exact cu                                | `"4"`                            |
+| `contains` | Ieșirea trebuie să conțină subșir (indiferență de majuscule și minuscule) | `"Paris"`                        |
+| `regex`    | Ieșirea trebuie să se potrivească cu modelul regex                        | `"1.*2.*3"`                      |
+| `custom`   | Funcția JS personalizată returnează adevărat/fals                         | `(output) => output.length > 10` |
 
 ---
 
@@ -1058,29 +1293,6 @@ Settings → API Configuration:
 
 ---
 
-## 🧪 Evaluări (Evaluări)
-
-OmniRoute include un cadru de evaluare încorporat pentru a testa calitatea răspunsului LLM față de un set de aur. Accesați-l prin **Analitice → Evaluări** în tabloul de bord.
-
-### Set de aur încorporat
-
-„Setul de Aur OmniRoute” preîncărcat conține 10 cazuri de testare care acoperă:
-
-- Salutări, matematică, geografie, generare de cod
-- Conformitatea formatului JSON, traducere, reducere
-- Refuz de siguranță (conținut dăunător), numărare, logică booleană
-
-### Strategii de evaluare
-
-| Strategie  | Descriere                                                                 | Exemplu                          |
-| ---------- | ------------------------------------------------------------------------- | -------------------------------- |
-| `exact`    | Ieșirea trebuie să se potrivească exact cu                                | `"4"`                            |
-| `contains` | Ieșirea trebuie să conțină subșir (indiferență de majuscule și minuscule) | `"Paris"`                        |
-| `regex`    | Ieșirea trebuie să se potrivească cu modelul regex                        | `"1.*2.*3"`                      |
-| `custom`   | Funcția JS personalizată returnează adevărat/fals                         | `(output) => output.length > 10` |
-
----
-
 ## 🐛 Depanare
 
 <details>
@@ -1132,13 +1344,13 @@ OmniRoute include un cadru de evaluare încorporat pentru a testa calitatea răs
 - OmniRoute v1.0.6+ include validarea de rezervă prin finalizarea chatului
 - Asigurați-vă că adresa URL de bază include sufixul `/v1`
 
-### 🔐 OAuth em Servidor Remoto (Configurare OAuth la distanță)
+### 🔐 OAuth
 
 <a name="oauth-em-servidor-remoto"></a>
 
 > **⚠️ IMPORTANT pentru utilizatorii cu OmniRoute în VPS/Docker/servidor remoto**
 
-#### Por que o OAuth do Antigravity / Gemini CLI falha em serveres remotes?
+#### OAuth
 
 Pentru autentificare, **Antigravity** și **Gemini CLI** folosesc **Google OAuth 2.0**. O Google exige que a `redirect_uri` utilizat nu fluxo OAuth seja **exatamente** uma das URIs pre-cadastradas no Google Cloud Console do aplicative.
 
@@ -1227,7 +1439,7 @@ Nu vă rugăm să vă convingeți acum, dar este posibil să utilizați sau să 
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️
 
 - **Runtime**: Node.js 18–22 LTS (⚠️ Node.js 24+ este **nu este acceptat** - `better-sqlite3` binarele native sunt incompatibile)
 - **Limba**: TypeScript 5.9 — **100% TypeScript** în `src/` și `open-sse/` (v1.0.6)
@@ -1279,7 +1491,7 @@ Nu vă rugăm să vă convingeți acum, dar este posibil să utilizați sau să 
 
 ---
 
-## 🗺️ Foaia de parcurs
+## 🗺️
 
 OmniRoute are **210+ funcții planificate** în mai multe faze de dezvoltare. Iată domeniile cheie:
 
@@ -1301,18 +1513,6 @@ OmniRoute are **210+ funcții planificate** în mai multe faze de dezvoltare. Ia
 - 💰 **Strategia cu cel mai mic cost** — Selectați automat cel mai ieftin furnizor disponibil
 
 > 📝 Specificații complete ale caracteristicilor disponibile în [link](docs/new-features/) (217 specificații detaliate)
-
----
-
-## 📧 Suport
-
-> 💬 **Alăturați-vă comunității noastre!** [WhatsApp Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t) — Obțineți ajutor, împărtășiți sfaturi și fiți la curent.
-
-- **Site web**: [omniroute.online](https://omniroute.online)
-- **GitHub**: [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)
-- **Probleme**: [github.com/diegosouzapw/OmniRoute/issues](https://github.com/diegosouzapw/OmniRoute/issues)
-- **WhatsApp**: [Community Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t)
-- **Proiect original**: [9router by decolua](https://github.com/decolua/9router)
 
 ---
 

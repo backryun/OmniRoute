@@ -68,6 +68,7 @@
     "typecheck:noimplicit:core": "tsc --pretty false -p tsconfig.typecheck-noimplicit-core.json",
     "test:integration": "node --import tsx/esm --test tests/integration/*.test.mjs",
     "test:e2e": "node scripts/run-playwright-tests.mjs test tests/e2e/*.spec.ts",
+    "test:protocols:e2e": "node scripts/run-protocol-clients-tests.mjs",
     "test:vitest": "vitest run open-sse/mcp-server/__tests__/*.test.ts open-sse/services/autoCombo/__tests__/*.test.ts",
     "test:ecosystem": "node scripts/run-ecosystem-tests.mjs",
     "test:coverage": "npx c8 --exclude=open-sse --check-coverage --lines 50 --functions 50 --branches 50 node --import tsx/esm --test tests/unit/*.test.mjs",

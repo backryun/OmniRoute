@@ -14,6 +14,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
 import {
+  MCP_TOOLS,
   getHealthInput,
   listCombosInput,
   getComboMetricsInput,
@@ -31,6 +32,7 @@ import {
   explainRouteInput,
   getSessionSnapshotInput,
 } from "./schemas/tools.ts";
+import { startMcpHeartbeat } from "./runtimeHeartbeat.ts";
 
 import { logToolCall } from "./audit.ts";
 import {
@@ -674,10 +676,30 @@ export function createMcpServer(): McpServer {
 export async function startMcpStdio(): Promise<void> {
   const server = createMcpServer();
   const transport = new StdioServerTransport();
+  const version = process.env.npm_package_version || "1.8.1";
+  const stopHeartbeat = startMcpHeartbeat({
+    version,
+    scopesEnforced: MCP_ENFORCE_SCOPES,
+    allowedScopes: Array.from(MCP_ALLOWED_SCOPES),
+    toolCount: MCP_TOOLS.length,
+  });
+  const stopHeartbeatOnce = () => {
+    stopHeartbeat();
+  };
+  process.once("exit", stopHeartbeatOnce);
+  process.once("SIGINT", stopHeartbeatOnce);
+  process.once("SIGTERM", stopHeartbeatOnce);
 
   console.error("[MCP] OmniRoute MCP Server starting (stdio transport)...");
-  await server.connect(transport);
-  console.error("[MCP] OmniRoute MCP Server connected and ready.");
+  try {
+    await server.connect(transport);
+    console.error("[MCP] OmniRoute MCP Server connected and ready.");
+  } finally {
+    stopHeartbeatOnce();
+    process.off("exit", stopHeartbeatOnce);
+    process.off("SIGINT", stopHeartbeatOnce);
+    process.off("SIGTERM", stopHeartbeatOnce);
+  }
 }
 
 // If this file is run directly, start stdio server

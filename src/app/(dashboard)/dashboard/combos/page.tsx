@@ -12,12 +12,43 @@ import {
   ProxyConfigModal,
   EmptyState,
 } from "@/shared/components";
+import Tooltip from "@/shared/components/Tooltip";
 import { useCopyToClipboard } from "@/shared/hooks/useCopyToClipboard";
 import { useNotificationStore } from "@/store/notificationStore";
 import { useTranslations } from "next-intl";
 
 // Validate combo name: letters, numbers, -, _, /, .
 const VALID_NAME_REGEX = /^[a-zA-Z0-9_/.-]+$/;
+
+const STRATEGY_OPTIONS = [
+  { value: "priority", labelKey: "priority", descKey: "priorityDesc", icon: "sort" },
+  { value: "weighted", labelKey: "weighted", descKey: "weightedDesc", icon: "percent" },
+  { value: "round-robin", labelKey: "roundRobin", descKey: "roundRobinDesc", icon: "autorenew" },
+  { value: "random", labelKey: "random", descKey: "randomDesc", icon: "shuffle" },
+  { value: "least-used", labelKey: "leastUsed", descKey: "leastUsedDesc", icon: "low_priority" },
+  { value: "cost-optimized", labelKey: "costOpt", descKey: "costOptimizedDesc", icon: "savings" },
+];
+
+function getStrategyMeta(strategy) {
+  return STRATEGY_OPTIONS.find((s) => s.value === strategy) || STRATEGY_OPTIONS[0];
+}
+
+function getStrategyLabel(t, strategy) {
+  return t(getStrategyMeta(strategy).labelKey);
+}
+
+function getStrategyDescription(t, strategy) {
+  return t(getStrategyMeta(strategy).descKey);
+}
+
+function getStrategyBadgeClass(strategy) {
+  if (strategy === "weighted") return "bg-amber-500/15 text-amber-600 dark:text-amber-400";
+  if (strategy === "round-robin") return "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400";
+  if (strategy === "random") return "bg-purple-500/15 text-purple-600 dark:text-purple-400";
+  if (strategy === "least-used") return "bg-cyan-500/15 text-cyan-600 dark:text-cyan-400";
+  if (strategy === "cost-optimized") return "bg-teal-500/15 text-teal-600 dark:text-teal-400";
+  return "bg-blue-500/15 text-blue-600 dark:text-blue-400";
+}
 
 // ─────────────────────────────────────────────
 // Helper: normalize model entry (legacy string ↔ new object)
@@ -219,6 +250,8 @@ export default function CombosPage() {
         </Button>
       </div>
 
+      <ComboUsageGuide />
+
       {/* Combos List */}
       {combos.length === 0 ? (
         <EmptyState
@@ -299,6 +332,49 @@ export default function CombosPage() {
   );
 }
 
+function ComboUsageGuide() {
+  const t = useTranslations("combos");
+  const guideStrategies = ["priority", "cost-optimized", "least-used"];
+
+  return (
+    <Card padding="sm">
+      <div className="flex items-center gap-2">
+        <div className="size-7 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+          <span className="material-symbols-outlined text-primary text-[16px]">
+            tips_and_updates
+          </span>
+        </div>
+        <div className="min-w-0">
+          <h2 className="text-sm font-semibold">{t("routingStrategy")}</h2>
+          <p className="text-xs text-text-muted mt-0.5">{t("description")}</p>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mt-3">
+        {guideStrategies.map((strategyValue) => {
+          const strategyMeta = getStrategyMeta(strategyValue);
+          return (
+            <div
+              key={strategyValue}
+              className="rounded-lg border border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] p-2.5"
+            >
+              <div className="flex items-center gap-1.5">
+                <span className="material-symbols-outlined text-[14px] text-primary">
+                  {strategyMeta.icon}
+                </span>
+                <span className="text-xs font-medium">{getStrategyLabel(t, strategyValue)}</span>
+              </div>
+              <p className="text-[11px] leading-4 text-text-muted mt-1.5">
+                {getStrategyDescription(t, strategyValue)}
+              </p>
+            </div>
+          );
+        })}
+      </div>
+    </Card>
+  );
+}
+
 // ─────────────────────────────────────────────
 // Combo Card
 // ─────────────────────────────────────────────
@@ -322,6 +398,7 @@ function ComboCard({
   const isDisabled = combo.isActive === false;
   const t = useTranslations("combos");
   const tc = useTranslations("common");
+  const strategyDescription = getStrategyDescription(t, strategy);
 
   // Resolve provider UUID to user-defined name
   const formatModelDisplay = (modelValue) => {
@@ -346,23 +423,15 @@ function ComboCard({
             {/* Name + Strategy Badge + Copy */}
             <div className="flex items-center gap-2">
               <code className="text-sm font-medium font-mono truncate">{combo.name}</code>
-              <span
-                className={`text-[9px] uppercase font-semibold px-1.5 py-0.5 rounded-full ${
-                  strategy === "weighted"
-                    ? "bg-amber-500/15 text-amber-600 dark:text-amber-400"
-                    : strategy === "round-robin"
-                      ? "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400"
-                      : strategy === "random"
-                        ? "bg-purple-500/15 text-purple-600 dark:text-purple-400"
-                        : strategy === "least-used"
-                          ? "bg-cyan-500/15 text-cyan-600 dark:text-cyan-400"
-                          : strategy === "cost-optimized"
-                            ? "bg-teal-500/15 text-teal-600 dark:text-teal-400"
-                            : "bg-blue-500/15 text-blue-600 dark:text-blue-400"
-                }`}
-              >
-                {strategy}
-              </span>
+              <Tooltip content={strategyDescription}>
+                <span
+                  className={`text-[9px] uppercase font-semibold px-1.5 py-0.5 rounded-full ${getStrategyBadgeClass(
+                    strategy
+                  )}`}
+                >
+                  {getStrategyLabel(t, strategy)}
+                </span>
+              </Tooltip>
               {hasProxy && (
                 <span
                   className="text-[9px] uppercase font-semibold px-1.5 py-0.5 rounded-full bg-primary/15 text-primary flex items-center gap-0.5"
@@ -377,7 +446,7 @@ function ComboCard({
                   e.stopPropagation();
                   onCopy(combo.name, `combo-${combo.id}`);
                 }}
-                className="p-0.5 hover:bg-black/5 dark:hover:bg-white/5 rounded text-text-muted hover:text-primary transition-colors opacity-0 group-hover:opacity-100"
+                className="p-0.5 hover:bg-black/5 dark:hover:bg-white/5 rounded text-text-muted hover:text-primary transition-colors opacity-100 md:opacity-0 md:group-hover:opacity-100"
                 title={t("copyComboName")}
               >
                 <span className="material-symbols-outlined text-[14px]">
@@ -440,7 +509,7 @@ function ComboCard({
             onChange={onToggle}
             title={isDisabled ? t("enableCombo") : t("disableCombo")}
           />
-          <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+          <div className="flex items-center gap-1 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity">
             <button
               onClick={onTest}
               disabled={testing}
@@ -573,6 +642,12 @@ function ComboFormModal({ isOpen, combo, onClose, onSave, activeProviders }) {
   // DnD state
   const [dragIndex, setDragIndex] = useState(null);
   const [dragOverIndex, setDragOverIndex] = useState(null);
+  const weightTotal = models.reduce((sum, modelEntry) => sum + (modelEntry.weight || 0), 0);
+  const hasNoModels = models.length === 0;
+  const hasInvalidWeightedTotal =
+    strategy === "weighted" && models.length > 0 && weightTotal !== 100;
+  const saveBlocked =
+    !name.trim() || !!nameError || saving || hasNoModels || hasInvalidWeightedTotal;
 
   const fetchModalData = async () => {
     try {
@@ -724,6 +799,7 @@ function ComboFormModal({ isOpen, combo, onClose, onSave, activeProviders }) {
 
   const handleSave = async () => {
     if (!validateName(name)) return;
+    if (hasNoModels || hasInvalidWeightedTotal) return;
     setSaving(true);
 
     const saveData: any = {
@@ -768,19 +844,21 @@ function ComboFormModal({ isOpen, combo, onClose, onSave, activeProviders }) {
 
           {/* Strategy Toggle */}
           <div>
-            <label className="text-sm font-medium mb-1.5 block">{t("routingStrategy")}</label>
+            <div className="flex items-center gap-1 mb-1.5">
+              <label className="text-sm font-medium">{t("routingStrategy")}</label>
+              <Tooltip content={getStrategyDescription(t, strategy)}>
+                <span className="material-symbols-outlined text-[13px] text-text-muted cursor-help">
+                  help
+                </span>
+              </Tooltip>
+            </div>
             <div className="grid grid-cols-3 gap-1 p-0.5 bg-black/5 dark:bg-white/5 rounded-lg">
-              {[
-                { value: "priority", label: "Priority", icon: "sort" },
-                { value: "weighted", label: "Weighted", icon: "percent" },
-                { value: "round-robin", label: "Round-Robin", icon: "autorenew" },
-                { value: "random", label: "Random", icon: "shuffle" },
-                { value: "least-used", label: "Least-Used", icon: "low_priority" },
-                { value: "cost-optimized", label: "Cost-Opt", icon: "savings" },
-              ].map((s) => (
+              {STRATEGY_OPTIONS.map((s) => (
                 <button
                   key={s.value}
                   onClick={() => setStrategy(s.value)}
+                  title={t(s.descKey)}
+                  aria-label={`${getStrategyLabel(t, s.value)}. ${t(s.descKey)}`}
                   className={`py-1.5 px-2 rounded-md text-xs font-medium transition-all ${
                     strategy === s.value
                       ? "bg-white dark:bg-bg-main shadow-sm text-primary"
@@ -790,22 +868,12 @@ function ComboFormModal({ isOpen, combo, onClose, onSave, activeProviders }) {
                   <span className="material-symbols-outlined text-[14px] align-middle mr-0.5">
                     {s.icon}
                   </span>
-                  {s.label}
+                  {getStrategyLabel(t, s.value)}
                 </button>
               ))}
             </div>
             <p className="text-[10px] text-text-muted mt-0.5">
-              {
-                {
-                  priority: "Sequential fallback: tries model 1 first, then 2, etc.",
-                  weighted: "Distributes traffic by weight percentage with fallback",
-                  "round-robin":
-                    "Circular distribution: each request goes to the next model in rotation",
-                  random: "Uniform random selection, then fallback to remaining models",
-                  "least-used": "Picks the model with fewest requests, balancing load over time",
-                  "cost-optimized": "Routes to the cheapest model first based on pricing",
-                }[strategy]
-              }
+              {getStrategyDescription(t, strategy)}
             </p>
           </div>
 
@@ -917,6 +985,22 @@ function ComboFormModal({ isOpen, combo, onClose, onSave, activeProviders }) {
 
             {/* Weight total indicator */}
             {strategy === "weighted" && models.length > 0 && <WeightTotalBar models={models} />}
+
+            {hasNoModels && (
+              <div className="mt-2 rounded-md border border-amber-500/20 bg-amber-500/10 px-2 py-1.5 text-[10px] text-amber-700 dark:text-amber-300 flex items-center gap-1">
+                <span className="material-symbols-outlined text-[12px]">warning</span>
+                <span>{t("noModelsYet")}</span>
+              </div>
+            )}
+
+            {hasInvalidWeightedTotal && (
+              <div className="mt-2 rounded-md border border-amber-500/20 bg-amber-500/10 px-2 py-1.5 text-[10px] text-amber-700 dark:text-amber-300 flex items-center gap-1">
+                <span className="material-symbols-outlined text-[12px]">warning</span>
+                <span>
+                  {t("weighted")} {weightTotal}% {"\u2260"} 100%. {t("autoBalance")}
+                </span>
+              </div>
+            )}
 
             {/* Add Model button */}
             <button
@@ -1061,12 +1145,7 @@ function ComboFormModal({ isOpen, combo, onClose, onSave, activeProviders }) {
             <Button onClick={onClose} variant="ghost" fullWidth size="sm">
               {tc("cancel")}
             </Button>
-            <Button
-              onClick={handleSave}
-              fullWidth
-              size="sm"
-              disabled={!name.trim() || !!nameError || saving}
-            >
+            <Button onClick={handleSave} fullWidth size="sm" disabled={saveBlocked}>
               {saving ? t("saving") : isEdit ? tc("save") : t("createCombo")}
             </Button>
           </div>

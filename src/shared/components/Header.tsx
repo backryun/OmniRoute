@@ -86,6 +86,10 @@ function usePageInfo(pathname: string | null) {
     return { title: t("cliTools"), description: t("cliToolsDescription"), breadcrumbs: [] };
   if (pathname === "/dashboard")
     return { title: t("home"), description: t("homeDescription"), breadcrumbs: [] };
+  if (pathname.includes("/mcp"))
+    return { title: t("mcp"), description: t("mcpDescription"), breadcrumbs: [] };
+  if (pathname.includes("/a2a"))
+    return { title: t("a2a"), description: t("a2aDescription"), breadcrumbs: [] };
   if (pathname.includes("/endpoint"))
     return { title: t("endpoint"), description: t("endpointDescription"), breadcrumbs: [] };
   if (pathname.includes("/profile"))

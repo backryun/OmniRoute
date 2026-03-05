@@ -47,6 +47,20 @@ export interface A2ATask {
   expiresAt: string;
 }
 
+export interface TaskListFilter {
+  state?: TaskState;
+  skill?: string;
+  limit?: number;
+  offset?: number;
+}
+
+export interface A2ATaskStats {
+  counts: Record<TaskState, number>;
+  total: number;
+  activeStreams: number;
+  lastTaskAt: string | null;
+}
+
 // ============ Valid Transitions ============
 
 const VALID_TRANSITIONS: Record<TaskState, TaskState[]> = {
@@ -63,6 +77,7 @@ export class A2ATaskManager {
   private tasks = new Map<string, A2ATask>();
   private readonly ttlMs: number;
   private cleanupInterval: ReturnType<typeof setInterval>;
+  private activeStreams = 0;
 
   constructor(ttlMinutes: number = 5) {
     this.ttlMs = ttlMinutes * 60 * 1000;
@@ -125,12 +140,59 @@ export class A2ATaskManager {
     return this.updateTask(taskId, "cancelled", undefined, "Cancelled by client");
   }
 
-  listTasks(filter?: { state?: TaskState; skill?: string; limit?: number }): A2ATask[] {
+  countTasks(filter?: Pick<TaskListFilter, "state" | "skill">): number {
+    let tasks = [...this.tasks.values()];
+    if (filter?.state) tasks = tasks.filter((t) => t.state === filter.state);
+    if (filter?.skill) tasks = tasks.filter((t) => t.skill === filter.skill);
+    return tasks.length;
+  }
+
+  listTasks(filter?: TaskListFilter): A2ATask[] {
     let tasks = [...this.tasks.values()];
     if (filter?.state) tasks = tasks.filter((t) => t.state === filter.state);
     if (filter?.skill) tasks = tasks.filter((t) => t.skill === filter.skill);
     tasks.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
-    return tasks.slice(0, filter?.limit || 50);
+    const offset = Math.max(0, filter?.offset || 0);
+    const limit =
+      typeof filter?.limit === "number" && Number.isFinite(filter.limit)
+        ? Math.max(1, Math.floor(filter.limit))
+        : 50;
+    return tasks.slice(offset, offset + limit);
+  }
+
+  beginStream() {
+    this.activeStreams += 1;
+  }
+
+  endStream() {
+    this.activeStreams = Math.max(0, this.activeStreams - 1);
+  }
+
+  getStats(): A2ATaskStats {
+    const counts: Record<TaskState, number> = {
+      submitted: 0,
+      working: 0,
+      completed: 0,
+      failed: 0,
+      cancelled: 0,
+    };
+
+    let lastTaskAt: string | null = null;
+    for (const task of this.tasks.values()) {
+      counts[task.state] += 1;
+      const updatedAt = new Date(task.updatedAt).getTime();
+      if (!Number.isFinite(updatedAt)) continue;
+      if (!lastTaskAt || updatedAt > new Date(lastTaskAt).getTime()) {
+        lastTaskAt = task.updatedAt;
+      }
+    }
+
+    return {
+      counts,
+      total: this.tasks.size,
+      activeStreams: this.activeStreams,
+      lastTaskAt,
+    };
   }
 
   private cleanupExpired() {

@@ -1,7 +1,4 @@
-<div align="center">
-  <img src="./docs/screenshots/MainOmniRoute.png" alt="OmniRoute Dashboard" width="800"/>
-  
-  # 🚀 OmniRoute — The Free AI Gateway
+# 🚀 OmniRoute — The Free AI Gateway
 
 ### Never stop coding. Smart routing to **FREE & low-cost AI models** with automatic fallback.
 
@@ -11,6 +8,8 @@ _Your universal API proxy — one endpoint, 36+ providers, zero downtime. Now wi
 
 ---
 
+<div align="center">
+
 [![npm version](https://img.shields.io/npm/v/omniroute?color=cb3837&logo=npm)](https://www.npmjs.com/package/omniroute)
 [![Docker Hub](https://img.shields.io/docker/v/diegosouzapw/omniroute?label=Docker%20Hub&logo=docker&color=2496ED)](https://hub.docker.com/r/diegosouzapw/omniroute)
 [![License](https://img.shields.io/github/license/diegosouzapw/OmniRoute)](https://github.com/diegosouzapw/OmniRoute/blob/main/LICENSE)
@@ -19,9 +18,38 @@ _Your universal API proxy — one endpoint, 36+ providers, zero downtime. Now wi
 
 [🌐 Website](https://omniroute.online) • [🚀 Quick Start](#-quick-start) • [💡 Features](#-key-features) • [📖 Docs](#-documentation) • [💰 Pricing](#-pricing-at-a-glance) • [💬 WhatsApp](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t)
 
+</div>
+
 🌐 **Available in:** 🇺🇸 [English](README.md) | 🇧🇷 [Português (Brasil)](README.pt-BR.md) | 🇪🇸 [Español](README.es.md) | 🇫🇷 [Français](README.fr.md) | 🇮🇹 [Italiano](README.it.md) | 🇷🇺 [Русский](README.ru.md) | 🇨🇳 [中文 (简体)](README.zh-CN.md) | 🇩🇪 [Deutsch](README.de.md) | 🇮🇳 [हिन्दी](README.in.md) | 🇹🇭 [ไทย](README.th.md) | 🇺🇦 [Українська](README.uk-UA.md) | 🇸🇦 [العربية](README.ar.md) | 🇯🇵 [日本語](README.ja.md) | 🇻🇳 [Tiếng Việt](README.vi.md) | 🇧🇬 [Български](README.bg.md) | 🇩🇰 [Dansk](README.da.md) | 🇫🇮 [Suomi](README.fi.md) | 🇮🇱 [עברית](README.he.md) | 🇭🇺 [Magyar](README.hu.md) | 🇮🇩 [Bahasa Indonesia](README.id.md) | 🇰🇷 [한국어](README.ko.md) | 🇲🇾 [Bahasa Melayu](README.ms.md) | 🇳🇱 [Nederlands](README.nl.md) | 🇳🇴 [Norsk](README.no.md) | 🇵🇹 [Português (Portugal)](README.pt.md) | 🇷🇴 [Română](README.ro.md) | 🇵🇱 [Polski](README.pl.md) | 🇸🇰 [Slovenčina](README.sk.md) | 🇸🇪 [Svenska](README.sv.md) | 🇵🇭 [Filipino](README.phi.md)
 
+---
+
+## 🖼️ Main Dashboard
+
+<div align="center">
+  <img src="./docs/screenshots/MainOmniRoute.png" alt="OmniRoute Dashboard" width="800"/>
 </div>
+
+---
+
+## 📸 Dashboard Preview
+
+<details>
+<summary><b>Click to see dashboard screenshots</b></summary>
+
+| Page           | Screenshot                                        |
+| -------------- | ------------------------------------------------- |
+| **Providers**  | ![Providers](docs/screenshots/01-providers.png)   |
+| **Combos**     | ![Combos](docs/screenshots/02-combos.png)         |
+| **Analytics**  | ![Analytics](docs/screenshots/03-analytics.png)   |
+| **Health**     | ![Health](docs/screenshots/04-health.png)         |
+| **Translator** | ![Translator](docs/screenshots/05-translator.png) |
+| **Settings**   | ![Settings](docs/screenshots/06-settings.png)     |
+| **CLI Tools**  | ![CLI Tools](docs/screenshots/07-cli-tools.png)   |
+| **Usage Logs** | ![Usage](docs/screenshots/08-usage.png)           |
+| **Endpoint**   | ![Endpoint](docs/screenshots/09-endpoint.png)     |
+
+</details>
 
 ---
 
@@ -110,18 +138,6 @@ _Connect any AI-powered IDE or CLI tool through OmniRoute — free API gateway f
 
 ---
 
-## 📧 Support
-
-> 💬 **Join our community!** [WhatsApp Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t) — Get help, share tips, and stay updated.
-
-- **Website**: [omniroute.online](https://omniroute.online)
-- **GitHub**: [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)
-- **Issues**: [github.com/diegosouzapw/OmniRoute/issues](https://github.com/diegosouzapw/OmniRoute/issues)
-- **WhatsApp**: [Community Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t)
-- **Original Project**: [9router by decolua](https://github.com/decolua/9router)
-
----
-
 ## 🤔 Why OmniRoute?
 
 **Stop wasting money and hitting limits:**
@@ -137,6 +153,19 @@ _Connect any AI-powered IDE or CLI tool through OmniRoute — free API gateway f
 - ✅ **Auto fallback** - Subscription → API Key → Cheap → Free, zero downtime
 - ✅ **Multi-account** - Round-robin between accounts per provider
 - ✅ **Universal** - Works with Claude Code, Codex, Gemini CLI, Cursor, Cline, OpenClaw, any CLI tool
+
+---
+
+## 📧 Support
+
+> 💬 **Join our community!** [WhatsApp Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t) — Get help, share tips, and stay updated.
+
+- **Website**: [omniroute.online](https://omniroute.online)
+- **GitHub**: [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)
+- **Issues**: [github.com/diegosouzapw/OmniRoute/issues](https://github.com/diegosouzapw/OmniRoute/issues)
+- **WhatsApp**: [Community Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t)
+- **Contributing**: See [CONTRIBUTING.md](CONTRIBUTING.md), open a PR, or pick a `good first issue`
+- **Original Project**: [9router by decolua](https://github.com/decolua/9router)
 
 ---
 
@@ -169,9 +198,9 @@ Result: Never stop coding, minimal cost
 
 ---
 
-## 🎯 What OmniRoute Solves — 16 Real Pain Points
+## 🎯 What OmniRoute Solves — 30 Real Pain Points & Use Cases
 
-> **Every developer using AI tools faces these problems daily.** OmniRoute was built to solve them all — from cost overruns to regional blocks, from broken OAuth flows to zero observability.
+> **Every developer using AI tools faces these problems daily.** OmniRoute was built to solve them all — from cost overruns to regional blocks, from broken OAuth flows to protocol operations and enterprise observability.
 
 <details>
 <summary><b>💸 1. "I pay for an expensive subscription but still get interrupted by limits"</b></summary>
@@ -428,24 +457,254 @@ Developers who want all responses in a specific language, with a specific tone, 
 
 </details>
 
+<details>
+<summary><b>🧰 17. "I need MCP tools as first-class product capabilities"</b></summary>
+
+Many AI gateways expose MCP only as a hidden implementation detail. Teams need a visible, manageable operation layer.
+
+**How OmniRoute solves it:**
+
+- MCP appears in the dashboard navigation and endpoint protocol tab
+- Dedicated MCP management page with process, tools, scopes, and audit
+- Built-in quick-start for `omniroute --mcp` and client onboarding
+
+</details>
+
+<details>
+<summary><b>🧠 18. "I need A2A orchestration with sync + stream task paths"</b></summary>
+
+Agent workflows need both direct replies and long-running streamed execution with lifecycle control.
+
+**How OmniRoute solves it:**
+
+- A2A JSON-RPC endpoint (`POST /a2a`) with `message/send` and `message/stream`
+- SSE streaming with terminal state propagation
+- Task lifecycle APIs for `tasks/get` and `tasks/cancel`
+
+</details>
+
+<details>
+<summary><b>🛰️ 19. "I need real MCP process health, not guessed status"</b></summary>
+
+Operational teams need to know if MCP is actually alive, not just whether an API is reachable.
+
+**How OmniRoute solves it:**
+
+- Runtime heartbeat file with PID, timestamps, transport, tool count, and scope mode
+- MCP status API combining heartbeat + recent activity
+- UI status cards for process/uptime/heartbeat freshness
+
+</details>
+
+<details>
+<summary><b>📋 20. "I need auditable MCP tool execution"</b></summary>
+
+When tools mutate config or trigger ops actions, teams need forensic traceability.
+
+**How OmniRoute solves it:**
+
+- SQLite-backed audit logging for MCP tool calls
+- Filters by tool, success/failure, API key, and pagination
+- Dashboard audit table + stats endpoints for automation
+
+</details>
+
+<details>
+<summary><b>🔐 21. "I need scoped MCP permissions per integration"</b></summary>
+
+Different clients should have least-privilege access to tool categories.
+
+**How OmniRoute solves it:**
+
+- 9 granular MCP scopes for controlled tool access
+- Scope enforcement and visibility in MCP management UI
+- Safe default posture for operational tooling
+
+</details>
+
+<details>
+<summary><b>⚙️ 22. "I need operational controls without redeploying"</b></summary>
+
+Teams need quick runtime changes during incidents or cost events.
+
+**How OmniRoute solves it:**
+
+- Switch combo activation directly from MCP dashboard
+- Apply resilience profiles from pre-defined policy packs
+- Reset circuit breaker state from the same operations panel
+
+</details>
+
+<details>
+<summary><b>🔄 23. "I need live A2A task lifecycle visibility and cancellation"</b></summary>
+
+Without lifecycle visibility, task incidents become hard to triage.
+
+**How OmniRoute solves it:**
+
+- Task listing/filtering by state/skill with pagination
+- Drill-down on task metadata, events, and artifacts
+- Task cancellation endpoint and UI action with confirmation
+
+</details>
+
+<details>
+<summary><b>🌊 24. "I need active stream metrics for A2A load"</b></summary>
+
+Streaming workflows require operational insight into concurrency and live connections.
+
+**How OmniRoute solves it:**
+
+- Active stream counters integrated into A2A status
+- Last task timestamp and per-state counts
+- A2A dashboard cards for real-time ops monitoring
+
+</details>
+
+<details>
+<summary><b>🪪 25. "I need standard agent discovery for clients"</b></summary>
+
+External clients and orchestrators need machine-readable metadata for onboarding.
+
+**How OmniRoute solves it:**
+
+- Agent Card exposed at `/.well-known/agent.json`
+- Capabilities and skills shown in management UI
+- A2A status API includes discovery metadata for automation
+
+</details>
+
+<details>
+<summary><b>🧭 26. "I need protocol discoverability in the product UX"</b></summary>
+
+If users cannot discover protocol surfaces, adoption and support quality drop.
+
+**How OmniRoute solves it:**
+
+- Sidebar entries for MCP and A2A
+- Endpoint page Protocols tab with quick-start and status
+- Links from overview to dedicated management dashboards
+
+</details>
+
+<details>
+<summary><b>🧪 27. "I need end-to-end protocol validation with real clients"</b></summary>
+
+Mock tests are not enough to validate protocol compatibility before release.
+
+**How OmniRoute solves it:**
+
+- E2E suite that boots app and uses real MCP SDK client transport
+- A2A client tests for discovery, send, stream, get, and cancel flows
+- Cross-check assertions against MCP audit and A2A tasks APIs
+
+</details>
+
+<details>
+<summary><b>📡 28. "I need unified observability across all interfaces"</b></summary>
+
+Splitting observability by protocol creates blind spots and longer MTTR.
+
+**How OmniRoute solves it:**
+
+- Unified dashboards/logs/analytics in one product
+- Health + audit + request telemetry across OpenAI, MCP, and A2A layers
+- Operational APIs for status and automation
+
+</details>
+
+<details>
+<summary><b>💼 29. "I need one runtime for proxy + tools + agent orchestration"</b></summary>
+
+Running many separate services increases operational cost and failure modes.
+
+**How OmniRoute solves it:**
+
+- OpenAI-compatible proxy, MCP server, and A2A server in one stack
+- Shared auth, resilience, data store, and observability
+- Consistent policy model across all interaction surfaces
+
+</details>
+
+<details>
+<summary><b>🚀 30. "I need to ship agentic workflows without glue-code sprawl"</b></summary>
+
+Teams lose velocity when stitching multiple ad-hoc services and scripts.
+
+**How OmniRoute solves it:**
+
+- Unified endpoint strategy for clients and agents
+- Built-in protocol management UIs and smoke validation paths
+- Production-ready foundations (security, logging, resilience, backup)
+
+</details>
+
+### Example Playbooks (Integrated Use Cases)
+
+**Playbook A: Maximize paid subscription + cheap backup**
+
+```txt
+Combo: "maximize-claude"
+  1. cc/claude-opus-4-6
+  2. glm/glm-4.7
+  3. if/kimi-k2-thinking
+
+Monthly cost: $20 + small backup spend
+Outcome: higher quality, near-zero interruption
+```
+
+**Playbook B: Zero-cost coding stack**
+
+```txt
+Combo: "free-forever"
+  1. gc/gemini-3-flash
+  2. if/kimi-k2-thinking
+  3. qw/qwen3-coder-plus
+
+Monthly cost: $0
+Outcome: stable free coding workflow
+```
+
+**Playbook C: 24/7 always-on fallback chain**
+
+```txt
+Combo: "always-on"
+  1. cc/claude-opus-4-6
+  2. cx/gpt-5.2-codex
+  3. glm/glm-4.7
+  4. minimax/MiniMax-M2.1
+  5. if/kimi-k2-thinking
+
+Outcome: deep fallback depth for deadline-critical workloads
+```
+
+**Playbook D: Agent ops with MCP + A2A**
+
+```txt
+1) Start MCP transport (`omniroute --mcp`) for tool-driven operations
+2) Run A2A tasks via `message/send` and `message/stream`
+3) Observe via /dashboard/mcp and /dashboard/a2a
+4) Control incidents with resilience profile + task cancellation
+```
+
 ---
 
 ## ⚡ Quick Start
 
-**1. Install globally:**
+### 1) Install and run
 
 ```bash
 npm install -g omniroute
 omniroute
 ```
 
-🎉 Dashboard opens at `http://localhost:20128`
+Dashboard opens at `http://localhost:20128` and API base URL is `http://localhost:20128/v1`.
 
 | Command                 | Description                                                 |
 | ----------------------- | ----------------------------------------------------------- |
 | `omniroute`             | Start server (`PORT=20128`, API and dashboard on same port) |
 | `omniroute --port 3000` | Set canonical/API port to 3000                              |
-| `omniroute --mcp`       | Start MCP server (stdio transport) for IDE integration      |
+| `omniroute --mcp`       | Start MCP server (stdio transport)                          |
 | `omniroute --no-open`   | Don't auto-open browser                                     |
 | `omniroute --help`      | Show help                                                   |
 
@@ -457,24 +716,56 @@ PORT=20128 DASHBOARD_PORT=20129 omniroute
 # Dashboard: http://localhost:20129
 ```
 
-When ports are split, the API port serves only OpenAI-compatible routes (`/v1`, `/chat/completions`, `/responses`, `/models`, `/codex/*`).
+### 2) Connect providers and create your API key
 
-**2. Connect a FREE provider:**
+1. Open Dashboard → `Providers` and connect at least one provider (OAuth or API key).
+2. Open Dashboard → `Endpoint` and create an API key.
+3. (Optional) Open Dashboard → `Combos` and set your fallback chain.
 
-Dashboard → Providers → Connect **Claude Code** or **Antigravity** → OAuth login → Done!
+### 3) Point your coding tool to OmniRoute
 
-**3. Use in your CLI tool:**
-
+```txt
+Base URL: http://localhost:20128/v1
+API Key:  [copy from Endpoint page]
+Model:    if/kimi-k2-thinking (or any provider/model prefix)
 ```
-Claude Code/Codex/Gemini CLI/OpenClaw/Cursor/Cline Settings:
-  Endpoint: http://localhost:20128/v1
-  API Key: [copy from dashboard]
-  Model: if/kimi-k2-thinking
+
+Works with Claude Code, Codex CLI, Gemini CLI, Cursor, Cline, OpenClaw, OpenCode, and OpenAI-compatible SDKs.
+
+### 4) Enable and validate protocols (v2.0)
+
+**MCP (for tool-driven operations):**
+
+```bash
+omniroute --mcp
 ```
 
-**That's it!** Start coding with FREE AI models.
+Then connect your MCP client over `stdio` and test tools like:
 
-**Alternative — run from source:**
+- `omniroute_get_health`
+- `omniroute_list_combos`
+
+**A2A (for agent-to-agent workflows):**
+
+```bash
+curl http://localhost:20128/.well-known/agent.json
+```
+
+```bash
+curl -X POST http://localhost:20128/a2a \
+  -H 'content-type: application/json' \
+  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
+```
+
+### 5) Validate everything end-to-end (recommended)
+
+```bash
+npm run test:protocols:e2e
+```
+
+This suite validates real MCP and A2A client flows against a running app.
+
+### Alternative: run from source
 
 ```bash
 cp .env.example .env
@@ -595,249 +886,224 @@ When minimized, OmniRoute lives in your system tray with quick actions:
 
 ## 💡 Key Features
 
-### 🤖 Agent Integration (NEW in v2.0)
+OmniRoute v2.0 is built as an operational platform, not just a relay proxy.
 
-| Feature                      | What It Does                                                                        |
-| ---------------------------- | ----------------------------------------------------------------------------------- |
-| 🔧 **MCP Server (16 Tools)** | IDE agents control OmniRoute via Model Context Protocol — health, routing, budgets  |
-| 🤝 **A2A Server (v0.3)**     | Multi-agent orchestration via JSON-RPC 2.0 with smart-routing & quota-management    |
-| ⚡ **Auto-Combo Engine**     | Self-healing 6-factor scoring with task fitness, mode packs, and bandit exploration |
-| 🎯 **Scope Enforcement**     | 9 granular permission scopes for MCP tool access control                            |
-| 📊 **Audit Logging**         | SHA-256 hashed tool call audit trail in SQLite                                      |
-| 📡 **SSE Streaming**         | Real-time A2A task streaming with heartbeat and completion events                   |
-| 🛡️ **Budget Guard**          | Session-level budget enforcement with degrade/block/alert actions                   |
-| 📋 **Agent Card Discovery**  | `/.well-known/agent.json` for automatic A2A agent discovery                         |
+### 🤖 Agent & Protocol Operations (v2.0)
 
-> 📖 **[MCP Server README](open-sse/mcp-server/README.md)** — Full tool reference, IDE configs, and client examples in Python/TypeScript/Go
->
-> 📖 **[A2A Server README](src/lib/a2a/README.md)** — Skills reference, JSON-RPC methods, LangChain integration, and streaming examples
+| Feature                              | What It Does                                                                     |
+| ------------------------------------ | -------------------------------------------------------------------------------- |
+| 🔧 **MCP Server (16 tools)**         | IDE/agent tools control routing, health, combos, limits, and operations          |
+| 🤝 **A2A Server (JSON-RPC + SSE)**   | Agent-to-agent task execution with sync and streaming flows                      |
+| 🧭 **MCP/A2A Dashboards**            | Dedicated management pages (`/dashboard/mcp`, `/dashboard/a2a`)                  |
+| 🛰️ **MCP Runtime Heartbeat**         | Real process status (pid, uptime, heartbeat age, transport, scope mode)          |
+| 📋 **MCP Audit Trail**               | Filterable audit logs with success/failure and key attribution                   |
+| 🔐 **MCP Scope Enforcement**         | 9 granular scope permissions for controlled tool access                          |
+| 📡 **A2A Task Lifecycle Management** | List/filter tasks, inspect events/artifacts, cancel running tasks                |
+| 📋 **Agent Card Discovery**          | `/.well-known/agent.json` for client auto-discovery                              |
+| 🧪 **Protocol E2E Test Harness**     | Real MCP SDK + A2A client flows in `test:protocols:e2e`                          |
+| ⚙️ **Operational Controls**          | Switch combo, apply resilience profiles, reset breakers from one control surface |
 
-### 🧠 Core Routing & Intelligence
+### 🧠 Routing & Intelligence
 
-| Feature                         | What It Does                                                                   |
-| ------------------------------- | ------------------------------------------------------------------------------ |
-| 🎯 **Smart 4-Tier Fallback**    | Auto-route: Subscription → API Key → Cheap → Free                              |
-| 📊 **Real-Time Quota Tracking** | Live token count + reset countdown per provider                                |
-| 🔄 **Format Translation**       | OpenAI ↔ Claude ↔ Gemini ↔ Cursor ↔ Kiro seamless + response sanitization      |
-| 👥 **Multi-Account Support**    | Multiple accounts per provider with intelligent selection                      |
-| 🔄 **Auto Token Refresh**       | OAuth tokens refresh automatically with retry                                  |
-| 🎨 **Custom Combos**            | 6 strategies: fill-first, round-robin, p2c, random, least-used, cost-optimized |
-| 🧩 **Custom Models**            | Add any model ID to any provider                                               |
-| 🌐 **Wildcard Router**          | Route `provider/*` patterns to any provider dynamically                        |
-| 🧠 **Thinking Budget**          | Passthrough, auto, custom, and adaptive modes for reasoning models             |
-| 🔀 **Model Aliases**            | Auto-forward deprecated model IDs to current replacements (built-in + custom)  |
-| ⚡ **Background Degradation**   | Auto-route background tasks (titles, summaries) to cheaper models              |
-| 💬 **System Prompt Injection**  | Global system prompt applied across all requests                               |
-| 📄 **Responses API**            | Full OpenAI Responses API (`/v1/responses`) support for Codex                  |
+| Feature                            | What It Does                                                          |
+| ---------------------------------- | --------------------------------------------------------------------- |
+| 🎯 **Smart 4-Tier Fallback**       | Auto-route: Subscription → API Key → Cheap → Free                     |
+| 📊 **Real-Time Quota Tracking**    | Live token count + reset countdown per provider                       |
+| 🔄 **Format Translation**          | OpenAI ↔ Claude ↔ Gemini ↔ Responses with schema-safe conversions     |
+| 👥 **Multi-Account Support**       | Multiple accounts per provider with intelligent selection             |
+| 🔄 **Auto Token Refresh**          | OAuth tokens refresh automatically with retry                         |
+| 🎨 **Custom Combos**               | 6 balancing strategies + fallback chain control                       |
+| 🌐 **Wildcard Router**             | `provider/*` dynamic routing                                          |
+| 🧠 **Thinking Budget Controls**    | Passthrough, auto, custom, and adaptive reasoning limits              |
+| 🔀 **Model Aliases**               | Built-in + custom model aliasing and migration safety                 |
+| ⚡ **Background Degradation**      | Route low-priority background tasks to cheaper models                 |
+| 💬 **System Prompt Injection**     | Global behavior controls applied consistently                         |
+| 📄 **Responses API Compatibility** | Full `/v1/responses` support for Codex and advanced agentic workflows |
 
 ### 🎵 Multi-Modal APIs
 
-| Feature                    | What It Does                                                                     |
-| -------------------------- | -------------------------------------------------------------------------------- |
-| 🖼️ **Image Generation**    | `/v1/images/generations` — 10 providers, 20+ models (cloud + local)              |
-| 📐 **Embeddings**          | `/v1/embeddings` — 6 providers, 9+ models                                        |
-| 🎤 **Audio Transcription** | `/v1/audio/transcriptions` — Whisper + Nvidia NIM, HuggingFace, Qwen3            |
-| 🔊 **Text-to-Speech**      | `/v1/audio/speech` — ElevenLabs, Nvidia NIM, HuggingFace, Coqui, Tortoise, Qwen3 |
-| 🎬 **Video Generation**    | `/v1/videos/generations` — ComfyUI (AnimateDiff, SVD), SD WebUI                  |
-| 🎵 **Music Generation**    | `/v1/music/generations` — ComfyUI (Stable Audio Open, MusicGen)                  |
-| 🛡️ **Moderations**         | `/v1/moderations` — Content safety checks                                        |
-| 🔀 **Reranking**           | `/v1/rerank` — Document relevance reranking                                      |
+| Feature                    | What It Does                                                  |
+| -------------------------- | ------------------------------------------------------------- |
+| 🖼️ **Image Generation**    | `/v1/images/generations` with cloud and local backends        |
+| 📐 **Embeddings**          | `/v1/embeddings` for search and RAG pipelines                 |
+| 🎤 **Audio Transcription** | `/v1/audio/transcriptions` (Whisper and additional providers) |
+| 🔊 **Text-to-Speech**      | `/v1/audio/speech` (multiple engines/providers)               |
+| 🎬 **Video Generation**    | `/v1/videos/generations` (ComfyUI + SD WebUI workflows)       |
+| 🎵 **Music Generation**    | `/v1/music/generations` (ComfyUI workflows)                   |
+| 🛡️ **Moderations**         | `/v1/moderations` safety checks                               |
+| 🔀 **Reranking**           | `/v1/rerank` for relevance scoring                            |
 
-### 🛡️ Resilience & Security
+### 🛡️ Resilience, Security & Governance
 
-| Feature                         | What It Does                                                                  |
-| ------------------------------- | ----------------------------------------------------------------------------- |
-| 🔌 **Circuit Breaker**          | Auto-open/close per-provider with configurable thresholds                     |
-| 🛡️ **Anti-Thundering Herd**     | Mutex + semaphore rate-limit for API key providers                            |
-| 🧠 **Semantic Cache**           | Two-tier cache (signature + semantic) reduces cost & latency                  |
-| ⚡ **Request Idempotency**      | 5s dedup window for duplicate requests                                        |
-| 🔒 **TLS Fingerprint Spoofing** | Bypass TLS-based bot detection via wreq-js                                    |
-| 🌐 **IP Filtering**             | Allowlist/blocklist for API access control                                    |
-| 📊 **Editable Rate Limits**     | Configurable RPM, min gap, and max concurrent at system level                 |
-| 💾 **Rate Limit Persistence**   | Learned limits survive restarts via SQLite with 60s debounce + 24h staleness  |
-| 🔄 **Token Refresh Resilience** | Per-provider circuit breaker (5 fails→30min) + 30s timeout per attempt        |
-| 🛡 **API Endpoint Protection**  | Auth gating + provider blocking for the `/models` endpoint                    |
-| 🔒 **Proxy Visibility**         | Color-coded badges: 🟢 global, 🟡 provider, 🔵 per-connection with IP display |
-| 🌐 **3-Level Proxy Config**     | Configure proxies at global, per-provider, or per-connection level            |
+| Feature                             | What It Does                                               |
+| ----------------------------------- | ---------------------------------------------------------- |
+| 🔌 **Circuit Breakers**             | Provider-level trip/recover with threshold controls        |
+| 🛡️ **Anti-Thundering Herd**         | Mutex + semaphore protections on retry/rate events         |
+| 🧠 **Semantic + Signature Cache**   | Cost/latency reduction with two cache layers               |
+| ⚡ **Request Idempotency**          | Duplicate protection window                                |
+| 🔒 **TLS Fingerprint Spoofing**     | Better compatibility with anti-bot filtered providers      |
+| 🌐 **IP Filtering**                 | Allowlist/blocklist control for exposed deployments        |
+| 📊 **Editable Rate Limits**         | Configurable global/provider-level limits with persistence |
+| 🔑 **API Key Management + Scoping** | Secure key issuance/rotation and model/provider controls   |
+| 🛡️ **Protected `/models`**          | Optional auth gating and provider hiding for model catalog |
 
 ### 📊 Observability & Analytics
 
-| Feature                    | What It Does                                                           |
-| -------------------------- | ---------------------------------------------------------------------- |
-| 📝 **Request Logging**     | Debug mode with full request/response logs                             |
-| 💾 **SQLite Proxy Logs**   | Persistent proxy logs survive server restarts                          |
-| 📊 **Analytics Dashboard** | Recharts-powered: stat cards, model usage chart, provider table        |
-| 📈 **Progress Tracking**   | Opt-in SSE progress events for streaming                               |
-| 🧪 **LLM Evaluations**     | Golden set testing with 4 match strategies                             |
-| 🔍 **Request Telemetry**   | p50/p95/p99 latency aggregation + X-Request-Id tracing                 |
-| 📋 **Logs Dashboard**      | Unified 4-tab page: Request Logs, Proxy Logs, Audit Logs, Console      |
-| 🖥️ **Console Log Viewer**  | Real-time terminal-style viewer with level filter, search, auto-scroll |
-| 📑 **File-Based Logging**  | Console interceptor captures all output to JSON log file with rotation |
-| 🏥 **Health Dashboard**    | System uptime, circuit breaker states, lockouts, cache stats           |
-| 💰 **Cost Tracking**       | Budget management + per-model pricing configuration                    |
+| Feature                         | What It Does                                          |
+| ------------------------------- | ----------------------------------------------------- |
+| 📝 **Request + Proxy Logging**  | Full request/response and proxy logging               |
+| 📋 **Unified Logs Dashboard**   | Request, proxy, audit, and console views in one page  |
+| 🔍 **Request Telemetry**        | p50/p95/p99 latency and request tracing               |
+| 🏥 **Health Dashboard**         | Uptime, breaker states, lockouts, cache stats         |
+| 💰 **Cost Tracking**            | Budget controls and per-model pricing visibility      |
+| 📈 **Analytics Visualizations** | Model/provider usage insights and trend views         |
+| 🧪 **Evaluation Framework**     | Golden set testing with configurable match strategies |
 
-### ☁️ Deployment & Sync
+### ☁️ Deployment & Platform
 
-| Feature                      | What It Does                                                          |
-| ---------------------------- | --------------------------------------------------------------------- |
-| 💾 **Cloud Sync**            | Sync config across devices via Cloudflare Workers                     |
-| 🌐 **Deploy Anywhere**       | Localhost, VPS, Docker, Cloudflare Workers                            |
-| 🔑 **API Key Management**    | Generate, rotate, and scope API keys per provider                     |
-| 🧙 **Onboarding Wizard**     | 4-step guided setup for first-time users                              |
-| 🔧 **CLI Tools Dashboard**   | One-click configure Claude, Codex, Cline, OpenClaw, Kilo, Antigravity |
-| 🔄 **DB Backups**            | Automatic backup, restore, export & import for all settings           |
-| 🌐 **Internationalization**  | Full i18n with next-intl — 30 languages including RTL support         |
-| 🌍 **Language Selector**     | Globe icon in header for real-time switching between 30 languages     |
-| 📂 **Custom Data Directory** | `DATA_DIR` env var to override default `~/.omniroute` storage path    |
+| Feature                      | What It Does                                             |
+| ---------------------------- | -------------------------------------------------------- |
+| 🌐 **Deploy Anywhere**       | Localhost, VPS, Docker, Cloud environments               |
+| 💾 **Cloud Sync**            | Configuration sync via cloud worker                      |
+| 🔄 **Backup/Restore**        | Export/import and disaster recovery flows                |
+| 🧙 **Onboarding Wizard**     | First-run guided setup                                   |
+| 🔧 **CLI Tools Dashboard**   | One-click setup for popular coding tools                 |
+| 🌐 **i18n (30 languages)**   | Full dashboard + docs language support with RTL coverage |
+| 📂 **Custom Data Directory** | `DATA_DIR` override for storage location                 |
 
-<details>
-<summary><b>📖 Feature Details</b></summary>
+### Feature Deep Dive
 
-### 🎯 Smart 4-Tier Fallback
+#### Smart fallback with practical cost control
 
-Create combos with automatic fallback:
-
-```
+```txt
 Combo: "my-coding-stack"
-  1. cc/claude-opus-4-6        (your subscription)
-  2. nvidia/llama-3.3-70b      (free NVIDIA API)
-  3. glm/glm-4.7               (cheap backup, $0.6/1M)
-  4. if/kimi-k2-thinking       (free fallback)
-
-→ Auto switches when quota runs out or errors occur
+  1. cc/claude-opus-4-6
+  2. nvidia/llama-3.3-70b
+  3. glm/glm-4.7
+  4. if/kimi-k2-thinking
 ```
 
-### 📊 Real-Time Quota Tracking
+When quota, rate, or health fails, OmniRoute automatically moves to the next candidate without manual switching.
 
-- Token consumption per provider
-- Reset countdown (5-hour, daily, weekly)
-- Cost estimation for paid tiers
-- Monthly spending reports
+#### Protocol management that is visible and operable
 
-### 🔄 Format Translation
+- MCP + A2A are discoverable in UI and docs (not hidden)
+- Protocol status APIs expose live operational data (`/api/mcp/*`, `/api/a2a/*`)
+- Dashboards include actions for day-2 ops (combo toggles, breaker resets, task cancellation)
 
-Seamless translation between formats:
+#### Translator + validation workflow
 
-- **OpenAI** ↔ **Claude** ↔ **Gemini** ↔ **OpenAI Responses**
-- Your CLI tool sends OpenAI format → OmniRoute translates → Provider receives native format
-- Works with any tool that supports custom OpenAI endpoints
-- **Response sanitization** — Strips non-standard fields for strict OpenAI SDK compatibility
-- **Role normalization** — `developer` → `system` for non-OpenAI; `system` → `user` for GLM/ERNIE models
-- **Think tag extraction** — `<think>` blocks → `reasoning_content` for thinking models
-- **Structured output** — `json_schema` → Gemini's `responseMimeType`/`responseSchema`
+The Translator area includes:
 
-### 👥 Multi-Account Support
+- **Playground**: request transformation checks
+- **Chat Tester**: full request/response round-trip
+- **Test Bench**: multiple cases in one run
+- **Live Monitor**: real-time traffic view
 
-- Add multiple accounts per provider
-- Auto round-robin or priority-based routing
-- Fallback to next account when one hits quota
+Plus protocol validation with real clients via `npm run test:protocols:e2e`.
 
-### 🔄 Auto Token Refresh
+> 📖 **[MCP Server README](open-sse/mcp-server/README.md)** — Tool reference, IDE configs, and client examples
+>
+> 📖 **[A2A Server README](src/lib/a2a/README.md)** — Skills, JSON-RPC methods, streaming, and task lifecycle
 
-- OAuth tokens automatically refresh before expiration
-- No manual re-authentication needed
-- Seamless experience across all providers
+## 🧪 Evaluations (Evals)
 
-### 🎨 Custom Combos
+OmniRoute includes a built-in evaluation framework to test LLM response quality against a golden set. Access it via **Analytics → Evals** in the dashboard.
 
-- Create unlimited model combinations
-- 6 strategies: fill-first, round-robin, power-of-two-choices, random, least-used, cost-optimized
-- Share combos across devices with Cloud Sync
+### Built-in Golden Set
 
-### 🏥 Health Dashboard
+The pre-loaded "OmniRoute Golden Set" contains test cases for:
 
-- System status (uptime, version, memory usage)
-- Circuit breaker states per provider (Closed/Open/Half-Open)
-- Rate limit status and active lockouts
-- Signature cache statistics
-- Latency telemetry (p50/p95/p99) + prompt cache
-- Reset health status with one click
+- Greetings, math, geography, code generation
+- JSON format compliance, translation, markdown generation
+- Safety refusal (harmful content), counting, boolean logic
 
-### 🔧 Translator Playground
+### Evaluation Strategies
 
-OmniRoute includes a powerful built-in Translator Playground with **4 modes** for debugging, testing, and monitoring API translations:
-
-| Mode                | Description                                                                                                                                                                                                                     |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **💻 Playground**   | Direct format translation — paste any API request body and instantly see how OmniRoute translates it between provider formats (OpenAI ↔ Claude ↔ Gemini ↔ Responses API). Includes example templates and format auto-detection. |
-| **💬 Chat Tester**  | Send real chat requests through OmniRoute and see the full round-trip: your input, the translated request, the provider response, and the translated response back. Invaluable for validating combo routing.                    |
-| **🧪 Test Bench**   | Batch testing mode — define multiple test cases with different inputs and expected outputs, run them all at once, and compare results across providers and models.                                                              |
-| **📱 Live Monitor** | Real-time request monitoring — watch incoming requests as they flow through OmniRoute, see format translations happening live, and identify issues instantly.                                                                   |
-
-**Access:** Dashboard → Translator (sidebar)
-
-### 💾 Cloud Sync
-
-- Sync providers, combos, and settings across devices
-- Automatic background sync
-- Secure encrypted storage
-
-</details>
-
----
-
-## 🎯 Use Cases
-
-### Case 1: "I have Claude Pro subscription"
-
-**Problem:** Quota expires unused, rate limits during heavy coding
-
-```
-Combo: "maximize-claude"
-  1. cc/claude-opus-4-6        (use subscription fully)
-  2. glm/glm-4.7               (cheap backup when quota out)
-  3. if/kimi-k2-thinking       (free emergency fallback)
-
-Monthly cost: $20 (subscription) + ~$5 (backup) = $25 total
-vs. $20 + hitting limits = frustration
-```
-
-### Case 2: "I want zero cost"
-
-**Problem:** Can't afford subscriptions, need reliable AI coding
-
-```
-Combo: "free-forever"
-  1. gc/gemini-3-flash         (180K free/month)
-  2. if/kimi-k2-thinking       (unlimited free)
-  3. qw/qwen3-coder-plus       (unlimited free)
-
-Monthly cost: $0
-Quality: Production-ready models
-```
-
-### Case 3: "I need 24/7 coding, no interruptions"
-
-**Problem:** Deadlines, can't afford downtime
-
-```
-Combo: "always-on"
-  1. cc/claude-opus-4-6        (best quality)
-  2. cx/gpt-5.2-codex          (second subscription)
-  3. glm/glm-4.7               (cheap, resets daily)
-  4. minimax/MiniMax-M2.1      (cheapest, 5h reset)
-  5. if/kimi-k2-thinking       (free unlimited)
-
-Result: 5 layers of fallback = zero downtime
-```
-
-### Case 4: "I want FREE AI in OpenClaw"
-
-**Problem:** Need AI assistant in messaging apps, completely free
-
-```
-Combo: "openclaw-free"
-  1. if/glm-4.7                (unlimited free)
-  2. if/minimax-m2.1           (unlimited free)
-  3. if/kimi-k2-thinking       (unlimited free)
-
-Monthly cost: $0
-Access via: WhatsApp, Telegram, Slack, Discord, iMessage, Signal...
-```
+| Strategy   | Description                                      | Example                          |
+| ---------- | ------------------------------------------------ | -------------------------------- |
+| `exact`    | Output must match exactly                        | `"4"`                            |
+| `contains` | Output must contain substring (case-insensitive) | `"Paris"`                        |
+| `regex`    | Output must match regex pattern                  | `"1.*2.*3"`                      |
+| `custom`   | Custom JS function returns true/false            | `(output) => output.length > 10` |
 
 ---
 
 ## 📖 Setup Guide
+
+### Protocol Setup (MCP + A2A)
+
+<details>
+<summary><b>🧩 MCP Setup (Model Context Protocol)</b></summary>
+
+Start MCP transport in stdio mode:
+
+```bash
+omniroute --mcp
+```
+
+Recommended validation flow:
+
+1. Connect your MCP client over stdio.
+2. Run `omniroute_get_health`.
+3. Run `omniroute_list_combos`.
+4. Open `/dashboard/mcp` to confirm heartbeat, activity, and audit.
+
+Useful APIs for automation:
+
+- `GET /api/mcp/status`
+- `GET /api/mcp/tools`
+- `GET /api/mcp/audit`
+- `GET /api/mcp/audit/stats`
+
+</details>
+
+<details>
+<summary><b>🤝 A2A Setup (Agent2Agent)</b></summary>
+
+Discover the agent:
+
+```bash
+curl http://localhost:20128/.well-known/agent.json
+```
+
+Send a task:
+
+```bash
+curl -X POST http://localhost:20128/a2a \
+  -H 'content-type: application/json' \
+  -d '{"jsonrpc":"2.0","id":"setup-a2a","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Summarize quota status."}]}}'
+```
+
+Manage lifecycle:
+
+- `GET /api/a2a/status`
+- `GET /api/a2a/tasks`
+- `GET /api/a2a/tasks/:id`
+- `POST /api/a2a/tasks/:id/cancel`
+
+Operational UI:
+
+- `/dashboard/a2a` for task/state/stream observability and smoke actions
+
+</details>
+
+<details>
+<summary><b>🧪 End-to-end protocol validation</b></summary>
+
+Validate both protocols with real clients:
+
+```bash
+npm run test:protocols:e2e
+```
+
+This verifies:
+
+- MCP SDK client connect/list/call
+- A2A discovery/send/stream/get/cancel
+- Cross-check data in MCP audit and A2A task management APIs
+
+</details>
 
 <details>
 <summary><b>💳 Subscription Providers</b></summary>
@@ -1158,29 +1424,6 @@ opencode
 
 ---
 
-## 🧪 Evaluations (Evals)
-
-OmniRoute includes a built-in evaluation framework to test LLM response quality against a golden set. Access it via **Analytics → Evals** in the dashboard.
-
-### Built-in Golden Set
-
-The pre-loaded "OmniRoute Golden Set" contains 10 test cases covering:
-
-- Greetings, math, geography, code generation
-- JSON format compliance, translation, markdown
-- Safety refusal (harmful content), counting, boolean logic
-
-### Evaluation Strategies
-
-| Strategy   | Description                                      | Example                          |
-| ---------- | ------------------------------------------------ | -------------------------------- |
-| `exact`    | Output must match exactly                        | `"4"`                            |
-| `contains` | Output must contain substring (case-insensitive) | `"Paris"`                        |
-| `regex`    | Output must match regex pattern                  | `"1.*2.*3"`                      |
-| `custom`   | Custom JS function returns true/false            | `(output) => output.length > 10` |
-
----
-
 ## 🐛 Troubleshooting
 
 <details>
@@ -1332,6 +1575,9 @@ Se não quiser criar credenciais próprias agora, ainda é possível usar o flux
 
 ## 🛠️ Tech Stack
 
+<details>
+<summary><b>Click to expand tech stack details</b></summary>
+
 - **Runtime**: Node.js 18–22 LTS (⚠️ Node.js 24+ is **not supported** — `better-sqlite3` native binaries are incompatible)
 - **Language**: TypeScript 5.9 — **100% TypeScript** across `src/` and `open-sse/` (zero `any` in core modules since v2.0)
 - **Framework**: Next.js 16 + React 19 + Tailwind CSS 4
@@ -1346,6 +1592,8 @@ Se não quiser criar credenciais próprias agora, ainda é possível usar o flux
 - **Package**: [npmjs.com/package/omniroute](https://www.npmjs.com/package/omniroute)
 - **Docker**: [hub.docker.com/r/diegosouzapw/omniroute](https://hub.docker.com/r/diegosouzapw/omniroute)
 - **Resilience**: Circuit breaker, exponential backoff, anti-thundering herd, TLS spoofing, auto-combo self-healing
+
+</details>
 
 ---
 
@@ -1366,25 +1614,6 @@ Se não quiser criar credenciais próprias agora, ainda é possível usar o flux
 | [VM Deployment](docs/VM_DEPLOYMENT_GUIDE.md)   | Complete guide: VM + nginx + Cloudflare setup       |
 | [Features Gallery](docs/FEATURES.md)           | Visual dashboard tour with screenshots              |
 | [Release Checklist](docs/RELEASE_CHECKLIST.md) | Pre-release validation steps                        |
-
-### 📸 Dashboard Preview
-
-<details>
-<summary><b>Click to see dashboard screenshots</b></summary>
-
-| Page           | Screenshot                                        |
-| -------------- | ------------------------------------------------- |
-| **Providers**  | ![Providers](docs/screenshots/01-providers.png)   |
-| **Combos**     | ![Combos](docs/screenshots/02-combos.png)         |
-| **Analytics**  | ![Analytics](docs/screenshots/03-analytics.png)   |
-| **Health**     | ![Health](docs/screenshots/04-health.png)         |
-| **Translator** | ![Translator](docs/screenshots/05-translator.png) |
-| **Settings**   | ![Settings](docs/screenshots/06-settings.png)     |
-| **CLI Tools**  | ![CLI Tools](docs/screenshots/07-cli-tools.png)   |
-| **Usage Logs** | ![Usage](docs/screenshots/08-usage.png)           |
-| **Endpoint**   | ![Endpoint](docs/screenshots/09-endpoint.png)     |
-
-</details>
 
 ---
 

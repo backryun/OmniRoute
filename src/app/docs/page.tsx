@@ -46,6 +46,7 @@ const TOC_ITEMS = [
   { href: "#supported-providers", labelKey: "supportedProvidersToc" },
   { href: "#use-cases", labelKey: "commonUseCases" },
   { href: "#client-compatibility", labelKey: "clientCompatibility" },
+  { href: "#protocols", labelKey: "protocolsToc" },
   { href: "#api-reference", labelKey: "apiReference" },
   { href: "#model-prefixes", labelKey: "modelPrefixes" },
   { href: "#troubleshooting", labelKey: "troubleshooting" },
@@ -363,6 +364,49 @@ export default function DocsPage() {
                 <li>{t("fullStreaming")}</li>
               </ul>
             </article>
+          </div>
+        </section>
+
+        <section id="protocols" className="rounded-2xl border border-border bg-bg-subtle p-6">
+          <h2 className="text-xl font-semibold">{t("protocolsTitle")}</h2>
+          <p className="text-sm text-text-muted mt-2">{t("protocolsDescription")}</p>
+
+          <div className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4 text-sm">
+            <article className="rounded-lg border border-border p-4 bg-bg">
+              <h3 className="font-semibold">{t("protocolMcpTitle")}</h3>
+              <p className="text-text-muted mt-1">{t("protocolMcpDesc")}</p>
+              <ol className="mt-3 list-decimal list-inside space-y-1 text-text-muted">
+                <li>{t("protocolMcpStep1")}</li>
+                <li>{t("protocolMcpStep2")}</li>
+                <li>{t("protocolMcpStep3")}</li>
+              </ol>
+              <pre className="mt-3 p-3 rounded-lg border border-border bg-bg overflow-x-auto text-xs">
+                <code>{`omniroute --mcp`}</code>
+              </pre>
+            </article>
+
+            <article className="rounded-lg border border-border p-4 bg-bg">
+              <h3 className="font-semibold">{t("protocolA2aTitle")}</h3>
+              <p className="text-text-muted mt-1">{t("protocolA2aDesc")}</p>
+              <ol className="mt-3 list-decimal list-inside space-y-1 text-text-muted">
+                <li>{t("protocolA2aStep1")}</li>
+                <li>{t("protocolA2aStep2")}</li>
+                <li>{t("protocolA2aStep3")}</li>
+              </ol>
+              <pre className="mt-3 p-3 rounded-lg border border-border bg-bg overflow-x-auto text-xs">
+                <code>{`GET /.well-known/agent.json
+POST /a2a  (JSON-RPC: message/send | message/stream)`}</code>
+              </pre>
+            </article>
+          </div>
+
+          <div className="mt-4 rounded-lg border border-border p-4 bg-bg">
+            <h3 className="font-semibold">{t("protocolTroubleshootingTitle")}</h3>
+            <ul className="mt-2 list-disc list-inside text-sm text-text-muted space-y-1">
+              <li>{t("protocolTroubleshooting1")}</li>
+              <li>{t("protocolTroubleshooting2")}</li>
+              <li>{t("protocolTroubleshooting3")}</li>
+            </ul>
           </div>
         </section>
 

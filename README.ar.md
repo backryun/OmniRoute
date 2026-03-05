@@ -1,13 +1,55 @@
-<div align="center">
-  <img src="./docs/screenshots/MainOmniRoute.png" alt="OmniRoute Dashboard" width="800"/>
-  
-  # 🚀 OmniRoute — بوابة الذكاء الاصطناعي المجانية
+# 🚀 OmniRoute — بوابة الذكاء الاصطناعي المجانية
 
 ### لا تتوقف أبدًا عن البرمجة. التوجيه الذكي إلى **نماذج الذكاء الاصطناعي المجانية ومنخفضة التكلفة** مع الرجوع التلقائي.
 
-_وكيل واجهة برمجة التطبيقات العالمي الخاص بك — نقطة نهاية واحدة، وأكثر من 36 موفرًا، بدون أي توقف عن العمل._
+_وكيل API العالمي الخاص بك - نقطة نهاية واحدة، أكثر من 36 موفرًا، بدون توقف. الآن مع تنسيق الوكيل **MCP & A2A**._
 
-**إكمالات الدردشة • التضمينات • إنشاء الصور • الصوت • إعادة الترتيب • 100% TypeScript**
+**إكمالات الدردشة • التضمينات • إنشاء الصور • الفيديو • الموسيقى • الصوت • إعادة الترتيب • خادم MCP • بروتوكول A2A • 100٪ TypeScript **
+
+---
+
+<div align="center">
+
+[![إصدار npm](https://img.shields.io/npm/v/omniroute?color=cb3837&logo=npm)](https://www.npmjs.com/package/omniroute)
+[![Docker Hub](https://img.shields.io/docker/v/diegosouzapw/omniroute?label=Docker%20Hub&logo=docker&color=2496ED)](https://hub.docker.com/r/diegosouzapw/omniroute)
+[![الترخيص](https://img.shields.io/github/license/diegosouzapw/OmniRoute)](https://github.com/diegosouzapw/OmniRoute/blob/main/LICENSE)
+[![موقع الويب](https://img.shields.io/badge/Website-omniroute.online-blue?logo=google-chrome&logoColor=white)](https://omniroute.online)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-Community-25D366?logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t)
+
+[🌐 الموقع الإلكتروني](https://omniroute.online) • [🚀 البداية السريعة](#-quick-start) • [💡 الميزات](#-key-features) • [📖 المستندات](#-documentation) • [💰 التسعير](#-pricing-at-a-glance) • [💬 واتساب](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t)
+
+</div>
+
+🌐 **متوفر باللغة:** 🇺🇸 [الإنجليزية](README.md) | 🇧🇷 [البرتغالية (البرازيل)](README.pt-BR.md) | 🇪🇸 [الإسبانية](README.es.md) | 🇫🇷 [Français](README.fr.md) | 🇮🇹 [الإيطالية](README.it.md) | 🇷🇺 [Русский](README.ru.md) | 🇨🇳 [中文 (简体)](README.zh-CN.md) | 🇩🇪 [الألمانية](README.de.md) | 🇮🇳 [هندي](README.in.md) | 🇹🇭 [ไทย](README.th.md) | 🇺🇦 [أوكرانيا](README.uk-UA.md) | 🇸🇦 [العربية](README.ar.md) | 🇯🇵 [日本語](README.ja.md) | 🇻🇳 [تيانج فيت](README.vi.md) | 🇧🇬 [بلغارسكي](README.bg.md) | 🇩🇰 [الدانسك](README.da.md) | 🇫🇮 [سومي](README.fi.md) | 🇮🇱 [العربية](README.he.md) | 🇭🇺 [المجرية](README.hu.md) | 🇮🇩 [البهاسا الإندونيسية](README.id.md) | 🇰🇷 [한국어](README.ko.md) | 🇲🇾 [البهاسا ملايو](README.ms.md) | 🇳🇱 [هولندا](README.nl.md) | 🇳🇴 [نورسك](README.no.md) | 🇵🇹 [البرتغالية (البرتغال)](README.pt.md) | 🇷🇴 [روماني](README.ro.md) | 🇵🇱 [بولسكي](README.pl.md) | 🇸🇰 [سلوفينسينا](README.sk.md) | 🇸🇪 [سفينسكا](README.sv.md) | 🇵🇭 [فلبينية](README.phi.md)
+
+---
+
+## 🖼️ لوحة التحكم الرئيسية
+
+<div align="center">
+  <img src="./docs/screenshots/MainOmniRoute.png" alt="OmniRoute Dashboard" width="800"/>
+</div>
+
+---
+
+## 📸 معاينة لوحة التحكم
+
+<details>
+<summary><b>انقر لرؤية لقطات شاشة لوحة القيادة</b></summary>
+
+| صفحة                  | لقطة شاشة                                          |
+| --------------------- | -------------------------------------------------- |
+| ** مقدمو الخدمة **    | ![مقدمو الخدمة](docs/screenshots/01-providers.png) |
+| **المجموعات**         | ![المجموعات](docs/screenshots/02-combos.png)       |
+| **تحليلات**           | ![تحليلات](docs/screenshots/03-analytics.png)      |
+| **الصحة**             | ![الصحة](docs/screenshots/04-health.png)           |
+| **مترجم**             | ![مترجم](docs/screenshots/05-translator.png)       |
+| **الإعدادات**         | ![الإعدادات](docs/screenshots/06-settings.png)     |
+| **أدوات سطر الأوامر** | ![أدوات CLI](docs/screenshots/07-cli-tools.png)    |
+| **سجلات الاستخدام**   | ![الاستخدام](docs/screenshots/08-usage.png)        |
+| **نقطة النهاية**      | ![نقطة النهاية](docs/screenshots/09-endpoint.png)  |
+
+</details>
 
 ---
 
@@ -18,11 +60,10 @@ _قم بتوصيل أي أداة IDE أو CLI مدعومة بالذكاء الا
   <table>
     <tr>
       <td align="center" width="110">
-        <a href="https://github.com/cline/cline">
+        <a href="https://github.com/openclaw/openclaw">
           <img src="./public/providers/openclaw.png" alt="OpenClaw" width="48"/><br/>
           <b>OpenClaw</b>
-        </a><br/>
-        <sub>⭐ 205K</sub>
+        </a><br/><sub>⭐ 205K</sub>
       </td>
       <td align="center" width="110">
         <a href="https://github.com/HKUDS/nanobot">
@@ -41,7 +82,7 @@ _قم بتوصيل أي أداة IDE أو CLI مدعومة بالذكاء الا
       <td align="center" width="110">
         <a href="https://github.com/zeroclaw-labs/zeroclaw">
           <img src="./public/providers/zeroclaw.png" alt="ZeroClaw" width="48"/><br/>
-          <b>ZeroClaw</b>
+          <b>زيرومخلب</b>
         </a><br/>
         <sub>⭐ 9.9K</sub>
       </td>
@@ -64,49 +105,35 @@ _قم بتوصيل أي أداة IDE أو CLI مدعومة بالذكاء الا
       <td align="center" width="110">
         <a href="https://github.com/openai/codex">
           <img src="./public/providers/codex.png" alt="Codex CLI" width="48"/><br/>
-          <b>Codex CLI</b>
+          <b>Codex
         </a><br/>
         <sub>⭐ 60.8K</sub>
       </td>
       <td align="center" width="110">
         <a href="https://github.com/anthropics/claude-code">
           <img src="./public/providers/claude.png" alt="Claude Code" width="48"/><br/>
-          <b>Claude Code</b>
+          <b>كلود كود</b>
         </a><br/>
         <sub>⭐ 67.3K</sub>
       </td>
       <td align="center" width="110">
         <a href="https://github.com/google-gemini/gemini-cli">
           <img src="./public/providers/gemini-cli.png" alt="Gemini CLI" width="48"/><br/>
-          <b>Gemini CLI</b>
+          <b>الجوزاء CLI</b>
         </a><br/>
         <sub>⭐ 94.7K</sub>
       </td>
       <td align="center" width="110">
         <a href="https://github.com/Kilo-Org/kilocode">
           <img src="./public/providers/kilocode.png" alt="Kilo Code" width="48"/><br/>
-          <b>Kilo Code</b>
+          <b>كيلو كود</b>
         </a><br/>
         <sub>⭐ 15.5K</sub>
       </td>
     </tr>
   </table>
 
-<sub>📡 يتصل جميع الوكلاء عبر <code>http://localhost:20128/v1</code> أو <code>http://cloud.omniroute.online/v1</code> - تكوين واحد ونماذج غير محدودة و الحصة</sub>
-
----
-
-[![npm version](https://img.shields.io/npm/v/omniroute?color=cb3837&logo=npm)](https://www.npmjs.com/package/omniroute)
-[![Docker Hub](https://img.shields.io/docker/v/diegosouzapw/omniroute?label=Docker%20Hub&logo=docker&color=2496ED)](https://hub.docker.com/r/diegosouzapw/omniroute)
-[![License](https://img.shields.io/github/license/diegosouzapw/OmniRoute)](https://github.com/diegosouzapw/OmniRoute/blob/main/LICENSE)
-[![Website](https://img.shields.io/badge/Website-omniroute.online-blue?logo=google-chrome&logoColor=white)](https://omniroute.online)
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-Community-25D366?logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t)
-
-[🌐 الموقع](https://omniroute.online) • [🚀 البداية السريعة](#-بداية-سريعة) • [💡 الميزات](#-الميزات-الرئيسية) • [📖 التوثيق](#-التوثيق) • [💰 الأسعار](#-لمحة-سريعة-عن-الأسعار) • [💬 WhatsApp](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t)
-
-🌐 **متوفر باللغات:** 🇺🇸 [English](README.md) | 🇧🇷 [Português (Brasil)](README.pt-BR.md) | 🇪🇸 [Español](README.es.md) | 🇫🇷 [Français](README.fr.md) | 🇮🇹 [Italiano](README.it.md) | 🇷🇺 [Русский](README.ru.md) | 🇨🇳 [中文 (简体)](README.zh-CN.md) | 🇩🇪 [Deutsch](README.de.md) | 🇮🇳 [हिन्दी](README.in.md) | 🇹🇭 [ไทย](README.th.md) | 🇺🇦 [Українська](README.uk-UA.md) | 🇸🇦 [العربية](README.ar.md) | 🇯🇵 [日本語](README.ja.md) | 🇻🇳 [Tiếng Việt](README.vi.md) | 🇧🇬 [Български](README.bg.md) | 🇩🇰 [Dansk](README.da.md) | 🇫🇮 [Suomi](README.fi.md) | 🇮🇱 [עברית](README.he.md) | 🇭🇺 [Magyar](README.hu.md) | 🇮🇩 [Bahasa Indonesia](README.id.md) | 🇰🇷 [한국어](README.ko.md) | 🇲🇾 [Bahasa Melayu](README.ms.md) | 🇳🇱 [Nederlands](README.nl.md) | 🇳🇴 [Norsk](README.no.md) | 🇵🇹 [Português (Portugal)](README.pt.md) | 🇷🇴 [Română](README.ro.md) | 🇵🇱 [Polski](README.pl.md) | 🇸🇰 [Slovenčina](README.sk.md) | 🇸🇪 [Svenska](README.sv.md) | 🇵🇭 [Filipino](README.phi.md)
-
-</div>
+<sub>📡 يتصل جميع الوكلاء عبر <code>http://localhost:20128/v1</code> أو <code>http://cloud.omniroute.online/v1</code> - تكوين واحد ونماذج غير محدودة و حصة</sub>
 
 ---
 
@@ -114,8 +141,8 @@ _قم بتوصيل أي أداة IDE أو CLI مدعومة بالذكاء الا
 
 **توقف عن إهدار المال وضرب الحدود:**
 
-- <img src="https://img.shields.io/badge/✗-e74c3c?style=flat-square" height="16"/> تنتهي صلاحية حصة الاشتراك غير المستخدمة كل شهر
-- <img src="https://img.shields.io/badge/✗-e74c3c?style=flat-square" height="16"/> حدود الأسعار تمنعك من الترميز المتوسط
+- <img src="https://img.shields.io/badge/✗-e74c3c?style=flat-square" height="16"/> تنتهي حصة الاشتراك غير المستخدمة كل شهر
+- حدود معدل <img src="https://img.shields.io/badge/✗-e74c3c?style=flat-square" height="16"/> تمنعك من الترميز المتوسط
 - <img src="https://img.shields.io/badge/✗-e74c3c?style=flat-square" height="16"/> واجهات برمجة التطبيقات باهظة الثمن (20-50 دولارًا شهريًا لكل مزود)
 - <img src="https://img.shields.io/badge/✗-e74c3c?style=flat-square" height="16"/> التبديل اليدوي بين مقدمي الخدمة
 
@@ -125,6 +152,17 @@ _قم بتوصيل أي أداة IDE أو CLI مدعومة بالذكاء الا
 - ✅ **الرجوع التلقائي** - الاشتراك → مفتاح واجهة برمجة التطبيقات → رخيص → مجاني، بدون توقف
 - ✅ **حسابات متعددة** - جولة روبن بين الحسابات لكل مزود
 - ✅ **عالمي** - يعمل مع Claude Code وCodex وGemini CLI وCursor وCline وOpenClaw وأي أداة CLI
+
+---
+
+## 📧 الدعم> 💬 **انضم إلى مجتمعنا!** [مجموعة WhatsApp](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t) - احصل على المساعدة وشارك النصائح وابق على اطلاع.
+
+- **الموقع الإلكتروني**: [omniroute.online](https://omniroute.online)
+- **GitHub**: [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)
+- **المشاكل**: [github.com/diegosouzapw/OmniRoute/issues](https://github.com/diegosouzapw/OmniRoute/issues)
+- **واتساب**: [مجموعة المجتمع](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t)
+- **المساهمة**: راجع [CONTRIBUTING.md](CONTRIBUTING.md)، أو افتح علاقة عامة، أو اختر `good first issue`
+- **المشروع الأصلي**: [9router by decolua](https://github.com/decolua/9router)
 
 ---
 
@@ -157,302 +195,567 @@ Result: Never stop coding, minimal cost
 
 ---
 
-## 🎯 What OmniRoute Solves — 16 Real Pain Points
+## 🎯 ما يحله OmniRoute — 30 مشكلة حقيقية وحالات استخدام
 
-> **Every developer using AI tools faces these problems daily.** OmniRoute was built to solve them all — from cost overruns to regional blocks, from broken OAuth flows to zero observability.
+> **يواجه كل مطور يستخدم أدوات الذكاء الاصطناعي هذه المشكلات يوميًا.** تم تصميم OmniRoute لحلها جميعًا — بدءًا من تجاوز التكاليف وحتى الكتل الإقليمية، ومن تدفقات OAuth المعطلة إلى عمليات البروتوكول وإمكانية مراقبة المؤسسة.
 
 <details>
-<summary><b>💸 1. "I pay for an expensive subscription but still get interrupted by limits"</b></summary>
+<summary><b>💸 1. "أدفع مقابل اشتراك باهظ الثمن ولكن لا يزال يتم مقاطعتي بسبب الحدود"</b></summary>
 
-Developers pay $20–200/month for Claude Pro, Codex Pro, or GitHub Copilot. Even paying, quota has a ceiling — 5h of usage, weekly limits, or per-minute rate limits. Mid-coding session, the provider stops responding and the developer loses flow and productivity.
+يدفع المطورون ما بين 20 إلى 200 دولار شهريًا مقابل Claude Pro أو Codex Pro أو GitHub Copilot. حتى عند الدفع، فإن الحصة لها حد أقصى — 5 ساعات من الاستخدام، أو حدود أسبوعية، أو حدود لسعر الدقيقة. في منتصف جلسة الترميز، يتوقف الموفر عن الاستجابة ويفقد المطور التدفق والإنتاجية.
 
-**How OmniRoute solves it:**
+**كيف يحل OmniRoute المشكلة:**
 
-- **Smart 4-Tier Fallback** — If subscription quota runs out, automatically redirects to API Key → Cheap → Free with zero manual intervention
-- **Real-Time Quota Tracking** — Shows token consumption in real-time with reset countdown (5h, daily, weekly)
-- **Multi-Account Support** — Multiple accounts per provider with auto round-robin — when one runs out, switches to the next
-- **Custom Combos** — Customizable fallback chains with 6 balancing strategies (fill-first, round-robin, P2C, random, least-used, cost-optimized)
-- **Codex Business Quotas** — Business/Team workspace quota monitoring directly in the dashboard
+- **الاحتياطي الذكي ذو 4 طبقات** — في حالة نفاد حصة الاشتراك، تتم إعادة التوجيه تلقائيًا إلى مفتاح واجهة برمجة التطبيقات ← رخيص ← مجاني بدون أي تدخل يدوي
+- **تتبع الحصص في الوقت الفعلي** — يُظهر استهلاك الرمز المميز في الوقت الفعلي مع العد التنازلي لإعادة التعيين (5 ساعات، يوميًا، وأسبوعيًا)
+- **دعم الحسابات المتعددة** — حسابات متعددة لكل مزود مع نظام روبن تلقائي — عند نفاد الحساب، يتم التبديل إلى التالي
+- **مجموعات مخصصة** — سلاسل احتياطية قابلة للتخصيص مع 6 إستراتيجيات موازنة (الملء أولاً، جولة روبن، P2C، عشوائي، الأقل استخدامًا، الأمثل من حيث التكلفة)
+- **حصص الدستور الغذائي** — مراقبة حصص مساحة عمل الشركة/الفريق مباشرة في لوحة المعلومات
 
 </details>
 
 <details>
-<summary><b>🔌 2. "I need to use multiple providers but each has a different API"</b></summary>
+<summary><b>🔌 2. "أحتاج إلى استخدام موفري خدمات متعددين ولكن لكل منهم واجهة برمجة تطبيقات مختلفة"</b></summary>
 
-OpenAI uses one format, Claude (Anthropic) uses another, Gemini yet another. If a dev wants to test models from different providers or fallback between them, they need to reconfigure SDKs, change endpoints, deal with incompatible formats. Custom providers (FriendLI, NIM) have non-standard model endpoints.
+يستخدم OpenAI تنسيقًا واحدًا، ويستخدم Claude (Anthropic) تنسيقًا آخر، ويستخدم Gemini تنسيقًا آخر. إذا أراد أحد المطورين اختبار النماذج من موفري خدمات مختلفين أو إجراء بديل فيما بينهم، فسيحتاج إلى إعادة تكوين مجموعات تطوير البرامج (SDK)، وتغيير نقاط النهاية، والتعامل مع التنسيقات غير المتوافقة. لدى موفري الخدمة المخصصين (FriendLI، NIM) نقاط نهاية نموذجية غير قياسية.
 
-**How OmniRoute solves it:**
+**كيف يحل OmniRoute المشكلة:**
 
-- **Unified Endpoint** — A single `http://localhost:20128/v1` serves as proxy for all 36+ providers
-- **Format Translation** — Automatic and transparent: OpenAI ↔ Claude ↔ Gemini ↔ Responses API
-- **Response Sanitization** — Strips non-standard fields (`x_groq`, `usage_breakdown`, `service_tier`) that break OpenAI SDK v1.83+
-- **Role Normalization** — Converts `developer` → `system` for non-OpenAI providers; `system` → `user` for GLM/ERNIE
-- **Think Tag Extraction** — Extracts `<think>` blocks from models like DeepSeek R1 into standardized `reasoning_content`
-- **Structured Output for Gemini** — `json_schema` → `responseMimeType`/`responseSchema` automatic conversion
-- **`stream` defaults to `false`** — Aligns with OpenAI spec, avoiding unexpected SSE in Python/Rust/Go SDKs
+- **نقطة النهاية الموحدة** — تعمل نقطة `http://localhost:20128/v1` واحدة كوكيل لجميع مقدمي الخدمة الذين يزيد عددهم عن 36
+- **تنسيق الترجمة** — تلقائي وشفاف: OpenAI ↔ Claude ↔ Gemini ↔ Responses API
+- **تطهير الاستجابة** — إزالة الحقول غير القياسية (`x_groq`، `usage_breakdown`، `service_tier`) التي تكسر OpenAI SDK v1.83+
+- **تطبيع الدور** — تحويل `developer` → `system` لمقدمي الخدمات غير التابعين لـ OpenAI؛ `system` → `user` لـ GLM/ERNIE
+- **Think Tag Extraction** — يستخرج كتل `<think>` من نماذج مثل DeepSeek R1 إلى `reasoning_content` القياسية
+- **الإخراج المنظم لـ Gemini** — التحويل التلقائي `json_schema` → `responseMimeType`/`responseSchema`
+- **الإعدادات الافتراضية لـ `stream` هي `false`** — تتماشى مع مواصفات OpenAI، وتتجنب SSE غير المتوقع في Python/Rust/Go SDKs</details>
+
+<details>
+<summary><b>🌐 3. "مزود الذكاء الاصطناعي الخاص بي يحظر منطقتي/بلدي"</b></summary>
+
+يقوم مقدمو الخدمة مثل OpenAI/Codex بحظر الوصول من مناطق جغرافية معينة. يحصل المستخدمون على أخطاء مثل `unsupported_country_region_territory` أثناء اتصالات OAuth وAPI. وهذا أمر محبط بشكل خاص للمطورين من البلدان النامية.
+
+**كيف يحل OmniRoute المشكلة:**
+
+- **تكوين الوكيل ثلاثي المستوى** — وكيل قابل للتكوين على 3 مستويات: عالمي (كل حركة المرور)، لكل مزود (موفر واحد فقط)، ولكل اتصال/مفتاح
+- **شارات الوكيل المرمزة بالألوان** — المؤشرات المرئية: 🟢 الوكيل العالمي، 🟡 وكيل الموفر، 🔵 وكيل الاتصال، يظهر دائمًا عنوان IP
+- **تبادل رمز OAuth عبر الوكيل** — يمر تدفق OAuth أيضًا عبر الوكيل، مما يؤدي إلى حل مشكلة `unsupported_country_region_territory`
+- **اختبارات الاتصال عبر الوكيل** — تستخدم اختبارات الاتصال الوكيل الذي تم تكوينه (لا مزيد من التجاوز المباشر)
+- **دعم SOCKS5** — دعم وكيل SOCKS5 الكامل للتوجيه الخارجي
+- ** انتحال بصمة إصبع TLS ** — بصمة TLS تشبه المتصفح عبر `wreq-js` لتجاوز اكتشاف الروبوتات
 
 </details>
 
 <details>
-<summary><b>🌐 3. "My AI provider blocks my region/country"</b></summary>
+<summary><b>🆓 4. "أريد استخدام الذكاء الاصطناعي للبرمجة ولكن ليس لدي المال"</b></summary>
 
-Providers like OpenAI/Codex block access from certain geographic regions. Users get errors like `unsupported_country_region_territory` during OAuth and API connections. This is especially frustrating for developers from developing countries.
+لا يستطيع الجميع دفع ما بين 20 إلى 200 دولار شهريًا مقابل اشتراكات الذكاء الاصطناعي. يحتاج الطلاب والمطورون من البلدان الناشئة والهواة والمستقلون إلى الوصول إلى نماذج عالية الجودة بدون تكلفة.
 
-**How OmniRoute solves it:**
+**كيف يحل OmniRoute المشكلة:**
 
-- **3-Level Proxy Config** — Configurable proxy at 3 levels: global (all traffic), per-provider (one provider only), and per-connection/key
-- **Color-Coded Proxy Badges** — Visual indicators: 🟢 global proxy, 🟡 provider proxy, 🔵 connection proxy, always showing the IP
-- **OAuth Token Exchange Through Proxy** — OAuth flow also goes through the proxy, solving `unsupported_country_region_territory`
-- **Connection Tests via Proxy** — Connection tests use the configured proxy (no more direct bypass)
-- **SOCKS5 Support** — Full SOCKS5 proxy support for outbound routing
-- **TLS Fingerprint Spoofing** — Browser-like TLS fingerprint via `wreq-js` to bypass bot detection
+- **موفرو الطبقة المجانية المضمنون** — دعم أصلي لمقدمي الخدمات المجانيين بنسبة 100%: iFlow (8 نماذج غير محدودة)، Qwen (3 نماذج غير محدودة)، Kiro (Claude مجانًا)، Gemini CLI (180 ألف/شهر مجانًا)
+- **المجموعات المجانية فقط** — السلسلة `gc/gemini-3-flash → if/kimi-k2-thinking → qw/qwen3-coder-plus` = 0 USD/الشهر بدون أي توقف عن العمل
+- **أرصدة NVIDIA NIM المجانية** — 1000 رصيد مجاني مدمج
+- **استراتيجية التكلفة المحسنة** — استراتيجية التوجيه التي تختار تلقائيًا أرخص مزود متاح
 
 </details>
 
 <details>
-<summary><b>🆓 4. "I want to use AI for coding but I have no money"</b></summary>
+<summary><b>🔒 5. "أحتاج إلى حماية بوابة الذكاء الاصطناعي الخاصة بي من الوصول غير المصرح به"</b></summary>
 
-Not everyone can pay $20–200/month for AI subscriptions. Students, devs from emerging countries, hobbyists, and freelancers need access to quality models at zero cost.
+عند تعريض بوابة AI للشبكة (LAN، VPS، Docker)، يمكن لأي شخص لديه العنوان استهلاك الرموز المميزة/الحصة النسبية للمطور. بدون الحماية، تكون واجهات برمجة التطبيقات (API) عرضة لإساءة الاستخدام والحقن الفوري وإساءة الاستخدام.
 
-**How OmniRoute solves it:**
+**كيف يحل OmniRoute المشكلة:**
 
-- **Free Tier Providers Built-in** — Native support for 100% free providers: iFlow (8 unlimited models), Qwen (3 unlimited models), Kiro (Claude for free), Gemini CLI (180K/month free)
-- **Free-Only Combos** — Chain `gc/gemini-3-flash → if/kimi-k2-thinking → qw/qwen3-coder-plus` = $0/month with zero downtime
-- **NVIDIA NIM Free Credits** — 1000 free credits integrated
-- **Cost Optimized Strategy** — Routing strategy that automatically chooses the cheapest available provider
-
-</details>
-
-<details>
-<summary><b>🔒 5. "I need to protect my AI gateway from unauthorized access"</b></summary>
-
-When exposing an AI gateway to the network (LAN, VPS, Docker), anyone with the address can consume the developer's tokens/quota. Without protection, APIs are vulnerable to misuse, prompt injection, and abuse.
-
-**How OmniRoute solves it:**
-
-- **API Key Management** — Generation, rotation, and scoping per provider with a dedicated `/dashboard/api-manager` page
-- **Model-Level Permissions** — Restrict API keys to specific models (`openai/*`, wildcard patterns), with Allow All/Restrict toggle
-- **API Endpoint Protection** — Require a key for `/v1/models` and block specific providers from the listing
-- **Auth Guard + CSRF Protection** — All dashboard routes protected with `withAuth` middleware + CSRF tokens
-- **Rate Limiter** — Per-IP rate limiting with configurable windows
-- **IP Filtering** — Allowlist/blocklist for access control
-- **Prompt Injection Guard** — Sanitization against malicious prompt patterns
-- **AES-256-GCM Encryption** — Credentials encrypted at rest
+- **إدارة مفاتيح واجهة برمجة التطبيقات** — الإنشاء والتدوير وتحديد النطاق لكل مزود من خلال صفحة `/dashboard/api-manager` المخصصة
+- **أذونات على مستوى النموذج** — تقييد مفاتيح واجهة برمجة التطبيقات (API) على نماذج محددة (`openai/*`، أنماط أحرف البدل)، مع تبديل السماح للكل/تقييد
+- **API Endpoint Protection** — اطلب مفتاحًا لـ `/v1/models` وقم بحظر موفري خدمة محددين من القائمة
+- **Auth Guard + CSRF Protection** — جميع مسارات لوحة المعلومات محمية بالبرمجيات الوسيطة `withAuth` + رموز CSRF
+- **محدد المعدل** — تحديد معدل لكل IP مع نوافذ قابلة للتكوين
+- **تصفية IP** — القائمة المسموح بها/القائمة المحظورة للتحكم في الوصول
+- **حماية الحقن الفوري** — التعقيم ضد أنماط المطالبة الضارة
+- **تشفير AES-256-GCM** — بيانات الاعتماد مشفرة في حالة عدم النشاط
 
 </details>
 
 <details>
-<summary><b>🛑 6. "My provider went down and I lost my coding flow"</b></summary>
+<summary><b>🛑 6. "تعطل مزود الخدمة الخاص بي وفقدت تدفق الترميز الخاص بي"</b></summary>يمكن أن يصبح موفرو الذكاء الاصطناعي غير مستقرين، أو يعرضون أخطاء 5xx، أو يصلون إلى حدود المعدلات المؤقتة. إذا كان أحد المطورين يعتمد على موفر واحد، فسيتم مقاطعته. بدون قواطع الدائرة، يمكن أن تؤدي عمليات إعادة المحاولة المتكررة إلى تعطل التطبيق.
 
-AI providers can become unstable, return 5xx errors, or hit temporary rate limits. If a dev depends on a single provider, they're interrupted. Without circuit breakers, repeated retries can crash the application.
+**كيف يحل OmniRoute المشكلة:**
 
-**How OmniRoute solves it:**
-
-- **Circuit Breaker per-provider** — Auto-open/close with configurable thresholds and cooldown (Closed/Open/Half-Open)
-- **Exponential Backoff** — Progressive retry delays
-- **Anti-Thundering Herd** — Mutex + semaphore protection against concurrent retry storms
-- **Combo Fallback Chains** — If the primary provider fails, automatically falls through the chain with no intervention
-- **Combo Circuit Breaker** — Auto-disables failing providers within a combo chain
-- **Health Dashboard** — Uptime monitoring, circuit breaker states, lockouts, cache stats, p50/p95/p99 latency
+- **قاطع الدائرة الكهربائية لكل مزود** — فتح/إغلاق تلقائي مع حدود قابلة للتكوين وفترة تهدئة (مغلق/مفتوح/نصف مفتوح)
+- **التراجع الأسي** — تأخير إعادة المحاولة التدريجي
+- **مكافحة الرعد القطيع** — Mutex + حماية الإشارة ضد عواصف إعادة المحاولة المتزامنة
+- **السلاسل الاحتياطية المجمعة** — إذا فشل الموفر الأساسي، فسيتم دخوله تلقائيًا عبر السلسلة دون أي تدخل
+- **Combo Circuit Breaker** — التعطيل التلقائي لمقدمي الخدمات الفاشلين ضمن سلسلة التحرير والسرد
+- **لوحة معلومات الصحة** — مراقبة وقت التشغيل، وحالات قاطع الدائرة، وعمليات التأمين، وإحصائيات ذاكرة التخزين المؤقت، ووقت الاستجابة p50/p95/p99
 
 </details>
 
 <details>
-<summary><b>🔧 7. "Configuring each AI tool is tedious and repetitive"</b></summary>
+<summary><b>🔧 7. "تكوين كل أداة من أدوات الذكاء الاصطناعي أمر ممل ومتكرر"</b></summary>
 
-Developers use Cursor, Claude Code, Codex CLI, OpenClaw, Gemini CLI, Kilo Code... Each tool needs a different config (API endpoint, key, model). Reconfiguring when switching providers or models is a waste of time.
+يستخدم المطورون Cursor وClaude Code وCodex CLI وOpenClaw وGemini CLI وKilo Code... تحتاج كل أداة إلى تكوين مختلف (نقطة نهاية واجهة برمجة التطبيقات، المفتاح، النموذج). تعد إعادة التكوين عند تبديل مقدمي الخدمات أو النماذج مضيعة للوقت.
 
-**How OmniRoute solves it:**
+**كيف يحل OmniRoute المشكلة:**
 
-- **CLI Tools Dashboard** — Dedicated page with one-click setup for Claude Code, Codex CLI, OpenClaw, Kilo Code, Antigravity, Cline
-- **GitHub Copilot Config Generator** — Generates `chatLanguageModels.json` for VS Code with bulk model selection
-- **Onboarding Wizard** — Guided 4-step setup for first-time users
-- **One endpoint, all models** — Configure `http://localhost:20128/v1` once, access 36+ providers
-
-</details>
-
-<details>
-<summary><b>🔑 8. "Managing OAuth tokens from multiple providers is hell"</b></summary>
-
-Claude Code, Codex, Gemini CLI, Copilot — all use OAuth 2.0 with expiring tokens. Developers need to re-authenticate constantly, deal with `client_secret is missing`, `redirect_uri_mismatch`, and failures on remote servers. OAuth on LAN/VPS is particularly problematic.
-
-**How OmniRoute solves it:**
-
-- **Auto Token Refresh** — OAuth tokens refresh in background before expiration
-- **OAuth 2.0 (PKCE) Built-in** — Automatic flow for Claude Code, Codex, Gemini CLI, Copilot, Kiro, Qwen, iFlow
-- **Multi-Account OAuth** — Multiple accounts per provider via JWT/ID token extraction
-- **OAuth LAN/Remote Fix** — Private IP detection for `redirect_uri` + manual URL mode for remote servers
-- **OAuth Behind Nginx** — Uses `window.location.origin` for reverse proxy compatibility
-- **Remote OAuth Guide** — Step-by-step guide for Google Cloud credentials on VPS/Docker
+- **لوحة تحكم أدوات CLI** — صفحة مخصصة مع إعداد بنقرة واحدة لـ Claude Code، وCodex CLI، وOpenClaw، وKilo Code، وAntigravity، وCline
+- **GitHub Copilot Config Generator** — يُنشئ `chatLanguageModels.json` لرمز VS مع اختيار نموذج مجمع
+- **معالج الإعداد** — إعداد إرشادي من 4 خطوات للمستخدمين لأول مرة
+- **نقطة نهاية واحدة، جميع الطرز** — قم بتكوين `http://localhost:20128/v1` مرة واحدة، وقم بالوصول إلى أكثر من 36 موفرًا
 
 </details>
 
 <details>
-<summary><b>📊 9. "I don't know how much I'm spending or where"</b></summary>
+<summary><b>🔑 8. "إدارة رموز OAuth المميزة من موفري خدمات متعددين أمر جحيم"</b></summary>
 
-Developers use multiple paid providers but have no unified view of spending. Each provider has its own billing dashboard, but there's no consolidated view. Unexpected costs can pile up.
+Claude Code، وCodex، وGemini CLI، وCopilot — جميعهم يستخدمون OAuth 2.0 مع الرموز المميزة التي تنتهي صلاحيتها. يحتاج المطورون إلى إعادة المصادقة باستمرار، والتعامل مع `client_secret is missing`، و`redirect_uri_mismatch`، والفشل في الخوادم البعيدة. يعد OAuth على LAN/VPS مشكلة بشكل خاص.
 
-**How OmniRoute solves it:**
+**كيف يحل OmniRoute المشكلة:**
 
-- **Cost Analytics Dashboard** — Per-token cost tracking and budget management per provider
-- **Budget Limits per Tier** — Spending ceiling per tier that triggers automatic fallback
-- **Per-Model Pricing Configuration** — Configurable prices per model
-- **Usage Statistics Per API Key** — Request count and last-used timestamp per key
-- **Analytics Dashboard** — Stat cards, model usage chart, provider table with success rates and latency
-
-</details>
-
-<details>
-<summary><b>🐛 10. "I can't diagnose errors and problems in AI calls"</b></summary>
-
-When a call fails, the dev doesn't know if it was a rate limit, expired token, wrong format, or provider error. Fragmented logs across different terminals. Without observability, debugging is trial-and-error.
-
-**How OmniRoute solves it:**
-
-- **Unified Logs Dashboard** — 4 tabs: Request Logs, Proxy Logs, Audit Logs, Console
-- **Console Log Viewer** — Real-time terminal-style viewer with color-coded levels, auto-scroll, search, filter
-- **SQLite Proxy Logs** — Persistent logs that survive server restarts
-- **Translator Playground** — 4 debugging modes: Playground (format translation), Chat Tester (round-trip), Test Bench (batch), Live Monitor (real-time)
-- **Request Telemetry** — p50/p95/p99 latency + X-Request-Id tracing
-- **File-Based Logging with Rotation** — Console interceptor captures everything to JSON log with size-based rotation
+- **التحديث التلقائي للرمز المميز** — يتم تحديث رموز OAuth المميزة في الخلفية قبل انتهاء الصلاحية
+- **OAuth 2.0 (PKCE) مدمج** — التدفق التلقائي لـ Claude Code وCodex وGemini CLI وCopilot وKiro وQwen وiFlow
+- **OAuth متعدد الحسابات** — حسابات متعددة لكل مزود عبر استخراج الرمز المميز JWT/ID
+- **OAuth LAN/Remote Fix** — اكتشاف IP الخاص لـ `redirect_uri` + وضع URL اليدوي للخوادم البعيدة
+- **OAuth Behind Nginx** — يستخدم `window.location.origin` للتوافق مع الوكيل العكسي
+- **دليل OAuth عن بعد** — دليل خطوة بخطوة لبيانات اعتماد Google Cloud على VPS/Docker
 
 </details>
 
 <details>
-<summary><b>🏗️ 11. "Deploying and maintaining the gateway is complex"</b></summary>
+<summary><b>📊 9. "لا أعرف كم أنفق أو أين"</b></summary>
 
-Installing, configuring, and maintaining an AI proxy across different environments (local, VPS, Docker, cloud) is labor-intensive. Problems like hardcoded paths, `EACCES` on directories, port conflicts, and cross-platform builds add friction.
+يستخدم المطورون العديد من مقدمي الخدمات المدفوعة ولكن ليس لديهم رؤية موحدة للإنفاق. يمتلك كل مزود خدمة لوحة تحكم الفوترة الخاصة به، ولكن لا يوجد عرض موحد. التكاليف غير المتوقعة يمكن أن تتراكم.
 
-**How OmniRoute solves it:**
+**كيف يحل OmniRoute المشكلة:**
 
-- **npm global install** — `npm install -g omniroute && omniroute` — done
-- **Docker Multi-Platform** — AMD64 + ARM64 native (Apple Silicon, AWS Graviton, Raspberry Pi)
-- **Docker Compose Profiles** — `base` (no CLI tools) and `cli` (with Claude Code, Codex, OpenClaw)
-- **Electron Desktop App** — Native app for Windows/macOS/Linux with system tray, auto-start, offline mode
-- **Split-Port Mode** — API and Dashboard on separate ports for advanced scenarios (reverse proxy, container networking)
-- **Cloud Sync** — Config synchronization across devices via Cloudflare Workers
-- **DB Backups** — Automatic backup, restore, export and import of all settings
+- **لوحة معلومات تحليلات التكلفة** — تتبع التكلفة لكل رمز مميز وإدارة الميزانية لكل مزود
+- **حدود الميزانية لكل طبقة** — سقف الإنفاق لكل طبقة يؤدي إلى حدوث تراجع تلقائي
+- **تكوين التسعير لكل نموذج** — أسعار قابلة للتكوين لكل نموذج- **إحصاءات الاستخدام لكل مفتاح API** — عدد الطلبات والطابع الزمني الأخير المستخدم لكل مفتاح
+- **لوحة التحكم التحليلية** — بطاقات الإحصائيات، ومخطط استخدام النموذج، وجدول الموفر مع معدلات النجاح وزمن الاستجابة
 
 </details>
 
 <details>
-<summary><b>🌍 12. "The interface is English-only and my team doesn't speak English"</b></summary>
+<summary><b>🐛 10. "لا يمكنني تشخيص الأخطاء والمشكلات في مكالمات الذكاء الاصطناعي"</b></summary>
 
-Teams in non-English-speaking countries, especially in Latin America, Asia, and Europe, struggle with English-only interfaces. Language barriers reduce adoption and increase configuration errors.
+عندما تفشل المكالمة، لا يعرف المطور ما إذا كان هناك حد للسعر، أو رمز مميز منتهي الصلاحية، أو تنسيق خاطئ، أو خطأ في الموفر. سجلات مجزأة عبر محطات مختلفة. وبدون إمكانية الملاحظة، يكون تصحيح الأخطاء عبارة عن تجربة وخطأ.
 
-**How OmniRoute solves it:**
+**كيف يحل OmniRoute المشكلة:**
 
-- **Dashboard i18n — 30 Languages** — All 500+ keys translated including Arabic, Bulgarian, Danish, German, Spanish, Finnish, French, Hebrew, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Malay, Dutch, Norwegian, Polish, Portuguese (PT/BR), Romanian, Russian, Slovak, Swedish, Thai, Ukrainian, Vietnamese, Chinese, Filipino, English
-- **RTL Support** — Right-to-left support for Arabic and Hebrew
-- **Multi-Language READMEs** — 30 complete documentation translations
-- **Language Selector** — Globe icon in header for real-time switching
-
-</details>
-
-<details>
-<summary><b>🔄 13. "I need more than chat — I need embeddings, images, audio"</b></summary>
-
-AI isn't just chat completion. Devs need to generate images, transcribe audio, create embeddings for RAG, rerank documents, and moderate content. Each API has a different endpoint and format.
-
-**How OmniRoute solves it:**
-
-- **Embeddings** — `/v1/embeddings` with 6 providers and 9+ models
-- **Image Generation** — `/v1/images/generations` with 4 providers and 9+ models
-- **Audio Transcription** — `/v1/audio/transcriptions` — Whisper-compatible
-- **Text-to-Speech** — `/v1/audio/speech` — Multi-provider audio synthesis
-- **Moderations** — `/v1/moderations` — Content safety checks
-- **Reranking** — `/v1/rerank` — Document relevance reranking
-- **Responses API** — Full `/v1/responses` support for Codex
+- **لوحة تحكم السجلات الموحدة** — 4 علامات تبويب: سجلات الطلبات، وسجلات الوكيل، وسجلات التدقيق، ووحدة التحكم
+- **عارض سجل وحدة التحكم** — عارض بنمط المحطة الطرفية في الوقت الفعلي مع مستويات مرمزة بالألوان، والتمرير التلقائي، والبحث، والتصفية
+- **سجلات وكيل SQLite** — السجلات المستمرة التي تستمر حتى بعد إعادة تشغيل الخادم
+- **ساحة المترجم** — 4 أوضاع لتصحيح الأخطاء: ساحة اللعب (ترجمة التنسيق)، اختبار الدردشة (ذهابًا وإيابًا)، منصة الاختبار (دفعة)، المراقبة المباشرة (في الوقت الفعلي)
+- **قياس الطلب عن بعد** — زمن الاستجابة p50/p95/p99 + تتبع معرف طلب X
+- **التسجيل المستند إلى الملف مع التدوير** — يلتقط جهاز اعتراض وحدة التحكم كل شيء إلى سجل JSON من خلال التدوير المستند إلى الحجم
 
 </details>
 
 <details>
-<summary><b>🧪 14. "I have no way to test and compare quality across models"</b></summary>
+<summary><b>🏗️ 11. "إن نشر البوابة وصيانتها أمر معقد"</b></summary>
 
-Developers want to know which model is best for their use case — code, translation, reasoning — but comparing manually is slow. No integrated eval tools exist.
+يعد تثبيت وكيل AI وتكوينه وصيانته عبر بيئات مختلفة (محلية، VPS، Docker، سحابية) عملية كثيفة العمالة. مشاكل مثل المسارات المضمنة، `EACCES` في الدلائل، وتعارضات المنافذ، والبنيات عبر الأنظمة الأساسية تزيد من الاحتكاك.
 
-**How OmniRoute solves it:**
+**كيف يحل OmniRoute المشكلة:**
 
-- **LLM Evaluations** — Golden set testing with 10 pre-loaded cases covering greetings, math, geography, code generation, JSON compliance, translation, markdown, safety refusal
-- **4 Match Strategies** — `exact`, `contains`, `regex`, `custom` (JS function)
-- **Translator Playground Test Bench** — Batch testing with multiple inputs and expected outputs, cross-provider comparison
-- **Chat Tester** — Full round-trip with visual response rendering
-- **Live Monitor** — Real-time stream of all requests flowing through the proxy
-
-</details>
-
-<details>
-<summary><b>📈 15. "I need to scale without losing performance"</b></summary>
-
-As request volume grows, without caching the same questions generate duplicate costs. Without idempotency, duplicate requests waste processing. Per-provider rate limits must be respected.
-
-**How OmniRoute solves it:**
-
-- **Semantic Cache** — Two-tier cache (signature + semantic) reduces cost and latency
-- **Request Idempotency** — 5s deduplication window for identical requests
-- **Rate Limit Detection** — Per-provider RPM, min gap, and max concurrent tracking
-- **Editable Rate Limits** — Configurable defaults in Settings → Resilience with persistence
-- **API Key Validation Cache** — 3-tier cache for production performance
-- **Health Dashboard with Telemetry** — p50/p95/p99 latency, cache stats, uptime
+- **تثبيت npm الشامل** — `npm install -g omniroute && omniroute` — تم
+- **منصة Docker المتعددة** — AMD64 + ARM64 الأصلي (Apple Silicon، AWS Graviton، Raspberry Pi)
+- **ملفات تعريف Docker Compose** — `base` (لا توجد أدوات CLI) و`cli` (مع Claude Code وCodex وOpenClaw)
+- **Electron Desktop App** — تطبيق أصلي لنظام التشغيل Windows/macOS/Linux مع علبة النظام، والتشغيل التلقائي، ووضع عدم الاتصال
+- **وضع المنفذ المقسم** — واجهة برمجة التطبيقات ولوحة المعلومات على منافذ منفصلة للسيناريوهات المتقدمة (الوكيل العكسي، وشبكات الحاويات)
+- **Cloud Sync** — مزامنة التكوين عبر الأجهزة عبر Cloudflare Workers
+- **النسخ الاحتياطية لقاعدة البيانات** — النسخ الاحتياطي التلقائي لجميع الإعدادات واستعادتها وتصديرها واستيرادها
 
 </details>
 
 <details>
-<summary><b>🤖 16. "I want to control model behavior globally"</b></summary>
+<summary><b>🌍 12. "الواجهة باللغة الإنجليزية فقط وفريقي لا يتحدث الإنجليزية"</b></summary>
 
-Developers who want all responses in a specific language, with a specific tone, or want to limit reasoning tokens. Configuring this in every tool/request is impractical.
+تواجه الفرق في البلدان غير الناطقة باللغة الإنجليزية، وخاصة في أمريكا اللاتينية وآسيا وأوروبا، صعوبة في التعامل مع الواجهات التي تستخدم اللغة الإنجليزية فقط. تعمل حواجز اللغة على تقليل الاعتماد وزيادة أخطاء التكوين.
 
-**How OmniRoute solves it:**
+**كيف يحل OmniRoute المشكلة:**
 
-- **System Prompt Injection** — Global prompt applied to all requests
-- **Thinking Budget Validation** — Reasoning token allocation control per request (passthrough, auto, custom, adaptive)
-- **6 Routing Strategies** — Global strategies that determine how requests are distributed
-- **Wildcard Router** — `provider/*` patterns route dynamically to any provider
-- **Combo Enable/Disable Toggle** — Toggle combos directly from the dashboard
-- **Provider Toggle** — Enable/disable all connections for a provider with one click
-- **Blocked Providers** — Exclude specific providers from `/v1/models` listing
+- **لوحة المعلومات i18n — 30 لغة** — أكثر من 500 مفتاح مترجم بما في ذلك العربية والبلغارية والدنماركية والألمانية والإسبانية والفنلندية والفرنسية والعبرية والهندية والمجرية والإندونيسية والإيطالية واليابانية والكورية والماليزية والهولندية والنرويجية والبولندية والبرتغالية (PT/BR) والرومانية والروسية والسلوفاكية والسويدية والتايلاندية والأوكرانية والفيتنامية والصينية والفلبينية والإنجليزية
+- **دعم RTL** — دعم من اليمين إلى اليسار للغتين العربية والعبرية
+- **الملفات التمهيدية متعددة اللغات** — 30 ترجمة كاملة للوثائق
+- **محدد اللغة** — رمز الكرة الأرضية في رأس الصفحة للتبديل في الوقت الفعلي</details>
+
+<details>
+<summary><b>🔄 13. "أحتاج إلى أكثر من مجرد الدردشة - أحتاج إلى التضمين والصور والصوت"</b></summary>
+
+الذكاء الاصطناعي ليس مجرد استكمال للدردشة. يحتاج المطورون إلى إنشاء صور، ونسخ الصوت، وإنشاء تضمينات لـ RAG، وإعادة ترتيب المستندات، والإشراف على المحتوى. تحتوي كل واجهة برمجة تطبيقات على نقطة نهاية وتنسيق مختلفين.
+
+**كيف يحل OmniRoute المشكلة:**
+
+- **التضمينات** — `/v1/embeddings` مع 6 موفري خدمة وأكثر من 9 نماذج
+- **إنشاء الصور** — `/v1/images/generations` مع 10 موفرين وأكثر من 20 نموذجًا (OpenAI، وxAI، وTogether، وFireworks، وNebius، وHyperbolic، وNanoBanana، وAntigravity، وSD WebUI، وComfyUI)
+- **تحويل النص إلى فيديو** — `/v1/videos/generations` — ComfyUI (AnimateDiff، SVD) وSD WebUI
+- **تحويل النص إلى موسيقى** — `/v1/music/generations` — ComfyUI (فتح الصوت الثابت، MusicGen)
+- **النسخ الصوتي** — `/v1/audio/transcriptions` — Whisper + Nvidia NIM، HuggingFace، Qwen3
+- **تحويل النص إلى كلام** — `/v1/audio/speech` — ElevenLabs، وNvidia NIM، وHuggingFace، وCoqui، وTortoise، وQwen3، بالإضافة إلى مقدمي الخدمات الحاليين
+- **الإشراف** — `/v1/moderations` — التحقق من سلامة المحتوى
+- **إعادة الترتيب** — `/v1/rerank` — إعادة ترتيب مدى ملاءمة المستند
+- **Responses API** — دعم `/v1/responses` الكامل لـ Codex
 
 </details>
+
+<details>
+<summary><b>🧪 14. "ليس لدي طريقة لاختبار ومقارنة الجودة عبر النماذج"</b></summary>
+
+يرغب المطورون في معرفة النموذج الأفضل لحالة الاستخدام الخاصة بهم - التعليمات البرمجية، والترجمة، والتفكير - ولكن المقارنة يدويًا بطيئة. لا توجد أدوات تقييم متكاملة.
+
+**كيف يحل OmniRoute المشكلة:**
+
+- ** تقييمات LLM ** — اختبار المجموعة الذهبية مع 10 حالات محملة مسبقًا تغطي التحيات، والرياضيات، والجغرافيا، وإنشاء التعليمات البرمجية، والامتثال لـ JSON، والترجمة، وتخفيض السعر، والرفض الآمن
+- **4 إستراتيجيات مطابقة** — `exact`، `contains`، `regex`، `custom` (وظيفة JS)
+- **منصة اختبار ساحة المترجم** — اختبار الدفعات بمدخلات متعددة ومخرجات متوقعة، ومقارنة بين الموفرين
+- **أداة اختبار الدردشة** — رحلة ذهابًا وإيابًا كاملة مع عرض الاستجابة المرئية
+- **المراقبة المباشرة** — البث المباشر لجميع الطلبات المتدفقة عبر الوكيل
+
+</details>
+
+<details>
+<summary><b>📈 15. "أحتاج إلى التوسع دون فقدان الأداء"</b></summary>
+
+مع نمو حجم الطلب، يؤدي عدم التخزين المؤقت لنفس الأسئلة إلى توليد تكاليف مكررة. دون العجز، طلبات مكررة معالجة النفايات. يجب احترام حدود الأسعار لكل مزود.
+
+**كيف يحل OmniRoute المشكلة:**
+
+- **ذاكرة التخزين المؤقت الدلالية** — تعمل ذاكرة التخزين المؤقت ذات المستويين (التوقيع + الدلالي) على تقليل التكلفة ووقت الاستجابة
+- **صلاحية الطلب** — نافذة إلغاء البيانات المكررة لمدة 5 ثوانٍ للطلبات المتماثلة
+- **الكشف عن حدود المعدل** — عدد الدورات في الدقيقة لكل مزود، والفجوة الدنيا، والحد الأقصى للتتبع المتزامن
+- **حدود المعدل القابلة للتحرير** — الإعدادات الافتراضية القابلة للتكوين في الإعدادات → المرونة مع الثبات
+- **ذاكرة التخزين المؤقت للتحقق من صحة مفتاح واجهة برمجة التطبيقات** — ذاكرة تخزين مؤقت ثلاثية الطبقات لأداء الإنتاج
+- **لوحة معلومات الصحة مع القياس عن بعد** — زمن الاستجابة p50/p95/p99، وإحصائيات ذاكرة التخزين المؤقت، ووقت التشغيل
+
+</details>
+
+<details>
+<summary><b>🤖 16. "أريد التحكم في سلوك النموذج عالميًا"</b></summary>المطورون الذين يريدون جميع الاستجابات بلغة معينة، بنبرة معينة، أو يريدون الحد من الرموز المميزة للاستدلال. يعد تكوين هذا في كل أداة/طلب أمرًا غير عملي.
+
+**كيف يحل OmniRoute المشكلة:**
+
+- **الحقن الفوري للنظام** — يتم تطبيق المطالبة العامة على جميع الطلبات
+- **التحقق من صحة ميزانية التفكير** — التحكم في تخصيص الرمز المميز لكل طلب (العبور، التلقائي، المخصص، التكيفي)
+- **6 إستراتيجيات التوجيه** — إستراتيجيات عالمية تحدد كيفية توزيع الطلبات
+- **Wildcard Router** — يتم توجيه أنماط `provider/*` ديناميكيًا إلى أي مزود
+- **تبديل تمكين/تعطيل التحرير والسرد** — تبديل المجموعات مباشرة من لوحة المعلومات
+- **تبديل الموفر** — تمكين/تعطيل جميع اتصالات الموفر بنقرة واحدة
+- **المقدمون المحظورون** — استبعاد موفري الخدمة المحددين من قائمة `/v1/models`
+
+</details>
+
+<details>
+<summary><b>🧰 17. "أحتاج إلى أدوات MCP كقدرات منتج من الدرجة الأولى"</b></summary>
+
+تعرض العديد من بوابات الذكاء الاصطناعي MCP فقط كتفاصيل تنفيذ مخفية. تحتاج الفرق إلى طبقة تشغيل مرئية ويمكن التحكم فيها.
+
+**كيف يحل OmniRoute المشكلة:**
+
+- يظهر MCP في لوحة التحكم وعلامة تبويب بروتوكول نقطة النهاية
+- صفحة إدارة MCP مخصصة تحتوي على العمليات والأدوات والنطاقات والتدقيق
+- بداية سريعة مدمجة لـ `omniroute --mcp` وتأهيل العميل
+
+</details>
+
+<details>
+<summary><b>🧠 18. "أحتاج إلى تنسيق A2A مع مسارات مهمة المزامنة + الدفق"</b></summary>
+
+تحتاج مسارات عمل الوكيل إلى ردود مباشرة وتنفيذ متدفق طويل الأمد مع التحكم في دورة الحياة.
+
+**كيف يحل OmniRoute المشكلة:**
+
+- نقطة نهاية A2A JSON-RPC (`POST /a2a`) مع `message/send` و`message/stream`
+- تدفق SSE مع انتشار الحالة الطرفية
+- واجهات برمجة تطبيقات دورة حياة المهام لـ `tasks/get` و`tasks/cancel`
+
+</details>
+
+<details>
+<summary><b>🛰️ 19. "أحتاج إلى صحة عملية MCP حقيقية، وليس حالة تخمينية"</b></summary>
+
+تحتاج الفرق التشغيلية إلى معرفة ما إذا كان MCP حيًا بالفعل، وليس فقط ما إذا كان يمكن الوصول إلى واجهة برمجة التطبيقات (API).
+
+**كيف يحل OmniRoute المشكلة:**
+
+- ملف نبضات وقت التشغيل مع PID والطوابع الزمنية والنقل وعدد الأدوات ووضع النطاق
+- واجهة برمجة تطبيقات حالة MCP التي تجمع بين نبضات القلب + النشاط الأخير
+- بطاقات حالة واجهة المستخدم للعملية/وقت التشغيل/نضارة نبضات القلب
+
+</details>
+
+<details>
+<summary><b>📋 20. "أحتاج إلى تنفيذ أداة MCP قابلة للتدقيق"</b></summary>
+
+عندما تقوم الأدوات بتغيير التكوين أو تشغيل إجراءات العمليات، تحتاج الفرق إلى إمكانية التتبع الجنائي.
+
+**كيف يحل OmniRoute المشكلة:**
+
+- تسجيل التدقيق المدعوم من SQLite لاستدعاءات أداة MCP
+- عوامل التصفية حسب الأداة، والنجاح/الفشل، ومفتاح API، وترقيم الصفحات
+- جدول تدقيق لوحة المعلومات + إحصائيات نقاط النهاية للأتمتة
+
+</details>
+
+<details>
+<summary><b>🔐 21. "أحتاج إلى أذونات MCP محددة النطاق لكل عملية تكامل"</b></summary>
+
+يجب أن يتمتع العملاء المختلفون بإمكانية وصول أقل امتيازًا إلى فئات الأدوات.
+
+**كيف يحل OmniRoute المشكلة:**
+
+- 9 نطاقات MCP محببة للتحكم في الوصول إلى الأدوات
+- إنفاذ النطاق والرؤية في واجهة مستخدم إدارة MCP
+- الوضع الافتراضي الآمن للأدوات التشغيلية
+
+</details>
+
+<details><summary><b>⚙️ 22. "أحتاج إلى عناصر تحكم تشغيلية دون إعادة النشر"</b></summary>
+
+تحتاج الفرق إلى تغييرات سريعة في وقت التشغيل أثناء الحوادث أو أحداث التكلفة.
+
+**كيف يحل OmniRoute المشكلة:**
+
+- قم بتبديل تنشيط التحرير والسرد مباشرةً من لوحة معلومات MCP
+- تطبيق ملفات تعريف المرونة من حزم السياسات المحددة مسبقًا
+- إعادة ضبط حالة قاطع الدائرة من نفس لوحة العمليات
+
+</details>
+
+<details>
+<summary><b>🔄 23. "أحتاج إلى رؤية وإلغاء دورة حياة مهمة A2A المباشرة"</b></summary>
+
+وبدون رؤية دورة الحياة، يصبح من الصعب فرز حوادث المهام.
+
+**كيف يحل OmniRoute المشكلة:**
+
+- قائمة المهام/التصفية حسب الحالة/المهارة مع ترقيم الصفحات
+- التعمق في البيانات الوصفية للمهمة، والأحداث، والتحف
+- نقطة نهاية إلغاء المهمة وإجراء واجهة المستخدم مع التأكيد
+
+</details>
+
+<details>
+<summary><b>🌊 24. "أحتاج إلى مقاييس تيار نشطة لتحميل A2A"</b></summary>
+
+يتطلب تدفق سير العمل رؤية تشغيلية للتزامن والاتصالات المباشرة.
+
+**كيف يحل OmniRoute المشكلة:**
+
+- عدادات التدفق النشطة مدمجة في حالة A2A
+- الطابع الزمني للمهمة الأخيرة وعدد كل ولاية
+- بطاقات لوحة القيادة A2A لمراقبة العمليات في الوقت الفعلي
+
+</details>
+
+<details>
+<summary><b>🪪 25. "أحتاج إلى اكتشاف الوكيل القياسي للعملاء"</b></summary>
+
+يحتاج العملاء والمنسقون الخارجيون إلى بيانات تعريف يمكن قراءتها آليًا من أجل الإعداد.
+
+**كيف يحل OmniRoute المشكلة:**
+
+- بطاقة الوكيل معروضة في `/.well-known/agent.json`
+- القدرات والمهارات الموضحة في واجهة المستخدم الإدارية
+- تتضمن واجهة برمجة التطبيقات لحالة A2A بيانات تعريف الاكتشاف للأتمتة
+
+</details>
+
+<details>
+<summary><b>🧭 26. "أحتاج إلى إمكانية اكتشاف البروتوكول في تجربة المستخدم للمنتج"</b></summary>
+
+إذا لم يتمكن المستخدمون من اكتشاف أسطح البروتوكول، فسوف ينخفض جودة الاعتماد والدعم.
+
+**كيف يحل OmniRoute المشكلة:**
+
+- إدخالات الشريط الجانبي لـ MCP وA2A
+- علامة تبويب بروتوكولات صفحة نقطة النهاية مع البدء السريع والحالة
+- روابط من النظرة العامة إلى لوحات معلومات الإدارة المخصصة
+
+</details>
+
+<details>
+<summary><b>🧪 27. "أحتاج إلى التحقق من صحة البروتوكول الشامل مع عملاء حقيقيين"</b></summary>
+
+الاختبارات الوهمية ليست كافية للتحقق من توافق البروتوكول قبل الإصدار.
+
+**كيف يحل OmniRoute المشكلة:**
+
+- مجموعة E2E التي تعمل على تشغيل التطبيق وتستخدم نقل عميل MCP SDK الحقيقي
+- اختبارات عميل A2A لاكتشاف التدفقات وإرسالها ودفقها والحصول عليها وإلغائها
+- التحقق من التأكيدات ضد تدقيق MCP وواجهات برمجة تطبيقات مهام A2A
+
+</details>
+
+<details>
+<summary><b>📡 28. "أحتاج إلى إمكانية ملاحظة موحدة عبر جميع الواجهات"</b></summary>
+
+يؤدي تقسيم إمكانية المراقبة حسب البروتوكول إلى إنشاء نقاط عمياء وMTTR أطول.
+
+**كيف يحل OmniRoute المشكلة:**
+
+- لوحات معلومات/سجلات/تحليلات موحدة في منتج واحد
+- الصحة + التدقيق + طلب القياس عن بعد عبر طبقات OpenAI وMCP وA2A
+- واجهات برمجة التطبيقات التشغيلية للحالة والأتمتة
+
+</details>
+
+<details>
+<summary><b>💼 29. "أحتاج إلى وقت تشغيل واحد للوكيل + الأدوات + تنسيق الوكيل"</b></summary>
+
+يؤدي تشغيل العديد من الخدمات المنفصلة إلى زيادة تكلفة التشغيل وأوضاع الفشل.
+
+**كيف يحل OmniRoute المشكلة:**- وكيل متوافق مع OpenAI وخادم MCP وخادم A2A في مكدس واحد
+
+- المصادقة المشتركة والمرونة وتخزين البيانات وإمكانية الملاحظة
+- نموذج سياسة متسق عبر جميع أسطح التفاعل
+
+</details>
+
+<details>
+<summary><b>🚀 30. "أحتاج إلى شحن عمليات سير عمل الوكيل دون امتداد كود الغراء"</b></summary>
+
+تفقد الفرق سرعتها عند دمج العديد من الخدمات والبرامج النصية المخصصة.
+
+**كيف يحل OmniRoute المشكلة:**
+
+- استراتيجية نقطة النهاية الموحدة للعملاء والوكلاء
+- واجهات مستخدم لإدارة البروتوكول مدمجة ومسارات التحقق من صحة الدخان
+- أسس جاهزة للإنتاج (الأمان، التسجيل، المرونة، النسخ الاحتياطي)
+
+</details>
+
+### أمثلة لقواعد اللعبة (حالات الاستخدام المتكاملة)
+
+** قواعد اللعبة أ: زيادة الاشتراك المدفوع إلى الحد الأقصى + نسخة احتياطية رخيصة **
+
+```txt
+Combo: "maximize-claude"
+  1. cc/claude-opus-4-6
+  2. glm/glm-4.7
+  3. if/kimi-k2-thinking
+
+Monthly cost: $20 + small backup spend
+Outcome: higher quality, near-zero interruption
+```
+
+**دليل التشغيل ب: مكدس البرمجة بدون تكلفة**
+
+```txt
+Combo: "free-forever"
+  1. gc/gemini-3-flash
+  2. if/kimi-k2-thinking
+  3. qw/qwen3-coder-plus
+
+Monthly cost: $0
+Outcome: stable free coding workflow
+```
+
+**Playbook C: سلسلة احتياطية تعمل دائمًا على مدار 24 ساعة طوال أيام الأسبوع**
+
+```txt
+Combo: "always-on"
+  1. cc/claude-opus-4-6
+  2. cx/gpt-5.2-codex
+  3. glm/glm-4.7
+  4. minimax/MiniMax-M2.1
+  5. if/kimi-k2-thinking
+
+Outcome: deep fallback depth for deadline-critical workloads
+```
+
+**قواعد اللعبة د: عمليات العميل مع MCP + A2A**
+
+```txt
+1) Start MCP transport (`omniroute --mcp`) for tool-driven operations
+2) Run A2A tasks via `message/send` and `message/stream`
+3) Observe via /dashboard/mcp and /dashboard/a2a
+4) Control incidents with resilience profile + task cancellation
+```
+
+---
 
 ## ⚡ بداية سريعة
 
-**1. التثبيت عالميًا:**
+### 1) التثبيت والتشغيل
 
 ```bash
 npm install -g omniroute
 omniroute
 ```
 
-🎉 تفتح لوحة التحكم في `http://localhost:20128`
+يتم فتح لوحة المعلومات على `http://localhost:20128` ويكون عنوان URL الأساسي لواجهة برمجة التطبيقات هو `http://localhost:20128/v1`.
 
-| الأمر                   | الوصف                                     |
-| ----------------------- | ----------------------------------------- |
-| `omniroute`             | بدء تشغيل الخادم (المنفذ الافتراضي 20128) |
-| `omniroute --port 3000` | استخدم المنفذ المخصص                      |
-| `omniroute --no-open`   | لا تفتح المتصفح تلقائيًا                  |
-| `omniroute --help`      | عرض المساعدة                              |
+| الأمر                   | الوصف                                                                                 |
+| ----------------------- | ------------------------------------------------------------------------------------- |
+| `omniroute`             | بدء تشغيل الخادم (`PORT=20128` وواجهة برمجة التطبيقات ولوحة المعلومات على نفس المنفذ) |
+| `omniroute --port 3000` | اضبط منفذ Canonical/API على 3000                                                      |
+| `omniroute --mcp`       | بدء تشغيل خادم MCP (نقل stdio)                                                        |
+| `omniroute --no-open`   | لا تفتح المتصفح تلقائيًا                                                              |
+| `omniroute --help`      | عرض المساعدة                                                                          |
 
-**2. الاتصال بمزود مجاني: **
+وضع المنفذ المقسم الاختياري:
 
-لوحة التحكم → الموفرون → الاتصال **Claude Code** أو **Antigravity** → تسجيل الدخول OAuth → تم!
-
-**3. استخدم في أداة CLI الخاصة بك:**
-
-```
-Claude Code/Codex/Gemini CLI/OpenClaw/Cursor/Cline Settings:
-  Endpoint: http://localhost:20128/v1
-  API Key: [copy from dashboard]
-  Model: if/kimi-k2-thinking
+```bash
+PORT=20128 DASHBOARD_PORT=20129 omniroute
+# API:       http://localhost:20128/v1
+# Dashboard: http://localhost:20129
 ```
 
-**هذا كل شيء!** ابدأ البرمجة باستخدام نماذج الذكاء الاصطناعي المجانية.
+### 2) قم بتوصيل مقدمي الخدمة وإنشاء مفتاح واجهة برمجة التطبيقات (API) الخاص بك
 
-** البديل - تشغيل من المصدر: **
+1. افتح لوحة المعلومات → `Providers` وقم بتوصيل موفر واحد على الأقل (مفتاح OAuth أو API).
+2. افتح لوحة المعلومات → `Endpoint` وقم بإنشاء مفتاح API.
+3. (اختياري) افتح Dashboard → `Combos` وقم بتعيين السلسلة الاحتياطية.
+
+### 3) قم بتوجيه أداة الترميز الخاصة بك إلى OmniRoute
+
+```txt
+Base URL: http://localhost:20128/v1
+API Key:  [copy from Endpoint page]
+Model:    if/kimi-k2-thinking (or any provider/model prefix)
+```
+
+يعمل مع Claude Code، وCodex CLI، وGemini CLI، وCursor، وCline، وOpenClaw، وOpenCode، وحزم SDK المتوافقة مع OpenAI.
+
+### 4) تمكين البروتوكولات والتحقق من صحتها (الإصدار 2.0)
+
+**MCP (للعمليات التي تعتمد على الأدوات):**
+
+```bash
+omniroute --mcp
+```
+
+ثم قم بتوصيل عميل MCP الخاص بك عبر `stdio` وأدوات الاختبار مثل:
+
+-`omniroute_get_health` -`omniroute_list_combos`
+
+**A2A (لسير العمل من وكيل إلى وكيل):**
+
+```bash
+curl http://localhost:20128/.well-known/agent.json
+```
+
+```bash
+curl -X POST http://localhost:20128/a2a \
+  -H 'content-type: application/json' \
+  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
+```
+
+### 5) التحقق من صحة كل شيء من البداية إلى النهاية (مستحسن)
+
+```bash
+npm run test:protocols:e2e
+```
+
+يتحقق هذا الجناح من تدفقات عميل MCP وA2A الحقيقية مقابل تطبيق قيد التشغيل.
+
+### البديل: التشغيل من المصدر
 
 ```bash
 cp .env.example .env
 npm install
-PORT=20128 NEXT_PUBLIC_BASE_URL=http://localhost:20128 npm run dev
+PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
 ---
@@ -504,26 +807,38 @@ docker compose --profile cli up -d
 
 ---
 
----
+## 🖥️
 
-## 🖥️ تطبيق سطح المكتب — غير متصل ومتاح دائمًا
+قم بتشغيل OmniRoute كتطبيق مستقل لسطح المكتب - لا توجد محطة طرفية أو متصفح أو إنترنت مطلوب للطرز المحلية. يتضمن التطبيق المعتمد على Electron ما يلي:
 
-> 🆕 **جديد!** أصبح OmniRoute متاحًا الآن كـ **تطبيق سطح مكتب أصلي** لنظام Windows وmacOS وLinux.
+- 🖥️ **النافذة الأصلية** — نافذة تطبيق مخصصة مع تكامل علبة النظام
+- 🔄 **البدء التلقائي** — قم بتشغيل OmniRoute عند تسجيل الدخول إلى النظام
+- 🔔 **الإشعارات الأصلية** — احصل على تنبيهات بشأن استنفاد الحصص أو مشكلات المزود
+- ⚡ **التثبيت بنقرة واحدة** — NSIS (Windows)، DMG (macOS)، AppImage (Linux)
+- 🌐 **وضع عدم الاتصال بالإنترنت** — يعمل بشكل كامل دون اتصال بالإنترنت مع الخادم المُجمَّع
 
-- 🖥️ **نافذة أصلية** — نافذة مخصصة مع تكامل شريط النظام
-- 🔄 **بدء تلقائي** — تشغيل OmniRoute عند تسجيل الدخول
-- 🔔 **إشعارات أصلية** — تنبيهات عند نفاد الحصة
-- ⚡ **تثبيت بنقرة واحدة** — NSIS (Windows)، DMG (macOS)، AppImage (Linux)
-- 🌐 **وضع غير متصل** — يعمل بالكامل بدون إنترنت
+### بداية سريعة
 
 ```bash
-npm run electron:dev           # وضع التطوير
+# Development mode
+npm run electron:dev
+
+# Build for your platform
+npm run electron:build         # Current platform
 npm run electron:build:win     # Windows (.exe)
-npm run electron:build:mac     # macOS (.dmg)
+npm run electron:build:mac     # macOS (.dmg) — x64 & arm64
 npm run electron:build:linux   # Linux (.AppImage)
 ```
 
-📖 التوثيق الكامل: [`electron/README.md`](electron/README.md)
+### علبة النظام
+
+عند تصغيره، يظل OmniRoute موجودًا في علبة النظام لديك من خلال الإجراءات السريعة:
+
+- فتح لوحة القيادة
+- تغيير منفذ الخادم
+- قم بإنهاء التطبيق
+
+📖 التوثيق الكامل : [`electron/README.md`](electron/README.md)
 
 ---
 
@@ -548,239 +863,223 @@ npm run electron:build:linux   # Linux (.AppImage)
 |                                    | كوين                         | $0                     | غير محدود               | 3 نماذج مجانية            |
 |                                    | كيرو                         | $0                     | غير محدود               | كلود مجاني                |
 
-**💡 نصيحة احترافية:** ابدأ مع مجموعة Gemini CLI (180 ألفًا مجانًا شهريًا) + مجموعة iFlow (مجانية غير محدودة) = تكلفة 0 دولار!
+**💡 نصيحة احترافية:** ابدأ مع Gemini CLI (180 ألفًا مجانًا شهريًا) + مجموعة iFlow (مجانية غير محدودة) = تكلفة 0 دولار!
 
 ---
 
 ## 💡 الميزات الرئيسية
 
-### 🧠 التوجيه الأساسي والذكاء
+تم تصميم OmniRoute v2.0 كمنصة تشغيلية، وليس مجرد وكيل ترحيل.
 
-| ميزة                              | ماذا يفعل                                                                                      |
-| --------------------------------- | ---------------------------------------------------------------------------------------------- |
-| 🎯 **احتياطي ذكي من 4 طبقات**     | المسار التلقائي: الاشتراك → مفتاح API → رخيص → مجاني                                           |
-| 📊 **تتبع الحصص في الوقت الفعلي** | عدد الرموز الحية + إعادة تعيين العد التنازلي لكل مزود                                          |
-| 🔄 **تنسيق الترجمة**              | OpenAI ↔ كلود ↔ الجوزاء ↔ المؤشر ↔ كيرو سلس + تعقيم الاستجابة                                  |
-| 👥 **دعم الحسابات المتعددة**      | حسابات متعددة لكل مزود مع اختيار ذكي                                                           |
-| 🔄 **تحديث تلقائي للرمز**         | يتم تحديث رموز OAuth المميزة تلقائيًا من خلال إعادة المحاولة                                   |
-| 🎨 **مجموعات مخصصة**              | 6 إستراتيجيات: التعبئة أولاً، الجولة روبن، P2C، عشوائي، الأقل استخدامًا، الأمثل من حيث التكلفة |
-| 🧩 **نماذج مخصصة**                | أضف أي معرف نموذج إلى أي مزود                                                                  |
-| 🌐 **جهاز توجيه Wildcard**        | قم بتوجيه أنماط `provider/*` إلى أي مزود ديناميكيًا                                            |
-| 🧠 **ميزانية التفكير**            | أوضاع العبور والتلقائي والمخصص والتكيفي لنماذج الاستدلال                                       |
-| 🔀 **Model Aliases**              | Auto-forward deprecated model IDs to current replacements (built-in + custom)                  |
-| ⚡ **Background Degradation**     | Auto-route background tasks (titles, summaries) to cheaper models                              |
-| 💬 **الحقن الفوري للنظام**        | يتم تطبيق موجه النظام العالمي على كافة الطلبات                                                 |
-| 📄 **Responses API**              | دعم واجهة برمجة تطبيقات استجابات OpenAI الكاملة (`/v1/responses`) لـ Codex                     |
+### 🤖 عمليات الوكيل والبروتوكول (الإصدار 2.0)| ميزة | ماذا يفعل |
+
+| ------------------------------------ | -------------------------------------------------------------------------------- |
+| 🔧 **خادم MCP (16 أداة)** | تتحكم أدوات IDE/agent في التوجيه والصحة والمجموعات والحدود والعمليات |
+| 🤝 **خادم A2A (JSON-RPC + SSE)** | تنفيذ المهام من وكيل إلى وكيل مع تدفقات المزامنة والتدفق |
+| 🧭 **لوحات المعلومات MCP/A2A** | صفحات إدارة مخصصة (`/dashboard/mcp`, `/dashboard/a2a`) |
+| 🛰️ **نبضات وقت تشغيل MCP** | حالة العملية الحقيقية (معرف المنتج، وقت التشغيل، عمر نبضات القلب، النقل، وضع النطاق) |
+| 📋 **مسار تدقيق MCP** | سجلات التدقيق القابلة للتصفية مع النجاح/الفشل والإسناد الرئيسي |
+| 🔐 **تنفيذ نطاق MCP** | 9 أذونات نطاق تفصيلية للوصول إلى الأدوات الخاضعة للرقابة |
+| 📡 **إدارة دورة حياة المهام A2A** | قائمة/تصفية المهام، فحص الأحداث/التحف، إلغاء المهام قيد التشغيل |
+| 📋 **اكتشاف بطاقة الوكيل** | `/.well-known/agent.json` للاكتشاف التلقائي للعميل |
+| 🧪 **أداة اختبار البروتوكول E2E** | يتدفق عميل MCP SDK + A2A الحقيقي في `test:protocols:e2e` |
+| ⚙️ **ضوابط التشغيل** | مجموعة التبديل، وتطبيق ملفات تعريف المرونة، وإعادة ضبط القواطع من سطح تحكم واحد |
+
+### 🧠 التوجيه والاستخبارات
+
+| ميزة                                      | ماذا يفعل                                                    |
+| ----------------------------------------- | ------------------------------------------------------------ |
+| 🎯 **احتياطي ذكي من 4 طبقات**             | المسار التلقائي: الاشتراك → مفتاح API → رخيص → مجاني         |
+| 📊 **تتبع الحصص في الوقت الفعلي**         | عدد الرموز الحية + إعادة تعيين العد التنازلي لكل مزود        |
+| 🔄 **تنسيق الترجمة**                      | OpenAI ↔ Claude ↔ Gemini ↔ الردود مع التحويلات الآمنة للمخطط |
+| 👥 **دعم الحسابات المتعددة**              | حسابات متعددة لكل مزود مع اختيار ذكي                         |
+| 🔄 **تحديث تلقائي للرمز**                 | يتم تحديث رموز OAuth المميزة تلقائيًا من خلال إعادة المحاولة |
+| 🎨 **مجموعات مخصصة**                      | 6 استراتيجيات موازنة + التحكم في السلسلة الاحتياطية          |
+| 🌐 **جهاز توجيه Wildcard**                | التوجيه الديناميكي `provider/*`                              |
+| 🧠 **التفكير في ضوابط الميزانية**         | حدود التفكير المنطقي والتلقائي والمخصص والتكيفي              |
+| 🔀 **الأسماء المستعارة للنماذج**          | مدمج + اسم مستعار للنموذج المخصص وأمان الترحيل               |
+| ⚡ **تدهور الخلفية**                      | قم بتوجيه مهام الخلفية ذات الأولوية المنخفضة إلى نماذج أرخص  |
+| 💬 **الحقن الفوري للنظام**                | يتم تطبيق ضوابط السلوك العالمية بشكل متسق                    |
+| 📄 **توافق واجهة برمجة التطبيقات للردود** | دعم `/v1/responses` الكامل لـ Codex وسير عمل الوكلاء المتقدم |
 
 ### 🎵 واجهات برمجة التطبيقات متعددة الوسائط
 
-| ميزة                       | ماذا يفعل                                                 |
-| -------------------------- | --------------------------------------------------------- |
-| 🖼️ **إنشاء الصور**         | `/v1/images/generations` — 4 مقدمي خدمات، أكثر من 9 نماذج |
-| 📐 **المضامين**            | `/v1/embeddings` — 6 مقدمي خدمات، أكثر من 9 نماذج         |
-| 🎤 **نسخ صوتي**            | `/v1/audio/transcriptions` — متوافق مع الهمس              |
-| 🔊 **تحويل النص إلى كلام** | `/v1/audio/speech` — تركيب صوتي متعدد الموفرين            |
-| 🛡️ **اعتدالات**            | `/v1/moderations` — فحوصات سلامة المحتوى                  |
-| 🔀 **إعادة الترتيب**       | `/v1/rerank` — إعادة ترتيب مدى صلة الوثيقة                |
+| ميزة | ماذا يفعل || -------------------------- | ------------------------------------------------------------- |
+| 🖼️ **إنشاء الصور** | `/v1/images/generations` مع الواجهات الخلفية السحابية والمحلية |
+| 📐 **المضامين** | `/v1/embeddings` للبحث وخطوط أنابيب RAG |
+| 🎤 **نسخ صوتي** | `/v1/audio/transcriptions` (مقدمو خدمات الهمس والإضافيون) |
+| 🔊 **تحويل النص إلى كلام** | `/v1/audio/speech` (محركات/موفرو متعددون) |
+| 🎬 **توليد الفيديو** | `/v1/videos/generations` (سير عمل ComfyUI + SD WebUI) |
+| 🎵 **جيل الموسيقى** | `/v1/music/generations` (سير عمل ComfyUI) |
+| 🛡️ **اعتدالات** | فحوصات السلامة `/v1/moderations` |
+| 🔀 **إعادة الترتيب** | `/v1/rerank` لقياس مدى الملاءمة |
 
-### 🛡️ المرونة والأمان
+### 🛡️ المرونة والأمن والحوكمة
 
-| ميزة                                          | ماذا يفعل                                                                                   |
-| --------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| 🔌 **قاطع الدائرة**                           | فتح/إغلاق تلقائي لكل مزود مع حدود قابلة للتكوين                                             |
-| 🛡️ **القطيع المضاد للرعد**                    | الحد الأقصى لمعدل Mutex + الإشارة لموفري مفاتيح API                                         |
-| 🧠 **ذاكرة التخزين المؤقت الدلالية**          | ذاكرة التخزين المؤقت ذات المستويين (التوقيع + الدلالي) تقلل التكلفة وزمن الوصول             |
-| ⚡ **طلب العجز**                              | نافذة 5s dedup للطلبات المكررة                                                              |
-| 🔒 **انتحال بصمة الإصبع TLS**                 | تجاوز اكتشاف الروبوتات المستندة إلى TLS عبر wreq-js                                         |
-| 🌐 **تصفية IP**                               | القائمة المسموح بها/القائمة المحظورة للتحكم في الوصول إلى واجهة برمجة التطبيقات             |
-| 📊 **حدود المعدل القابلة للتحرير**            | عدد الدورات في الدقيقة القابل للتكوين والفجوة الدنيا والحد الأقصى المتزامن على مستوى النظام |
-| 💾 **Rate Limit Persistence**                 | Learned limits survive restarts via SQLite with 60s debounce + 24h staleness                |
-| 🔄 **Token Refresh Resilience**               | Per-provider circuit breaker (5 fails→30min) + 30s timeout per attempt                      |
-| 🛡 **حماية نقطة نهاية واجهة برمجة التطبيقات** | بوابة المصادقة + حظر الموفر لنقطة النهاية `/models`                                         |
-| 🔒 **رؤية الوكيل**                            | شارات مرمزة بالألوان: 🟢 عالمية، 🟡 مزود، 🔵 لكل اتصال مع عرض IP                            |
-| 🌐 ** تكوين الوكيل ذو 3 مستويات **            | قم بتكوين الوكلاء على المستوى العالمي أو لكل مزود أو لكل اتصال                              |
+| ميزة                                                     | ماذا يفعل                                                             |
+| -------------------------------------------------------- | --------------------------------------------------------------------- |
+| 🔌 **قواطع الدائرة**                                     | رحلة/استرداد على مستوى الموفر مع عناصر التحكم في العتبة               |
+| 🛡️ **القطيع المضاد للرعد**                               | حماية Mutex + الإشارة في أحداث إعادة المحاولة/التقييم                 |
+| 🧠 ** ذاكرة التخزين المؤقت الدلالية + التوقيع **         | تقليل التكلفة/زمن الوصول باستخدام طبقتين من ذاكرة التخزين المؤقت      |
+| ⚡ **طلب العجز**                                         | نافذة الحماية المكررة                                                 |
+| 🔒 **انتحال بصمة الإصبع TLS**                            | توافق أفضل مع مقدمي خدمات مكافحة الروبوتات الذين تمت تصفيتهم          |
+| 🌐 **تصفية IP**                                          | التحكم في القائمة المسموح بها/القائمة المحظورة لعمليات النشر المكشوفة |
+| 📊 **حدود المعدل القابلة للتحرير**                       | حدود عالمية/مستوى مزود قابلة للتكوين مع الثبات                        |
+| 🔑 **إدارة مفاتيح واجهة برمجة التطبيقات + تحديد النطاق** | تأمين إصدار/تدوير المفتاح وضوابط النموذج/المزود                       |
+| 🛡️ **محمية `/models`**                                   | بوابة مصادقة اختيارية وإخفاء الموفر لكتالوج النماذج                   |
 
 ### 📊 إمكانية الملاحظة والتحليلات
 
-| ميزة                                 | ماذا يفعل                                                                                    |
-| ------------------------------------ | -------------------------------------------------------------------------------------------- |
-| 📝 **تسجيل الطلبات**                 | وضع التصحيح مع سجلات الطلب/الاستجابة الكاملة                                                 |
-| 💾 **سجلات وكيل SQLite**             | تستمر سجلات الوكيل المستمرة في إعادة تشغيل الخادم                                            |
-| 📊 **لوحة التحكم التحليلية**         | مدعوم من إعادة التخطيط: بطاقات إحصائيات، مخطط استخدام النموذج، جدول الموفر                   |
-| 📈 **تتبع التقدم**                   | الاشتراك في أحداث تقدم SSE للبث                                                              |
-| 🧪 **تقييمات ماجستير إدارة الأعمال** | اختبار المجموعة الذهبية مع 4 إستراتيجيات المباراة                                            |
-| 🔍 **طلب القياس عن بعد**             | تجميع زمن الوصول p50/p95/p99 + تتبع معرف طلب X                                               |
-| 📋 **لوحة تحكم السجلات**             | صفحة موحدة مكونة من 4 علامات تبويب: سجلات الطلب، وسجلات الوكيل، وسجلات التدقيق، ووحدة التحكم |
-| 🖥️ **عارض سجل وحدة التحكم**          | عارض على النمط الطرفي في الوقت الفعلي مع مرشح المستوى والبحث والتمرير التلقائي               |
-| 📑 ** التسجيل المعتمد على الملفات ** | يلتقط جهاز اعتراض وحدة التحكم جميع المخرجات إلى ملف سجل JSON بالتدوير                        |
-| 🏥 **لوحة المعلومات الصحية**         | وقت تشغيل النظام، حالات قاطع الدائرة، عمليات الإغلاق، إحصائيات ذاكرة التخزين المؤقت          |
-| 💰 **تتبع التكلفة**                  | إدارة الميزانية + تكوين التسعير لكل نموذج                                                    |
+| ميزة                             | ماذا يفعل                                                                 |
+| -------------------------------- | ------------------------------------------------------------------------- |
+| 📝 **الطلب + تسجيل الوكيل**      | الطلب/الاستجابة الكاملة وتسجيل الوكيل                                     |
+| 📋 **لوحة تحكم السجلات الموحدة** | طلب العروض والوكيل والتدقيق ووحدة التحكم في صفحة واحدة                    |
+| 🔍 **طلب القياس عن بعد**         | زمن الاستجابة p50/p95/p99 وطلب التتبع                                     |
+| 🏥 **لوحة المعلومات الصحية**     | وقت التشغيل، حالات الكسارة، عمليات الإغلاق، إحصائيات ذاكرة التخزين المؤقت |
+| 💰 **تتبع التكلفة**              | ضوابط الميزانية ورؤية التسعير لكل نموذج                                   |
+| 📈 **تصورات التحليلات**          | رؤى استخدام النموذج/الموفر وطرق عرض الاتجاه                               |
+| 🧪 **إطار التقييم**              | اختبار المجموعة الذهبية مع استراتيجيات المطابقة القابلة للتكوين           |
 
-### ☁️ النشر والمزامنة
+### ☁️ النشر والمنصة
 
-| ميزة                                      | ماذا يفعل                                                                     |
-| ----------------------------------------- | ----------------------------------------------------------------------------- |
-| 💾 **المزامنة السحابية**                  | مزامنة التكوين عبر الأجهزة عبر Cloudflare Workers                             |
-| 🌐 **النشر في أي مكان**                   | المضيف المحلي، VPS، Docker، عمال Cloudflare                                   |
-| 🔑 **إدارة مفاتيح واجهة برمجة التطبيقات** | إنشاء مفاتيح واجهة برمجة التطبيقات وتدويرها ونطاقها لكل مزود                  |
-| 🧙 **معالج الإعداد**                      | إعداد إرشادي من 4 خطوات للمستخدمين لأول مرة                                   |
-| 🔧 **لوحة تحكم أدوات CLI**                | بنقرة واحدة قم بتكوين Claude، Codex، Cline، OpenClaw، Kilo، Antigravity       |
-| 🔄 **النسخ الاحتياطية لقاعدة البيانات**   | النسخ الاحتياطي التلقائي والاستعادة والتصدير والاستيراد لجميع الإعدادات       |
-| 🌐 **التدويل**                            | i18n الكامل مع دعم next-intl — الإنجليزية + البرتغالية (البرازيل)             |
-| 🌍 **محدد اللغة**                         | أيقونة الكرة الأرضية في رأس الصفحة للتبديل بين اللغات في الوقت الفعلي (🇺🇸/🇧🇷) |
-| 📂 **دليل البيانات المخصصة**              | `DATA_DIR` env var لتجاوز مسار التخزين الافتراضي `~/.omniroute`               |
+| ميزة                             | ماذا يفعل                                        |
+| -------------------------------- | ------------------------------------------------ | --- | ------------------------ | ------------------------------- |
+| 🌐 **النشر في أي مكان**          | المضيف المحلي، VPS، Docker، البيئات السحابية     |     | 💾 **المزامنة السحابية** | مزامنة التكوين عبر عامل السحابة |
+| 🔄 **النسخ الاحتياطي/الاستعادة** | تدفقات التصدير/الاستيراد والتعافي من الكوارث     |
+| 🧙 **معالج الإعداد**             | الإعداد الموجه لأول مرة                          |
+| 🔧 **لوحة تحكم أدوات CLI**       | إعداد بنقرة واحدة لأدوات الترميز الشائعة         |
+| 🌐 **i18n (30 لغة)**             | لوحة تحكم كاملة + دعم لغة المستندات مع تغطية RTL |
+| 📂 **دليل البيانات المخصصة**     | تجاوز `DATA_DIR` لموقع التخزين                   |
 
-<details>
-<summary><b>📖 تفاصيل الميزة</b></summary>
+### ميزة الغوص العميق
 
-### 🎯 نظام احتياطي ذكي مكون من 4 طبقات
+#### إجراء احتياطي ذكي مع التحكم العملي في التكلفة
 
-إنشاء مجموعات باستخدام خيار الرجوع التلقائي:
-
-```
+```txt
 Combo: "my-coding-stack"
-  1. cc/claude-opus-4-6        (your subscription)
-  2. nvidia/llama-3.3-70b      (free NVIDIA API)
-  3. glm/glm-4.7               (cheap backup, $0.6/1M)
-  4. if/kimi-k2-thinking       (free fallback)
-
-→ Auto switches when quota runs out or errors occur
+  1. cc/claude-opus-4-6
+  2. nvidia/llama-3.3-70b
+  3. glm/glm-4.7
+  4. if/kimi-k2-thinking
 ```
 
-### 📊 تتبع الحصص في الوقت الحقيقي
+عند فشل الحصة أو المعدل أو الصحة، ينتقل OmniRoute تلقائيًا إلى المرشح التالي دون التبديل اليدوي.
 
-- استهلاك الرمز المميز لكل مزود
-- إعادة ضبط العد التنازلي (5 ساعات، يوميًا، أسبوعيًا)
-- تقدير التكلفة للمستويات المدفوعة
-- تقارير الإنفاق الشهرية
+#### إدارة البروتوكول مرئية وقابلة للتشغيل
 
-### 🔄 ترجمة التنسيق
+- يمكن اكتشاف MCP + A2A في واجهة المستخدم والمستندات (غير مخفية)
+- تعرض واجهات برمجة التطبيقات لحالة البروتوكول بيانات التشغيل المباشرة (`/api/mcp/*`، `/api/a2a/*`)
+- تتضمن لوحات المعلومات إجراءات لعمليات اليوم الثاني (تبديل التحرير والسرد، وإعادة ضبط الكسارة، وإلغاء المهام)
 
-ترجمة سلسة بين الصيغ:
+#### سير عمل المترجم + التحقق من الصحة
 
-- **OpenAI** ↔ **Claude** ↔ **Gemini** ↔ **استجابات OpenAI**
-- ترسل أداة CLI الخاصة بك تنسيق OpenAI ← يترجم OmniRoute ← يتلقى الموفر التنسيق الأصلي
-- يعمل مع أي أداة تدعم نقاط نهاية OpenAI المخصصة
-- **تطهير الاستجابة** - يزيل الحقول غير القياسية من أجل توافق صارم مع OpenAI SDK
-- **تطبيع الدور** — `developer` → `system` لغير OpenAI؛ `system` → `user` لطرز GLM/ERNIE
-- **استخراج علامة التفكير** — كتل `<think>` → `reasoning_content` لنماذج التفكير
-- **الإخراج المنظم** — `json_schema` → الجوزاء `responseMimeType`/`responseSchema`
+منطقة المترجم تشمل:
 
-### 👥 دعم الحسابات المتعددة
+- **الملعب**: طلب عمليات التحقق من التحويل
+- **أداة اختبار الدردشة**: الطلب/الإجابة الكاملة ذهابًا وإيابًا
+- **منصة الاختبار**: حالات متعددة في جولة واحدة
+- **المراقبة المباشرة**: عرض حركة المرور في الوقت الحقيقي
 
-- إضافة حسابات متعددة لكل مزود
-- التوجيه التلقائي أو التوجيه على أساس الأولوية
-- الرجوع إلى الحساب التالي عندما يصل أحد إلى الحصة
+بالإضافة إلى التحقق من صحة البروتوكول مع عملاء حقيقيين عبر `npm run test:protocols:e2e`.
 
-### 🔄 التحديث التلقائي للرموز
+> 📖 **[قراءة خادم MCP](open-sse/mcp-server/README.md)** — مرجع الأداة، وتكوينات IDE، وأمثلة العميل
+>
+> 📖 **[ملف قراءة خادم A2A](src/lib/a2a/README.md)** — المهارات، وأساليب JSON-RPC، والبث، ودورة حياة المهمة
 
-- يتم تحديث رموز OAuth المميزة تلقائيًا قبل انتهاء الصلاحية
-- لا حاجة لإعادة المصادقة اليدوية
-- تجربة سلسة عبر جميع مقدمي الخدمة
+## 🧪 التقييمات (التقييمات)
 
-### 🎨 مجموعات مخصصة
+يشتمل OmniRoute على إطار تقييم مدمج لاختبار جودة استجابة LLM مقابل المجموعة الذهبية. يمكنك الوصول إليه عبر **Analytics → Evals** في لوحة التحكم.
 
-- إنشاء مجموعات نماذج غير محدودة
-- 6 إستراتيجيات: التعبئة أولاً، جولة روبن، قوة الاختيارين، العشوائية، الأقل استخدامًا، الأمثل من حيث التكلفة
-- مشاركة المجموعات عبر الأجهزة باستخدام Cloud Sync
+### الطقم الذهبي المدمج
 
-### 🏥 لوحة المعلومات الصحية
+تحتوي "OmniRoute Golden Set" المحملة مسبقًا على حالات اختبار لما يلي:
 
-- حالة النظام (وقت التشغيل، الإصدار، استخدام الذاكرة)
-- حالات قاطع الدائرة لكل مزود (مغلق/مفتوح/نصف مفتوح)
-- حالة الحد الأقصى للسعر وعمليات الإغلاق النشطة
-- إحصائيات ذاكرة التخزين المؤقت للتوقيع
-- قياس الكمون عن بعد (ص50/ص95/ص99) + ذاكرة تخزين مؤقت سريعة
-- إعادة ضبط الحالة الصحية بنقرة واحدة
+- تحياتي، الرياضيات، الجغرافيا، توليد التعليمات البرمجية
+- الامتثال لتنسيق JSON والترجمة وإنشاء تخفيض السعر
+- رفض السلامة (المحتوى الضار)، العد، المنطق المنطقي
 
-### 🔧 ملعب المترجم
+### استراتيجيات التقييم
 
-يشتمل OmniRoute على ساحة مترجم قوية مدمجة مع **4 أوضاع** لتصحيح الأخطاء واختبار ومراقبة ترجمات واجهة برمجة التطبيقات:
-
-| الوضع                 | الوصف                                                                                                                                                                                                                            |
-| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **💻 الملعب**         | ترجمة التنسيق المباشر - الصق أي نص طلب واجهة برمجة التطبيقات (API) وشاهد على الفور كيف يقوم OmniRoute بترجمته بين تنسيقات الموفر (OpenAI ↔ Claude ↔ Gemini ↔ Responses API). يتضمن أمثلة على القوالب والكشف التلقائي عن التنسيق. |
-| **💬 اختبار الدردشة** | أرسل طلبات دردشة حقيقية من خلال OmniRoute وشاهد الرحلة الكاملة ذهابًا وإيابًا: مدخلاتك، والطلب المترجم، واستجابة الموفر، والرد المترجم. لا تقدر بثمن للتحقق من صحة توجيه التحرير والسرد.                                         |
-| **🧪 مقعد الاختبار**  | وضع الاختبار المجمع - حدد حالات اختبار متعددة بمدخلات مختلفة ومخرجات متوقعة، وقم بتشغيلها كلها مرة واحدة، وقارن النتائج عبر الموفرين والنماذج.                                                                                   |
-| **📱 مراقب مباشر**    | مراقبة الطلبات في الوقت الفعلي - شاهد الطلبات الواردة أثناء تدفقها عبر OmniRoute، وشاهد ترجمات التنسيق التي تحدث مباشرة، وحدد المشكلات على الفور.                                                                                |
-
-**الوصول:** لوحة المعلومات ← المترجم (الشريط الجانبي)
-
-### 💾 المزامنة السحابية
-
-- موفري المزامنة والمجموعات والإعدادات عبر الأجهزة
-- مزامنة الخلفية التلقائية
-- تخزين مشفر آمن
-
-</details>
-
----
-
-## 🎯 حالات الاستخدام
-
-### الحالة 1: "لدي اشتراك Claude Pro"
-
-**المشكلة:** تنتهي صلاحية الحصة غير المستخدمة، وحدود المعدل أثناء عملية الترميز المكثف
-
-```
-Combo: "maximize-claude"
-  1. cc/claude-opus-4-6        (use subscription fully)
-  2. glm/glm-4.7               (cheap backup when quota out)
-  3. if/kimi-k2-thinking       (free emergency fallback)
-
-Monthly cost: $20 (subscription) + ~$5 (backup) = $25 total
-vs. $20 + hitting limits = frustration
-```
-
-### الحالة 2: "أريد تكلفة صفرية"
-
-**المشكلة:** لا أستطيع تحمل تكلفة الاشتراكات، وتحتاج إلى ترميز يعتمد على الذكاء الاصطناعي
-
-```
-Combo: "free-forever"
-  1. gc/gemini-3-flash         (180K free/month)
-  2. if/kimi-k2-thinking       (unlimited free)
-  3. qw/qwen3-coder-plus       (unlimited free)
-
-Monthly cost: $0
-Quality: Production-ready models
-```
-
-### الحالة 3: "أحتاج إلى تشفير على مدار 24 ساعة طوال أيام الأسبوع، دون انقطاع"
-
-**المشكلة:** المواعيد النهائية، لا أستطيع تحمل فترات التوقف عن العمل
-
-```
-Combo: "always-on"
-  1. cc/claude-opus-4-6        (best quality)
-  2. cx/gpt-5.2-codex          (second subscription)
-  3. glm/glm-4.7               (cheap, resets daily)
-  4. minimax/MiniMax-M2.1      (cheapest, 5h reset)
-  5. if/kimi-k2-thinking       (free unlimited)
-
-Result: 5 layers of fallback = zero downtime
-```
-
-### الحالة 4: "أريد ذكاءً اصطناعيًا مجانيًا في OpenClaw"
-
-**المشكلة:** تحتاج إلى مساعد الذكاء الاصطناعي في تطبيقات المراسلة، مجانًا تمامًا
-
-```
-Combo: "openclaw-free"
-  1. if/glm-4.7                (unlimited free)
-  2. if/minimax-m2.1           (unlimited free)
-  3. if/kimi-k2-thinking       (unlimited free)
-
-Monthly cost: $0
-Access via: WhatsApp, Telegram, Slack, Discord, iMessage, Signal...
-```
+| استراتيجية | الوصف                                                         | مثال                             |
+| ---------- | ------------------------------------------------------------- | -------------------------------- |
+| `exact`    | يجب أن يتطابق الإخراج تمامًا مع                               | `"4"`                            |
+| `contains` | يجب أن يحتوي الإخراج على سلسلة فرعية (غير حساسة لحالة الأحرف) | `"Paris"`                        |
+| `regex`    | يجب أن يتطابق الإخراج مع نمط regex                            | `"1.*2.*3"`                      |
+| `custom`   | ترجع دالة JS المخصصة صواب/خطأ                                 | `(output) => output.length > 10` |
 
 ---
 
 ## 📖 دليل الإعداد
 
+### إعداد البروتوكول (MCP + A2A)
+
 <details>
-<summary><b>💳 موفري الاشتراك</b></summary>
+<summary><b>🧩 إعداد MCP (بروتوكول سياق النموذج)</b></summary>
+
+بدء نقل MCP في وضع stdio:
+
+```bash
+omniroute --mcp
+```
+
+تدفق التحقق الموصى به:
+
+1. قم بتوصيل عميل MCP الخاص بك عبر stdio.
+2. قم بتشغيل `omniroute_get_health`.
+3. قم بتشغيل `omniroute_list_combos`.
+4. افتح `/dashboard/mcp` لتأكيد نبضات القلب والنشاط والتدقيق.
+
+واجهات برمجة التطبيقات المفيدة للأتمتة:
+
+-`GET /api/mcp/status` -`GET /api/mcp/tools` -`GET /api/mcp/audit` -`GET /api/mcp/audit/stats`
+
+</details>
+
+<details><summary><b>🤝 إعداد A2A (Agent2Agent)</b></summary>
+
+اكتشف الوكيل:
+
+```bash
+curl http://localhost:20128/.well-known/agent.json
+```
+
+إرسال مهمة:
+
+```bash
+curl -X POST http://localhost:20128/a2a \
+  -H 'content-type: application/json' \
+  -d '{"jsonrpc":"2.0","id":"setup-a2a","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Summarize quota status."}]}}'
+```
+
+إدارة دورة الحياة:
+
+-`GET /api/a2a/status` -`GET /api/a2a/tasks` -`GET /api/a2a/tasks/:id` -`POST /api/a2a/tasks/:id/cancel`
+
+واجهة المستخدم التشغيلية:
+
+- `/dashboard/a2a` لإمكانية ملاحظة المهمة/الحالة/الدفق وإجراءات الدخان
+
+</details>
+
+<details>
+<summary><b>🧪 التحقق من صحة البروتوكول من طرف إلى طرف</b></summary>
+
+التحقق من صحة كلا البروتوكولين مع عملاء حقيقيين:
+
+```bash
+npm run test:protocols:e2e
+```
+
+هذا يتحقق:
+
+- اتصال/قائمة/اتصال عميل MCP SDK
+- اكتشاف A2A/إرسال/دفق/حصول على/إلغاء
+- التحقق من البيانات في تدقيق MCP وواجهات برمجة التطبيقات لإدارة المهام A2A
+
+</details>
+
+<details>
+<summary><b>💳 مقدمي الاشتراك</b></summary>
 
 ### كلود كود (برو/ماكس)
 
@@ -846,9 +1145,9 @@ Models:
 1. قم بالتسجيل: [build.nvidia.com](https://build.nvidia.com)
 2. احصل على مفتاح واجهة برمجة التطبيقات (API) مجانًا (يتضمن 1000 نقطة استدلال)
 3. لوحة المعلومات → إضافة موفر → NVIDIA NIM:
-   - مفتاح واجهة برمجة التطبيقات: `nvapi-your-key`
+   - مفتاح API: `nvapi-your-key`
 
-**النماذج:** `nvidia/llama-3.3-70b-instruct`، `nvidia/mistral-7b-instruct`، وأكثر من 50 طرازًا آخر
+**النماذج:** `nvidia/llama-3.3-70b-instruct` و`nvidia/mistral-7b-instruct` وأكثر من 50 طرازًا آخر
 
 **نصيحة احترافية:** واجهة برمجة التطبيقات المتوافقة مع OpenAI — تعمل بسلاسة مع ترجمة تنسيق OmniRoute!
 
@@ -889,7 +1188,7 @@ Models:
 2. احصل على مفتاح API من خطة الترميز
 3. لوحة المعلومات → إضافة مفتاح واجهة برمجة التطبيقات:
    - المزود: `glm`
-   - مفتاح واجهة برمجة التطبيقات: `your-key`
+   - مفتاح API: `your-key`
 
 **الاستخدام:** `glm/glm-4.7`
 
@@ -918,22 +1217,22 @@ Models:
 </details>
 
 <details>
-<summary><b>🆓 موفرو الخدمة المجانية (النسخ الاحتياطي في حالات الطوارئ)</b></summary>
+<summary><b>🆓 موفري الخدمة المجانية (النسخ الاحتياطي في حالات الطوارئ)</b></summary>
 
-### iFlow (8 نماذج مجانية)
+### iFlow (8 نماذج مجانية)```bash
 
-```bash
 Dashboard → Connect iFlow
 → iFlow OAuth login
 → Unlimited usage
 
 Models:
-  if/kimi-k2-thinking
-  if/qwen3-coder-plus
-  if/glm-4.7
-  if/minimax-m2
-  if/deepseek-r1
-```
+if/kimi-k2-thinking
+if/qwen3-coder-plus
+if/glm-4.7
+if/minimax-m2
+if/deepseek-r1
+
+````
 
 ### كوين (3 موديلات مجانية)
 
@@ -945,7 +1244,7 @@ Dashboard → Connect Qwen
 Models:
   qw/qwen3-coder-plus
   qw/qwen3-coder-flash
-```
+````
 
 ### كيرو (كلود فري)
 
@@ -962,7 +1261,7 @@ Models:
 </details>
 
 <details>
-<summary><b>🎨 إنشاء مجموعات</b></summary>
+<summary><b>🎨 إنشاء المجموعات</b></summary>
 
 ### مثال 1: زيادة الاشتراك إلى الحد الأقصى → النسخ الاحتياطي الرخيص
 
@@ -993,7 +1292,7 @@ Cost: $0 forever!
 </details>
 
 <details>
-<summary><b>🔧 تكامل واجهة سطر الأوامر</b></summary>
+<summary><b>🔧 تكامل CLI</b></summary>
 
 ### بيئة تطوير متكاملة للمؤشر
 
@@ -1053,30 +1352,48 @@ Settings → API Configuration:
   Model: if/kimi-k2-thinking
 ```
 
+### الكود المفتوح
+
+**الخطوة 1:** أضف OmniRoute كموفر مخصص:
+
+```bash
+opencode
+/connect
+# Select "Other" → Enter ID: "omniroute" → Enter your OmniRoute API key
+```
+
+**الخطوة 2:** إنشاء/تحرير `opencode.json` في جذر مشروعك:
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "omniroute": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "OmniRoute",
+      "options": {
+        "baseURL": "http://localhost:20128/v1"
+      },
+      "models": {
+        "cc/claude-sonnet-4-20250514": { "name": "Claude Sonnet 4" },
+        "gg/gemini-2.5-pro": { "name": "Gemini 2.5 Pro" },
+        "if/kimi-k2-thinking": { "name": "Kimi K2 (Free)" }
+      }
+    }
+  }
+}
+```
+
+**الخطوة 3:** حدد النموذج في OpenCode:
+
+```bash
+/models
+# Select any OmniRoute model from the list
+```
+
+> **نصيحة:** أضف أي نموذج متوفر في نقطة نهاية OmniRoute `/v1/models` إلى قسم `models`. استخدم التنسيق `provider/model-id` من لوحة معلومات OmniRoute.
+
 </details>
-
----
-
-## 🧪 التقييمات (التقييمات)
-
-يشتمل OmniRoute على إطار تقييم مدمج لاختبار جودة استجابة LLM مقابل المجموعة الذهبية. يمكنك الوصول إليه عبر **Analytics → Evals** في لوحة التحكم.
-
-### الطقم الذهبي المدمج
-
-تحتوي "OmniRoute Golden Set" المحملة مسبقًا على 10 حالات اختبار تغطي:
-
-- تحياتي، الرياضيات، الجغرافيا، توليد التعليمات البرمجية
-- الامتثال لتنسيق JSON والترجمة وتخفيض السعر
-- رفض السلامة (المحتوى الضار)، العد، المنطق المنطقي
-
-### استراتيجيات التقييم
-
-| استراتيجية | الوصف                                                         | مثال                             |
-| ---------- | ------------------------------------------------------------- | -------------------------------- |
-| `exact`    | يجب أن يتطابق الإخراج تمامًا مع                               | `"4"`                            |
-| `contains` | يجب أن يحتوي الإخراج على سلسلة فرعية (غير حساسة لحالة الأحرف) | `"Paris"`                        |
-| `regex`    | يجب أن يتطابق الإخراج مع نمط regex                            | `"1.*2.*3"`                      |
-| `custom`   | ترجع دالة JS المخصصة صواب/خطأ                                 | `(output) => output.length > 10` |
 
 ---
 
@@ -1106,15 +1423,18 @@ Settings → API Configuration:
 - تبديل النموذج الأساسي إلى GLM/MiniMax
 - استخدم الطبقة المجانية (Gemini CLI، iFlow) للمهام غير الحرجة
 
-** لوحة المعلومات تفتح على منفذ خاطئ **
+**منافذ لوحة المعلومات/واجهة برمجة التطبيقات غير صحيحة**
 
-- اضبط `PORT=20128` و`NEXT_PUBLIC_BASE_URL=http://localhost:20128`
+- `PORT` هو المنفذ الأساسي الأساسي (ومنفذ API افتراضيًا)
+- يتجاوز `API_PORT` مستمع واجهة برمجة التطبيقات (API) المتوافق مع OpenAI فقط
+- يتجاوز `DASHBOARD_PORT` مستمع لوحة المعلومات/Next.js فقط
+- قم بتعيين `NEXT_PUBLIC_BASE_URL` على لوحة المعلومات/عنوان URL العام (لعمليات الاسترجاعات عبر OAuth)
 
 **أخطاء المزامنة السحابية**
 
 - تحقق من نقاط `BASE_URL` لمثيلك قيد التشغيل
-- تحقق من نقاط `CLOUD_URL` إلى نقطة نهاية السحابة المتوقعة
-- احتفظ بقيم `NEXT_PUBLIC_*` متوافقة مع القيم من جانب الخادم
+- تحقق من نقاط `CLOUD_URL` إلى نقطة النهاية السحابية المتوقعة
+- حافظ على محاذاة قيم `NEXT_PUBLIC_*` مع القيم من جانب الخادم
 
 **تسجيل الدخول الأول لا يعمل**
 
@@ -1123,31 +1443,29 @@ Settings → API Configuration:
 
 ** لا توجد سجلات الطلب **
 
-- اضبط `ENABLE_REQUEST_LOGS=true` في `.env`
+- تعيين `ENABLE_REQUEST_LOGS=true` في `.env`
 
 **يظهر اختبار الاتصال "غير صالح" لمقدمي الخدمات المتوافقين مع OpenAI**
 
-- لا يكشف العديد من مقدمي الخدمة عن نقطة النهاية `/models`
+- لا يكشف العديد من مقدمي الخدمة عن نقطة نهاية `/models`
 - يتضمن OmniRoute v1.0.6+ التحقق الاحتياطي من خلال إكمال الدردشة
-- تأكد من أن عنوان URL الأساسي يتضمن اللاحقة `/v1`
+- تأكد من أن عنوان URL الأساسي يتضمن لاحقة `/v1`
 
-### 🔐 OAuth em Servidor Remoto (إعداد OAuth عن بعد)
+### 🔐 OAuth
 
 <a name="oauth-em-servidor-remoto"></a>
 
 > **⚠️ هام لمستخدمي OmniRoute على VPS/Docker/servidor عن بعد**
 
-### لماذا OAuth يفعل Antigravity / Gemini CLI في الخوادم البعيدة؟
+#### OAuth
 
-تم إثبات **Antigravity** e **Gemini CLI** باستخدام **Google OAuth 2.0** للمصادقة. تطلب Google أن يتم استخدام `redirect_uri` دون تدفق OAuth ** على وجه التحديد ** إلى معرفات URI السابقة للمسح في تطبيق Google Cloud Console.
-
-نظرًا لأن اعتمادات OAuth المُدمجة ليست في OmniRoute، فهي عبارة عن سجلات \*\*apenas لـ عندما تصل إلى OmniRoute من خادم بعيد (على سبيل المثال: `https://omniroute.meuservidor.com`)، تحصل Google على مصادقة عبر:
+نظرًا لأن اعتمادات OAuth المُدخلة ليست في OmniRoute، فهي عبارة عن سجلات **apenas لـ `localhost`**. عندما تصل إلى OmniRoute من خادم بعيد (على سبيل المثال: `https://omniroute.meuservidor.com`)، تحصل Google على مصادقة عبر:
 
 ```
 Error 400: redirect_uri_mismatch
 ```
 
-### الحل: تكوين OAuth الخاص بك
+#### الحل: تكوين OAuth الخاص بك
 
 يجب عليك إنشاء **OAuth 2.0 Client ID** على Google Cloud Console باستخدام URI لخادمك.
 
@@ -1171,7 +1489,7 @@ Error 400: redirect_uri_mismatch
 https://seu-servidor.com/callback
 ```
 
-> استبدال `seu-servidor.com` بنطاقك أو IP الخاص بخادمك (بما في ذلك البوابة الضرورية، على سبيل المثال: `http://45.33.32.156:20128/callback`).
+> استبدال `seu-servidor.com` بنطاقك أو IP بخادمك (بما في ذلك البوابة الضرورية، على سبيل المثال: `http://45.33.32.156:20128/callback`).
 
 **4. حفظ ونسخ كمعتمدة**
 
@@ -1179,7 +1497,7 @@ https://seu-servidor.com/callback
 
 **5. تكوين كمتغيرات البيئة **
 
-لا يوجد `.env` (أو متغيرات بيئة Docker):
+ليس لديك `.env` (أو في بيئة Docker المتنوعة):
 
 ```bash
 # Para Antigravity:
@@ -1206,16 +1524,16 @@ docker restart omniroute
 
 لوحة المعلومات → الموفرون → Antigravity (ou Gemini CLI) → OAuth
 
-Agora o Google redirecionará corretamente para `https://seu-servidor.com/callback` e a autenticação funcionará.
+قم بإعادة توجيه Google بشكل صحيح إلى `https://seu-servidor.com/callback` ووظيفة المصادقة.
 
 ---
 
-### الحل المؤقت (لم يتم تكوين الاعتمادات الخاصة)
+#### الحل المؤقت (لم يتم تكوين الاعتمادات الخاصة)
 
 إذا لم ترغب في إنشاء بيانات اعتماد خاصة بك منذ الآن، فمن الممكن استخدام التدفق **دليل URL**:
 
 1. يفتح OmniRoute عنوان URL لتفويض Google
-2. قم بتفويض Google لإعادة التوجيه إلى `localhost` (لا يوجد خادم عن بعد)
+2. قم بتفويض Google لإعادة توجيه `localhost` (لا يوجد خادم عن بعد)
 3. **انسخ عنوان URL كاملاً** من شريط الإدخال في متصفحك (حتى لا يتم نقل الصفحة)
 4. هذا هو عنوان URL الذي يظهر في وضع الاتصال بـ OmniRoute
 5. انقر على **"الاتصال"**
@@ -1226,55 +1544,46 @@ Agora o Google redirecionará corretamente para `https://seu-servidor.com/callba
 
 ---
 
-## 🛠️ تيك ستاك
+## 🛠️
 
-- **وقت التشغيل**: Node.js 18–22 LTS (⚠️ Node.js 24+ **غير مدعومة** — `better-sqlite3` الثنائيات الأصلية غير متوافقة)
-- **اللغة**: TypeScript 5.9 — **TypeScript بنسبة 100%** عبر `src/` و`open-sse/` (الإصدار 1.0.6)
+<details>
+<summary><b>انقر لتوسيع تفاصيل حزمة التقنية</b></summary>
+
+- **وقت التشغيل**: Node.js 18–22 LTS (⚠️ Node.js 24+ **غير مدعومة** — الثنائيات الأصلية `better-sqlite3` غير متوافقة)
+- **اللغة**: TypeScript 5.9 — **TypeScript بنسبة 100%** عبر `src/` و`open-sse/` (لا يوجد `any` في الوحدات الأساسية منذ الإصدار 2.0)
 - **الإطار**: Next.js 16 + React 19 + Tailwind CSS 4
-- **قاعدة البيانات**: LowDB (JSON) + SQLite (حالة المجال + سجلات الوكيل)
+- **قاعدة البيانات**: LowDB (JSON) + SQLite (حالة المجال + سجلات الوكيل + تدقيق MCP + قرارات التوجيه)
+- **المخططات**: Zod (التحقق من صحة الإدخال/الإخراج لأداة MCP، وعقود API)
+- **البروتوكولات**: MCP (stdio/HTTP) + A2A v0.3 (JSON-RPC 2.0 + SSE)
 - **البث**: الأحداث المرسلة من الخادم (SSE)
-- **المصادقة**: OAuth 2.0 (PKCE) + JWT + مفاتيح API
-- **الاختبار**: مشغل اختبار Node.js (أكثر من 368 اختبارًا للوحدة)
-- **CI/CD**: إجراءات GitHub (نشر npm التلقائي + Docker Hub عند الإصدار)
+- **المصادقة**: OAuth 2.0 (PKCE) + JWT + مفاتيح API + ترخيص نطاق MCP
+- **الاختبار**: مشغل اختبار Node.js + Vitest (أكثر من 900 اختبار بما في ذلك الوحدة والتكامل وE2E)- **CI/CD**: إجراءات GitHub (نشر npm التلقائي + Docker Hub عند الإصدار)
 - **الموقع الإلكتروني**: [omniroute.online](https://omniroute.online)
 - **الحزمة**: [npmjs.com/package/omniroute](https://www.npmjs.com/package/omniroute)
-- **عامل الميناء**: [hub.docker.com/r/diegosouzapw/omniroute](https://hub.docker.com/r/diegosouzapw/omniroute)
-- **المرونة**: قاطع الدائرة الكهربائية، والتراجع الأسي، وقطيع مضاد للرعد، وانتحال TLS
+- **دوكر**: [hub.docker.com/r/diegosouzapw/omniroute](https://hub.docker.com/r/diegosouzapw/omniroute)
+- **المرونة**: قاطع الدائرة، والتراجع الأسي، وقطيع مكافحة الرعد، وانتحال TLS، والإصلاح الذاتي للتحرير والسرد التلقائي
+
+</details>
 
 ---
 
 ## 📖 التوثيق
 
-| وثيقة                                        | الوصف                                         |
-| -------------------------------------------- | --------------------------------------------- |
-| [User Guide](docs/USER_GUIDE.md)             | مقدمو الخدمات، والمجموعات، وتكامل CLI، والنشر |
-| [API Reference](docs/API_REFERENCE.md)       | جميع نقاط النهاية مع الأمثلة                  |
-| [Troubleshooting](docs/TROUBLESHOOTING.md)   | المشاكل والحلول الشائعة                       |
-| [Architecture](docs/ARCHITECTURE.md)         | بنية النظام والداخلية                         |
-| [Contributing](CONTRIBUTING.md)              | إعداد التطوير والمبادئ التوجيهية              |
-| [OpenAPI Spec](docs/openapi.yaml)            | مواصفات OpenAPI 3.0                           |
-| [Security Policy](SECURITY.md)               | الإبلاغ عن الثغرات الأمنية والممارسات الأمنية |
-| [VM Deployment](docs/VM_DEPLOYMENT_GUIDE.md) | الدليل الكامل: إعداد VM + nginx + Cloudflare  |
-| [Features Gallery](docs/FEATURES.md)         | جولة لوحة القيادة المرئية مع لقطات الشاشة     |
-
-### 📸 معاينة لوحة التحكم
-
-<details>
-<summary><b>انقر لرؤية لقطات شاشة لوحة المعلومات</b></summary>
-
-| صفحة                  | لقطة شاشة                                         |
-| --------------------- | ------------------------------------------------- |
-| ** مقدمو الخدمة **    | ![Providers](docs/screenshots/01-providers.png)   |
-| **المجموعات**         | ![Combos](docs/screenshots/02-combos.png)         |
-| **تحليلات**           | ![Analytics](docs/screenshots/03-analytics.png)   |
-| **الصحة**             | ![Health](docs/screenshots/04-health.png)         |
-| **مترجم**             | ![Translator](docs/screenshots/05-translator.png) |
-| **الإعدادات**         | ![Settings](docs/screenshots/06-settings.png)     |
-| **أدوات سطر الأوامر** | ![CLI Tools](docs/screenshots/07-cli-tools.png)   |
-| **سجلات الاستخدام**   | ![Usage](docs/screenshots/08-usage.png)           |
-| **نقطة النهاية**      | ![Endpoint](docs/screenshots/09-endpoint.png)     |
-
-</details>
+| وثيقة                                               | الوصف                                                 |
+| --------------------------------------------------- | ----------------------------------------------------- |
+| [دليل المستخدم](docs/USER_GUIDE.md)                 | مقدمو الخدمات، والمجموعات، وتكامل CLI، والنشر         |
+| [مرجع واجهة برمجة التطبيقات](docs/API_REFERENCE.md) | جميع نقاط النهاية مع الأمثلة                          |
+| [خادم MCP](open-sse/mcp-server/README.md)           | 16 أدوات MCP وتكوينات IDE وعملاء Python/TS/Go         |
+| [خادم A2A](src/lib/a2a/README.md)                   | بروتوكول JSON-RPC 2.0، المهارات، التدفق، إدارة المهام |
+| [محرك التحرير والسرد التلقائي](docs/auto-combo.md)  | تسجيل 6 عوامل، حزم الوضع، الشفاء الذاتي               |
+| [استكشاف الأخطاء وإصلاحها](docs/TROUBLESHOOTING.md) | المشاكل والحلول الشائعة                               |
+| [الهندسة المعمارية](docs/ARCHITECTURE.md)           | بنية النظام والداخلية                                 |
+| [مساهمة](CONTRIBUTING.md)                           | إعداد التطوير والمبادئ التوجيهية                      |
+| [مواصفات OpenAPI](docs/openapi.yaml)                | مواصفات OpenAPI 3.0                                   |
+| [سياسة الأمان](SECURITY.md)                         | الإبلاغ عن الثغرات الأمنية والممارسات الأمنية         |
+| [نشر الجهاز الافتراضي](docs/VM_DEPLOYMENT_GUIDE.md) | الدليل الكامل: إعداد VM + nginx + Cloudflare          |
+| [معرض الميزات](docs/FEATURES.md)                    | جولة لوحة القيادة المرئية مع لقطات الشاشة             |
+| [قائمة مراجعة الإصدار](docs/RELEASE_CHECKLIST.md)   | خطوات التحقق من صحة الإصدار المسبق                    |
 
 ---
 
@@ -1291,33 +1600,20 @@ Agora o Google redirecionará corretamente para `https://seu-servidor.com/callba
 | ⚡ **الأداء**               | 15+             | طبقة ذاكرة التخزين المؤقت المزدوجة، ذاكرة التخزين المؤقت السريعة، ذاكرة التخزين المؤقت للاستجابة، استمرار البث، واجهة برمجة التطبيقات الدفعية |
 | 🌐 **النظام البيئي**        | 10+             | WebSocket API، إعادة تحميل التكوين السريع، مخزن التكوين الموزع، الوضع التجاري                                                                 |
 
-### 🔜قريبا
+### 🔜قريبا- 🔗 **تكامل OpenCode** — دعم الموفر الأصلي لـ OpenCode AI IDE للترميز
 
-- 🔗 **تكامل OpenCode** — دعم الموفر الأصلي لـ OpenCode AI IDE للترميز
 - 🔗 **تكامل TRAE** — الدعم الكامل لإطار تطوير TRAE AI
 - 📦 **Batch API** — معالجة الدفعات غير المتزامنة للطلبات المجمعة
 - 🎯 **التوجيه المعتمد على العلامات** — توجيه الطلبات بناءً على العلامات المخصصة والبيانات الوصفية
 - 💰 **إستراتيجية أقل تكلفة** — تحديد أرخص مزود متاح تلقائيًا
 
-> 📝 مواصفات الميزات الكاملة متوفرة في [link](docs/new-features/) (217 مواصفات تفصيلية)
-
----
-
-## 📧 الدعم
-
-> 💬 **انضم إلى مجتمعنا!** [WhatsApp Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t) — احصل على المساعدة وشارك النصائح وابق على اطلاع.
-
-- **الموقع الإلكتروني**: [omniroute.online](https://omniroute.online)
-- **جيثب**: [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)
-- **المشاكل**: [github.com/diegosouzapw/OmniRoute/issues](https://github.com/diegosouzapw/OmniRoute/issues)
-- **واتساب**: [Community Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t)
-- **المشروع الأصلي**: [9router by decolua](https://github.com/decolua/9router)
+> 📝 مواصفات الميزات الكاملة متوفرة في [`docs/new-features/`](docs/new-features/) (217 مواصفات تفصيلية)
 
 ---
 
 ## 👥 المساهمون
 
-[![Contributors](https://contrib.rocks/image?repo=diegosouzapw/OmniRoute&max=100&columns=20&anon=1)](https://github.com/diegosouzapw/OmniRoute/graphs/contributors)
+[![المساهمون](https://contrib.rocks/image?repo=diegosouzapw/OmniRoute&max=100&columns=20&anon=1)](https://github.com/diegosouzapw/OmniRoute/graphs/contributors)
 
 ### كيفية المساهمة
 
@@ -1333,7 +1629,7 @@ Agora o Google redirecionará corretamente para `https://seu-servidor.com/callba
 
 ```bash
 # Create a release — npm publish happens automatically
-gh release create v1.0.6 --title "v1.0.6" --generate-notes
+gh release create v2.0.0 --title "v2.0.0" --generate-notes
 ```
 
 ---
@@ -1360,8 +1656,13 @@ gh release create v1.0.6 --title "v1.0.6" --generate-notes
 
 ## 📄 الترخيص
 
-ترخيص MIT - راجع [LICENSE](LICENSE) للحصول على التفاصيل.
+ترخيص MIT - راجع [الترخيص](LICENSE) للحصول على التفاصيل.
 
 ---
 
----
+<div align="center">
+  <sub> تم تصميمه باستخدام ❤️ للمطورين الذين يبرمجون 24/7</sub>
+  <br/>
+  <sub><a href="https://omniroute.online">omniroute.online</a></sub>
+</div>
+<!-- GitHub Discussions enabled for community Q&A -->

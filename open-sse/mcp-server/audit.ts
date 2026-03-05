@@ -31,6 +31,96 @@ interface AuditTopToolRow {
   count: unknown;
 }
 
+interface AuditCountRow {
+  total: unknown;
+}
+
+interface AuditEntryRow {
+  id?: unknown;
+  tool_name?: unknown;
+  input_hash?: unknown;
+  output_summary?: unknown;
+  duration_ms?: unknown;
+  api_key_id?: unknown;
+  success?: unknown;
+  error_code?: unknown;
+  created_at?: unknown;
+}
+
+export interface McpAuditQuery {
+  limit?: number;
+  offset?: number;
+  tool?: string;
+  success?: boolean;
+  apiKeyId?: string;
+}
+
+export interface McpAuditEntry {
+  id: number;
+  toolName: string;
+  inputHash: string;
+  outputSummary: string;
+  durationMs: number;
+  apiKeyId: string | null;
+  success: boolean;
+  errorCode: string | null;
+  createdAt: string;
+}
+
+function toNullableString(value: unknown): string | null {
+  return typeof value === "string" ? value : null;
+}
+
+function toBoolean(value: unknown, fallback = false): boolean {
+  if (typeof value === "boolean") return value;
+  if (value === 1 || value === "1") return true;
+  if (value === 0 || value === "0") return false;
+  return fallback;
+}
+
+function toPositiveInt(value: unknown, fallback: number): number {
+  const parsed = toNumber(value, fallback);
+  if (!Number.isFinite(parsed)) return fallback;
+  return Math.max(0, Math.floor(parsed));
+}
+
+function mapAuditEntry(row: AuditEntryRow): McpAuditEntry {
+  return {
+    id: toPositiveInt(row.id, 0),
+    toolName: toString(row.tool_name),
+    inputHash: toString(row.input_hash),
+    outputSummary: toString(row.output_summary),
+    durationMs: toNumber(row.duration_ms, 0),
+    apiKeyId: toNullableString(row.api_key_id),
+    success: toBoolean(row.success, false),
+    errorCode: toNullableString(row.error_code),
+    createdAt: toString(row.created_at),
+  };
+}
+
+function buildAuditFilterSql(filters: McpAuditQuery): { whereSql: string; params: unknown[] } {
+  const clauses: string[] = [];
+  const params: unknown[] = [];
+
+  if (typeof filters.tool === "string" && filters.tool.trim().length > 0) {
+    clauses.push("tool_name = ?");
+    params.push(filters.tool.trim());
+  }
+  if (typeof filters.success === "boolean") {
+    clauses.push("success = ?");
+    params.push(filters.success ? 1 : 0);
+  }
+  if (typeof filters.apiKeyId === "string" && filters.apiKeyId.trim().length > 0) {
+    clauses.push("api_key_id = ?");
+    params.push(filters.apiKeyId.trim());
+  }
+
+  return {
+    whereSql: clauses.length > 0 ? `WHERE ${clauses.join(" AND ")}` : "",
+    params,
+  };
+}
+
 let db: AuditDatabase | null = null;
 
 function toNumber(value: unknown, fallback = 0): number {
@@ -129,17 +219,55 @@ export async function logToolCall(
 /**
  * Get recent audit entries (for dashboard/monitoring).
  */
-export async function getRecentAuditEntries(limit = 50): Promise<unknown[]> {
+export async function queryAuditEntries(
+  filters: McpAuditQuery = {}
+): Promise<{ entries: McpAuditEntry[]; total: number; limit: number; offset: number }> {
   try {
     const database = await getDb();
-    if (!database) return [];
+    const limit = Math.max(1, Math.min(500, toPositiveInt(filters.limit, 50)));
+    const offset = Math.max(0, toPositiveInt(filters.offset, 0));
+    if (!database) return { entries: [], total: 0, limit, offset };
 
-    return database
-      .prepare("SELECT * FROM mcp_tool_audit ORDER BY created_at DESC LIMIT ?")
-      .all(limit);
+    const { whereSql, params } = buildAuditFilterSql(filters);
+    const totalRow = database
+      .prepare<AuditCountRow>(`SELECT COUNT(*) as total FROM mcp_tool_audit ${whereSql}`)
+      .get(...params);
+    const rows = database
+      .prepare<AuditEntryRow>(
+        `SELECT
+           id,
+           tool_name,
+           input_hash,
+           output_summary,
+           duration_ms,
+           api_key_id,
+           success,
+           error_code,
+           created_at
+         FROM mcp_tool_audit
+         ${whereSql}
+         ORDER BY created_at DESC
+         LIMIT ? OFFSET ?`
+      )
+      .all(...params, limit, offset);
+
+    return {
+      entries: rows.map(mapAuditEntry),
+      total: toPositiveInt(totalRow?.total, 0),
+      limit,
+      offset,
+    };
   } catch {
-    return [];
+    return { entries: [], total: 0, limit: 50, offset: 0 };
   }
+}
+
+/**
+ * Backward compatible helper for existing callers.
+ */
+export async function getRecentAuditEntries(limit = 50): Promise<McpAuditEntry[]> {
+  const result = await queryAuditEntries({ limit, offset: 0 });
+  return result.entries;
 }
 
 /**

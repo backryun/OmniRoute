@@ -110,6 +110,35 @@ _Połącz dowolne narzędzie IDE lub CLI oparte na sztucznej inteligencji poprze
 
 ---
 
+## 🖼️
+
+<div align="center">
+  <img src="./docs/screenshots/MainOmniRoute.png" alt="OmniRoute" width="800"/>
+</div>
+
+---
+
+## 📸
+
+<details>
+<summary><b>...</b></summary>
+
+| #     | #                                        |
+| ----- | ---------------------------------------- |
+| **1** | ![1](docs/screenshots/01-providers.png)  |
+| **2** | ![2](docs/screenshots/02-combos.png)     |
+| **3** | ![3](docs/screenshots/03-analytics.png)  |
+| **4** | ![4](docs/screenshots/04-health.png)     |
+| **5** | ![5](docs/screenshots/05-translator.png) |
+| **6** | ![6](docs/screenshots/06-settings.png)   |
+| **7** | ![7](docs/screenshots/07-cli-tools.png)  |
+| **8** | ![8](docs/screenshots/08-usage.png)      |
+| **9** | ![9](docs/screenshots/09-endpoint.png)   |
+
+</details>
+
+---
+
 ## 🤔 Dlaczego OmniRoute?
 
 **Przestań marnować pieniądze i przekraczać limity:**
@@ -125,6 +154,18 @@ _Połącz dowolne narzędzie IDE lub CLI oparte na sztucznej inteligencji poprze
 - ✅ **Automatyczny powrót** - Subskrypcja → Klucz API → Tani → Bezpłatny, zero przestojów
 - ✅ **Wiele kont** - Praca okrężna pomiędzy kontami każdego dostawcy
 - ✅ **Uniwersalny** - Działa z Claude Code, Codex, Gemini CLI, Cursor, Cline, OpenClaw i dowolnym narzędziem CLI
+
+---
+
+## 📧 Wsparcie
+
+> 💬 **Dołącz do naszej społeczności!** [WhatsApp Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t) — Uzyskaj pomoc, dziel się wskazówkami i bądź na bieżąco.
+
+- **Strona internetowa**: [omniroute.online](https://omniroute.online)
+- **GitHub**: [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)
+- **Problemy**: [github.com/diegosouzapw/OmniRoute/issues](https://github.com/diegosouzapw/OmniRoute/issues)
+- **WhatsApp**: [Community Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t)
+- **Oryginalny projekt**: [9router by decolua](https://github.com/decolua/9router)
 
 ---
 
@@ -157,262 +198,496 @@ Result: Never stop coding, minimal cost
 
 ---
 
-## 🎯 What OmniRoute Solves — 16 Real Pain Points
+## 🎯 Co rozwiązuje OmniRoute — 30 rzeczywistych problemów i przypadków użycia
 
-> **Every developer using AI tools faces these problems daily.** OmniRoute was built to solve them all — from cost overruns to regional blocks, from broken OAuth flows to zero observability.
+> **Każdy programista korzystający z narzędzi AI codziennie spotyka się z tymi problemami.** OmniRoute został stworzony, aby rozwiązać je wszystkie — od przekroczeń kosztów po blokady regionalne, od zepsutych przepływów OAuth po operacje protokołów i obserwowalność przedsiębiorstwa.
 
 <details>
-<summary><b>💸 1. "I pay for an expensive subscription but still get interrupted by limits"</b></summary>
+<summary><b>💸 1. „Płacę za kosztowną subskrypcję, ale nadal przeszkadzają mi limity”</b></summary>
 
-Developers pay $20–200/month for Claude Pro, Codex Pro, or GitHub Copilot. Even paying, quota has a ceiling — 5h of usage, weekly limits, or per-minute rate limits. Mid-coding session, the provider stops responding and the developer loses flow and productivity.
+Programiści płacą 20–200 USD miesięcznie za Claude Pro, Codex Pro lub GitHub Copilot. Nawet płacąc, limit ma pułap – 5 godzin użytkowania, limity tygodniowe lub limity stawek za minutę. W połowie sesji kodowania dostawca przestaje odpowiadać, a programista traci płynność i produktywność.
 
-**How OmniRoute solves it:**
+**Jak rozwiązuje to OmniRoute:**
 
-- **Smart 4-Tier Fallback** — If subscription quota runs out, automatically redirects to API Key → Cheap → Free with zero manual intervention
-- **Real-Time Quota Tracking** — Shows token consumption in real-time with reset countdown (5h, daily, weekly)
-- **Multi-Account Support** — Multiple accounts per provider with auto round-robin — when one runs out, switches to the next
-- **Custom Combos** — Customizable fallback chains with 6 balancing strategies (fill-first, round-robin, P2C, random, least-used, cost-optimized)
-- **Codex Business Quotas** — Business/Team workspace quota monitoring directly in the dashboard
+- **Inteligentny 4-poziomowy powrót** — Jeśli limit subskrypcji się wyczerpie, automatycznie przekierowuje do klucza API → Tani → Bezpłatny bez ręcznej interwencji
+- **Śledzenie limitów w czasie rzeczywistym** — Pokazuje zużycie tokenów w czasie rzeczywistym z resetowanym odliczaniem (5 godzin, codziennie, co tydzień)
+- **Obsługa wielu kont** — Wiele kont na dostawcę z funkcją automatycznego przełączania między kontami — gdy skończy się jedno, następuje przejście do następnego
+- **Niestandardowe kombinacje** — Konfigurowalne łańcuchy rezerwowe z 6 strategiami równoważenia (pierwsze wypełnienie, działanie okrężne, P2C, losowe, najrzadziej używane, zoptymalizowane pod względem kosztów)
+- **Przydziały biznesowe Kodeksu** — monitorowanie przydziałów przestrzeni roboczej firmy/zespołu bezpośrednio na pulpicie nawigacyjnym
 
 </details>
 
 <details>
-<summary><b>🔌 2. "I need to use multiple providers but each has a different API"</b></summary>
+<summary><b>🔌 2. „Muszę korzystać z wielu dostawców, ale każdy ma inny interfejs API”</b></summary>
 
-OpenAI uses one format, Claude (Anthropic) uses another, Gemini yet another. If a dev wants to test models from different providers or fallback between them, they need to reconfigure SDKs, change endpoints, deal with incompatible formats. Custom providers (FriendLI, NIM) have non-standard model endpoints.
+OpenAI używa jednego formatu, Claude (Anthropic) używa innego, Gemini jeszcze innego. Jeśli programista chce przetestować modele od różnych dostawców lub korzystać z nich w trybie awaryjnym, musi ponownie skonfigurować pakiety SDK, zmienić punkty końcowe i poradzić sobie z niekompatybilnymi formatami. Dostawcy niestandardowi (FriendLI, NIM) mają niestandardowe punkty końcowe modelu.
 
-**How OmniRoute solves it:**
+**Jak rozwiązuje to OmniRoute:**
 
-- **Unified Endpoint** — A single `http://localhost:20128/v1` serves as proxy for all 36+ providers
-- **Format Translation** — Automatic and transparent: OpenAI ↔ Claude ↔ Gemini ↔ Responses API
-- **Response Sanitization** — Strips non-standard fields (`x_groq`, `usage_breakdown`, `service_tier`) that break OpenAI SDK v1.83+
-- **Role Normalization** — Converts `developer` → `system` for non-OpenAI providers; `system` → `user` for GLM/ERNIE
-- **Think Tag Extraction** — Extracts `<think>` blocks from models like DeepSeek R1 into standardized `reasoning_content`
-- **Structured Output for Gemini** — `json_schema` → `responseMimeType`/`responseSchema` automatic conversion
-- **`stream` defaults to `false`** — Aligns with OpenAI spec, avoiding unexpected SSE in Python/Rust/Go SDKs
-
-</details>
-
-<details>
-<summary><b>🌐 3. "My AI provider blocks my region/country"</b></summary>
-
-Providers like OpenAI/Codex block access from certain geographic regions. Users get errors like `unsupported_country_region_territory` during OAuth and API connections. This is especially frustrating for developers from developing countries.
-
-**How OmniRoute solves it:**
-
-- **3-Level Proxy Config** — Configurable proxy at 3 levels: global (all traffic), per-provider (one provider only), and per-connection/key
-- **Color-Coded Proxy Badges** — Visual indicators: 🟢 global proxy, 🟡 provider proxy, 🔵 connection proxy, always showing the IP
-- **OAuth Token Exchange Through Proxy** — OAuth flow also goes through the proxy, solving `unsupported_country_region_territory`
-- **Connection Tests via Proxy** — Connection tests use the configured proxy (no more direct bypass)
-- **SOCKS5 Support** — Full SOCKS5 proxy support for outbound routing
-- **TLS Fingerprint Spoofing** — Browser-like TLS fingerprint via `wreq-js` to bypass bot detection
+- **Ujednolicony punkt końcowy** — pojedynczy `http://localhost:20128/v1` służy jako serwer proxy dla wszystkich ponad 36 dostawców
+- **Tłumaczenie formatu** — Automatyczne i przejrzyste: OpenAI ↔ Claude ↔ Gemini ↔ API odpowiedzi
+- **Odkażanie odpowiedzi** — usuwa niestandardowe pola (`x_groq`, `usage_breakdown`, `service_tier`), które psują OpenAI SDK v1.83+
+- **Normalizacja ról** — Konwertuje `developer` → `system` dla dostawców innych niż OpenAI; `system` → `user` dla GLM/ERNIE
+- **Pomyśl o ekstrakcji tagów** — wyodrębnia bloki `<think>` z modeli takich jak DeepSeek R1 do standardowego `reasoning_content`
+- **Wyjście strukturalne dla Gemini** — `json_schema` → `responseMimeType`/`responseSchema` automatyczna konwersja
+- **`stream` domyślnie to `false`** — Zgodność ze specyfikacją OpenAI, unikanie nieoczekiwanego SSE w pakietach SDK Python/Rust/Go
 
 </details>
 
 <details>
-<summary><b>🆓 4. "I want to use AI for coding but I have no money"</b></summary>
+<summary><b>🌐 3. „Mój dostawca AI blokuje mój region/kraj”</b></summary>
 
-Not everyone can pay $20–200/month for AI subscriptions. Students, devs from emerging countries, hobbyists, and freelancers need access to quality models at zero cost.
+Dostawcy tacy jak OpenAI/Codex blokują dostęp z określonych regionów geograficznych. Podczas połączeń OAuth i API użytkownicy otrzymują błędy takie jak `unsupported_country_region_territory`. Jest to szczególnie frustrujące dla programistów z krajów rozwijających się.
 
-**How OmniRoute solves it:**
+**Jak rozwiązuje to OmniRoute:**
 
-- **Free Tier Providers Built-in** — Native support for 100% free providers: iFlow (8 unlimited models), Qwen (3 unlimited models), Kiro (Claude for free), Gemini CLI (180K/month free)
-- **Free-Only Combos** — Chain `gc/gemini-3-flash → if/kimi-k2-thinking → qw/qwen3-coder-plus` = $0/month with zero downtime
-- **NVIDIA NIM Free Credits** — 1000 free credits integrated
-- **Cost Optimized Strategy** — Routing strategy that automatically chooses the cheapest available provider
-
-</details>
-
-<details>
-<summary><b>🔒 5. "I need to protect my AI gateway from unauthorized access"</b></summary>
-
-When exposing an AI gateway to the network (LAN, VPS, Docker), anyone with the address can consume the developer's tokens/quota. Without protection, APIs are vulnerable to misuse, prompt injection, and abuse.
-
-**How OmniRoute solves it:**
-
-- **API Key Management** — Generation, rotation, and scoping per provider with a dedicated `/dashboard/api-manager` page
-- **Model-Level Permissions** — Restrict API keys to specific models (`openai/*`, wildcard patterns), with Allow All/Restrict toggle
-- **API Endpoint Protection** — Require a key for `/v1/models` and block specific providers from the listing
-- **Auth Guard + CSRF Protection** — All dashboard routes protected with `withAuth` middleware + CSRF tokens
-- **Rate Limiter** — Per-IP rate limiting with configurable windows
-- **IP Filtering** — Allowlist/blocklist for access control
-- **Prompt Injection Guard** — Sanitization against malicious prompt patterns
-- **AES-256-GCM Encryption** — Credentials encrypted at rest
+- **3-poziomowa konfiguracja serwera proxy** — Konfigurowalny serwer proxy na 3 poziomach: globalny (cały ruch), na dostawcę (tylko jeden dostawca) i na połączenie/klucz
+- **Oznaczone kolorami identyfikatory proxy** — Wskaźniki wizualne: 🟢 globalny serwer proxy, 🟡 serwer proxy dostawcy, 🔵 serwer proxy połączenia, zawsze pokazujący adres IP
+- **Wymiana tokenów OAuth przez serwer proxy** — Przepływ OAuth przechodzi również przez serwer proxy, co rozwiązuje problem `unsupported_country_region_territory`
+- **Test połączenia przez serwer proxy** — Testy połączenia wykorzystują skonfigurowany serwer proxy (koniec z bezpośrednim obejściem)
+- **Obsługa SOCKS5** — Pełna obsługa proxy SOCKS5 dla routingu wychodzącego
+- **Podrabianie odcisków palców TLS** — Odcisk palca TLS podobny do przeglądarki za pośrednictwem `wreq-js` w celu ominięcia wykrywania botów
 
 </details>
 
 <details>
-<summary><b>🛑 6. "My provider went down and I lost my coding flow"</b></summary>
+<summary><b>🆓 4. „Chcę używać AI do kodowania, ale nie mam pieniędzy”</b></summary>
 
-AI providers can become unstable, return 5xx errors, or hit temporary rate limits. If a dev depends on a single provider, they're interrupted. Without circuit breakers, repeated retries can crash the application.
+Nie każdy może zapłacić 20–200 USD miesięcznie za subskrypcje AI. Studenci, programiści z krajów wschodzących, hobbyści i freelancerzy potrzebują dostępu do wysokiej jakości modeli po zerowych kosztach.
 
-**How OmniRoute solves it:**
+**Jak rozwiązuje to OmniRoute:**
 
-- **Circuit Breaker per-provider** — Auto-open/close with configurable thresholds and cooldown (Closed/Open/Half-Open)
-- **Exponential Backoff** — Progressive retry delays
-- **Anti-Thundering Herd** — Mutex + semaphore protection against concurrent retry storms
-- **Combo Fallback Chains** — If the primary provider fails, automatically falls through the chain with no intervention
-- **Combo Circuit Breaker** — Auto-disables failing providers within a combo chain
-- **Health Dashboard** — Uptime monitoring, circuit breaker states, lockouts, cache stats, p50/p95/p99 latency
+- **Wbudowani dostawcy bezpłatnych poziomów** — Natywne wsparcie dla w 100% darmowych dostawców: iFlow (8 nielimitowanych modeli), Qwen (3 nieograniczone modele), Kiro (Claude za darmo), Gemini CLI (180 tys./miesiąc za darmo)
+- **Kombinacje dostępne wyłącznie bezpłatnie** — Łańcuch `gc/gemini-3-flash → if/kimi-k2-thinking → qw/qwen3-coder-plus` = 0 USD/miesiąc z zerowymi przestojami
+- **Darmowe kredyty NVIDIA NIM** — zintegrowane 1000 darmowych kredytów
+- **Strategia zoptymalizowana pod względem kosztów** — Strategia routingu, która automatycznie wybiera najtańszego dostępnego dostawcę
 
 </details>
 
 <details>
-<summary><b>🔧 7. "Configuring each AI tool is tedious and repetitive"</b></summary>
+<summary><b>🔒 5. „Muszę chronić moją bramę AI przed nieautoryzowanym dostępem”</b></summary>
 
-Developers use Cursor, Claude Code, Codex CLI, OpenClaw, Gemini CLI, Kilo Code... Each tool needs a different config (API endpoint, key, model). Reconfiguring when switching providers or models is a waste of time.
+Podczas udostępniania bramy AI w sieci (LAN, VPS, Docker) każda osoba posiadająca adres może wykorzystać tokeny/przydział programisty. Bez ochrony interfejsy API są podatne na niewłaściwe użycie, natychmiastowe wstrzyknięcie i nadużycia.
 
-**How OmniRoute solves it:**
+**Jak rozwiązuje to OmniRoute:**
 
-- **CLI Tools Dashboard** — Dedicated page with one-click setup for Claude Code, Codex CLI, OpenClaw, Kilo Code, Antigravity, Cline
-- **GitHub Copilot Config Generator** — Generates `chatLanguageModels.json` for VS Code with bulk model selection
-- **Onboarding Wizard** — Guided 4-step setup for first-time users
-- **One endpoint, all models** — Configure `http://localhost:20128/v1` once, access 36+ providers
-
-</details>
-
-<details>
-<summary><b>🔑 8. "Managing OAuth tokens from multiple providers is hell"</b></summary>
-
-Claude Code, Codex, Gemini CLI, Copilot — all use OAuth 2.0 with expiring tokens. Developers need to re-authenticate constantly, deal with `client_secret is missing`, `redirect_uri_mismatch`, and failures on remote servers. OAuth on LAN/VPS is particularly problematic.
-
-**How OmniRoute solves it:**
-
-- **Auto Token Refresh** — OAuth tokens refresh in background before expiration
-- **OAuth 2.0 (PKCE) Built-in** — Automatic flow for Claude Code, Codex, Gemini CLI, Copilot, Kiro, Qwen, iFlow
-- **Multi-Account OAuth** — Multiple accounts per provider via JWT/ID token extraction
-- **OAuth LAN/Remote Fix** — Private IP detection for `redirect_uri` + manual URL mode for remote servers
-- **OAuth Behind Nginx** — Uses `window.location.origin` for reverse proxy compatibility
-- **Remote OAuth Guide** — Step-by-step guide for Google Cloud credentials on VPS/Docker
+- **Zarządzanie kluczami API** — generowanie, rotacja i ustalanie zakresu dla każdego dostawcy za pomocą dedykowanej strony `/dashboard/api-manager`
+- **Uprawnienia na poziomie modelu** — Ogranicz klucze API do określonych modeli (`openai/*`, wzorce symboli wieloznacznych), za pomocą przełącznika Zezwalaj na wszystko/Ogranicz
+- **API Endpoint Protection** — Wymagaj klucza dla `/v1/models` i blokuj określonych dostawców na liście
+- **Auth Guard + ochrona CSRF** — Wszystkie trasy panelu kontrolnego chronione oprogramowaniem pośredniczącym `withAuth` + tokenami CSRF
+- **Rate Limiter** — Ograniczanie szybkości na IP z konfigurowalnymi oknami
+- **Filtrowanie IP** — Lista dozwolonych/blokowanych do kontroli dostępu
+- **Szybka ochrona przed wstrzyknięciem** — Oczyszczanie przed złośliwymi wzorcami podpowiedzi
+- **Szyfrowanie AES-256-GCM** — Poświadczenia szyfrowane w stanie spoczynku
 
 </details>
 
 <details>
-<summary><b>📊 9. "I don't know how much I'm spending or where"</b></summary>
+<summary><b>🛑 6. „Mój dostawca przestał działać i straciłem płynność kodowania”</b></summary>
 
-Developers use multiple paid providers but have no unified view of spending. Each provider has its own billing dashboard, but there's no consolidated view. Unexpected costs can pile up.
+Dostawcy sztucznej inteligencji mogą stać się niestabilni, zwracać błędy 5xx lub przekraczać tymczasowe limity szybkości. Jeśli programista jest zależny od jednego dostawcy, jego praca jest przerywana. Bez wyłączników automatycznych wielokrotne próby mogą spowodować awarię aplikacji.
 
-**How OmniRoute solves it:**
+**Jak rozwiązuje to OmniRoute:**
 
-- **Cost Analytics Dashboard** — Per-token cost tracking and budget management per provider
-- **Budget Limits per Tier** — Spending ceiling per tier that triggers automatic fallback
-- **Per-Model Pricing Configuration** — Configurable prices per model
-- **Usage Statistics Per API Key** — Request count and last-used timestamp per key
-- **Analytics Dashboard** — Stat cards, model usage chart, provider table with success rates and latency
-
-</details>
-
-<details>
-<summary><b>🐛 10. "I can't diagnose errors and problems in AI calls"</b></summary>
-
-When a call fails, the dev doesn't know if it was a rate limit, expired token, wrong format, or provider error. Fragmented logs across different terminals. Without observability, debugging is trial-and-error.
-
-**How OmniRoute solves it:**
-
-- **Unified Logs Dashboard** — 4 tabs: Request Logs, Proxy Logs, Audit Logs, Console
-- **Console Log Viewer** — Real-time terminal-style viewer with color-coded levels, auto-scroll, search, filter
-- **SQLite Proxy Logs** — Persistent logs that survive server restarts
-- **Translator Playground** — 4 debugging modes: Playground (format translation), Chat Tester (round-trip), Test Bench (batch), Live Monitor (real-time)
-- **Request Telemetry** — p50/p95/p99 latency + X-Request-Id tracing
-- **File-Based Logging with Rotation** — Console interceptor captures everything to JSON log with size-based rotation
+- **Wyłącznik automatyczny na dostawcę** — Automatyczne otwieranie/zamykanie z konfigurowalnymi progami i czasem schładzania (zamknięty/otwarty/półotwarty)
+- **Wykładniczy wycofywanie** — Stopniowe opóźnienia ponownych prób
+- **Anti-Thundering Herd** — Mutex + ochrona semaforów przed równoczesnymi burzami ponownych prób
+- **Łańcuchy awaryjne typu Combo** — jeśli główny dostawca zawiedzie, automatycznie przejdzie przez łańcuch bez interwencji
+- **Wyłącznik automatyczny** — automatycznie wyłącza niesprawnych dostawców w łańcuchu combo
+- **Panel stanu** — Monitorowanie czasu pracy, stany wyłączników, blokady, statystyki pamięci podręcznej, opóźnienia p50/p95/p99
 
 </details>
 
 <details>
-<summary><b>🏗️ 11. "Deploying and maintaining the gateway is complex"</b></summary>
+<summary><b>🔧 7. „Konfigurowanie każdego narzędzia AI jest żmudne i powtarzalne”</b></summary>
 
-Installing, configuring, and maintaining an AI proxy across different environments (local, VPS, Docker, cloud) is labor-intensive. Problems like hardcoded paths, `EACCES` on directories, port conflicts, and cross-platform builds add friction.
+Programiści używają Cursor, Claude Code, Codex CLI, OpenClaw, Gemini CLI, Kilo Code... Każde narzędzie wymaga innej konfiguracji (punkt końcowy API, klucz, model). Ponowna konfiguracja w przypadku zmiany dostawcy lub modelu jest stratą czasu.
 
-**How OmniRoute solves it:**
+**Jak rozwiązuje to OmniRoute:**
 
-- **npm global install** — `npm install -g omniroute && omniroute` — done
-- **Docker Multi-Platform** — AMD64 + ARM64 native (Apple Silicon, AWS Graviton, Raspberry Pi)
-- **Docker Compose Profiles** — `base` (no CLI tools) and `cli` (with Claude Code, Codex, OpenClaw)
-- **Electron Desktop App** — Native app for Windows/macOS/Linux with system tray, auto-start, offline mode
-- **Split-Port Mode** — API and Dashboard on separate ports for advanced scenarios (reverse proxy, container networking)
-- **Cloud Sync** — Config synchronization across devices via Cloudflare Workers
-- **DB Backups** — Automatic backup, restore, export and import of all settings
+- ** Panel narzędzi CLI** — Dedykowana strona z konfiguracją jednym kliknięciem dla Claude Code, Codex CLI, OpenClaw, Kilo Code, Antigravity, Cline
+- **Generator konfiguracji GitHub Copilot** — Generuje `chatLanguageModels.json` dla kodu VS z zbiorczym wyborem modelu
+- **Kreator wprowadzenia** — konfiguracja w 4 krokach dla początkujących użytkowników
+- **Jeden punkt końcowy, wszystkie modele** — Skonfiguruj `http://localhost:20128/v1` raz, uzyskaj dostęp do ponad 36 dostawców
 
 </details>
 
 <details>
-<summary><b>🌍 12. "The interface is English-only and my team doesn't speak English"</b></summary>
+<summary><b>🔑 8. „Zarządzanie tokenami OAuth od wielu dostawców to piekło”</b></summary>
 
-Teams in non-English-speaking countries, especially in Latin America, Asia, and Europe, struggle with English-only interfaces. Language barriers reduce adoption and increase configuration errors.
+Claude Code, Codex, Gemini CLI, Copilot — wszystkie korzystają z OAuth 2.0 z wygasającymi tokenami. Programiści muszą stale przeprowadzać ponowne uwierzytelnianie, radzić sobie z `client_secret is missing`, `redirect_uri_mismatch` i awariami na zdalnych serwerach. Szczególnie problematyczny jest protokół OAuth w sieci LAN/VPS.
 
-**How OmniRoute solves it:**
+**Jak rozwiązuje to OmniRoute:**
 
-- **Dashboard i18n — 30 Languages** — All 500+ keys translated including Arabic, Bulgarian, Danish, German, Spanish, Finnish, French, Hebrew, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Malay, Dutch, Norwegian, Polish, Portuguese (PT/BR), Romanian, Russian, Slovak, Swedish, Thai, Ukrainian, Vietnamese, Chinese, Filipino, English
-- **RTL Support** — Right-to-left support for Arabic and Hebrew
-- **Multi-Language READMEs** — 30 complete documentation translations
-- **Language Selector** — Globe icon in header for real-time switching
-
-</details>
-
-<details>
-<summary><b>🔄 13. "I need more than chat — I need embeddings, images, audio"</b></summary>
-
-AI isn't just chat completion. Devs need to generate images, transcribe audio, create embeddings for RAG, rerank documents, and moderate content. Each API has a different endpoint and format.
-
-**How OmniRoute solves it:**
-
-- **Embeddings** — `/v1/embeddings` with 6 providers and 9+ models
-- **Image Generation** — `/v1/images/generations` with 4 providers and 9+ models
-- **Audio Transcription** — `/v1/audio/transcriptions` — Whisper-compatible
-- **Text-to-Speech** — `/v1/audio/speech` — Multi-provider audio synthesis
-- **Moderations** — `/v1/moderations` — Content safety checks
-- **Reranking** — `/v1/rerank` — Document relevance reranking
-- **Responses API** — Full `/v1/responses` support for Codex
+- **Automatyczne odświeżanie tokenu** — tokeny OAuth odświeżają się w tle przed wygaśnięciem
+- **Wbudowany OAuth 2.0 (PKCE)** — Automatyczny przepływ dla Claude Code, Codex, Gemini CLI, Copilot, Kiro, Qwen, iFlow
+- **Wielokontowy OAuth** — wiele kont na dostawcę poprzez ekstrakcję tokenów JWT/ID
+- **OAuth LAN/remote fix** — wykrywanie prywatnego adresu IP dla `redirect_uri` + ręczny tryb adresu URL dla serwerów zdalnych
+- **OAuth Behind Nginx** — wykorzystuje `window.location.origin` w celu zapewnienia zgodności z odwrotnym proxy
+- **Przewodnik po zdalnym OAuth** — szczegółowy przewodnik dotyczący danych uwierzytelniających Google Cloud na platformie VPS/Docker
 
 </details>
 
 <details>
-<summary><b>🧪 14. "I have no way to test and compare quality across models"</b></summary>
+<summary><b>📊 9. „Nie wiem, ile i gdzie wydaję”</b></summary>
 
-Developers want to know which model is best for their use case — code, translation, reasoning — but comparing manually is slow. No integrated eval tools exist.
+Programiści korzystają z wielu płatnych dostawców, ale nie mają jednolitego widoku wydatków. Każdy dostawca ma własny pulpit rozliczeniowy, ale nie ma widoku skonsolidowanego. Nieoczekiwane koszty mogą się kumulować.
 
-**How OmniRoute solves it:**
+**Jak rozwiązuje to OmniRoute:**
 
-- **LLM Evaluations** — Golden set testing with 10 pre-loaded cases covering greetings, math, geography, code generation, JSON compliance, translation, markdown, safety refusal
-- **4 Match Strategies** — `exact`, `contains`, `regex`, `custom` (JS function)
-- **Translator Playground Test Bench** — Batch testing with multiple inputs and expected outputs, cross-provider comparison
-- **Chat Tester** — Full round-trip with visual response rendering
-- **Live Monitor** — Real-time stream of all requests flowing through the proxy
-
-</details>
-
-<details>
-<summary><b>📈 15. "I need to scale without losing performance"</b></summary>
-
-As request volume grows, without caching the same questions generate duplicate costs. Without idempotency, duplicate requests waste processing. Per-provider rate limits must be respected.
-
-**How OmniRoute solves it:**
-
-- **Semantic Cache** — Two-tier cache (signature + semantic) reduces cost and latency
-- **Request Idempotency** — 5s deduplication window for identical requests
-- **Rate Limit Detection** — Per-provider RPM, min gap, and max concurrent tracking
-- **Editable Rate Limits** — Configurable defaults in Settings → Resilience with persistence
-- **API Key Validation Cache** — 3-tier cache for production performance
-- **Health Dashboard with Telemetry** — p50/p95/p99 latency, cache stats, uptime
+- **Panel analizy kosztów** — śledzenie kosztów według tokenu i zarządzanie budżetem dla każdego dostawcy
+- **Limity budżetowe na poziom** — Pułap wydatków na poziom, który uruchamia automatyczne wycofanie
+- **Konfiguracja cen dla poszczególnych modeli** — Ceny dla poszczególnych modeli można konfigurować
+- **Statystyki użytkowania na klucz API** — Liczba żądań i znacznik czasu ostatniego użycia na klucz
+- **Panel analityczny** — karty statystyk, wykres wykorzystania modelu, tabela dostawców ze wskaźnikami powodzenia i opóźnieniami
 
 </details>
 
 <details>
-<summary><b>🤖 16. "I want to control model behavior globally"</b></summary>
+<summary><b>🐛 10. „Nie mogę diagnozować błędów i problemów w wywołaniach AI”</b></summary>
 
-Developers who want all responses in a specific language, with a specific tone, or want to limit reasoning tokens. Configuring this in every tool/request is impractical.
+Gdy połączenie nie powiedzie się, programista nie wie, czy był to limit szybkości, wygasły token, nieprawidłowy format czy błąd dostawcy. Fragmentowane dzienniki na różnych terminalach. Bez obserwowalności debugowanie odbywa się metodą prób i błędów.
 
-**How OmniRoute solves it:**
+**Jak rozwiązuje to OmniRoute:**
 
-- **System Prompt Injection** — Global prompt applied to all requests
-- **Thinking Budget Validation** — Reasoning token allocation control per request (passthrough, auto, custom, adaptive)
-- **6 Routing Strategies** — Global strategies that determine how requests are distributed
-- **Wildcard Router** — `provider/*` patterns route dynamically to any provider
-- **Combo Enable/Disable Toggle** — Toggle combos directly from the dashboard
-- **Provider Toggle** — Enable/disable all connections for a provider with one click
-- **Blocked Providers** — Exclude specific providers from `/v1/models` listing
+- **Ujednolicony pulpit nawigacyjny** — 4 karty: Dzienniki żądań, Dzienniki proxy, Dzienniki audytu, Konsola
+- **Przeglądarka logów w konsoli** — Przeglądarka działająca w stylu terminala w czasie rzeczywistym z poziomami oznaczonymi kolorami, automatycznym przewijaniem, wyszukiwaniem i filtrowaniem
+- **Dzienniki proxy SQLite** — trwałe dzienniki, które przetrwają ponowne uruchomienie serwera
+- **Plac zabaw dla tłumaczy** — 4 tryby debugowania: Plac zabaw (tłumaczenie formatu), Tester czatu (w obie strony), Stanowisko testowe (wsadowe), Monitor na żywo (w czasie rzeczywistym)
+- **Żądanie telemetrii** — opóźnienie p50/p95/p99 + śledzenie identyfikatora X-Request-Id
+- **Logowanie oparte na plikach z rotacją** — Przechwytywacz konsoli przechwytuje wszystko do dziennika JSON z rotacją na podstawie rozmiaru
 
 </details>
+
+<details>
+<summary><b>🏗️ 11. „Wdrażanie i konserwacja bramy jest skomplikowane”</b></summary>
+
+Instalacja, konfiguracja i utrzymanie serwera proxy AI w różnych środowiskach (lokalnym, VPS, Docker, chmura) jest pracochłonne. Problemy takie jak zakodowane na stałe ścieżki, `EACCES` w katalogach, konflikty portów i kompilacje międzyplatformowe zwiększają tarcia.
+
+**Jak rozwiązuje to OmniRoute:**
+
+- **npm globalna instalacja** — `npm install -g omniroute && omniroute` — gotowe
+- **Docker Multi-platform** — natywny AMD64 + ARM64 (Apple Silicon, AWS Graviton, Raspberry Pi)
+- **Profile Docker Compose** — `base` (bez narzędzi CLI) i `cli` (z Claude Code, Codex, OpenClaw)
+- **Electron Desktop App** — Natywna aplikacja dla systemów Windows/macOS/Linux z zasobnikiem systemowym, automatycznym uruchamianiem i trybem offline
+- **Tryb Split-Port** — API i pulpit nawigacyjny na oddzielnych portach dla zaawansowanych scenariuszy (odwrotne proxy, sieć kontenerowa)
+- **Cloud Sync** — skonfiguruj synchronizację między urządzeniami za pośrednictwem Cloudflare Workers
+- **Kopie zapasowe DB** — Automatyczne tworzenie kopii zapasowych, przywracanie, eksportowanie i importowanie wszystkich ustawień
+
+</details>
+
+<details>
+<summary><b>🌍 12. „Interfejs jest wyłącznie w języku angielskim, a mój zespół nie mówi po angielsku”</b></summary>
+
+Zespoły w krajach nieanglojęzycznych, szczególnie w Ameryce Łacińskiej, Azji i Europie, mają trudności z interfejsami dostępnymi wyłącznie w języku angielskim. Bariery językowe ograniczają wdrażanie i zwiększają liczbę błędów konfiguracyjnych.
+
+**Jak rozwiązuje to OmniRoute:**
+
+- ** Panel i18n — 30 języków** — Przetłumaczono ponad 500 klawiszy, w tym arabski, bułgarski, duński, niemiecki, hiszpański, fiński, francuski, hebrajski, hindi, węgierski, indonezyjski, włoski, japoński, koreański, malajski, holenderski, norweski, polski, portugalski (PT/BR), rumuński, rosyjski, słowacki, szwedzki, tajski, ukraiński, wietnamski, chiński, filipiński, angielski
+- **Obsługa RTL** — obsługa tekstu od prawej do lewej w języku arabskim i hebrajskim
+- **Wielojęzyczne pliki README** — 30 kompletnych tłumaczeń dokumentacji
+- **Wybór języka** — Ikona kuli ziemskiej w nagłówku umożliwiająca przełączanie w czasie rzeczywistym
+
+</details>
+
+<details>
+<summary><b>🔄 13. „Potrzebuję czegoś więcej niż czatu — potrzebuję osadzania, obrazów i dźwięku”</b></summary>
+
+Sztuczna inteligencja to nie tylko ukończenie czatu. Twórcy muszą generować obrazy, transkrybować dźwięk, tworzyć osadzania dla RAG, zmieniać rangę dokumentów i moderować treści. Każdy interfejs API ma inny punkt końcowy i format.
+
+**Jak rozwiązuje to OmniRoute:**
+
+- **Osadzania** — `/v1/embeddings` z 6 dostawcami i ponad 9 modelami
+- **Generowanie obrazu** — `/v1/images/generations` z 10 dostawcami i ponad 20 modelami (OpenAI, xAI, Together, Fireworks, Nebius, Hyperbolic, NanoBanana, Antigravity, SD WebUI, ComfyUI)
+- **Tekst na wideo** — `/v1/videos/generations` — ComfyUI (AnimateDiff, SVD) i SD WebUI
+- **Tekst na muzykę** — `/v1/music/generations` — ComfyUI (Stable Audio Open, MusicGen)
+- **Transkrypcja audio** — `/v1/audio/transcriptions` — Whisper + Nvidia NIM, HuggingFace, Qwen3
+- **Zamiana tekstu na mowę** — `/v1/audio/speech` — ElevenLabs, Nvidia NIM, HuggingFace, Coqui, Tortoise, Qwen3, + obecni dostawcy
+- **Moderacje** — `/v1/moderations` — Sprawdzanie bezpieczeństwa treści
+- **Reranking** — `/v1/rerank` — Zmiana rankingu trafności dokumentu
+- **Responses API** — Pełna obsługa `/v1/responses` dla Codexu
+
+</details>
+
+<details>
+<summary><b>🧪 14. „Nie mam możliwości przetestowania i porównania jakości pomiędzy modelami”</b></summary>
+
+Programiści chcą wiedzieć, który model jest najlepszy dla ich przypadku użycia — kodu, tłumaczenia, rozumowania — ale ręczne porównywanie jest powolne. Nie istnieją żadne zintegrowane narzędzia eval.
+
+**Jak rozwiązuje to OmniRoute:**
+
+- **Oceny LLM** — Testowanie złotego zestawu z 10 fabrycznie załadowanymi skrzynkami obejmującymi pozdrowienia, matematykę, geografię, generowanie kodu, zgodność z JSON, tłumaczenie, przeceny, odmowy ze względów bezpieczeństwa
+- **4 strategie dopasowania** — `exact`, `contains`, `regex`, `custom` (funkcja JS)
+- **Stolik testowy dla tłumaczy** — Testowanie wsadowe z wieloma danymi wejściowymi i oczekiwanymi wynikami, porównanie różnych dostawców
+- **Tester czatu** — Pełna podróż w obie strony z renderowaniem odpowiedzi wizualnych
+- **Live Monitor** — Strumień w czasie rzeczywistym wszystkich żądań przepływających przez serwer proxy
+
+</details>
+
+<details>
+<summary><b>📈 15. „Muszę skalować bez utraty wydajności”</b></summary>
+
+W miarę wzrostu liczby żądań bez buforowania tych samych pytań generowane są podwójne koszty. Bez idempotencji zduplikowane żądania przetwarzania odpadów. Należy przestrzegać limitów stawek dla poszczególnych dostawców.
+
+**Jak rozwiązuje to OmniRoute:**
+
+- **Semantyczna pamięć podręczna** — Dwuwarstwowa pamięć podręczna (podpis + semantyka) zmniejsza koszty i opóźnienia
+- **Request Idempotency** — okno deduplikacji 5 s dla identycznych żądań
+- **Wykrywanie limitów szybkości** — RPM na dostawcę, minimalna przerwa i maksymalne jednoczesne śledzenie
+- **Edytowalne limity szybkości** — Konfigurowalne ustawienia domyślne w Ustawieniach → Odporność z trwałością
+- **API Key Validation Cache** — 3-warstwowa pamięć podręczna zapewniająca wydajność produkcyjną
+- **Panel kontrolny stanu z telemetrią** — opóźnienia p50/p95/p99, statystyki pamięci podręcznej, czas pracy
+
+</details>
+
+<details>
+<summary><b>🤖 16. „Chcę kontrolować zachowanie modelu globalnie”</b></summary>
+
+Deweloperzy, którzy chcą wszystkich odpowiedzi w określonym języku, w określonym tonie lub chcą ograniczyć tokeny rozumowania. Konfigurowanie tego w każdym narzędziu/żądaniu jest niepraktyczne.
+
+**Jak rozwiązuje to OmniRoute:**
+
+- **Wstrzykiwanie monitu systemowego** — monit globalny stosowany do wszystkich żądań
+- **Przemyślana walidacja budżetu** — Kontrola alokacji tokenów rozumowania na każde żądanie (przejściowe, automatyczne, niestandardowe, adaptacyjne)
+- **6 Strategii routingu** — Globalne strategie określające sposób dystrybucji żądań
+- **Wildcard Router** — wzorce `provider/*` są przesyłane dynamicznie do dowolnego dostawcy
+- **Przełączanie kombinacji włącz/wyłącz** — przełączaj kombinacje bezpośrednio z pulpitu nawigacyjnego
+- **Przełączanie dostawcy** — Włącz/wyłącz wszystkie połączenia dla dostawcy jednym kliknięciem
+- **Zablokowani dostawcy** — Wyklucz określonych dostawców z listy `/v1/models`
+
+</details>
+
+<details>
+<summary><b>🧰 17. „Potrzebuję narzędzi MCP jako produktów najwyższej klasy”</b></summary>
+
+Wiele bram AI ujawnia MCP jedynie jako ukryty szczegół implementacji. Zespoły potrzebują widocznej, zarządzalnej warstwy operacyjnej.
+
+**Jak rozwiązuje to OmniRoute:**
+
+- MCP pojawia się w panelu nawigacji na desce rozdzielczej i w zakładce protokołu punktu końcowego
+- Dedykowana strona zarządzania MCP z procesem, narzędziami, zakresami i audytem
+- Wbudowany szybki start dla `omniroute --mcp` i dołączania klientów
+
+</details>
+
+<details>
+<summary><b>🧠 18. „Potrzebuję orkiestracji A2A ze ścieżkami zadań synchronizacji i strumieniowania”</b></summary>
+
+Przepływy pracy agentów wymagają zarówno bezpośrednich odpowiedzi, jak i długotrwałego wykonywania strumieniowego z kontrolą cyklu życia.
+
+**Jak rozwiązuje to OmniRoute:**
+
+- Punkt końcowy A2A JSON-RPC (`POST /a2a`) z `message/send` i `message/stream`
+- Przesyłanie strumieniowe SSE z propagacją stanu terminala
+  — Interfejsy API cyklu życia zadań dla `tasks/get` i `tasks/cancel`
+
+</details>
+
+<details>
+<summary><b>🛰️ 19. „Potrzebuję prawdziwego stanu procesu MCP, a nie zgadniętego statusu”</b></summary>
+
+Zespoły operacyjne muszą wiedzieć, czy MCP rzeczywiście żyje, a nie tylko, czy można uzyskać dostęp do interfejsu API.
+
+**Jak rozwiązuje to OmniRoute:**
+
+- Plik pulsu środowiska wykonawczego z PID, znacznikami czasu, transportem, liczbą narzędzi i trybem zakresu
+- API statusu MCP łączące puls + ostatnią aktywność
+- Karty stanu interfejsu użytkownika dotyczące świeżości procesów/czasu pracy/bicia serca
+
+</details>
+
+<details>
+<summary><b>📋 20. „Potrzebuję wykonania narzędzia MCP z możliwością audytu”</b></summary>
+
+Gdy narzędzia modyfikują konfigurację lub uruchamiają działania operacyjne, zespoły potrzebują identyfikowalności kryminalistycznej.
+
+**Jak rozwiązuje to OmniRoute:**
+
+- Wspierane przez SQLite rejestrowanie audytu dla wywołań narzędzi MCP
+- Filtruje według narzędzia, sukcesu/porażki, klucza API i paginacji
+- Tabela audytu pulpitu nawigacyjnego + punkty końcowe statystyk dla automatyzacji
+
+</details>
+
+<details>
+<summary><b>🔐 21. „Potrzebuję uprawnień MCP o określonym zakresie na integrację”</b></summary>
+
+Różni klienci powinni mieć najniższy dostęp do kategorii narzędzi.
+
+**Jak rozwiązuje to OmniRoute:**
+
+- 9 szczegółowych zakresów MCP zapewniających kontrolowany dostęp do narzędzi
+- Egzekwowanie zakresu i widoczność w interfejsie zarządzania MCP
+- Bezpieczna domyślna pozycja dla narzędzi operacyjnych
+
+</details>
+
+<details>
+<summary><b>⚙️ 22. „Potrzebuję kontroli operacyjnej bez ponownego wdrażania”</b></summary>
+
+Zespoły potrzebują szybkich zmian w czasie działania podczas incydentów lub zdarzeń kosztowych.
+
+**Jak rozwiązuje to OmniRoute:**
+
+- Aktywacja kombinacji przełączników bezpośrednio z pulpitu nawigacyjnego MCP
+- Zastosuj profile odporności ze wstępnie zdefiniowanych pakietów zasad
+- Zresetuj stan wyłącznika automatycznego z tego samego panelu operacyjnego
+
+</details>
+
+<details>
+<summary><b>🔄 23. „Potrzebuję widoczności i anulowania cyklu życia zadania A2A na żywo”</b></summary>
+
+Bez widoczności cyklu życia zdarzenia związane z zadaniami stają się trudne do segregacji.
+
+**Jak rozwiązuje to OmniRoute:**
+
+- Lista zadań/filtrowanie według stanu/umiejętności z paginacją
+- Szczegółowa analiza metadanych zadań, zdarzeń i artefaktów
+- Punkt końcowy anulowania zadania i akcja interfejsu użytkownika z potwierdzeniem
+
+</details>
+
+<details>
+<summary><b>🌊 24. „Potrzebuję metryk aktywnego strumienia dla obciążenia A2A”</b></summary>
+
+Przepływy pracy związane z przesyłaniem strumieniowym wymagają operacyjnego wglądu w współbieżność i połączenia na żywo.
+
+**Jak rozwiązuje to OmniRoute:**
+
+- Aktywne liczniki strumieni zintegrowane ze statusem A2A
+- Znacznik czasu ostatniego zadania i liczba stanów
+- Karty pulpitu A2A do monitorowania operacji w czasie rzeczywistym
+
+</details>
+
+<details>
+<summary><b>🪪 25. „Potrzebuję standardowego wyszukiwania agentów dla klientów”</b></summary>
+
+Zewnętrzni klienci i koordynatorzy potrzebują metadanych do odczytu maszynowego na potrzeby wdrożenia.
+
+**Jak rozwiązuje to OmniRoute:**
+
+- Karta agenta ujawniona pod adresem `/.well-known/agent.json`
+- Możliwości i umiejętności pokazane w interfejsie zarządzania
+- Interfejs API stanu A2A zawiera metadane wykrywania do automatyzacji
+
+</details>
+
+<details>
+<summary><b>🧭 26. „Potrzebuję możliwości wykrycia protokołu w UX produktu”</b></summary>
+
+Jeśli użytkownicy nie mogą odkryć powierzchni protokołu, spada jakość przyjęcia i wsparcia.
+
+**Jak rozwiązuje to OmniRoute:**
+
+- Wpisy na pasku bocznym dla MCP i A2A
+- Strona punktu końcowego, zakładka Protokoły z szybkim startem i statusem
+- Linki z przeglądu do dedykowanych pulpitów zarządzania
+
+</details>
+
+<details>
+<summary><b>🧪 27. „Potrzebuję kompleksowej weryfikacji protokołu z prawdziwymi klientami”</b></summary>
+
+Testy próbne nie wystarczą do sprawdzenia zgodności protokołu przed wydaniem.
+
+**Jak rozwiązuje to OmniRoute:**
+
+- Pakiet E2E, który uruchamia aplikację i wykorzystuje prawdziwy transport klienta MCP SDK
+- Testy klienta A2A pod kątem wykrywania, wysyłania, przesyłania strumieniowego, pobierania i anulowania przepływów
+- Sprawdzaj twierdzenia względem interfejsów API audytu MCP i zadań A2A
+
+</details>
+
+<details>
+<summary><b>📡 28. „Potrzebuję ujednoliconej obserwowalności na wszystkich interfejsach”</b></summary>
+
+Podział obserwowalności według protokołu tworzy martwe punkty i wydłuża MTTR.
+
+**Jak rozwiązuje to OmniRoute:**
+
+- Ujednolicone dashboardy/dzienniki/analizy w jednym produkcie
+- Stan + audyt + telemetria żądań w warstwach OpenAI, MCP i A2A
+- Operacyjne interfejsy API dla statusu i automatyzacji
+
+</details>
+
+<details>
+<summary><b>💼 29. „Potrzebuję jednego środowiska wykonawczego dla serwera proxy + narzędzi + orkiestracji agenta”</b></summary>
+
+Uruchamianie wielu oddzielnych usług zwiększa koszty operacyjne i tryby awarii.
+
+**Jak rozwiązuje to OmniRoute:**
+
+- Serwer proxy zgodny z OpenAI, serwer MCP i serwer A2A w jednym stosie
+- Wspólne uwierzytelnianie, odporność, magazyn danych i obserwowalność
+- Spójny model polityki na wszystkich płaszczyznach interakcji
+
+</details>
+
+<details>
+<summary><b>🚀 30. „Muszę dostarczać agentowe przepływy pracy bez konieczności rozrzucania kodu kleju”</b></summary>
+
+Zespoły tracą prędkość podczas łączenia wielu usług i skryptów ad hoc.
+
+**Jak rozwiązuje to OmniRoute:**
+
+- Ujednolicona strategia dotycząca punktów końcowych dla klientów i agentów
+- Wbudowane interfejsy zarządzania protokołami i ścieżki sprawdzania dymu
+- Podstawy gotowe do produkcji (bezpieczeństwo, logowanie, odporność, kopie zapasowe)
+
+</details>
+
+### Przykładowe podręczniki (zintegrowane przypadki użycia)
+
+**Poradnik A: maksymalizuj płatną subskrypcję + tanią kopię zapasową**
+
+```txt
+Combo: "maximize-claude"
+  1. cc/claude-opus-4-6
+  2. glm/glm-4.7
+  3. if/kimi-k2-thinking
+
+Monthly cost: $20 + small backup spend
+Outcome: higher quality, near-zero interruption
+```
+
+**Poradnik B: stos kodowania o zerowym koszcie**
+
+```txt
+Combo: "free-forever"
+  1. gc/gemini-3-flash
+  2. if/kimi-k2-thinking
+  3. qw/qwen3-coder-plus
+
+Monthly cost: $0
+Outcome: stable free coding workflow
+```
+
+**Poradnik C: łańcuch awaryjny działający 24 godziny na dobę, 7 dni w tygodniu**
+
+```txt
+Combo: "always-on"
+  1. cc/claude-opus-4-6
+  2. cx/gpt-5.2-codex
+  3. glm/glm-4.7
+  4. minimax/MiniMax-M2.1
+  5. if/kimi-k2-thinking
+
+Outcome: deep fallback depth for deadline-critical workloads
+```
+
+**Poradnik D: Operacje agenta z MCP + A2A**
+
+```txt
+1) Start MCP transport (`omniroute --mcp`) for tool-driven operations
+2) Run A2A tasks via `message/send` and `message/stream`
+3) Observe via /dashboard/mcp and /dashboard/a2a
+4) Control incidents with resilience profile + task cancellation
+```
+
+---
 
 ## ⚡ Szybki start
 
@@ -506,7 +781,7 @@ docker compose --profile cli up -d
 
 ---
 
-## 🖥️ Desktop App — Offline & Always-On
+## 🖥️
 
 > 🆕 **NEW!** OmniRoute is now available as a **native desktop application** for Windows, macOS, and Linux.
 
@@ -715,66 +990,26 @@ OmniRoute zawiera potężny, wbudowany plac zabaw dla tłumaczy z **4 trybami** 
 
 </details>
 
----
+## 🧪 Oceny (Ewaluacje)
 
-## 🎯 Przypadki użycia
+OmniRoute zawiera wbudowaną platformę ewaluacyjną do testowania jakości odpowiedzi LLM na podstawie złotego zestawu. Uzyskaj do niego dostęp poprzez **Analytics → Evals** na pulpicie nawigacyjnym.
 
-### Przypadek 1: „Mam subskrypcję Claude Pro”
+### Wbudowany złoty zestaw
 
-**Problem:** Limit wygasa niewykorzystany, limity szybkości podczas intensywnego kodowania
+Fabrycznie załadowany „Złoty zestaw OmniRoute” zawiera 10 przypadków testowych obejmujących:
 
-```
-Combo: "maximize-claude"
-  1. cc/claude-opus-4-6        (use subscription fully)
-  2. glm/glm-4.7               (cheap backup when quota out)
-  3. if/kimi-k2-thinking       (free emergency fallback)
+- Pozdrowienia, matematyka, geografia, generowanie kodu
+- Zgodność z formatem JSON, tłumaczenie, przecena
+- Odmowa bezpieczeństwa (szkodliwa treść), liczenie, logika boolowska
 
-Monthly cost: $20 (subscription) + ~$5 (backup) = $25 total
-vs. $20 + hitting limits = frustration
-```
+### Strategie oceny
 
-### Przypadek 2: „Chcę zerowych kosztów”
-
-**Problem:** Nie stać Cię na subskrypcje, potrzebujesz niezawodnego kodowania AI
-
-```
-Combo: "free-forever"
-  1. gc/gemini-3-flash         (180K free/month)
-  2. if/kimi-k2-thinking       (unlimited free)
-  3. qw/qwen3-coder-plus       (unlimited free)
-
-Monthly cost: $0
-Quality: Production-ready models
-```
-
-### Przypadek 3: „Potrzebuję kodowania 24 godziny na dobę, 7 dni w tygodniu, bez przerw”
-
-**Problem:** Terminy, nie mogę sobie pozwolić na przestoje
-
-```
-Combo: "always-on"
-  1. cc/claude-opus-4-6        (best quality)
-  2. cx/gpt-5.2-codex          (second subscription)
-  3. glm/glm-4.7               (cheap, resets daily)
-  4. minimax/MiniMax-M2.1      (cheapest, 5h reset)
-  5. if/kimi-k2-thinking       (free unlimited)
-
-Result: 5 layers of fallback = zero downtime
-```
-
-### Przypadek 4: „Chcę DARMOWEJ sztucznej inteligencji w OpenClaw”
-
-**Problem:** Potrzebujesz asystenta AI w aplikacjach do przesyłania wiadomości, całkowicie za darmo
-
-```
-Combo: "openclaw-free"
-  1. if/glm-4.7                (unlimited free)
-  2. if/minimax-m2.1           (unlimited free)
-  3. if/kimi-k2-thinking       (unlimited free)
-
-Monthly cost: $0
-Access via: WhatsApp, Telegram, Slack, Discord, iMessage, Signal...
-```
+| Strategia  | Opis                                                                    | Przykład                         |
+| ---------- | ----------------------------------------------------------------------- | -------------------------------- |
+| `exact`    | Dane wyjściowe muszą dokładnie odpowiadać                               | `"4"`                            |
+| `contains` | Dane wyjściowe muszą zawierać podciąg (wielkość liter nie ma znaczenia) | `"Paris"`                        |
+| `regex`    | Dane wyjściowe muszą pasować do wzorca wyrażenia regularnego            | `"1.*2.*3"`                      |
+| `custom`   | Niestandardowa funkcja JS zwraca wartość prawda/fałsz                   | `(output) => output.length > 10` |
 
 ---
 
@@ -1058,29 +1293,6 @@ Settings → API Configuration:
 
 ---
 
-## 🧪 Oceny (Ewaluacje)
-
-OmniRoute zawiera wbudowaną platformę ewaluacyjną do testowania jakości odpowiedzi LLM na podstawie złotego zestawu. Uzyskaj do niego dostęp poprzez **Analytics → Evals** na pulpicie nawigacyjnym.
-
-### Wbudowany złoty zestaw
-
-Fabrycznie załadowany „Złoty zestaw OmniRoute” zawiera 10 przypadków testowych obejmujących:
-
-- Pozdrowienia, matematyka, geografia, generowanie kodu
-- Zgodność z formatem JSON, tłumaczenie, przecena
-- Odmowa bezpieczeństwa (szkodliwa treść), liczenie, logika boolowska
-
-### Strategie oceny
-
-| Strategia  | Opis                                                                    | Przykład                         |
-| ---------- | ----------------------------------------------------------------------- | -------------------------------- |
-| `exact`    | Dane wyjściowe muszą dokładnie odpowiadać                               | `"4"`                            |
-| `contains` | Dane wyjściowe muszą zawierać podciąg (wielkość liter nie ma znaczenia) | `"Paris"`                        |
-| `regex`    | Dane wyjściowe muszą pasować do wzorca wyrażenia regularnego            | `"1.*2.*3"`                      |
-| `custom`   | Niestandardowa funkcja JS zwraca wartość prawda/fałsz                   | `(output) => output.length > 10` |
-
----
-
 ## 🐛 Rozwiązywanie problemów
 
 <details>
@@ -1138,7 +1350,7 @@ Fabrycznie załadowany „Złoty zestaw OmniRoute” zawiera 10 przypadków test
 
 > **⚠️ WAŻNE dla zwykłych usług OmniRoute w VPS/Docker/serwidor zdalny**
 
-#### Por que o OAuth do Antigravity / Gemini CLI falha na zdalnych serwerach?
+#### OAuth
 
 Sprawdzone **Antigravity** i **Gemini CLI** używane **Google OAuth 2.0** dla autentyczności. O Google, jeśli potrzebujesz `redirect_uri`, aby nie zmieniać protokołu OAuth seja **exatamente** uma das URI pre-cadastradas no Google Cloud Console to aplicativo.
 
@@ -1227,7 +1439,7 @@ Jeśli chcesz uzyskać dostęp do **podręcznika URL**:
 
 ---
 
-## 🛠️ Stos technologii
+## 🛠️
 
 - **Środowisko wykonawcze**: Node.js 18–22 LTS (⚠️ Node.js 24+ jest **nieobsługiwany** — `better-sqlite3` natywne pliki binarne są niekompatybilne)
 - **Język**: TypeScript 5.9 — **100% TypeScript** w `src/` i `open-sse/` (v1.0.6)
@@ -1279,7 +1491,7 @@ Jeśli chcesz uzyskać dostęp do **podręcznika URL**:
 
 ---
 
-## 🗺️ Plan działania
+## 🗺️
 
 OmniRoute ma **ponad 210 funkcji zaplanowanych** w wielu fazach rozwoju. Oto kluczowe obszary:
 
@@ -1301,18 +1513,6 @@ OmniRoute ma **ponad 210 funkcji zaplanowanych** w wielu fazach rozwoju. Oto klu
 - 💰 **Strategia najniższych kosztów** — Automatycznie wybierz najtańszego dostępnego dostawcę
 
 > 📝 Pełna specyfikacja funkcji dostępna w [link](docs/new-features/) (217 szczegółowych specyfikacji)
-
----
-
-## 📧 Wsparcie
-
-> 💬 **Dołącz do naszej społeczności!** [WhatsApp Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t) — Uzyskaj pomoc, dziel się wskazówkami i bądź na bieżąco.
-
-- **Strona internetowa**: [omniroute.online](https://omniroute.online)
-- **GitHub**: [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)
-- **Problemy**: [github.com/diegosouzapw/OmniRoute/issues](https://github.com/diegosouzapw/OmniRoute/issues)
-- **WhatsApp**: [Community Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t)
-- **Oryginalny projekt**: [9router by decolua](https://github.com/decolua/9router)
 
 ---
 

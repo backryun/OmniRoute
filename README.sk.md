@@ -110,6 +110,35 @@ _Pripojte akýkoľvek nástroj IDE alebo CLI poháňaný AI cez OmniRoute – be
 
 ---
 
+## 🖼️
+
+<div align="center">
+  <img src="./docs/screenshots/MainOmniRoute.png" alt="OmniRoute" width="800"/>
+</div>
+
+---
+
+## 📸
+
+<details>
+<summary><b>...</b></summary>
+
+| #     | #                                        |
+| ----- | ---------------------------------------- |
+| **1** | ![1](docs/screenshots/01-providers.png)  |
+| **2** | ![2](docs/screenshots/02-combos.png)     |
+| **3** | ![3](docs/screenshots/03-analytics.png)  |
+| **4** | ![4](docs/screenshots/04-health.png)     |
+| **5** | ![5](docs/screenshots/05-translator.png) |
+| **6** | ![6](docs/screenshots/06-settings.png)   |
+| **7** | ![7](docs/screenshots/07-cli-tools.png)  |
+| **8** | ![8](docs/screenshots/08-usage.png)      |
+| **9** | ![9](docs/screenshots/09-endpoint.png)   |
+
+</details>
+
+---
+
 ## 🤔 Prečo OmniRoute?
 
 **Prestaňte plytvať peniazmi a dosahovať limity:**
@@ -125,6 +154,18 @@ _Pripojte akýkoľvek nástroj IDE alebo CLI poháňaný AI cez OmniRoute – be
 - ✅ **Automatická záloha** - Predplatné → Kľúč API → Lacné → Bezplatne, nulové prestoje
 - ✅ **Viaceré účty** - Obojstranne medzi účtami na poskytovateľa
 - ✅ **Universal** - Funguje s Claude Code, Codex, Gemini CLI, Cursor, Cline, OpenClaw, akýmkoľvek nástrojom CLI
+
+---
+
+## 📧 Podpora
+
+> 💬 **Pripojte sa k našej komunite!** [WhatsApp Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t) — Získajte pomoc, zdieľajte tipy a buďte informovaní.
+
+- **Web**: [omniroute.online](https://omniroute.online)
+- **GitHub**: [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)
+- **Problémy**: [github.com/diegosouzapw/OmniRoute/issues](https://github.com/diegosouzapw/OmniRoute/issues)
+- **WhatsApp**: [Community Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t)
+- **Pôvodný projekt**: [9router by decolua](https://github.com/decolua/9router)
 
 ---
 
@@ -157,262 +198,499 @@ Result: Never stop coding, minimal cost
 
 ---
 
-## 🎯 What OmniRoute Solves — 16 Real Pain Points
+## 🎯 Čo OmniRoute rieši — 30 bodov skutočnej bolesti a prípadov použitia
 
-> **Every developer using AI tools faces these problems daily.** OmniRoute was built to solve them all — from cost overruns to regional blocks, from broken OAuth flows to zero observability.
+> **Každý vývojár, ktorý používa nástroje AI, čelí týmto problémom denne.** OmniRoute bol vytvorený tak, aby ich všetky vyriešil – od prekročenia nákladov po regionálne bloky, od prerušených tokov OAuth po operácie protokolov a pozorovateľnosť podniku.
 
 <details>
-<summary><b>💸 1. "I pay for an expensive subscription but still get interrupted by limits"</b></summary>
+<summary><b>💸 1. „Platím za drahé predplatné, ale stále ma prerušujú limity“ </b></summary>
 
-Developers pay $20–200/month for Claude Pro, Codex Pro, or GitHub Copilot. Even paying, quota has a ceiling — 5h of usage, weekly limits, or per-minute rate limits. Mid-coding session, the provider stops responding and the developer loses flow and productivity.
+Vývojári platia za Claude Pro, Codex Pro alebo GitHub Copilot 20 – 200 dolárov mesačne. Aj pri platení má kvóta strop – 5 hodín používania, týždenné limity alebo limity za minútu. Počas relácie kódovania poskytovateľ prestane reagovať a vývojár stráca tok a produktivitu.
 
-**How OmniRoute solves it:**
+**Ako to rieši OmniRoute:**
 
-- **Smart 4-Tier Fallback** — If subscription quota runs out, automatically redirects to API Key → Cheap → Free with zero manual intervention
-- **Real-Time Quota Tracking** — Shows token consumption in real-time with reset countdown (5h, daily, weekly)
-- **Multi-Account Support** — Multiple accounts per provider with auto round-robin — when one runs out, switches to the next
-- **Custom Combos** — Customizable fallback chains with 6 balancing strategies (fill-first, round-robin, P2C, random, least-used, cost-optimized)
-- **Codex Business Quotas** — Business/Team workspace quota monitoring directly in the dashboard
+- **Inteligentný 4-úrovňový záložný systém** – Ak sa vyčerpá kvóta predplatného, automaticky sa presmeruje na kľúč API → Lacné → Zadarmo s nulovým manuálnym zásahom
+- **Sledovanie kvóty v reálnom čase** – Zobrazuje spotrebu tokenov v reálnom čase s resetovaným odpočítavaním (5 hodín, denne, týždenne)
+  – **Podpora viacerých účtov** – Viacero účtov na poskytovateľa s automatickým opakovaním – keď sa jeden minie, prepne sa na ďalší
+  – **Vlastné kombá** – Prispôsobiteľné záložné reťazce so 6 stratégiami vyvažovania (najskôr vyplniť, opakovane, P2C, náhodné, najmenej používané, nákladovo optimalizované)
+- **Codex Business Quotas** — Monitorovanie kvót pracovného priestoru pre firmy/tím priamo na paneli
 
 </details>
 
 <details>
-<summary><b>🔌 2. "I need to use multiple providers but each has a different API"</b></summary>
+<summary><b>🔌 2. „Potrebujem použiť viacerých poskytovateľov, ale každý má iné API“ </b></summary>
 
-OpenAI uses one format, Claude (Anthropic) uses another, Gemini yet another. If a dev wants to test models from different providers or fallback between them, they need to reconfigure SDKs, change endpoints, deal with incompatible formats. Custom providers (FriendLI, NIM) have non-standard model endpoints.
+OpenAI používa jeden formát, Claude (Anthropic) iný a Gemini ďalší. Ak chce vývojár testovať modely od rôznych poskytovateľov alebo medzi nimi záložné riešenie, musí prekonfigurovať súpravy SDK, zmeniť koncové body, vysporiadať sa s nekompatibilnými formátmi. Vlastní poskytovatelia (FriendLI, NIM) majú neštandardné modelové koncové body.
 
-**How OmniRoute solves it:**
+**Ako to rieši OmniRoute:**
 
-- **Unified Endpoint** — A single `http://localhost:20128/v1` serves as proxy for all 36+ providers
-- **Format Translation** — Automatic and transparent: OpenAI ↔ Claude ↔ Gemini ↔ Responses API
-- **Response Sanitization** — Strips non-standard fields (`x_groq`, `usage_breakdown`, `service_tier`) that break OpenAI SDK v1.83+
-- **Role Normalization** — Converts `developer` → `system` for non-OpenAI providers; `system` → `user` for GLM/ERNIE
-- **Think Tag Extraction** — Extracts `<think>` blocks from models like DeepSeek R1 into standardized `reasoning_content`
-- **Structured Output for Gemini** — `json_schema` → `responseMimeType`/`responseSchema` automatic conversion
-- **`stream` defaults to `false`** — Aligns with OpenAI spec, avoiding unexpected SSE in Python/Rust/Go SDKs
-
-</details>
-
-<details>
-<summary><b>🌐 3. "My AI provider blocks my region/country"</b></summary>
-
-Providers like OpenAI/Codex block access from certain geographic regions. Users get errors like `unsupported_country_region_territory` during OAuth and API connections. This is especially frustrating for developers from developing countries.
-
-**How OmniRoute solves it:**
-
-- **3-Level Proxy Config** — Configurable proxy at 3 levels: global (all traffic), per-provider (one provider only), and per-connection/key
-- **Color-Coded Proxy Badges** — Visual indicators: 🟢 global proxy, 🟡 provider proxy, 🔵 connection proxy, always showing the IP
-- **OAuth Token Exchange Through Proxy** — OAuth flow also goes through the proxy, solving `unsupported_country_region_territory`
-- **Connection Tests via Proxy** — Connection tests use the configured proxy (no more direct bypass)
-- **SOCKS5 Support** — Full SOCKS5 proxy support for outbound routing
-- **TLS Fingerprint Spoofing** — Browser-like TLS fingerprint via `wreq-js` to bypass bot detection
+- **Unified Endpoint** – Jediný `http://localhost:20128/v1` slúži ako proxy pre všetkých 36+ poskytovateľov
+- **Formátový preklad** — Automatický a transparentný: OpenAI ↔ Claude ↔ Gemini ↔ Responses API
+  – **Dezinfekcia odozvy** – Odstráni neštandardné polia (`x_groq`, `usage_breakdown`, `service_tier`), ktoré porušujú OpenAI SDK v1.83+
+- **Normalizácia rolí** – Konvertuje `developer` → `system` pre poskytovateľov, ktorí nie sú OpenAI; `system` → `user` pre GLM/ERNIE
+  – **Think Tag Extraction** – Extrahuje bloky `<think>` z modelov ako DeepSeek R1 do štandardizovaných `reasoning_content`
+- **Štruktúrovaný výstup pre Gemini** — `json_schema` → automatická konverzia `responseMimeType`/`responseSchema`
+- **`stream` predvolene je `false`** — Zosúladí sa so špecifikáciou OpenAI, čím sa zabráni neočakávanému SSE v súpravách Python/Rust/Go SDK
 
 </details>
 
 <details>
-<summary><b>🆓 4. "I want to use AI for coding but I have no money"</b></summary>
+<summary><b>🌐 3. „Môj poskytovateľ AI blokuje môj región/krajinu“</b></summary>
 
-Not everyone can pay $20–200/month for AI subscriptions. Students, devs from emerging countries, hobbyists, and freelancers need access to quality models at zero cost.
+Poskytovatelia ako OpenAI/Codex blokujú prístup z určitých geografických oblastí. Používatelia dostanú chyby ako `unsupported_country_region_territory` počas pripojení OAuth a API. To je frustrujúce najmä pre vývojárov z rozvojových krajín.
 
-**How OmniRoute solves it:**
+**Ako to rieši OmniRoute:**
 
-- **Free Tier Providers Built-in** — Native support for 100% free providers: iFlow (8 unlimited models), Qwen (3 unlimited models), Kiro (Claude for free), Gemini CLI (180K/month free)
-- **Free-Only Combos** — Chain `gc/gemini-3-flash → if/kimi-k2-thinking → qw/qwen3-coder-plus` = $0/month with zero downtime
-- **NVIDIA NIM Free Credits** — 1000 free credits integrated
-- **Cost Optimized Strategy** — Routing strategy that automatically chooses the cheapest available provider
-
-</details>
-
-<details>
-<summary><b>🔒 5. "I need to protect my AI gateway from unauthorized access"</b></summary>
-
-When exposing an AI gateway to the network (LAN, VPS, Docker), anyone with the address can consume the developer's tokens/quota. Without protection, APIs are vulnerable to misuse, prompt injection, and abuse.
-
-**How OmniRoute solves it:**
-
-- **API Key Management** — Generation, rotation, and scoping per provider with a dedicated `/dashboard/api-manager` page
-- **Model-Level Permissions** — Restrict API keys to specific models (`openai/*`, wildcard patterns), with Allow All/Restrict toggle
-- **API Endpoint Protection** — Require a key for `/v1/models` and block specific providers from the listing
-- **Auth Guard + CSRF Protection** — All dashboard routes protected with `withAuth` middleware + CSRF tokens
-- **Rate Limiter** — Per-IP rate limiting with configurable windows
-- **IP Filtering** — Allowlist/blocklist for access control
-- **Prompt Injection Guard** — Sanitization against malicious prompt patterns
-- **AES-256-GCM Encryption** — Credentials encrypted at rest
+- **Konfigurácia proxy servera na troch úrovniach** – Konfigurovateľný server proxy na 3 úrovniach: globálny (celá prevádzka), podľa jednotlivých poskytovateľov (iba jeden poskytovateľ) a podľa pripojenia/kľúča
+- **Farebné odznaky proxy** — Vizuálne indikátory: 🢢 globálny proxy, 🟡 proxy poskytovateľa, 🔵 proxy pripojenia, vždy zobrazuje IP
+  – **Výmena tokenov OAuth cez proxy** – tok OAuth prechádza aj cez proxy, čím sa rieši `unsupported_country_region_territory`
+- **Testy pripojenia cez proxy** – Testy pripojenia používajú nakonfigurovaný proxy (už žiadne priame obchádzanie)
+- **Podpora SOCKS5** — Úplná podpora proxy SOCKS5 pre odchádzajúce smerovanie
+- **TLS Fingerprint Spoofing** – Odtlačok prsta TLS podobný prehliadaču cez `wreq-js` na obídenie detekcie robotov
 
 </details>
 
 <details>
-<summary><b>🛑 6. "My provider went down and I lost my coding flow"</b></summary>
+<summary><b>🆓 4. „Chcem použiť AI na kódovanie, ale nemám peniaze“</b></summary>
 
-AI providers can become unstable, return 5xx errors, or hit temporary rate limits. If a dev depends on a single provider, they're interrupted. Without circuit breakers, repeated retries can crash the application.
+Nie každý môže platiť 20 – 200 $ mesačne za predplatné AI. Študenti, vývojári z rozvíjajúcich sa krajín, fanúšikovia a nezávislí pracovníci potrebujú prístup ku kvalitným modelom za nulové náklady.
 
-**How OmniRoute solves it:**
+**Ako to rieši OmniRoute:**
 
-- **Circuit Breaker per-provider** — Auto-open/close with configurable thresholds and cooldown (Closed/Open/Half-Open)
-- **Exponential Backoff** — Progressive retry delays
-- **Anti-Thundering Herd** — Mutex + semaphore protection against concurrent retry storms
-- **Combo Fallback Chains** — If the primary provider fails, automatically falls through the chain with no intervention
-- **Combo Circuit Breaker** — Auto-disables failing providers within a combo chain
-- **Health Dashboard** — Uptime monitoring, circuit breaker states, lockouts, cache stats, p50/p95/p99 latency
+- **Zabudovaní poskytovatelia bezplatnej úrovne** — Natívna podpora pre 100 % bezplatných poskytovateľov: iFlow (8 neobmedzených modelov), Qwen (3 neobmedzené modely), Kiro (Claude zdarma), Gemini CLI (180 000/mesiac zdarma)
+- **Len bezplatné kombá** — Reťaz `gc/gemini-3-flash → if/kimi-k2-thinking → qw/qwen3-coder-plus` = 0 USD/mesiac s nulovými prestojmi
+- **Bezplatné kredity NVIDIA NIM** – integrovaných 1 000 bezplatných kreditov
+- **Cost Optimized Strategy** – Stratégia smerovania, ktorá automaticky vyberie najlacnejšieho dostupného poskytovateľa
 
 </details>
 
 <details>
-<summary><b>🔧 7. "Configuring each AI tool is tedious and repetitive"</b></summary>
+<summary><b>🔒 5. „Potrebujem chrániť svoju bránu AI pred neoprávneným prístupom“</b></summary>
 
-Developers use Cursor, Claude Code, Codex CLI, OpenClaw, Gemini CLI, Kilo Code... Each tool needs a different config (API endpoint, key, model). Reconfiguring when switching providers or models is a waste of time.
+Pri vystavení brány AI do siete (LAN, VPS, Docker) môže ktokoľvek s adresou spotrebovať tokeny/kvótu vývojára. Bez ochrany sú rozhrania API náchylné na nesprávne použitie, rýchle vloženie a zneužitie.
 
-**How OmniRoute solves it:**
+**Ako to rieši OmniRoute:**
 
-- **CLI Tools Dashboard** — Dedicated page with one-click setup for Claude Code, Codex CLI, OpenClaw, Kilo Code, Antigravity, Cline
-- **GitHub Copilot Config Generator** — Generates `chatLanguageModels.json` for VS Code with bulk model selection
-- **Onboarding Wizard** — Guided 4-step setup for first-time users
-- **One endpoint, all models** — Configure `http://localhost:20128/v1` once, access 36+ providers
+– **Správa kľúčov API** – Generovanie, rotácia a rozsah podľa poskytovateľa s vyhradenou stránkou `/dashboard/api-manager`
+– **Povolenia na úrovni modelu** – Obmedzenie kľúčov API na konkrétne modely (`openai/*`, vzory zástupných znakov) s prepínačom Povoliť všetko/Obmedziť
+– **API Endpoint Protection** – Vyžadovať kľúč pre `/v1/models` a blokovať konkrétnych poskytovateľov zo zoznamu
 
-</details>
-
-<details>
-<summary><b>🔑 8. "Managing OAuth tokens from multiple providers is hell"</b></summary>
-
-Claude Code, Codex, Gemini CLI, Copilot — all use OAuth 2.0 with expiring tokens. Developers need to re-authenticate constantly, deal with `client_secret is missing`, `redirect_uri_mismatch`, and failures on remote servers. OAuth on LAN/VPS is particularly problematic.
-
-**How OmniRoute solves it:**
-
-- **Auto Token Refresh** — OAuth tokens refresh in background before expiration
-- **OAuth 2.0 (PKCE) Built-in** — Automatic flow for Claude Code, Codex, Gemini CLI, Copilot, Kiro, Qwen, iFlow
-- **Multi-Account OAuth** — Multiple accounts per provider via JWT/ID token extraction
-- **OAuth LAN/Remote Fix** — Private IP detection for `redirect_uri` + manual URL mode for remote servers
-- **OAuth Behind Nginx** — Uses `window.location.origin` for reverse proxy compatibility
-- **Remote OAuth Guide** — Step-by-step guide for Google Cloud credentials on VPS/Docker
+- **Auth Guard + ochrana CSRF** - Všetky trasy na dashboarde sú chránené middlevérom `withAuth` + tokenmi CSRF
+- **Rate Limiter** — Obmedzenie rýchlosti na IP pomocou konfigurovateľných okien
+- **IP Filtering** — Zoznam povolených/blokovaných pre riadenie prístupu
+- **Prompt Injection Guard** – Dezinfekcia proti škodlivým vzorom výzvy
+- **Šifrovanie AES-256-GCM** — Prihlasovacie údaje sú v pokoji zašifrované
 
 </details>
 
 <details>
-<summary><b>📊 9. "I don't know how much I'm spending or where"</b></summary>
+<summary><b>🛑 6. „Môj poskytovateľ zlyhal a stratil som tok kódovania“</b></summary>
 
-Developers use multiple paid providers but have no unified view of spending. Each provider has its own billing dashboard, but there's no consolidated view. Unexpected costs can pile up.
+Poskytovatelia AI sa môžu stať nestabilnými, vrátiť chyby 5xx alebo dosiahnuť dočasné limity sadzieb. Ak vývojár závisí od jedného poskytovateľa, bude prerušený. Bez ističov môžu opakované pokusy zlyhať aplikáciu.
 
-**How OmniRoute solves it:**
+**Ako to rieši OmniRoute:**
 
-- **Cost Analytics Dashboard** — Per-token cost tracking and budget management per provider
-- **Budget Limits per Tier** — Spending ceiling per tier that triggers automatic fallback
-- **Per-Model Pricing Configuration** — Configurable prices per model
-- **Usage Statistics Per API Key** — Request count and last-used timestamp per key
-- **Analytics Dashboard** — Stat cards, model usage chart, provider table with success rates and latency
-
-</details>
-
-<details>
-<summary><b>🐛 10. "I can't diagnose errors and problems in AI calls"</b></summary>
-
-When a call fails, the dev doesn't know if it was a rate limit, expired token, wrong format, or provider error. Fragmented logs across different terminals. Without observability, debugging is trial-and-error.
-
-**How OmniRoute solves it:**
-
-- **Unified Logs Dashboard** — 4 tabs: Request Logs, Proxy Logs, Audit Logs, Console
-- **Console Log Viewer** — Real-time terminal-style viewer with color-coded levels, auto-scroll, search, filter
-- **SQLite Proxy Logs** — Persistent logs that survive server restarts
-- **Translator Playground** — 4 debugging modes: Playground (format translation), Chat Tester (round-trip), Test Bench (batch), Live Monitor (real-time)
-- **Request Telemetry** — p50/p95/p99 latency + X-Request-Id tracing
-- **File-Based Logging with Rotation** — Console interceptor captures everything to JSON log with size-based rotation
+- **Istič pre každého poskytovateľa** — Automatické otváranie/zatváranie s konfigurovateľnými prahmi a chladením (zatvorené/otvorené/polootvorené)
+- **Exponenciálne stiahnutie** — Postupné oneskorenie opakovania
+- **Anti-Thundering Herd** - ochrana Mutex + semafor proti súbežným opakovaným búrkam
+- **Combo Fallback Chains** – Ak primárny poskytovateľ zlyhá, automaticky prepadne reťazcom bez akéhokoľvek zásahu
+- **Combo Circuit Breaker** – Automaticky deaktivuje zlyhávajúcich poskytovateľov v rámci kombinovaného reťazca
+  – **Health Dashboard** – Monitorovanie dostupnosti, stavy ističov, blokovania, štatistiky vyrovnávacej pamäte, latencia p50/p95/p99
 
 </details>
 
 <details>
-<summary><b>🏗️ 11. "Deploying and maintaining the gateway is complex"</b></summary>
+<summary><b>🔧 7. „Konfigurácia každého nástroja AI je únavná a opakovaná“ </b></summary>
 
-Installing, configuring, and maintaining an AI proxy across different environments (local, VPS, Docker, cloud) is labor-intensive. Problems like hardcoded paths, `EACCES` on directories, port conflicts, and cross-platform builds add friction.
+Vývojári používajú Cursor, Claude Code, Codex CLI, OpenClaw, Gemini CLI, Kilo Code... Každý nástroj potrebuje inú konfiguráciu (API endpoint, kľúč, model). Prekonfigurovanie pri zmene poskytovateľa alebo modelu je strata času.
 
-**How OmniRoute solves it:**
+**Ako to rieši OmniRoute:**
 
-- **npm global install** — `npm install -g omniroute && omniroute` — done
-- **Docker Multi-Platform** — AMD64 + ARM64 native (Apple Silicon, AWS Graviton, Raspberry Pi)
-- **Docker Compose Profiles** — `base` (no CLI tools) and `cli` (with Claude Code, Codex, OpenClaw)
-- **Electron Desktop App** — Native app for Windows/macOS/Linux with system tray, auto-start, offline mode
-- **Split-Port Mode** — API and Dashboard on separate ports for advanced scenarios (reverse proxy, container networking)
-- **Cloud Sync** — Config synchronization across devices via Cloudflare Workers
-- **DB Backups** — Automatic backup, restore, export and import of all settings
+- **CLI Tools Dashboard** – Vyhradená stránka s nastavením jedným kliknutím pre Claude Code, Codex CLI, OpenClaw, Kilo Code, Antigravity, Cline
+  – **GitHub Copilot Config Generator** – Generuje `chatLanguageModels.json` pre kód VS s hromadným výberom modelu
+- **Sprievodca registráciou** – Sprievodca nastavením v 4 krokoch pre začínajúcich používateľov
+  – **Jeden koncový bod, všetky modely** – Nakonfigurujte `http://localhost:20128/v1` raz a získajte prístup k viac ako 36 poskytovateľom
 
 </details>
 
 <details>
-<summary><b>🌍 12. "The interface is English-only and my team doesn't speak English"</b></summary>
+<summary><b>🔑 8. „Správa tokenov OAuth od viacerých poskytovateľov je peklo“ </b></summary>
 
-Teams in non-English-speaking countries, especially in Latin America, Asia, and Europe, struggle with English-only interfaces. Language barriers reduce adoption and increase configuration errors.
+Claude Code, Codex, Gemini CLI, Copilot – všetky používajú OAuth 2.0 s tokenmi, ktorých platnosť sa končí. Vývojári sa musia neustále znovu overovať, riešiť `client_secret is missing`, `redirect_uri_mismatch` a zlyhania na vzdialených serveroch. Obzvlášť problematické je OAuth na LAN/VPS.
 
-**How OmniRoute solves it:**
+**Ako to rieši OmniRoute:**
 
-- **Dashboard i18n — 30 Languages** — All 500+ keys translated including Arabic, Bulgarian, Danish, German, Spanish, Finnish, French, Hebrew, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Malay, Dutch, Norwegian, Polish, Portuguese (PT/BR), Romanian, Russian, Slovak, Swedish, Thai, Ukrainian, Vietnamese, Chinese, Filipino, English
-- **RTL Support** — Right-to-left support for Arabic and Hebrew
-- **Multi-Language READMEs** — 30 complete documentation translations
-- **Language Selector** — Globe icon in header for real-time switching
-
-</details>
-
-<details>
-<summary><b>🔄 13. "I need more than chat — I need embeddings, images, audio"</b></summary>
-
-AI isn't just chat completion. Devs need to generate images, transcribe audio, create embeddings for RAG, rerank documents, and moderate content. Each API has a different endpoint and format.
-
-**How OmniRoute solves it:**
-
-- **Embeddings** — `/v1/embeddings` with 6 providers and 9+ models
-- **Image Generation** — `/v1/images/generations` with 4 providers and 9+ models
-- **Audio Transcription** — `/v1/audio/transcriptions` — Whisper-compatible
-- **Text-to-Speech** — `/v1/audio/speech` — Multi-provider audio synthesis
-- **Moderations** — `/v1/moderations` — Content safety checks
-- **Reranking** — `/v1/rerank` — Document relevance reranking
-- **Responses API** — Full `/v1/responses` support for Codex
+- **Automatická obnova tokenov** – Tokeny OAuth sa pred vypršaním platnosti obnovujú na pozadí
+- **Vstavaný OAuth 2.0 (PKCE)** – Automatický tok pre Claude Code, Codex, Gemini CLI, Copilot, Kiro, Qwen, iFlow
+  – **Multi-Auth OAuth** – Viaceré účty na poskytovateľa prostredníctvom extrakcie tokenov JWT/ID
+- **Oprava OAuth LAN/Remote** — Detekcia súkromnej adresy IP pre `redirect_uri` + manuálny režim adresy URL pre vzdialené servery
+- **OAuth Behind Nginx** - Používa `window.location.origin` na reverznú kompatibilitu proxy
+  – **Príručka vzdialeného OAuth** – Podrobný sprievodca povereniami Google Cloud na VPS/Docker
 
 </details>
 
 <details>
-<summary><b>🧪 14. "I have no way to test and compare quality across models"</b></summary>
+<summary><b>📊 9. "Neviem, koľko míňam alebo kde" </b></summary>
 
-Developers want to know which model is best for their use case — code, translation, reasoning — but comparing manually is slow. No integrated eval tools exist.
+Vývojári využívajú viacerých platených poskytovateľov, ale nemajú jednotný pohľad na výdavky. Každý poskytovateľ má svoj vlastný informačný panel fakturácie, ale neexistuje žiadne konsolidované zobrazenie. Neočakávané náklady sa môžu nahromadiť.
 
-**How OmniRoute solves it:**
+**Ako to rieši OmniRoute:**
 
-- **LLM Evaluations** — Golden set testing with 10 pre-loaded cases covering greetings, math, geography, code generation, JSON compliance, translation, markdown, safety refusal
-- **4 Match Strategies** — `exact`, `contains`, `regex`, `custom` (JS function)
-- **Translator Playground Test Bench** — Batch testing with multiple inputs and expected outputs, cross-provider comparison
-- **Chat Tester** — Full round-trip with visual response rendering
-- **Live Monitor** — Real-time stream of all requests flowing through the proxy
+– **Informačný panel analýzy nákladov** – sledovanie nákladov na token a správa rozpočtu podľa poskytovateľa
 
-</details>
-
-<details>
-<summary><b>📈 15. "I need to scale without losing performance"</b></summary>
-
-As request volume grows, without caching the same questions generate duplicate costs. Without idempotency, duplicate requests waste processing. Per-provider rate limits must be respected.
-
-**How OmniRoute solves it:**
-
-- **Semantic Cache** — Two-tier cache (signature + semantic) reduces cost and latency
-- **Request Idempotency** — 5s deduplication window for identical requests
-- **Rate Limit Detection** — Per-provider RPM, min gap, and max concurrent tracking
-- **Editable Rate Limits** — Configurable defaults in Settings → Resilience with persistence
-- **API Key Validation Cache** — 3-tier cache for production performance
-- **Health Dashboard with Telemetry** — p50/p95/p99 latency, cache stats, uptime
+- **Obmedzenia rozpočtu na úroveň** – Strop výdavkov na úroveň, ktorý spúšťa automatické záložné právo
+- **Konfigurácia cien za model** – Konfigurovateľné ceny za model
+- **Štatistiky používania na kľúč API** – Počet žiadostí a časová pečiatka posledného použitia na kľúč
+  – **Panel Analytics** – štatistické karty, graf používania modelu, tabuľka poskytovateľov s mierami úspešnosti a latenciou
 
 </details>
 
 <details>
-<summary><b>🤖 16. "I want to control model behavior globally"</b></summary>
+<summary><b>🐛 10. „Nedokážem diagnostikovať chyby a problémy vo volaniach AI“ </b></summary>
 
-Developers who want all responses in a specific language, with a specific tone, or want to limit reasoning tokens. Configuring this in every tool/request is impractical.
+Keď hovor zlyhá, vývojár nevie, či to bol limit sadzby, vypršaný token, nesprávny formát alebo chyba poskytovateľa. Fragmentované protokoly cez rôzne terminály. Bez pozorovateľnosti je ladenie metódou pokus-omyl.
 
-**How OmniRoute solves it:**
+**Ako to rieši OmniRoute:**
 
-- **System Prompt Injection** — Global prompt applied to all requests
-- **Thinking Budget Validation** — Reasoning token allocation control per request (passthrough, auto, custom, adaptive)
-- **6 Routing Strategies** — Global strategies that determine how requests are distributed
-- **Wildcard Router** — `provider/*` patterns route dynamically to any provider
-- **Combo Enable/Disable Toggle** — Toggle combos directly from the dashboard
-- **Provider Toggle** — Enable/disable all connections for a provider with one click
-- **Blocked Providers** — Exclude specific providers from `/v1/models` listing
+– **Panel jednotných protokolov** – 4 karty: Protokoly žiadostí, Protokoly proxy, Protokoly auditu, Konzola
+
+- **Console Log Viewer** — Prehliadač v štýle terminálu v reálnom čase s farebne odlíšenými úrovňami, automatickým posúvaním, vyhľadávaním a filtrovaním
+- **Proxy protokoly SQLite** — Trvalé protokoly, ktoré prežijú reštart servera
+- **Translator Playground** – 4 režimy ladenia: Playground (preklad formátu), Chat Tester (spiatočný), Test Bench (dávka), Live Monitor (v reálnom čase)
+  – **Požiadať o telemetriu** – latencia p50/p95/p99 + sledovanie X-request-Id
+  – **Protokolovanie založené na súboroch s rotáciou** – Konzolový zachytávač zachytáva všetko do protokolu JSON s rotáciou na základe veľkosti
 
 </details>
+
+<details>
+<summary><b>🏗️ 11. „Nasadenie a údržba brány je zložitá“ </b></summary>
+
+Inštalácia, konfigurácia a údržba AI proxy v rôznych prostrediach (lokálne, VPS, Docker, cloud) je náročná na prácu. Problémy ako pevne zakódované cesty, `EACCES` v adresároch, konflikty portov a zostavy naprieč platformami zvyšujú trenie.
+
+**Ako to rieši OmniRoute:**
+
+- **Globálna inštalácia npm** — `npm install -g omniroute && omniroute` — hotovo
+- **Docker Multi-Platform** – natívne AMD64 + ARM64 (Apple Silicon, AWS Graviton, Raspberry Pi)
+- **Profily Docker Compose** — `base` (bez nástrojov CLI) a `cli` (s Claude Code, Codex, OpenClaw)
+- **Electron Desktop App** – natívna aplikácia pre Windows/macOS/Linux so systémovou lištou, automatickým spustením, offline režimom
+- **Split-Port Mode** – API a Dashboard na samostatných portoch pre pokročilé scenáre (reverzný proxy, kontajnerová sieť)
+- **Cloud Sync** — Synchronizácia konfigurácie medzi zariadeniami cez Cloudflare Workers
+- **DB Backups** — Automatické zálohovanie, obnovenie, export a import všetkých nastavení
+
+</details>
+
+<details>
+<summary><b>🌍 12. „Rozhranie je len v angličtine a môj tím nehovorí po anglicky“ </b></summary>
+
+Tímy v neanglicky hovoriacich krajinách, najmä v Latinskej Amerike, Ázii a Európe, zápasia s rozhraním iba v angličtine. Jazykové bariéry znižujú prijatie a zvyšujú chyby v konfigurácii.
+
+**Ako to rieši OmniRoute:**
+
+- **Dashboard i18n — 30 jazykov** — Všetkých 500+ kláves preložených vrátane arabčiny, bulharčiny, dánčiny, nemčiny, španielčiny, fínčiny, francúzštiny, hebrejčiny, hindčiny, maďarčiny, indonézštiny, taliančiny, japončiny, kórejčiny, malajčiny, holandčiny, nórčiny, poľštiny, portugalčiny (PT/BR), rumunčiny, ruštiny, slovenčiny, švédčiny, thajčiny, ukrajinčiny, vietnamčiny, angličtiny
+- **Podpora RTL** — Podpora sprava doľava pre arabčinu a hebrejčinu
+- **Viacjazyčné README** — 30 kompletných prekladov dokumentácie
+- **Language Selector** – ikona zemegule v hlavičke pre prepínanie v reálnom čase
+
+</details>
+
+<details>
+<summary><b>🔄 13. „Potrebujem viac ako chat – potrebujem vloženie, obrázky, zvuk“</b></summary>
+
+AI nie je len dokončenie chatu. Vývojári potrebujú generovať obrázky, prepisovať zvuk, vytvárať vloženia pre RAG, meniť hodnotenie dokumentov a moderovať obsah. Každé API má iný koncový bod a formát.
+
+**Ako to rieši OmniRoute:**
+
+- **Vloženie** — `/v1/embeddings` so 6 poskytovateľmi a 9+ modelmi
+- **Generácia obrazu** — `/v1/images/generations` s 10 poskytovateľmi a 20+ modelmi (OpenAI, xAI, Together, Fireworks, Nebius, Hyperbolic, NanoBanana, Antigravity, SD WebUI, ComfyUI)
+- **Text-to-Video** — `/v1/videos/generations` — ComfyUI (AnimateDiff, SVD) a SD WebUI
+- **Text-to-Music** — `/v1/music/generations` — ComfyUI (Stable Audio Open, MusicGen)
+- **Prepis zvuku** — `/v1/audio/transcriptions` — Whisper + Nvidia NIM, HuggingFace, Qwen3
+- **Text-to-Speech** — `/v1/audio/speech` — ElevenLabs, Nvidia NIM, HuggingFace, Coqui, Tortoise, Qwen3 a + existujúci poskytovatelia
+- **Moderácie** — `/v1/moderations` — Kontroly bezpečnosti obsahu
+- **Zmena poradia** — `/v1/rerank` — Zmena poradia relevantnosti dokumentu
+- **Responses API** – plná podpora `/v1/responses` pre kódex
+
+</details>
+
+<details>
+<summary><b>🧪 14. „Nemám možnosť testovať a porovnávať kvalitu medzi modelmi“ </b></summary>
+
+Vývojári chcú vedieť, ktorý model je pre ich prípad použitia najlepší – kód, preklad, zdôvodnenie – ale manuálne porovnávanie je pomalé. Neexistujú žiadne integrované nástroje hodnotenia.
+
+**Ako to rieši OmniRoute:**
+
+- **Hodnotenia LLM** – testovanie zlatej sady s 10 predinštalovanými prípadmi zahŕňajúcimi pozdravy, matematiku, geografiu, generovanie kódu, súlad s JSON, preklad, označenie, odmietnutie bezpečnosti
+- **4 stratégie zhody** — `exact`, `contains`, `regex`, `custom` (funkcia JS)
+- **Testovacia lavica pre prekladateľské ihrisko** – dávkové testovanie s viacerými vstupmi a očakávanými výstupmi, porovnanie medzi poskytovateľmi
+- **Chat Tester** – celý spiatočný výlet s vykresľovaním vizuálnej odozvy
+- **Live Monitor** – tok všetkých požiadaviek prechádzajúcich cez server proxy v reálnom čase
+
+</details>
+
+<details>
+<summary><b>📈 15. „Potrebujem škálovať bez straty výkonu“</b></summary>
+
+Keďže objem žiadostí rastie, bez ukladania rovnakých otázok do vyrovnávacej pamäte vznikajú duplicitné náklady. Bez idempotencie duplikát požaduje spracovanie odpadu. Musia sa dodržiavať limity sadzieb na poskytovateľa.
+
+**Ako to rieši OmniRoute:**
+
+- **Sémantická vyrovnávacia pamäť** – Dvojvrstvová vyrovnávacia pamäť (podpis + sémantická) znižuje náklady a latenciu
+- **Idempotencia požiadavky** – 5-sekundové deduplikačné okno pre identické požiadavky
+  – **Detekcia limitu rýchlosti** – RPM, minimálna medzera a maximálne súbežné sledovanie jednotlivých poskytovateľov
+- **Upraviteľné limity frekvencie** – Konfigurovateľné predvolené hodnoty v Nastaveniach → Odolnosť s perzistenciou
+- **Cache na overenie kľúča API** — 3-vrstvová vyrovnávacia pamäť pre produkčný výkon
+  – **Panel zdravia s telemetriou** – latencia p50/p95/p99, štatistiky vyrovnávacej pamäte, doba prevádzky
+
+</details>
+
+<details>
+<summary><b>🤖 16. „Chcem globálne ovládať správanie modelu“</b></summary>
+
+Vývojári, ktorí chcú všetky odpovede v konkrétnom jazyku, so špecifickým tónom alebo chcú obmedziť tokeny uvažovania. Konfigurovať to v každom nástroji/požiadavke je nepraktické.
+
+**Ako to rieši OmniRoute:**
+
+- **System Prompt Injection** – Globálna výzva aplikovaná na všetky požiadavky
+  – **Thinking Budget Validation** – Zdôvodnenie riadenia prideľovania tokenov na žiadosť (priechodné, automatické, vlastné, adaptívne)
+- **6 stratégií smerovania** — Globálne stratégie, ktoré určujú spôsob distribúcie požiadaviek
+- **Wildcard Router** — Vzory `provider/*` smerujú dynamicky k akémukoľvek poskytovateľovi
+- **Prepínač povoliť/zakázať kombo** — Prepínajte kombinácie priamo z ovládacieho panela
+- **Provider Toggle** — Povolenie/zakázanie všetkých pripojení pre poskytovateľa jedným kliknutím
+  – **Blokovaní poskytovatelia** – vylúčte konkrétnych poskytovateľov zo zoznamu `/v1/models`
+
+</details>
+
+<details>
+<summary><b>🧰 17. "Potrebujem nástroje MCP ako prvotriedne možnosti produktu"</b></summary>
+
+Mnohé brány AI odhaľujú MCP iba ako skrytý detail implementácie. Tímy potrebujú viditeľnú a spravovateľnú operačnú vrstvu.
+
+**Ako to rieši OmniRoute:**
+
+- MCP sa zobrazí na navigačnom paneli a na karte protokolu koncového bodu
+- Vyhradená stránka správy MCP s procesmi, nástrojmi, rozsahmi a auditom
+- Vstavaný rýchly štart pre `omniroute --mcp` a registráciu klienta
+
+</details>
+
+<details>
+<summary><b>🧠 18. "Potrebujem orchestráciu A2A s cestami synchronizácie + streamovania"</b></summary>
+
+Pracovné postupy agentov vyžadujú priame odpovede a dlhotrvajúce streamované vykonávanie s kontrolou životného cyklu.
+
+**Ako to rieši OmniRoute:**
+
+- Koncový bod A2A JSON-RPC (`POST /a2a`) s `message/send` a `message/stream`
+- SSE streaming so šírením koncového stavu
+- Rozhrania API životného cyklu úloh pre `tasks/get` a `tasks/cancel`
+
+</details>
+
+<details>
+<summary><b>🛰️ 19. „Potrebujem skutočné zdravie procesu MCP, nie uhádnutý stav“</b></summary>
+
+Operačné tímy potrebujú vedieť, či je MCP skutočne nažive, nielen to, či je dostupné API.
+
+**Ako to rieši OmniRoute:**
+
+- Súbor srdcového tepu za behu s PID, časovými pečiatkami, transportom, počtom nástrojov a režimom rozsahu
+- Stavové rozhranie MCP API, ktoré kombinuje srdcový tep + nedávnu aktivitu
+- Stavové karty používateľského rozhrania pre sviežosť procesu / dostupnosti / tepu
+
+</details>
+
+<details>
+<summary><b>📋 20. "Potrebujem auditovateľné spustenie nástroja MCP" </b></summary>
+
+Keď nástroje mutujú konfiguráciu alebo spúšťajú akcie operácií, tímy potrebujú forenznú sledovateľnosť.
+
+**Ako to rieši OmniRoute:**
+
+- Záznamy auditu podporované SQLite pre volania nástrojov MCP
+- Filtre podľa nástroja, úspechu/neúspechu, kľúča API a stránkovania
+- Tabuľka auditu palubnej dosky + štatistické koncové body pre automatizáciu
+
+</details>
+
+<details>
+<summary><b>🔐 21. "Potrebujem povolenia MCP v rozsahu na jednu integráciu"</b></summary>
+
+Rôzni klienti by mali mať najmenej privilegovaný prístup ku kategóriám nástrojov.
+
+**Ako to rieši OmniRoute:**
+
+- 9 zrnitých rozsahov MCP pre kontrolovaný prístup k nástrojom
+- Presadzovanie rozsahu a viditeľnosť v používateľskom rozhraní správy MCP
+- Bezpečná východisková poloha pre prevádzkové nástroje
+
+</details>
+
+<details>
+<summary><b>⚙️ 22. „Potrebujem prevádzkové ovládacie prvky bez premiestňovania“ </b></summary>
+
+Tímy potrebujú rýchle zmeny runtime počas incidentov alebo nákladových udalostí.
+
+**Ako to rieši OmniRoute:**
+
+- Aktivácia komba prepínača priamo z ovládacieho panela MCP
+- Použite profily odolnosti z preddefinovaných balíkov politík
+- Resetujte stav ističa z rovnakého ovládacieho panela
+
+</details>
+
+<details>
+<summary><b>🔄 23. „Potrebujem viditeľnosť a zrušenie životného cyklu úlohy A2A“ </b></summary>
+
+Bez viditeľnosti životného cyklu sa incidenty úloh ťažko triedia.
+
+**Ako to rieši OmniRoute:**
+
+- Zoznam úloh / filtrovanie podľa stavu / zručnosti so stránkovaním
+- Rozbalenie metadát úloh, udalostí a artefaktov
+- Koncový bod zrušenia úlohy a akcia používateľského rozhrania s potvrdením
+
+</details>
+
+<details>
+<summary><b>🌊 24. „Potrebujem aktívne metriky streamu pre načítanie A2A“</b></summary>
+
+Streamovanie pracovných tokov vyžaduje operačný prehľad o súbežnosti a živých pripojeniach.
+
+**Ako to rieši OmniRoute:**
+
+- Aktívne počítadlá toku integrované do stavu A2A
+- Časová pečiatka poslednej úlohy a počet jednotlivých štátov
+- Karty palubnej dosky A2A na monitorovanie operácií v reálnom čase
+
+</details>
+
+<details>
+<summary><b>🪪 25. "Potrebujem štandardné vyhľadávanie agentov pre klientov"</b></summary>
+
+Externí klienti a orchestrátori potrebujú strojovo čitateľné metadáta na integráciu.
+
+**Ako to rieši OmniRoute:**
+
+- Karta agenta vystavená na `/.well-known/agent.json`
+- Schopnosti a zručnosti zobrazené v používateľskom rozhraní správy
+- API stavu A2A obsahuje metaúdaje zisťovania pre automatizáciu
+
+</details>
+
+<details>
+<summary><b>🧭 26. "Potrebujem zistiteľnosť protokolu v UX produktu"</b></summary>
+
+Ak používatelia nemôžu objaviť povrchy protokolov, kvalita prijatia a podpory klesá.
+
+**Ako to rieši OmniRoute:**
+
+- Položky na bočnom paneli pre MCP a A2A
+- Koncový bod Karta Protokoly s rýchlym spustením a stavom
+- Odkazy z prehľadu na špecializované riadiace panely
+
+</details>
+
+<details>
+<summary><b>🧪 27. "Potrebujem komplexné overenie protokolu so skutočnými klientmi" </b></summary>
+
+Falošné testy nestačia na overenie kompatibility protokolu pred vydaním.
+
+**Ako to rieši OmniRoute:**
+
+- E2E balík, ktorý spúšťa aplikáciu a využíva skutočný prenos klienta MCP SDK
+- Klient A2A testuje toky zisťovania, odosielania, streamovania, získavania a rušenia
+- Krížová kontrola tvrdení proti auditu MCP a API úloh A2A
+
+</details>
+
+<details>
+<summary><b>📡 28. „Potrebujem jednotnú pozorovateľnosť naprieč všetkými rozhraniami“ </b></summary>
+
+Rozdelenie pozorovateľnosti podľa protokolu vytvára slepé miesta a dlhšie MTTR.
+
+**Ako to rieši OmniRoute:**
+
+- Zjednotené informačné panely / protokoly / analýzy v jednom produkte
+- Zdravie + audit + telemetria požiadaviek cez vrstvy OpenAI, MCP a A2A
+- Operačné API pre stav a automatizáciu
+
+</details>
+
+<details>
+<summary><b>💼 29. "Potrebujem jeden runtime pre proxy + nástroje + orchestráciu agentov" </b></summary>
+
+Prevádzka mnohých samostatných služieb zvyšuje prevádzkové náklady a spôsoby zlyhania.
+
+**Ako to rieši OmniRoute:**
+
+- Proxy, server MCP a server A2A kompatibilný s OpenAI v jednom zásobníku
+- Zdieľaná autentifikácia, odolnosť, ukladanie údajov a pozorovateľnosť
+- Konzistentný model politiky na všetkých interakčných plochách
+
+</details>
+
+<details>
+<summary><b>🚀 30. „Potrebujem odoslať agentské pracovné postupy bez roztiahnutia kódu lepidla“ </b></summary>
+
+Tímy strácajú rýchlosť pri spájaní viacerých ad-hoc služieb a skriptov.
+
+**Ako to rieši OmniRoute:**
+
+- Jednotná stratégia koncových bodov pre klientov a agentov
+- Vstavané používateľské rozhrania na správu protokolov a cesty overovania dymu
+- Základy pripravené na výrobu (zabezpečenie, protokolovanie, odolnosť, zálohovanie)
+
+</details>
+
+### Príklady príručiek (integrované prípady použitia)
+
+**Príručka A: Maximalizujte platené predplatné + lacné zálohovanie**
+
+```txt
+Combo: "maximize-claude"
+  1. cc/claude-opus-4-6
+  2. glm/glm-4.7
+  3. if/kimi-k2-thinking
+
+Monthly cost: $20 + small backup spend
+Outcome: higher quality, near-zero interruption
+```
+
+**Príručka B: Balík kódovania s nulovými nákladmi**
+
+```txt
+Combo: "free-forever"
+  1. gc/gemini-3-flash
+  2. if/kimi-k2-thinking
+  3. qw/qwen3-coder-plus
+
+Monthly cost: $0
+Outcome: stable free coding workflow
+```
+
+**Príručka C: 24/7 vždy zapnutý záložný reťazec**
+
+```txt
+Combo: "always-on"
+  1. cc/claude-opus-4-6
+  2. cx/gpt-5.2-codex
+  3. glm/glm-4.7
+  4. minimax/MiniMax-M2.1
+  5. if/kimi-k2-thinking
+
+Outcome: deep fallback depth for deadline-critical workloads
+```
+
+**Príručka D: Operačný program agenta s MCP + A2A**
+
+```txt
+1) Start MCP transport (`omniroute --mcp`) for tool-driven operations
+2) Run A2A tasks via `message/send` and `message/stream`
+3) Observe via /dashboard/mcp and /dashboard/a2a
+4) Control incidents with resilience profile + task cancellation
+```
+
+---
 
 ## ⚡ Rýchly štart
 
@@ -506,7 +784,7 @@ docker compose --profile cli up -d
 
 ---
 
-## 🖥️ Desktop App — Offline & Always-On
+## 🖥️
 
 > 🆕 **NEW!** OmniRoute is now available as a **native desktop application** for Windows, macOS, and Linux.
 
@@ -716,66 +994,26 @@ OmniRoute obsahuje výkonné vstavané ihrisko pre prekladateľov so **4 režima
 
 </details>
 
----
+## 🧪 Hodnotenia (Evals)
 
-## 🎯 Prípady použitia
+OmniRoute obsahuje vstavaný hodnotiaci rámec na testovanie kvality odozvy LLM oproti zlatému súboru. Prístup k nej získate cez **Analytics → Evals** na hlavnom paneli.
 
-### Prípad 1: „Mám predplatné Claude Pro“
+### Vstavaná zlatá súprava
 
-**Problém:** Platnosť kvóty vyprší nevyužitá, obmedzenia sadzieb počas náročného kódovania
+Predinštalovaná sada „OmniRoute Golden Set“ obsahuje 10 testovacích prípadov, ktoré zahŕňajú:
 
-```
-Combo: "maximize-claude"
-  1. cc/claude-opus-4-6        (use subscription fully)
-  2. glm/glm-4.7               (cheap backup when quota out)
-  3. if/kimi-k2-thinking       (free emergency fallback)
+- Pozdravy, matematika, geografia, generovanie kódu
+- Súlad s formátom JSON, preklad, zníženie
+- Bezpečnostné odmietnutie (škodlivý obsah), počítanie, booleovská logika
 
-Monthly cost: $20 (subscription) + ~$5 (backup) = $25 total
-vs. $20 + hitting limits = frustration
-```
+### Stratégie hodnotenia
 
-### Prípad 2: „Chcem nulové náklady“
-
-**Problém:** Nemôžem si dovoliť predplatné, potrebujem spoľahlivé kódovanie AI
-
-```
-Combo: "free-forever"
-  1. gc/gemini-3-flash         (180K free/month)
-  2. if/kimi-k2-thinking       (unlimited free)
-  3. qw/qwen3-coder-plus       (unlimited free)
-
-Monthly cost: $0
-Quality: Production-ready models
-```
-
-### Prípad 3: „Potrebujem kódovanie 24/7, žiadne prerušenia“
-
-**Problém:** Termíny, nemôžem si dovoliť prestoje
-
-```
-Combo: "always-on"
-  1. cc/claude-opus-4-6        (best quality)
-  2. cx/gpt-5.2-codex          (second subscription)
-  3. glm/glm-4.7               (cheap, resets daily)
-  4. minimax/MiniMax-M2.1      (cheapest, 5h reset)
-  5. if/kimi-k2-thinking       (free unlimited)
-
-Result: 5 layers of fallback = zero downtime
-```
-
-### Prípad 4: „Chcem AI ZDARMA v OpenClaw“
-
-**Problém:** Potrebujete asistenta AI v aplikáciách na odosielanie správ, úplne zadarmo
-
-```
-Combo: "openclaw-free"
-  1. if/glm-4.7                (unlimited free)
-  2. if/minimax-m2.1           (unlimited free)
-  3. if/kimi-k2-thinking       (unlimited free)
-
-Monthly cost: $0
-Access via: WhatsApp, Telegram, Slack, Discord, iMessage, Signal...
-```
+| Stratégia  | Popis                                                                  | Príklad                          |
+| ---------- | ---------------------------------------------------------------------- | -------------------------------- |
+| `exact`    | Výstup sa musí presne zhodovať                                         | `"4"`                            |
+| `contains` | Výstup musí obsahovať podreťazec (nerozlišujú sa malé a veľké písmená) | `"Paris"`                        |
+| `regex`    | Výstup musí zodpovedať vzoru regulárneho výrazu                        | `"1.*2.*3"`                      |
+| `custom`   | Vlastná funkcia JS vracia true/false                                   | `(output) => output.length > 10` |
 
 ---
 
@@ -1059,29 +1297,6 @@ Settings → API Configuration:
 
 ---
 
-## 🧪 Hodnotenia (Evals)
-
-OmniRoute obsahuje vstavaný hodnotiaci rámec na testovanie kvality odozvy LLM oproti zlatému súboru. Prístup k nej získate cez **Analytics → Evals** na hlavnom paneli.
-
-### Vstavaná zlatá súprava
-
-Predinštalovaná sada „OmniRoute Golden Set“ obsahuje 10 testovacích prípadov, ktoré zahŕňajú:
-
-- Pozdravy, matematika, geografia, generovanie kódu
-- Súlad s formátom JSON, preklad, zníženie
-- Bezpečnostné odmietnutie (škodlivý obsah), počítanie, booleovská logika
-
-### Stratégie hodnotenia
-
-| Stratégia  | Popis                                                                  | Príklad                          |
-| ---------- | ---------------------------------------------------------------------- | -------------------------------- |
-| `exact`    | Výstup sa musí presne zhodovať                                         | `"4"`                            |
-| `contains` | Výstup musí obsahovať podreťazec (nerozlišujú sa malé a veľké písmená) | `"Paris"`                        |
-| `regex`    | Výstup musí zodpovedať vzoru regulárneho výrazu                        | `"1.*2.*3"`                      |
-| `custom`   | Vlastná funkcia JS vracia true/false                                   | `(output) => output.length > 10` |
-
----
-
 ## 🐛 Riešenie problémov
 
 <details>
@@ -1133,13 +1348,13 @@ Predinštalovaná sada „OmniRoute Golden Set“ obsahuje 10 testovacích príp
 - OmniRoute v1.0.6+ zahŕňa záložné overenie prostredníctvom dokončenia chatu
 - Uistite sa, že základná adresa URL obsahuje príponu `/v1`
 
-### 🔐 OAuth em Servidor Remoto (Vzdialené nastavenie OAuth)
+### 🔐 OAuth
 
 <a name="oauth-em-servidor-remoto"></a>
 
 > **⚠️ DÔLEŽITÉ pre používateľov s OmniRoute a diaľkovým ovládaním VPS/Docker/servidor**
 
-### Od OAuth do Antigravity / Gemini CLI falha em servidores remotos?
+### OAuth
 
 Osvedčuje **Antigravity** a **Gemini CLI** používame **Google OAuth 2.0** ako autentifikáciu. O Google exige que a `redirect_uri` usada no fluxo OAuth saja **exatamente** uma das URI pre-kadastradas no Google Cloud Console to use.
 
@@ -1228,7 +1443,7 @@ Ak chcete získať prístup k dôvere, môžete použiť **príručku URL**:
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️
 
 - **Runtime**: Node.js 18–22 LTS (⚠️ Node.js 24+ nie je **podporovaný** — `better-sqlite3` natívne binárne súbory sú nekompatibilné)
   – **Jazyk**: TypeScript 5.9 — **100 % TypeScript** v `src/` a `open-sse/` (v1.0.6)
@@ -1280,7 +1495,7 @@ Ak chcete získať prístup k dôvere, môžete použiť **príručku URL**:
 
 ---
 
-## 🗺️ Cestovná mapa
+## 🗺️
 
 OmniRoute má naplánovaných **210+ funkcií** vo viacerých fázach vývoja. Tu sú kľúčové oblasti:
 
@@ -1302,18 +1517,6 @@ OmniRoute má naplánovaných **210+ funkcií** vo viacerých fázach vývoja. T
 - 💰 **Stratégia najnižšej ceny** — Automaticky vyberte najlacnejšieho dostupného poskytovateľa
 
 > 📝 Úplné špecifikácie funkcií sú k dispozícii v [link](docs/new-features/) (217 podrobných špecifikácií)
-
----
-
-## 📧 Podpora
-
-> 💬 **Pripojte sa k našej komunite!** [WhatsApp Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t) — Získajte pomoc, zdieľajte tipy a buďte informovaní.
-
-- **Web**: [omniroute.online](https://omniroute.online)
-- **GitHub**: [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)
-- **Problémy**: [github.com/diegosouzapw/OmniRoute/issues](https://github.com/diegosouzapw/OmniRoute/issues)
-- **WhatsApp**: [Community Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t)
-- **Pôvodný projekt**: [9router by decolua](https://github.com/decolua/9router)
 
 ---
 

@@ -110,6 +110,35 @@ _Csatlakoztasson bármilyen mesterséges intelligencia-alapú IDE-t vagy CLI-esz
 
 ---
 
+## 🖼️
+
+<div align="center">
+  <img src="./docs/screenshots/MainOmniRoute.png" alt="OmniRoute" width="800"/>
+</div>
+
+---
+
+## 📸
+
+<details>
+<summary><b>...</b></summary>
+
+| #     | #                                        |
+| ----- | ---------------------------------------- |
+| **1** | ![1](docs/screenshots/01-providers.png)  |
+| **2** | ![2](docs/screenshots/02-combos.png)     |
+| **3** | ![3](docs/screenshots/03-analytics.png)  |
+| **4** | ![4](docs/screenshots/04-health.png)     |
+| **5** | ![5](docs/screenshots/05-translator.png) |
+| **6** | ![6](docs/screenshots/06-settings.png)   |
+| **7** | ![7](docs/screenshots/07-cli-tools.png)  |
+| **8** | ![8](docs/screenshots/08-usage.png)      |
+| **9** | ![9](docs/screenshots/09-endpoint.png)   |
+
+</details>
+
+---
+
 ## 🤔 Miért az OmniRoute?
 
 **Ne pazarolja a pénzt, és ne lépje túl a limiteket:**
@@ -125,6 +154,18 @@ _Csatlakoztasson bármilyen mesterséges intelligencia-alapú IDE-t vagy CLI-esz
 - ✅ **Automatikus tartalék** - Előfizetés → API-kulcs → Olcsó → Ingyenes, nulla állásidő
 - ✅ **Több fiók** - Kör-robin a fiókok között szolgáltatónként
 - ✅ **Univerzális** - Claude Code, Codex, Gemini CLI, Cursor, Cline, OpenClaw, bármilyen CLI eszközzel működik
+
+---
+
+## 📧 Támogatás
+
+> 💬 **Csatlakozzon közösségünkhöz!** [WhatsApp Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t) — Kérjen segítséget, ossza meg tippjeit, és naprakész legyen.
+
+- **Webhely**: [omniroute.online](https://omniroute.online)
+- **GitHub**: [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)
+- **Problémák**: [github.com/diegosouzapw/OmniRoute/issues](https://github.com/diegosouzapw/OmniRoute/issues)
+- **WhatsApp**: [Community Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t)
+- **Eredeti projekt**: [9router by decolua](https://github.com/decolua/9router)
 
 ---
 
@@ -157,262 +198,496 @@ Result: Never stop coding, minimal cost
 
 ---
 
-## 🎯 What OmniRoute Solves — 16 Real Pain Points
+## 🎯 Mit old meg az OmniRoute – 30 valódi fájdalompont és használati eset
 
-> **Every developer using AI tools faces these problems daily.** OmniRoute was built to solve them all — from cost overruns to regional blocks, from broken OAuth flows to zero observability.
+> **Minden mesterséges intelligencia-eszközöket használó fejlesztő naponta szembesül ezekkel a problémákkal.** Az OmniRoute úgy készült, hogy ezeket mind megoldja – a költségtúllépésektől a regionális blokkokig, a megszakadt OAuth-folyamatoktól a protokollműveletekig és a vállalati megfigyelhetőségig.
 
 <details>
-<summary><b>💸 1. "I pay for an expensive subscription but still get interrupted by limits"</b></summary>
+<summary><b>💸 1. "Drága előfizetésért fizetek, de még mindig megszakítanak a korlátozások" </b></summary>
 
-Developers pay $20–200/month for Claude Pro, Codex Pro, or GitHub Copilot. Even paying, quota has a ceiling — 5h of usage, weekly limits, or per-minute rate limits. Mid-coding session, the provider stops responding and the developer loses flow and productivity.
+A fejlesztők havi 20–200 dollárt fizetnek a Claude Pro, Codex Pro vagy GitHub Copilotért. A kvótának még fizetés esetén is van felső határa – 5 óra használat, heti limitek vagy percdíjkorlátok. A kódolási munkamenet közepén a szolgáltató leáll, és a fejlesztő elveszíti a folyamatot és a termelékenységet.
 
-**How OmniRoute solves it:**
+**Hogyan oldja meg az OmniRoute:**
 
-- **Smart 4-Tier Fallback** — If subscription quota runs out, automatically redirects to API Key → Cheap → Free with zero manual intervention
-- **Real-Time Quota Tracking** — Shows token consumption in real-time with reset countdown (5h, daily, weekly)
-- **Multi-Account Support** — Multiple accounts per provider with auto round-robin — when one runs out, switches to the next
-- **Custom Combos** — Customizable fallback chains with 6 balancing strategies (fill-first, round-robin, P2C, random, least-used, cost-optimized)
-- **Codex Business Quotas** — Business/Team workspace quota monitoring directly in the dashboard
+- **Smart 4-Tier Fallback** – Ha az előfizetési kvóta kimerül, automatikusan átirányítja az API-kulcs → Olcsó → Ingyenes, manuális beavatkozás nélkül
+- **Valós idejű kvótakövetés** – Valós időben mutatja a token felhasználást, visszaszámlálással (5 óra, napi, heti)
+- **Több fiók támogatása** - Több fiók szolgáltatónként automatikus körváltással - ha az egyik elfogy, átvált a következőre
+- **Egyéni kombók** — Testreszabható tartalék láncok 6 kiegyensúlyozási stratégiával (fill-first, round-robin, P2C, véletlenszerű, legkevésbé használt, költségoptimalizált)
+- **Codex üzleti kvóták** — Üzleti/csapat munkaterület-kvóta figyelése közvetlenül az irányítópulton
 
 </details>
 
 <details>
-<summary><b>🔌 2. "I need to use multiple providers but each has a different API"</b></summary>
+<summary><b>🔌 2. "Több szolgáltatót kell használnom, de mindegyiknek más API" </b></summary>
 
-OpenAI uses one format, Claude (Anthropic) uses another, Gemini yet another. If a dev wants to test models from different providers or fallback between them, they need to reconfigure SDKs, change endpoints, deal with incompatible formats. Custom providers (FriendLI, NIM) have non-standard model endpoints.
+Az OpenAI egy formátumot használ, a Claude (Anthropic) egy másikat, a Gemini pedig egy másikat. Ha egy fejlesztő különböző szolgáltatók modelljeit szeretné tesztelni, vagy tartalékot szeretne közöttük, akkor újra kell konfigurálnia az SDK-kat, módosítania kell a végpontokat, és kezelnie kell az inkompatibilis formátumokat. Az egyéni szolgáltatók (FriendLI, NIM) nem szabványos modellvégpontokkal rendelkeznek.
 
-**How OmniRoute solves it:**
+**Hogyan oldja meg az OmniRoute:**
 
-- **Unified Endpoint** — A single `http://localhost:20128/v1` serves as proxy for all 36+ providers
-- **Format Translation** — Automatic and transparent: OpenAI ↔ Claude ↔ Gemini ↔ Responses API
-- **Response Sanitization** — Strips non-standard fields (`x_groq`, `usage_breakdown`, `service_tier`) that break OpenAI SDK v1.83+
-- **Role Normalization** — Converts `developer` → `system` for non-OpenAI providers; `system` → `user` for GLM/ERNIE
-- **Think Tag Extraction** — Extracts `<think>` blocks from models like DeepSeek R1 into standardized `reasoning_content`
-- **Structured Output for Gemini** — `json_schema` → `responseMimeType`/`responseSchema` automatic conversion
-- **`stream` defaults to `false`** — Aligns with OpenAI spec, avoiding unexpected SSE in Python/Rust/Go SDKs
-
-</details>
-
-<details>
-<summary><b>🌐 3. "My AI provider blocks my region/country"</b></summary>
-
-Providers like OpenAI/Codex block access from certain geographic regions. Users get errors like `unsupported_country_region_territory` during OAuth and API connections. This is especially frustrating for developers from developing countries.
-
-**How OmniRoute solves it:**
-
-- **3-Level Proxy Config** — Configurable proxy at 3 levels: global (all traffic), per-provider (one provider only), and per-connection/key
-- **Color-Coded Proxy Badges** — Visual indicators: 🟢 global proxy, 🟡 provider proxy, 🔵 connection proxy, always showing the IP
-- **OAuth Token Exchange Through Proxy** — OAuth flow also goes through the proxy, solving `unsupported_country_region_territory`
-- **Connection Tests via Proxy** — Connection tests use the configured proxy (no more direct bypass)
-- **SOCKS5 Support** — Full SOCKS5 proxy support for outbound routing
-- **TLS Fingerprint Spoofing** — Browser-like TLS fingerprint via `wreq-js` to bypass bot detection
+- **Egységes végpont** - Egy `http://localhost:20128/v1` proxyként szolgál mind a 36+ szolgáltató számára
+- **Formátumfordítás** - Automatikus és átlátható: OpenAI ↔ Claude ↔ Gemini ↔ Responses API
+- **Response Sanitization** – Eltávolítja azokat a nem szabványos mezőket (`x_groq`, `usage_breakdown`, `service_tier`), amelyek megszakítják az OpenAI SDK v1.83+ verzióját
+- **Szerepek normalizálása** — `developer` → `system` konvertálása nem OpenAI szolgáltatók számára; `system` → `user` a GLM/ERNIE számára
+- **Think Tag Extraction** – `<think>` blokkokat bont ki olyan modellekből, mint a DeepSeek R1 szabványos `reasoning_content`-be
+- **Strukturált kimenet a Gemini számára** — `json_schema` → `responseMimeType`/`responseSchema` automatikus átalakítás
+- **`stream` az alapértelmezett `false`** - Az OpenAI specifikációhoz igazodik, elkerülve a váratlan SSE-t a Python/Rust/Go SDK-kban
 
 </details>
 
 <details>
-<summary><b>🆓 4. "I want to use AI for coding but I have no money"</b></summary>
+<summary><b>🌐 3. „Az AI-szolgáltatóm blokkolja a régiómat/országomat”</b></summary>
 
-Not everyone can pay $20–200/month for AI subscriptions. Students, devs from emerging countries, hobbyists, and freelancers need access to quality models at zero cost.
+Az olyan szolgáltatók, mint az OpenAI/Codex, blokkolják a hozzáférést bizonyos földrajzi régiókból. A felhasználók OAuth- és API-kapcsolatok során olyan hibákat kapnak, mint az `unsupported_country_region_territory`. Ez különösen frusztráló a fejlődő országok fejlesztői számára.
 
-**How OmniRoute solves it:**
+**Hogyan oldja meg az OmniRoute:**
 
-- **Free Tier Providers Built-in** — Native support for 100% free providers: iFlow (8 unlimited models), Qwen (3 unlimited models), Kiro (Claude for free), Gemini CLI (180K/month free)
-- **Free-Only Combos** — Chain `gc/gemini-3-flash → if/kimi-k2-thinking → qw/qwen3-coder-plus` = $0/month with zero downtime
-- **NVIDIA NIM Free Credits** — 1000 free credits integrated
-- **Cost Optimized Strategy** — Routing strategy that automatically chooses the cheapest available provider
-
-</details>
-
-<details>
-<summary><b>🔒 5. "I need to protect my AI gateway from unauthorized access"</b></summary>
-
-When exposing an AI gateway to the network (LAN, VPS, Docker), anyone with the address can consume the developer's tokens/quota. Without protection, APIs are vulnerable to misuse, prompt injection, and abuse.
-
-**How OmniRoute solves it:**
-
-- **API Key Management** — Generation, rotation, and scoping per provider with a dedicated `/dashboard/api-manager` page
-- **Model-Level Permissions** — Restrict API keys to specific models (`openai/*`, wildcard patterns), with Allow All/Restrict toggle
-- **API Endpoint Protection** — Require a key for `/v1/models` and block specific providers from the listing
-- **Auth Guard + CSRF Protection** — All dashboard routes protected with `withAuth` middleware + CSRF tokens
-- **Rate Limiter** — Per-IP rate limiting with configurable windows
-- **IP Filtering** — Allowlist/blocklist for access control
-- **Prompt Injection Guard** — Sanitization against malicious prompt patterns
-- **AES-256-GCM Encryption** — Credentials encrypted at rest
+- **3-szintű proxykonfiguráció** – 3 szinten konfigurálható proxy: globális (teljes forgalom), szolgáltatónként (csak egy szolgáltató) és kapcsolatonként/kulcsonként
+- **Színes proxy jelvények** - Vizuális jelzők: 🟢 globális proxy, 🟡 szolgáltató proxy, 🔵 kapcsolat proxy, mindig az IP-t mutatja
+- **OAuth-tokencsere proxyn keresztül** — Az OAuth-folyamat a proxyn keresztül is megy, megoldva az `unsupported_country_region_territory` problémát
+- **Kapcsolódási tesztek proxyn keresztül** - A csatlakozási tesztek a konfigurált proxyt használják (nincs többé közvetlen kiiktatás)
+- **SOCKS5 támogatás** — Teljes SOCKS5 proxy támogatás a kimenő útválasztáshoz
+- **TLS-ujjlenyomat-hamisítás** — Böngészőszerű TLS-ujjlenyomat az `wreq-js`-n keresztül a botészlelés megkerüléséhez
 
 </details>
 
 <details>
-<summary><b>🛑 6. "My provider went down and I lost my coding flow"</b></summary>
+<summary><b>🆓 4. "MI-t akarok használni kódoláshoz, de nincs pénzem" </b></summary>
 
-AI providers can become unstable, return 5xx errors, or hit temporary rate limits. If a dev depends on a single provider, they're interrupted. Without circuit breakers, repeated retries can crash the application.
+Nem mindenki fizethet havi 20–200 dollárt az AI-előfizetésekért. A feltörekvő országok diákjainak, fejlesztőinek, amatőröknek és szabadúszóknak nulla költséggel kell hozzáférniük a minőségi modellekhez.
 
-**How OmniRoute solves it:**
+**Hogyan oldja meg az OmniRoute:**
 
-- **Circuit Breaker per-provider** — Auto-open/close with configurable thresholds and cooldown (Closed/Open/Half-Open)
-- **Exponential Backoff** — Progressive retry delays
-- **Anti-Thundering Herd** — Mutex + semaphore protection against concurrent retry storms
-- **Combo Fallback Chains** — If the primary provider fails, automatically falls through the chain with no intervention
-- **Combo Circuit Breaker** — Auto-disables failing providers within a combo chain
-- **Health Dashboard** — Uptime monitoring, circuit breaker states, lockouts, cache stats, p50/p95/p99 latency
+- **Beépített ingyenes szolgáltatók** - Natív támogatás 100%-ban ingyenes szolgáltatókhoz: iFlow (8 korlátlan modell), Qwen (3 korlátlan modell), Kiro (Claude ingyenes), Gemini CLI (180 000/hónap ingyenes)
+- **Csak ingyenes kombók** — `gc/gemini-3-flash → if/kimi-k2-thinking → qw/qwen3-coder-plus` lánc = 0 USD/hó nulla állásidővel
+- **NVIDIA NIM ingyenes kreditek** – 1000 ingyenes kredit integrálva
+- **Költségoptimalizált stratégia** — Útválasztási stratégia, amely automatikusan a legolcsóbb elérhető szolgáltatót választja
 
 </details>
 
 <details>
-<summary><b>🔧 7. "Configuring each AI tool is tedious and repetitive"</b></summary>
+<summary><b>🔒 5. "Meg kell védenem a mesterséges intelligencia átjárómat a jogosulatlan hozzáféréstől"</b></summary>
 
-Developers use Cursor, Claude Code, Codex CLI, OpenClaw, Gemini CLI, Kilo Code... Each tool needs a different config (API endpoint, key, model). Reconfiguring when switching providers or models is a waste of time.
+Ha AI átjárót teszünk ki a hálózatnak (LAN, VPS, Docker), a cím birtokában bárki felhasználhatja a fejlesztő tokenjeit/kvótáját. Védelem nélkül az API-k sebezhetőek a visszaélésekkel, azonnali befecskendezéssel és visszaélésekkel szemben.
 
-**How OmniRoute solves it:**
+**Hogyan oldja meg az OmniRoute:**
 
-- **CLI Tools Dashboard** — Dedicated page with one-click setup for Claude Code, Codex CLI, OpenClaw, Kilo Code, Antigravity, Cline
-- **GitHub Copilot Config Generator** — Generates `chatLanguageModels.json` for VS Code with bulk model selection
-- **Onboarding Wizard** — Guided 4-step setup for first-time users
-- **One endpoint, all models** — Configure `http://localhost:20128/v1` once, access 36+ providers
-
-</details>
-
-<details>
-<summary><b>🔑 8. "Managing OAuth tokens from multiple providers is hell"</b></summary>
-
-Claude Code, Codex, Gemini CLI, Copilot — all use OAuth 2.0 with expiring tokens. Developers need to re-authenticate constantly, deal with `client_secret is missing`, `redirect_uri_mismatch`, and failures on remote servers. OAuth on LAN/VPS is particularly problematic.
-
-**How OmniRoute solves it:**
-
-- **Auto Token Refresh** — OAuth tokens refresh in background before expiration
-- **OAuth 2.0 (PKCE) Built-in** — Automatic flow for Claude Code, Codex, Gemini CLI, Copilot, Kiro, Qwen, iFlow
-- **Multi-Account OAuth** — Multiple accounts per provider via JWT/ID token extraction
-- **OAuth LAN/Remote Fix** — Private IP detection for `redirect_uri` + manual URL mode for remote servers
-- **OAuth Behind Nginx** — Uses `window.location.origin` for reverse proxy compatibility
-- **Remote OAuth Guide** — Step-by-step guide for Google Cloud credentials on VPS/Docker
+- **API-kulcskezelés** — Generálás, rotáció és hatókör szolgáltatónként egy dedikált `/dashboard/api-manager`-oldallal
+- **Modellszintű engedélyek** - API-kulcsok korlátozása adott modellekre (`openai/*`, helyettesítő karakteres minták), az Összes engedélyezése/Korlátozása kapcsolóval
+- **API Endpoint Protection** — Kulcs szükséges az `/v1/models` számára, és bizonyos szolgáltatók letiltása a listáról
+- **Auth Guard + CSRF védelem** - Minden irányítópult-útvonal `withAuth` köztes szoftverrel + CSRF tokenekkel védett
+- **Rate Limiter** — IP-nkénti sebességkorlátozás konfigurálható ablakokkal
+- **IP-szűrés** — Engedélyezési lista/blokkolólista a hozzáférés-vezérléshez
+- **Prompt Injection Guard** – fertőtlenítés a rosszindulatú felszólítási minták ellen
+- **AES-256-GCM titkosítás** - A hitelesítő adatok nyugalmi állapotban titkosítva
 
 </details>
 
 <details>
-<summary><b>📊 9. "I don't know how much I'm spending or where"</b></summary>
+<summary><b>🛑 6. "A szolgáltatóm leállt, és elvesztettem a kódolási folyamatomat"</b></summary>
 
-Developers use multiple paid providers but have no unified view of spending. Each provider has its own billing dashboard, but there's no consolidated view. Unexpected costs can pile up.
+Az AI-szolgáltatók instabillá válhatnak, 5xx-es hibákat adnak vissza, vagy elérhetik az ideiglenes sebességkorlátokat. Ha egy fejlesztő egyetlen szolgáltatótól függ, akkor megszakad. Megszakítók nélkül az ismételt újrapróbálkozások összeomolhatják az alkalmazást.
 
-**How OmniRoute solves it:**
+**Hogyan oldja meg az OmniRoute:**
 
-- **Cost Analytics Dashboard** — Per-token cost tracking and budget management per provider
-- **Budget Limits per Tier** — Spending ceiling per tier that triggers automatic fallback
-- **Per-Model Pricing Configuration** — Configurable prices per model
-- **Usage Statistics Per API Key** — Request count and last-used timestamp per key
-- **Analytics Dashboard** — Stat cards, model usage chart, provider table with success rates and latency
-
-</details>
-
-<details>
-<summary><b>🐛 10. "I can't diagnose errors and problems in AI calls"</b></summary>
-
-When a call fails, the dev doesn't know if it was a rate limit, expired token, wrong format, or provider error. Fragmented logs across different terminals. Without observability, debugging is trial-and-error.
-
-**How OmniRoute solves it:**
-
-- **Unified Logs Dashboard** — 4 tabs: Request Logs, Proxy Logs, Audit Logs, Console
-- **Console Log Viewer** — Real-time terminal-style viewer with color-coded levels, auto-scroll, search, filter
-- **SQLite Proxy Logs** — Persistent logs that survive server restarts
-- **Translator Playground** — 4 debugging modes: Playground (format translation), Chat Tester (round-trip), Test Bench (batch), Live Monitor (real-time)
-- **Request Telemetry** — p50/p95/p99 latency + X-Request-Id tracing
-- **File-Based Logging with Rotation** — Console interceptor captures everything to JSON log with size-based rotation
+- **Megszakító szolgáltatónként** - Automatikus nyitás/zárás konfigurálható küszöbértékekkel és lehűtéssel (zárt/nyitott/félig nyitott)
+- **Exponenciális visszalépés** — Progresszív újrapróbálkozási késések
+- **Mennydörgés elleni csorda** - Mutex + szemafor védelem az egyidejű újrapróbálkozási viharok ellen
+- **Kombinált tartalék láncok** – Ha az elsődleges szolgáltató meghibásodik, automatikusan, beavatkozás nélkül átesik a láncon
+- **Combo Circuit Breaker** – Automatikusan letiltja a hibás szolgáltatókat a kombinált láncon belül
+- **Egészségügyi irányítópult** — Üzemidő-figyelés, áramkör-megszakító állapotok, zárolások, gyorsítótár-statisztika, p50/p95/p99 késleltetés
 
 </details>
 
 <details>
-<summary><b>🏗️ 11. "Deploying and maintaining the gateway is complex"</b></summary>
+<summary><b>🔧 7. "Az egyes AI-eszközök konfigurálása fárasztó és ismétlődő"</b></summary>
 
-Installing, configuring, and maintaining an AI proxy across different environments (local, VPS, Docker, cloud) is labor-intensive. Problems like hardcoded paths, `EACCES` on directories, port conflicts, and cross-platform builds add friction.
+A fejlesztők Cursort, Claude Code-ot, Codex CLI-t, OpenClaw-ot, Gemini CLI-t, Kilo Code-ot használnak... Minden eszköznek más konfigurációra van szüksége (API végpont, kulcs, modell). Az újrakonfigurálás szolgáltató- vagy modellváltáskor időpocsékolás.
 
-**How OmniRoute solves it:**
+**Hogyan oldja meg az OmniRoute:**
 
-- **npm global install** — `npm install -g omniroute && omniroute` — done
-- **Docker Multi-Platform** — AMD64 + ARM64 native (Apple Silicon, AWS Graviton, Raspberry Pi)
-- **Docker Compose Profiles** — `base` (no CLI tools) and `cli` (with Claude Code, Codex, OpenClaw)
-- **Electron Desktop App** — Native app for Windows/macOS/Linux with system tray, auto-start, offline mode
-- **Split-Port Mode** — API and Dashboard on separate ports for advanced scenarios (reverse proxy, container networking)
-- **Cloud Sync** — Config synchronization across devices via Cloudflare Workers
-- **DB Backups** — Automatic backup, restore, export and import of all settings
+- **CLI Tools Dashboard** - Dedikált oldal egykattintásos beállítással a Claude Code, Codex CLI, OpenClaw, Kilo Code, Antigravity, Cline számára
+- **GitHub másodpilóta konfigurációs generátor** — `chatLanguageModels.json` kódot generál VS kódhoz tömeges modellválasztással
+- **Bevezető varázsló** – Irányított 4 lépéses beállítás első felhasználók számára
+- **Egy végpont, minden modell** — Az `http://localhost:20128/v1` egyszeri konfigurálása, 36+ szolgáltató elérése
 
 </details>
 
 <details>
-<summary><b>🌍 12. "The interface is English-only and my team doesn't speak English"</b></summary>
+<summary><b>🔑 8. "A több szolgáltatótól származó OAuth-tokenek kezelése pokol"</b></summary>
 
-Teams in non-English-speaking countries, especially in Latin America, Asia, and Europe, struggle with English-only interfaces. Language barriers reduce adoption and increase configuration errors.
+Claude Code, Codex, Gemini CLI, Copilot – mindegyik az OAuth 2.0-t használja lejáró tokenekkel. A fejlesztőknek folyamatosan újra kell hitelesíteniük, kezelniük kell az `client_secret is missing`, `redirect_uri_mismatch` és a távoli szerverek hibáit. Az OAuth a LAN/VPS-en különösen problémás.
 
-**How OmniRoute solves it:**
+**Hogyan oldja meg az OmniRoute:**
 
-- **Dashboard i18n — 30 Languages** — All 500+ keys translated including Arabic, Bulgarian, Danish, German, Spanish, Finnish, French, Hebrew, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Malay, Dutch, Norwegian, Polish, Portuguese (PT/BR), Romanian, Russian, Slovak, Swedish, Thai, Ukrainian, Vietnamese, Chinese, Filipino, English
-- **RTL Support** — Right-to-left support for Arabic and Hebrew
-- **Multi-Language READMEs** — 30 complete documentation translations
-- **Language Selector** — Globe icon in header for real-time switching
-
-</details>
-
-<details>
-<summary><b>🔄 13. "I need more than chat — I need embeddings, images, audio"</b></summary>
-
-AI isn't just chat completion. Devs need to generate images, transcribe audio, create embeddings for RAG, rerank documents, and moderate content. Each API has a different endpoint and format.
-
-**How OmniRoute solves it:**
-
-- **Embeddings** — `/v1/embeddings` with 6 providers and 9+ models
-- **Image Generation** — `/v1/images/generations` with 4 providers and 9+ models
-- **Audio Transcription** — `/v1/audio/transcriptions` — Whisper-compatible
-- **Text-to-Speech** — `/v1/audio/speech` — Multi-provider audio synthesis
-- **Moderations** — `/v1/moderations` — Content safety checks
-- **Reranking** — `/v1/rerank` — Document relevance reranking
-- **Responses API** — Full `/v1/responses` support for Codex
+- **Automatikus tokenfrissítés** - Az OAuth-tokenek a háttérben frissülnek a lejárat előtt
+- **OAuth 2.0 (PKCE) beépített** - Automatikus áramlás Claude Code, Codex, Gemini CLI, Copilot, Kiro, Qwen, iFlow számára
+- **Multi-Account OAuth** - Több fiók szolgáltatónként a JWT/ID token kivonattal
+- **OAuth LAN/Távoli javítás** - Privát IP-észlelés `redirect_uri`-hez + kézi URL mód távoli szerverekhez
+- **OAuth az Nginx mögött** - `window.location.origin`-t használ a fordított proxy kompatibilitás érdekében
+- **Távoli OAuth útmutató** – Lépésről lépésre útmutató a Google Cloud hitelesítő adataihoz VPS/Docker rendszeren
 
 </details>
 
 <details>
-<summary><b>🧪 14. "I have no way to test and compare quality across models"</b></summary>
+<summary><b>📊 9. "Nem tudom, mennyit költök vagy hova"</b></summary>
 
-Developers want to know which model is best for their use case — code, translation, reasoning — but comparing manually is slow. No integrated eval tools exist.
+A fejlesztők több fizetős szolgáltatót használnak, de nincs egységes nézetük a kiadásokról. Minden szolgáltató saját számlázási irányítópulttal rendelkezik, de nincs összevont nézet. A váratlan költségek felhalmozódhatnak.
 
-**How OmniRoute solves it:**
+**Hogyan oldja meg az OmniRoute:**
 
-- **LLM Evaluations** — Golden set testing with 10 pre-loaded cases covering greetings, math, geography, code generation, JSON compliance, translation, markdown, safety refusal
-- **4 Match Strategies** — `exact`, `contains`, `regex`, `custom` (JS function)
-- **Translator Playground Test Bench** — Batch testing with multiple inputs and expected outputs, cross-provider comparison
-- **Chat Tester** — Full round-trip with visual response rendering
-- **Live Monitor** — Real-time stream of all requests flowing through the proxy
-
-</details>
-
-<details>
-<summary><b>📈 15. "I need to scale without losing performance"</b></summary>
-
-As request volume grows, without caching the same questions generate duplicate costs. Without idempotency, duplicate requests waste processing. Per-provider rate limits must be respected.
-
-**How OmniRoute solves it:**
-
-- **Semantic Cache** — Two-tier cache (signature + semantic) reduces cost and latency
-- **Request Idempotency** — 5s deduplication window for identical requests
-- **Rate Limit Detection** — Per-provider RPM, min gap, and max concurrent tracking
-- **Editable Rate Limits** — Configurable defaults in Settings → Resilience with persistence
-- **API Key Validation Cache** — 3-tier cache for production performance
-- **Health Dashboard with Telemetry** — p50/p95/p99 latency, cache stats, uptime
+- **Költségelemzési irányítópult** – Tokenenkénti költségkövetés és költségkeret-kezelés szolgáltatónként
+- **Költségkeret-korlátok rétegenként** - Költési felső határ szintenként, amely automatikus visszalépést vált ki
+- **Modellenkénti árképzés** - Konfigurálható árak modellenként
+- **Használati statisztika API-kulcsonként** — A kérések száma és az utoljára használt időbélyeg kulcsonként
+- **Analytics Dashboard** — Statisztikai kártyák, modellhasználati diagram, szolgáltatói táblázat sikerarányokkal és késleltetéssel
 
 </details>
 
 <details>
-<summary><b>🤖 16. "I want to control model behavior globally"</b></summary>
+<summary><b>🐛 10. "Nem tudom diagnosztizálni a hibákat és problémákat az AI-hívásoknál"</b></summary>
 
-Developers who want all responses in a specific language, with a specific tone, or want to limit reasoning tokens. Configuring this in every tool/request is impractical.
+Ha egy hívás meghiúsul, a fejlesztő nem tudja, hogy sebességkorlátozás, lejárt token, rossz formátum vagy szolgáltatói hiba volt-e. Töredezett naplók különböző terminálokon. Megfigyelhetőség nélkül a hibakeresés próba és hiba.
 
-**How OmniRoute solves it:**
+**Hogyan oldja meg az OmniRoute:**
 
-- **System Prompt Injection** — Global prompt applied to all requests
-- **Thinking Budget Validation** — Reasoning token allocation control per request (passthrough, auto, custom, adaptive)
-- **6 Routing Strategies** — Global strategies that determine how requests are distributed
-- **Wildcard Router** — `provider/*` patterns route dynamically to any provider
-- **Combo Enable/Disable Toggle** — Toggle combos directly from the dashboard
-- **Provider Toggle** — Enable/disable all connections for a provider with one click
-- **Blocked Providers** — Exclude specific providers from `/v1/models` listing
+- **Egységes naplók irányítópultja** - 4 lap: Kérelemnaplók, Proxynaplók, Auditnaplók, Konzol
+- **Konzolnapló-nézegető** — Valós idejű terminál stílusú megjelenítő színkódolt szintekkel, automatikus görgetés, keresés, szűrés
+- **SQLite proxynaplók** – Állandó naplók, amelyek túlélik a szerver újraindítását
+- **Translator Playground** – 4 hibakeresési mód: Playground (formátum fordítás), Chat Tester (oda-vissza út), Tesztpad (kötegelt), Élő monitor (valós idejű)
+- **Request Telemetria** – p50/p95/p99 késleltetés + X-Request-Id nyomkövetés
+- **Fájlalapú naplózás elforgatással** - A konzolelfogó mindent JSON-naplóba rögzít méretalapú elforgatással
 
 </details>
+
+<details>
+<summary><b>🏗️ 11. "Az átjáró telepítése és karbantartása összetett" </b></summary>
+
+Az AI-proxy telepítése, konfigurálása és karbantartása különböző környezetekben (helyi, VPS, Docker, felhő) munkaigényes. Az olyan problémák, mint a keménykódolt elérési utak, az `EACCES` a könyvtárakon, a portütközések és a többplatformos buildek súrlódást okoznak.
+
+**Hogyan oldja meg az OmniRoute:**
+
+- **npm globális telepítés** — `npm install -g omniroute && omniroute` — kész
+- **Docker Multi-Platform** – AMD64 + ARM64 natív (Apple Silicon, AWS Graviton, Raspberry Pi)
+- **Docker Compose Profiles** — `base` (nincs CLI-eszközök) és `cli` (Claude Code-al, Codex-szel, OpenClaw-val)
+- **Electron Desktop App** – Natív alkalmazás Windows/macOS/Linux rendszerhez rendszertálcával, automatikus indítással, offline móddal
+- **Split-Port Mode** – API és irányítópult külön portokon haladó forgatókönyvekhez (fordított proxy, konténerhálózat)
+- **Cloud Sync** – Szinkronizálás konfigurálása az eszközök között a Cloudflare Workers segítségével
+- **DB biztonsági mentések** — Az összes beállítás automatikus biztonsági mentése, visszaállítása, exportálása és importálása
+
+</details>
+
+<details>
+<summary><b>🌍 12. "A felület csak angol nyelvű, és a csapatom nem beszél angolul"</b></summary>
+
+A nem angol nyelvű országokban, különösen Latin-Amerikában, Ázsiában és Európában működő csapatok csak angol nyelvű felületekkel küszködnek. A nyelvi akadályok csökkentik az átvételt és növelik a konfigurációs hibákat.
+
+**Hogyan oldja meg az OmniRoute:**
+
+- ** Irányítópult i18n – 30 nyelv** – Mind az 500+ billentyű lefordítva, beleértve arab, bolgár, dán, német, spanyol, finn, francia, héber, hindi, magyar, indonéz, olasz, japán, koreai, maláj, holland, norvég, lengyel, portugál (PT/BR), román, thai, orosz, szlovák, svéd, filippínó, angol, thai, orosz, kínai, filippínó
+- **RTL támogatás** – Jobbról balra haladó arab és héber nyelv támogatása
+- **Többnyelvű README-k** — 30 teljes dokumentáció fordítás
+- **Nyelvválasztó** — Globe ikon a fejlécben a valós idejű váltáshoz
+
+</details>
+
+<details>
+<summary><b>🔄 13. "Többre van szükségem, mint csevegésre – beágyazásra, képekre, hangra van szükségem"</b></summary>
+
+Az AI nem csak a csevegés befejezése. A fejlesztőknek képeket kell generálniuk, hangot kell átírniuk, beágyazást kell létrehozniuk a RAG számára, át kell sorolniuk a dokumentumokat, és moderálniuk kell a tartalmat. Minden API más végponttal és formátummal rendelkezik.
+
+**Hogyan oldja meg az OmniRoute:**
+
+- **Beágyazások** — `/v1/embeddings` 6 szolgáltatóval és 9+ modellel
+- **Képgenerálás** — `/v1/images/generations` 10 szolgáltatóval és 20+ modellel (OpenAI, xAI, Together, Fireworks, Nebius, Hyperbolic, NanoBanana, Antigravity, SD WebUI, ComfyUI)
+- **Text-to-Video** — `/v1/videos/generations` — ComfyUI (AnimateDiff, SVD) és SD WebUI
+- **Text-to-Music** — `/v1/music/generations` — ComfyUI (Stable Audio Open, MusicGen)
+- **Audio átírás** - `/v1/audio/transcriptions` - Whisper + Nvidia NIM, HuggingFace, Qwen3
+- **Szövegfelolvasó** — `/v1/audio/speech` — ElevenLabs, Nvidia NIM, HuggingFace, Coqui, Tortoise, Qwen3, + meglévő szolgáltatók
+- **Moderálás** — `/v1/moderations` — Tartalombiztonsági ellenőrzések
+- **Átsorolás** — `/v1/rerank` — Dokumentumreleváns átsorolás
+- **Responses API** - Teljes `/v1/responses` támogatás a Codexhez
+
+</details>
+
+<details>
+<summary><b>🧪 14. "Nincs módom tesztelni és összehasonlítani a minőséget a különböző modellek között"</b></summary>
+
+A fejlesztők szeretnék tudni, hogy melyik modell a legjobb az ő használati esetükben – kód, fordítás, érvelés –, de a manuális összehasonlítás lassú. Nincsenek integrált eval eszközök.
+
+**Hogyan oldja meg az OmniRoute:**
+
+- **LLM-értékelések** — Arany készlet tesztelése 10 előre betöltött esettel, beleértve az üdvözlést, a matematikát, a földrajzot, a kódgenerálást, a JSON-megfelelőséget, a fordítást, a leértékelést, a biztonsági megtagadást
+- **4 egyezési stratégia** — `exact`, `contains`, `regex`, `custom` (JS funkció)
+- **Translator Playground Test Bench** - Kötegelt tesztelés több bemenettel és várható kimenettel, szolgáltatók közötti összehasonlítás
+- **Csevegés tesztelő** - Teljes körút vizuális válaszmegjelenítéssel
+- **Élő monitor** – Valós idejű adatfolyam a proxyn keresztül folyó összes kérésről
+
+</details>
+
+<details>
+<summary><b>📈 15. "A teljesítmény elvesztése nélkül kell méreteznem" </b></summary>
+
+A kérelmek mennyiségének növekedésével ugyanazok a kérdések a gyorsítótárazás nélkül duplikált költségeket generálnak. Idempotencia nélkül a duplikált hulladékfeldolgozási kérelmek. A szolgáltatónkénti díjkorlátokat be kell tartani.
+
+**Hogyan oldja meg az OmniRoute:**
+
+- **Szemantikus gyorsítótár** – A kétszintű gyorsítótár (aláírás + szemantikai) csökkenti a költségeket és a késleltetést
+- **Idempotency kérése** – 5 másodperces deduplikációs ablak azonos kérések esetén
+- **Drátakorlát észlelése** – Szolgáltatónkénti RPM, minimális rés és maximális egyidejű követés
+- **Szerkeszthető sebességkorlátok** - Konfigurálható alapértékek a Beállítások → Kitartással ellenálló képesség menüpontban
+- **API Key Validation Cache** – 3-szintű gyorsítótár az éles teljesítményhez
+- **Egészségügyi irányítópult telemetriával** — p50/p95/p99 késleltetés, gyorsítótár statisztika, üzemidő
+
+</details>
+
+<details>
+<summary><b>🤖 16. "Globálisan szeretném szabályozni a modell viselkedését" </b></summary>
+
+Azok a fejlesztők, akik minden választ egy adott nyelven, egy adott hangnemben szeretnének, vagy korlátozni szeretnék az érvelési tokeneket. Ennek konfigurálása minden eszközben/kérelemben nem praktikus.
+
+**Hogyan oldja meg az OmniRoute:**
+
+- **Rendszerprompt Injection** — Globális prompt minden kérelemre vonatkozik
+- **A költségkeret átgondolásának ellenőrzése** – Indoklási token-kiosztás ellenőrzése kérésenként (áthaladó, automatikus, egyéni, adaptív)
+- **6 Útválasztási stratégia** – Globális stratégiák, amelyek meghatározzák a kérések elosztását
+- **Wildcard Router** — `provider/*` minták dinamikusan továbbítanak bármely szolgáltatóhoz
+- **Kombinációs engedélyezés/letiltás váltás** - A kombók váltása közvetlenül az irányítópultról
+- **Provider Toggle** — Egy szolgáltató összes kapcsolatának engedélyezése/letiltása egyetlen kattintással
+- **Letiltott szolgáltatók** - Adott szolgáltatók kizárása az `/v1/models` listáról
+
+</details>
+
+<details>
+<summary><b>🧰 17. "MCP eszközökre van szükségem, mint első osztályú termékképességekre" </b></summary>
+
+Sok mesterséges intelligencia-átjáró csak rejtett megvalósítási részletként teszi közzé az MCP-t. A csapatoknak látható, kezelhető műveleti rétegre van szükségük.
+
+**Hogyan oldja meg az OmniRoute:**
+
+- Az MCP megjelenik az irányítópult navigációs és végponti protokoll lapján
+- Dedikált MCP-kezelési oldal folyamatokkal, eszközökkel, hatókörökkel és audittal
+- Beépített gyorsindítás az `omniroute --mcp` és a kliens beépítéséhez
+
+</details>
+
+<details>
+<summary><b>🧠 18. "A2A hangszerelésre van szükségem szinkronizálással + adatfolyam feladatútvonalak" </b></summary>
+
+Az ügynöki munkafolyamatokhoz közvetlen válaszokra és hosszú távú, streamelt végrehajtásra van szükség életciklus-vezérléssel.
+
+**Hogyan oldja meg az OmniRoute:**
+
+- A2A JSON-RPC végpont (`POST /a2a`) `message/send` és `message/stream`
+- SSE streaming terminál állapot terjesztéssel
+- Feladat életciklus API-k `tasks/get` és `tasks/cancel`
+
+</details>
+
+<details>
+<summary><b>🛰️ 19. "Valódi MCP folyamatállapotra van szükségem, nem kitalált állapotra" </b></summary>
+
+Az operatív csapatoknak tudniuk kell, hogy az MCP valóban életben van-e, nem csak azt, hogy egy API elérhető-e.
+
+**Hogyan oldja meg az OmniRoute:**
+
+- Futásidejű szívverés fájl PID-vel, időbélyegekkel, szállítással, szerszámszámmal és hatókör móddal
+- MCP állapot API, amely kombinálja a szívverést + a legutóbbi tevékenységet
+- UI állapotkártyák a folyamat/üzemidő/szívverés frissességéhez
+
+</details>
+
+<details>
+<summary><b>📋 20. "Kivizsgálható MCP-eszköz végrehajtásra van szükségem" </b></summary>
+
+Amikor az eszközök módosítják a konfigurációt vagy működési műveleteket indítanak el, a csapatoknak kriminalisztikai nyomon követhetőségre van szükségük.
+
+**Hogyan oldja meg az OmniRoute:**
+
+- SQLite-alapú audit naplózás MCP-eszközhívásokhoz
+- Szűrések eszköz, siker/kudarc, API-kulcs és oldalszámozás szerint
+- Irányítópult audit táblázat + statisztikai végpontok az automatizáláshoz
+
+</details>
+
+<details>
+<summary><b>🔐 21. "Hatókörű MCP-engedélyekre van szükségem integrációnként"</b></summary>
+
+A különböző ügyfeleknek a legkevesebb jogosultsággal kell rendelkezniük az eszközkategóriákhoz.
+
+**Hogyan oldja meg az OmniRoute:**
+
+- 9 szemcsés MCP hatókör az ellenőrzött szerszámhozzáféréshez
+- Hatályérvényesítés és láthatóság az MCP-kezelő felületen
+- Biztonságos alaphelyzet az üzemi szerszámokhoz
+
+</details>
+
+<details>
+<summary><b>⚙️ 22. "Üzemeltetési vezérlőkre van szükségem átcsoportosítás nélkül" </b></summary>
+
+A csapatoknak gyors futásidejű változtatásokra van szükségük incidensek vagy költségesemények során.
+
+**Hogyan oldja meg az OmniRoute:**
+
+- A kombinált aktiválás váltása közvetlenül az MCP műszerfaláról
+- Rugalmassági profilok alkalmazása előre meghatározott házirend-csomagokból
+- Állítsa vissza a megszakító állapotát ugyanarról a kezelőpanelről
+
+</details>
+
+<details>
+<summary><b>🔄 23. "Szükségem van élő A2A feladatok életciklusának láthatóságára és törlésére"</b></summary>
+
+Az életciklus láthatósága nélkül a feladat-incidensek nehezen osztályozhatók.
+
+**Hogyan oldja meg az OmniRoute:**
+
+- Feladatok listázása/szűrés állapot/készség szerint oldalszámozással
+- A feladatok metaadatainak, eseményeinek és műtermékeinek részletezése
+- Feladat törlési végpont és felhasználói felület művelet megerősítéssel
+
+</details>
+
+<details>
+<summary><b>🌊 24. "Aktív adatfolyam-metrikákra van szükségem A2A terheléshez"</b></summary>
+
+A streamelési munkafolyamatok működési betekintést igényelnek a párhuzamosság és az élő kapcsolatok terén.
+
+**Hogyan oldja meg az OmniRoute:**
+
+- Az A2A állapotba integrált aktív folyamszámlálók
+- Utolsó feladat időbélyegzője és állapotonkénti száma
+- A2A műszerfalkártyák a valós idejű műveletek figyeléséhez
+
+</details>
+
+<details>
+<summary><b>🪪 25. "Szabványos ügynökfelderítésre van szükségem az ügyfelek számára" </b></summary>
+
+A külső klienseknek és hangszerelőknek géppel olvasható metaadatokra van szükségük a bevezetéshez.
+
+**Hogyan oldja meg az OmniRoute:**
+
+- Az ügynökkártya az `/.well-known/agent.json` címen látható
+- A menedzsment felületen látható képességek és készségek
+- Az A2A állapot API felfedezési metaadatokat tartalmaz az automatizáláshoz
+
+</details>
+
+<details>
+<summary><b>🧭 26. "Protokoll felfedezhetőségre van szükségem az UX termékben"</b></summary>
+
+Ha a felhasználók nem fedezik fel a protokollfelületeket, az elfogadás és a támogatás minősége csökken.
+
+**Hogyan oldja meg az OmniRoute:**
+
+- Oldalsáv bejegyzések MCP és A2A számára
+- Végpont oldal Protokollok lap gyorsindítással és állapottal
+- Linkek az áttekintésből a dedikált felügyeleti irányítópultokhoz
+
+</details>
+
+<details>
+<summary><b>🧪 27. "Végponttól végpontig terjedő protokoll-érvényesítésre van szükségem valós kliensekkel"</b></summary>
+
+A próbatesztek nem elegendőek a protokoll-kompatibilitás ellenőrzéséhez a kiadás előtt.
+
+**Hogyan oldja meg az OmniRoute:**
+
+- E2E csomag, amely elindítja az alkalmazást, és valódi MCP SDK kliens szállítást használ
+- Az A2A kliens teszteli az áramlások felfedezését, küldését, streamingjét, lekérését és megszakítását
+- Az állítások keresztellenőrzése az MCP audit és az A2A feladatok API-jával szemben
+
+</details>
+
+<details>
+<summary><b>📡 28. "Egységes megfigyelhetőségre van szükségem minden interfészen"</b></summary>
+
+A megfigyelhetőség protokoll szerinti felosztása vakfoltokat és hosszabb MTTR-t hoz létre.
+
+**Hogyan oldja meg az OmniRoute:**
+
+- Egységes irányítópultok/naplók/analytics egy termékben
+- Egészség + audit + kérés telemetria OpenAI, MCP és A2A rétegeken keresztül
+- Működési API-k az állapothoz és az automatizáláshoz
+
+</details>
+
+<details>
+<summary><b>💼 29. "Egy futási időre van szükségem a proxyhoz + eszközökhöz + ügynök hangszereléshez" </b></summary>
+
+Számos külön szolgáltatás futtatása növeli a működési költségeket és a hibamódokat.
+
+**Hogyan oldja meg az OmniRoute:**
+
+- OpenAI-kompatibilis proxy, MCP szerver és A2A szerver egy veremben
+- Megosztott hitelesítés, rugalmasság, adattárolás és megfigyelhetőség
+- Konzisztens politikai modell az összes interakciós felületen
+
+</details>
+
+<details>
+<summary><b>🚀 30. "Az ügynöki munkafolyamatokat ragasztókód szétszórása nélkül kell szállítanom" </b></summary>
+
+A csapatok veszítenek sebességükből, amikor több ad-hoc szolgáltatást és szkriptet illesztenek össze.
+
+**Hogyan oldja meg az OmniRoute:**
+
+- Egységes végpont stratégia az ügyfelek és ügynökök számára
+- Beépített protokollkezelő felhasználói felületek és füstellenőrzési útvonalak
+- Gyártásra kész alapok (biztonság, naplózás, rugalmasság, biztonsági mentés)
+
+</details>
+
+### Példa forgatókönyvekre (integrált használati esetek)
+
+**A játékkönyv: Maximalizálja a fizetett előfizetést + olcsó biztonsági mentés**
+
+```txt
+Combo: "maximize-claude"
+  1. cc/claude-opus-4-6
+  2. glm/glm-4.7
+  3. if/kimi-k2-thinking
+
+Monthly cost: $20 + small backup spend
+Outcome: higher quality, near-zero interruption
+```
+
+**Playbook B: Zéró költségű kódolási verem**
+
+```txt
+Combo: "free-forever"
+  1. gc/gemini-3-flash
+  2. if/kimi-k2-thinking
+  3. qw/qwen3-coder-plus
+
+Monthly cost: $0
+Outcome: stable free coding workflow
+```
+
+**Playbook C: 24/7 mindig bekapcsolt tartalék lánc**
+
+```txt
+Combo: "always-on"
+  1. cc/claude-opus-4-6
+  2. cx/gpt-5.2-codex
+  3. glm/glm-4.7
+  4. minimax/MiniMax-M2.1
+  5. if/kimi-k2-thinking
+
+Outcome: deep fallback depth for deadline-critical workloads
+```
+
+**D játékkönyv: Az ügynök MCP + A2A-val működik**
+
+```txt
+1) Start MCP transport (`omniroute --mcp`) for tool-driven operations
+2) Run A2A tasks via `message/send` and `message/stream`
+3) Observe via /dashboard/mcp and /dashboard/a2a
+4) Control incidents with resilience profile + task cancellation
+```
+
+---
 
 ## ⚡ Gyors kezdés
 
@@ -506,7 +781,7 @@ docker compose --profile cli up -d
 
 ---
 
-## 🖥️ Desktop App — Offline & Always-On
+## 🖥️
 
 > 🆕 **NEW!** OmniRoute is now available as a **native desktop application** for Windows, macOS, and Linux.
 
@@ -715,66 +990,26 @@ Az OmniRoute egy erőteljes beépített fordítói játszóteret tartalmaz **4 m
 
 </details>
 
----
+## 🧪 Értékelések (Evals)
 
-## 🎯 Használati esetek
+Az OmniRoute egy beépített értékelési keretrendszert tartalmaz az LLM-válasz minőségének tesztelésére egy aranykészlettel összehasonlítva. Az irányítópult **Analytics → Evals** menüpontjában érheti el.
 
-### 1. eset: "Claude Pro előfizetésem van"
+### Beépített arany készlet
 
-**Probléma:** A kvóta lejár, kihasználatlanul, sebességkorlátozások erős kódolás közben
+Az előre feltöltött "OmniRoute Golden Set" 10 tesztesetet tartalmaz, amelyek lefedik:
 
-```
-Combo: "maximize-claude"
-  1. cc/claude-opus-4-6        (use subscription fully)
-  2. glm/glm-4.7               (cheap backup when quota out)
-  3. if/kimi-k2-thinking       (free emergency fallback)
+- Üdvözlet, matematika, földrajz, kódgenerálás
+- JSON formátum megfelelés, fordítás, leértékelés
+- Biztonsági elutasítás (káros tartalom), számlálás, logikai logika
 
-Monthly cost: $20 (subscription) + ~$5 (backup) = $25 total
-vs. $20 + hitting limits = frustration
-```
+### Értékelési stratégiák
 
-### 2. eset: "Nulla költséget akarok"
-
-**Probléma:** Nem engedheti meg magának az előfizetést, megbízható mesterséges intelligencia kódolásra van szüksége
-
-```
-Combo: "free-forever"
-  1. gc/gemini-3-flash         (180K free/month)
-  2. if/kimi-k2-thinking       (unlimited free)
-  3. qw/qwen3-coder-plus       (unlimited free)
-
-Monthly cost: $0
-Quality: Production-ready models
-```
-
-### 3. eset: "24 órás kódolásra van szükségem, megszakítás nélkül"
-
-**Probléma:** Határidők, nem engedheti meg magának az állásidőt
-
-```
-Combo: "always-on"
-  1. cc/claude-opus-4-6        (best quality)
-  2. cx/gpt-5.2-codex          (second subscription)
-  3. glm/glm-4.7               (cheap, resets daily)
-  4. minimax/MiniMax-M2.1      (cheapest, 5h reset)
-  5. if/kimi-k2-thinking       (free unlimited)
-
-Result: 5 layers of fallback = zero downtime
-```
-
-### 4. eset: "INGYENES AI-t akarok az OpenClawban"
-
-**Probléma:** AI-asszisztens szükséges az üzenetküldő alkalmazásokhoz, teljesen ingyenes
-
-```
-Combo: "openclaw-free"
-  1. if/glm-4.7                (unlimited free)
-  2. if/minimax-m2.1           (unlimited free)
-  3. if/kimi-k2-thinking       (unlimited free)
-
-Monthly cost: $0
-Access via: WhatsApp, Telegram, Slack, Discord, iMessage, Signal...
-```
+| Stratégia  | Leírás                                                                                            | Példa                            |
+| ---------- | ------------------------------------------------------------------------------------------------- | -------------------------------- |
+| `exact`    | A kimenetnek pontosan meg kell egyeznie                                                           | `"4"`                            |
+| `contains` | A kimenetnek tartalmaznia kell részkarakterláncot (a kis- és nagybetűk nem különböznek egymástól) | `"Paris"`                        |
+| `regex`    | A kimenetnek meg kell egyeznie a regex mintával                                                   | `"1.*2.*3"`                      |
+| `custom`   | Az egyéni JS függvény igaz/hamis                                                                  | `(output) => output.length > 10` |
 
 ---
 
@@ -1058,29 +1293,6 @@ Settings → API Configuration:
 
 ---
 
-## 🧪 Értékelések (Evals)
-
-Az OmniRoute egy beépített értékelési keretrendszert tartalmaz az LLM-válasz minőségének tesztelésére egy aranykészlettel összehasonlítva. Az irányítópult **Analytics → Evals** menüpontjában érheti el.
-
-### Beépített arany készlet
-
-Az előre feltöltött "OmniRoute Golden Set" 10 tesztesetet tartalmaz, amelyek lefedik:
-
-- Üdvözlet, matematika, földrajz, kódgenerálás
-- JSON formátum megfelelés, fordítás, leértékelés
-- Biztonsági elutasítás (káros tartalom), számlálás, logikai logika
-
-### Értékelési stratégiák
-
-| Stratégia  | Leírás                                                                                            | Példa                            |
-| ---------- | ------------------------------------------------------------------------------------------------- | -------------------------------- |
-| `exact`    | A kimenetnek pontosan meg kell egyeznie                                                           | `"4"`                            |
-| `contains` | A kimenetnek tartalmaznia kell részkarakterláncot (a kis- és nagybetűk nem különböznek egymástól) | `"Paris"`                        |
-| `regex`    | A kimenetnek meg kell egyeznie a regex mintával                                                   | `"1.*2.*3"`                      |
-| `custom`   | Az egyéni JS függvény igaz/hamis                                                                  | `(output) => output.length > 10` |
-
----
-
 ## 🐛 Hibaelhárítás
 
 <details>
@@ -1132,13 +1344,13 @@ Az előre feltöltött "OmniRoute Golden Set" 10 tesztesetet tartalmaz, amelyek 
 - Az OmniRoute v1.0.6+ tartalmazza a tartalék érvényesítést a csevegés befejezésén keresztül
 - Győződjön meg arról, hogy az alap URL tartalmazza a `/v1` utótagot
 
-### 🔐 OAuth em Servidor Remoto (távoli OAuth beállítás)
+### 🔐 OAuth
 
 <a name="oauth-em-servidor-remoto"></a>
 
 > **⚠️ FONTOS az OmniRoute em VPS/Docker/servidor Remoto használatához**
 
-### Az OAuth do Antigravity / Gemini CLI falha em servidores remotos?
+### OAuth
 
 Az **Antigravitáció** és a **Gemini CLI** usam **Google OAuth 2.0** hitelesítése. A Google exige que a `redirect_uri` nincs fluxo OAuth seja **exatamente** uma das URI-k pre-cadastradas no Google Cloud Console do aplicativo.
 
@@ -1227,7 +1439,7 @@ Se não quiser criar credenciais próprias agora, ainda é possível usar o flux
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️
 
 - **Futtatási idejű**: Node.js 18–22 LTS (⚠️ A Node.js 24+ **nem támogatott** - A `better-sqlite3` natív binárisok nem kompatibilisek)
 - **Nyelv**: TypeScript 5.9 – **100% TypeScript** `src/` és `open-sse/` (v1.0.6) között
@@ -1279,7 +1491,7 @@ Se não quiser criar credenciais próprias agora, ainda é possível usar o flux
 
 ---
 
-## 🗺️ Útiterv
+## 🗺️
 
 Az OmniRoute **210+ funkciót tervez** több fejlesztési fázisban. Íme a legfontosabb területek:
 
@@ -1301,18 +1513,6 @@ Az OmniRoute **210+ funkciót tervez** több fejlesztési fázisban. Íme a legf
 - 💰 **Legalacsonyabb költségű stratégia** - Automatikusan válassza ki a legolcsóbb elérhető szolgáltatót
 
 > 📝 A teljes funkció specifikációi a [link](docs/new-features/) címen érhetők el (217 részletes specifikáció)
-
----
-
-## 📧 Támogatás
-
-> 💬 **Csatlakozzon közösségünkhöz!** [WhatsApp Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t) — Kérjen segítséget, ossza meg tippjeit, és naprakész legyen.
-
-- **Webhely**: [omniroute.online](https://omniroute.online)
-- **GitHub**: [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)
-- **Problémák**: [github.com/diegosouzapw/OmniRoute/issues](https://github.com/diegosouzapw/OmniRoute/issues)
-- **WhatsApp**: [Community Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t)
-- **Eredeti projekt**: [9router by decolua](https://github.com/decolua/9router)
 
 ---
 

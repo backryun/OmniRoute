@@ -194,7 +194,11 @@ export async function POST(req: NextRequest) {
       const stream = createA2AStream(
         task,
         async (t) => executeA2ATaskWithState(tm, t, handler),
-        req.signal
+        req.signal,
+        {
+          onStart: () => tm.beginStream(),
+          onEnd: () => tm.endStream(),
+        }
       );
 
       return new Response(stream, { headers: SSE_HEADERS });

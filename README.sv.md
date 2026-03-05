@@ -110,6 +110,35 @@ _Anslut alla AI-drivna IDE- eller CLI-verktyg via OmniRoute — gratis API-gatew
 
 ---
 
+## 🖼️
+
+<div align="center">
+  <img src="./docs/screenshots/MainOmniRoute.png" alt="OmniRoute" width="800"/>
+</div>
+
+---
+
+## 📸
+
+<details>
+<summary><b>...</b></summary>
+
+| #     | #                                        |
+| ----- | ---------------------------------------- |
+| **1** | ![1](docs/screenshots/01-providers.png)  |
+| **2** | ![2](docs/screenshots/02-combos.png)     |
+| **3** | ![3](docs/screenshots/03-analytics.png)  |
+| **4** | ![4](docs/screenshots/04-health.png)     |
+| **5** | ![5](docs/screenshots/05-translator.png) |
+| **6** | ![6](docs/screenshots/06-settings.png)   |
+| **7** | ![7](docs/screenshots/07-cli-tools.png)  |
+| **8** | ![8](docs/screenshots/08-usage.png)      |
+| **9** | ![9](docs/screenshots/09-endpoint.png)   |
+
+</details>
+
+---
+
 ## 🤔 Varför OmniRoute?
 
 **Sluta slösa pengar och nå gränser:**
@@ -125,6 +154,18 @@ _Anslut alla AI-drivna IDE- eller CLI-verktyg via OmniRoute — gratis API-gatew
 - ✅ **Automatisk reserv** - Prenumeration → API-nyckel → Billigt → Gratis, noll driftstopp
 - ✅ **Multi-konto** - Round-robin mellan konton per leverantör
 - ✅ **Universal** - Fungerar med Claude Code, Codex, Gemini CLI, Cursor, Cline, OpenClaw, vilket CLI-verktyg som helst
+
+---
+
+## 📧 Support
+
+> 💬 **Gå med i vår community!** [WhatsApp Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t) — Få hjälp, dela tips och håll dig uppdaterad.
+
+- **Webbplats**: [omniroute.online](https://omniroute.online)
+- **GitHub**: [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)
+- **Frågor**: [github.com/diegosouzapw/OmniRoute/issues](https://github.com/diegosouzapw/OmniRoute/issues)
+- **WhatsApp**: [Community Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t)
+- **Originalprojekt**: [9router by decolua](https://github.com/decolua/9router)
 
 ---
 
@@ -157,262 +198,496 @@ Result: Never stop coding, minimal cost
 
 ---
 
-## 🎯 What OmniRoute Solves — 16 Real Pain Points
+## 🎯 Vad OmniRoute löser — 30 verkliga smärtpunkter och användningsfall
 
-> **Every developer using AI tools faces these problems daily.** OmniRoute was built to solve them all — from cost overruns to regional blocks, from broken OAuth flows to zero observability.
+> **Varje utvecklare som använder AI-verktyg möter dessa problem dagligen.** OmniRoute byggdes för att lösa dem alla — från kostnadsöverskridanden till regionala block, från trasiga OAuth-flöden till protokolloperationer och observerbarhet i företag.
 
 <details>
-<summary><b>💸 1. "I pay for an expensive subscription but still get interrupted by limits"</b></summary>
+<summary><b>💸 1. "Jag betalar för ett dyrt abonnemang men blir ändå avbruten av limits" </b></summary>
 
-Developers pay $20–200/month for Claude Pro, Codex Pro, or GitHub Copilot. Even paying, quota has a ceiling — 5h of usage, weekly limits, or per-minute rate limits. Mid-coding session, the provider stops responding and the developer loses flow and productivity.
+Utvecklare betalar $20–200/månad för Claude Pro, Codex Pro eller GitHub Copilot. Även om du betalar har kvoten ett tak - 5 timmars användning, veckogränser eller gränser per minut. Mid-coding session, leverantören slutar svara och utvecklaren tappar flöde och produktivitet.
 
-**How OmniRoute solves it:**
+**Hur OmniRoute löser det:**
 
-- **Smart 4-Tier Fallback** — If subscription quota runs out, automatically redirects to API Key → Cheap → Free with zero manual intervention
-- **Real-Time Quota Tracking** — Shows token consumption in real-time with reset countdown (5h, daily, weekly)
-- **Multi-Account Support** — Multiple accounts per provider with auto round-robin — when one runs out, switches to the next
-- **Custom Combos** — Customizable fallback chains with 6 balancing strategies (fill-first, round-robin, P2C, random, least-used, cost-optimized)
-- **Codex Business Quotas** — Business/Team workspace quota monitoring directly in the dashboard
+- **Smart 4-lagers fallback** — Om prenumerationskvoten tar slut, omdirigeras automatiskt till API-nyckel → Billigt → Gratis med noll manuellt ingrepp
+- **Kvotspårning i realtid** — Visar tokenförbrukning i realtid med återställningsnedräkning (5 timmar, dagligen, veckovis)
+- **Multi-Account Support** — Flera konton per leverantör med automatisk round-robin — när ett tar slut, byter du till nästa
+- **Anpassade kombinationer** — Anpassningsbara reservkedjor med 6 balanseringsstrategier (fill-first, round-robin, P2C, slumpmässig, minst använda, kostnadsoptimerad)
+- **Codex Business Quotas** — Övervakning av företags-/teamarbetsutrymmeskvoter direkt i instrumentpanelen
 
 </details>
 
 <details>
-<summary><b>🔌 2. "I need to use multiple providers but each has a different API"</b></summary>
+<summary><b>🔌 2. "Jag måste använda flera leverantörer men alla har olika API" </b></summary>
 
-OpenAI uses one format, Claude (Anthropic) uses another, Gemini yet another. If a dev wants to test models from different providers or fallback between them, they need to reconfigure SDKs, change endpoints, deal with incompatible formats. Custom providers (FriendLI, NIM) have non-standard model endpoints.
+OpenAI använder ett format, Claude (Anthropic) använder ett annat, Gemini ännu ett annat. Om en utvecklare vill testa modeller från olika leverantörer eller fallback mellan dem måste de konfigurera om SDK:er, ändra slutpunkter, hantera inkompatibla format. Anpassade leverantörer (FriendLI, NIM) har icke-standardiserade modellslutpunkter.
 
-**How OmniRoute solves it:**
+**Hur OmniRoute löser det:**
 
-- **Unified Endpoint** — A single `http://localhost:20128/v1` serves as proxy for all 36+ providers
-- **Format Translation** — Automatic and transparent: OpenAI ↔ Claude ↔ Gemini ↔ Responses API
-- **Response Sanitization** — Strips non-standard fields (`x_groq`, `usage_breakdown`, `service_tier`) that break OpenAI SDK v1.83+
-- **Role Normalization** — Converts `developer` → `system` for non-OpenAI providers; `system` → `user` for GLM/ERNIE
-- **Think Tag Extraction** — Extracts `<think>` blocks from models like DeepSeek R1 into standardized `reasoning_content`
-- **Structured Output for Gemini** — `json_schema` → `responseMimeType`/`responseSchema` automatic conversion
-- **`stream` defaults to `false`** — Aligns with OpenAI spec, avoiding unexpected SSE in Python/Rust/Go SDKs
-
-</details>
-
-<details>
-<summary><b>🌐 3. "My AI provider blocks my region/country"</b></summary>
-
-Providers like OpenAI/Codex block access from certain geographic regions. Users get errors like `unsupported_country_region_territory` during OAuth and API connections. This is especially frustrating for developers from developing countries.
-
-**How OmniRoute solves it:**
-
-- **3-Level Proxy Config** — Configurable proxy at 3 levels: global (all traffic), per-provider (one provider only), and per-connection/key
-- **Color-Coded Proxy Badges** — Visual indicators: 🟢 global proxy, 🟡 provider proxy, 🔵 connection proxy, always showing the IP
-- **OAuth Token Exchange Through Proxy** — OAuth flow also goes through the proxy, solving `unsupported_country_region_territory`
-- **Connection Tests via Proxy** — Connection tests use the configured proxy (no more direct bypass)
-- **SOCKS5 Support** — Full SOCKS5 proxy support for outbound routing
-- **TLS Fingerprint Spoofing** — Browser-like TLS fingerprint via `wreq-js` to bypass bot detection
+- **Unified Endpoint** — En enda `http://localhost:20128/v1` fungerar som proxy för alla 36+ leverantörer
+- **Formatöversättning** — Automatisk och transparent: OpenAI ↔ Claude ↔ Gemini ↔ Responses API
+- **Responssanering** — Tar bort icke-standardiserade fält (`x_groq`, `usage_breakdown`, `service_tier`) som bryter OpenAI SDK v1.83+
+- **Rollnormalisering** — Konverterar `developer` → `system` för icke-OpenAI-leverantörer; `system` → `user` för GLM/ERNIE
+- **Think Tag Extraction** — Extraherar `<think>`-block från modeller som DeepSeek R1 till standardiserade `reasoning_content`
+- **Structured Output for Gemini** — `json_schema` → `responseMimeType`/`responseSchema` automatisk konvertering
+- **`stream` är standard till `false`** — Justerar med OpenAI-specifikationen, undviker oväntad SSE i Python/Rust/Go SDK:er
 
 </details>
 
 <details>
-<summary><b>🆓 4. "I want to use AI for coding but I have no money"</b></summary>
+<summary><b>🌐 3. "Min AI-leverantör blockerar min region/land" </b></summary>
 
-Not everyone can pay $20–200/month for AI subscriptions. Students, devs from emerging countries, hobbyists, and freelancers need access to quality models at zero cost.
+Leverantörer som OpenAI/Codex blockerar åtkomst från vissa geografiska regioner. Användare får fel som `unsupported_country_region_territory` under OAuth- och API-anslutningar. Detta är särskilt frustrerande för utvecklare från utvecklingsländer.
 
-**How OmniRoute solves it:**
+**Hur OmniRoute löser det:**
 
-- **Free Tier Providers Built-in** — Native support for 100% free providers: iFlow (8 unlimited models), Qwen (3 unlimited models), Kiro (Claude for free), Gemini CLI (180K/month free)
-- **Free-Only Combos** — Chain `gc/gemini-3-flash → if/kimi-k2-thinking → qw/qwen3-coder-plus` = $0/month with zero downtime
-- **NVIDIA NIM Free Credits** — 1000 free credits integrated
-- **Cost Optimized Strategy** — Routing strategy that automatically chooses the cheapest available provider
-
-</details>
-
-<details>
-<summary><b>🔒 5. "I need to protect my AI gateway from unauthorized access"</b></summary>
-
-When exposing an AI gateway to the network (LAN, VPS, Docker), anyone with the address can consume the developer's tokens/quota. Without protection, APIs are vulnerable to misuse, prompt injection, and abuse.
-
-**How OmniRoute solves it:**
-
-- **API Key Management** — Generation, rotation, and scoping per provider with a dedicated `/dashboard/api-manager` page
-- **Model-Level Permissions** — Restrict API keys to specific models (`openai/*`, wildcard patterns), with Allow All/Restrict toggle
-- **API Endpoint Protection** — Require a key for `/v1/models` and block specific providers from the listing
-- **Auth Guard + CSRF Protection** — All dashboard routes protected with `withAuth` middleware + CSRF tokens
-- **Rate Limiter** — Per-IP rate limiting with configurable windows
-- **IP Filtering** — Allowlist/blocklist for access control
-- **Prompt Injection Guard** — Sanitization against malicious prompt patterns
-- **AES-256-GCM Encryption** — Credentials encrypted at rest
+- **3-Level Proxy Config** — Konfigurerbar proxy på 3 nivåer: global (all trafik), per leverantör (endast en leverantör) och per anslutning/nyckel
+- **Färgkodade proxymärken** — Visuella indikatorer: 🟢 global proxy, 🟡 leverantörsproxy, 🔵 anslutningsproxy, visar alltid IP:n
+- **OAuth Token Exchange Through Proxy** — OAuth-flödet går också genom proxyn, vilket löser `unsupported_country_region_territory`
+- **Anslutningstester via proxy** — Anslutningstester använder den konfigurerade proxyn (ingen mer direkt förbikoppling)
+- **SOCKS5-stöd** — Fullständigt SOCKS5-proxystöd för utgående routing
+- **TLS Fingerprint Spoofing** — Webbläsarliknande TLS-fingeravtryck via `wreq-js` för att kringgå botdetektering
 
 </details>
 
 <details>
-<summary><b>🛑 6. "My provider went down and I lost my coding flow"</b></summary>
+<summary><b>🆓 4. "Jag vill använda AI för kodning men jag har inga pengar" </b></summary>
 
-AI providers can become unstable, return 5xx errors, or hit temporary rate limits. If a dev depends on a single provider, they're interrupted. Without circuit breakers, repeated retries can crash the application.
+Alla kan inte betala $20–200/månad för AI-prenumerationer. Studenter, utvecklare från tillväxtländer, hobbyister och frilansare behöver tillgång till kvalitetsmodeller utan kostnad.
 
-**How OmniRoute solves it:**
+**Hur OmniRoute löser det:**
 
-- **Circuit Breaker per-provider** — Auto-open/close with configurable thresholds and cooldown (Closed/Open/Half-Open)
-- **Exponential Backoff** — Progressive retry delays
-- **Anti-Thundering Herd** — Mutex + semaphore protection against concurrent retry storms
-- **Combo Fallback Chains** — If the primary provider fails, automatically falls through the chain with no intervention
-- **Combo Circuit Breaker** — Auto-disables failing providers within a combo chain
-- **Health Dashboard** — Uptime monitoring, circuit breaker states, lockouts, cache stats, p50/p95/p99 latency
+- **Gratis leverantörer inbyggda** — Inbyggt stöd för 100 % gratis leverantörer: iFlow (8 obegränsade modeller), Qwen (3 obegränsade modeller), Kiro (Claude gratis), Gemini CLI (180K/månad gratis)
+- **Free-Only Combos** — Chain `gc/gemini-3-flash → if/kimi-k2-thinking → qw/qwen3-coder-plus` = $0/månad utan stilleståndstid
+- **NVIDIA NIM gratis krediter** — 1000 gratis krediter integrerade
+- **Kostnadsoptimerad strategi** — Routingstrategi som automatiskt väljer den billigaste tillgängliga leverantören
 
 </details>
 
 <details>
-<summary><b>🔧 7. "Configuring each AI tool is tedious and repetitive"</b></summary>
+<summary><b>🔒 5. "Jag behöver skydda min AI-gateway från obehörig åtkomst" </b></summary>
 
-Developers use Cursor, Claude Code, Codex CLI, OpenClaw, Gemini CLI, Kilo Code... Each tool needs a different config (API endpoint, key, model). Reconfiguring when switching providers or models is a waste of time.
+När du exponerar en AI-gateway för nätverket (LAN, VPS, Docker) kan vem som helst med adressen konsumera utvecklarens tokens/kvot. Utan skydd är API:er sårbara för missbruk, snabb injektion och missbruk.
 
-**How OmniRoute solves it:**
+**Hur OmniRoute löser det:**
 
-- **CLI Tools Dashboard** — Dedicated page with one-click setup for Claude Code, Codex CLI, OpenClaw, Kilo Code, Antigravity, Cline
-- **GitHub Copilot Config Generator** — Generates `chatLanguageModels.json` for VS Code with bulk model selection
-- **Onboarding Wizard** — Guided 4-step setup for first-time users
-- **One endpoint, all models** — Configure `http://localhost:20128/v1` once, access 36+ providers
-
-</details>
-
-<details>
-<summary><b>🔑 8. "Managing OAuth tokens from multiple providers is hell"</b></summary>
-
-Claude Code, Codex, Gemini CLI, Copilot — all use OAuth 2.0 with expiring tokens. Developers need to re-authenticate constantly, deal with `client_secret is missing`, `redirect_uri_mismatch`, and failures on remote servers. OAuth on LAN/VPS is particularly problematic.
-
-**How OmniRoute solves it:**
-
-- **Auto Token Refresh** — OAuth tokens refresh in background before expiration
-- **OAuth 2.0 (PKCE) Built-in** — Automatic flow for Claude Code, Codex, Gemini CLI, Copilot, Kiro, Qwen, iFlow
-- **Multi-Account OAuth** — Multiple accounts per provider via JWT/ID token extraction
-- **OAuth LAN/Remote Fix** — Private IP detection for `redirect_uri` + manual URL mode for remote servers
-- **OAuth Behind Nginx** — Uses `window.location.origin` for reverse proxy compatibility
-- **Remote OAuth Guide** — Step-by-step guide for Google Cloud credentials on VPS/Docker
+- **API Key Management** — Generering, rotation och omfattning per leverantör med en dedikerad `/dashboard/api-manager`-sida
+- **Behörigheter på modellnivå** — Begränsa API-nycklar till specifika modeller (`openai/*`, jokerteckenmönster), med växlaren Tillåt allt/Begränsa
+- **API Endpoint Protection** — Kräv en nyckel för `/v1/models` och blockera specifika leverantörer från listan
+- **Auth Guard + CSRF Protection** — Alla instrumentpanelsrutter skyddade med `withAuth` middleware + CSRF-tokens
+- **Rate Limiter** — Per-IP-hastighetsbegränsning med konfigurerbara fönster
+- **IP-filtrering** — Tillåtelselista/blockeringslista för åtkomstkontroll
+- **Prompt Injection Guard** — Sanering mot skadliga promptmönster
+- **AES-256-GCM-kryptering** — Autentiseringsuppgifter krypterade i vila
 
 </details>
 
 <details>
-<summary><b>📊 9. "I don't know how much I'm spending or where"</b></summary>
+<summary><b>🛑 6. "Min leverantör gick ner och jag tappade mitt kodningsflöde" </b></summary>
 
-Developers use multiple paid providers but have no unified view of spending. Each provider has its own billing dashboard, but there's no consolidated view. Unexpected costs can pile up.
+AI-leverantörer kan bli instabila, returnera 5xx-fel eller nå tillfälliga hastighetsgränser. Om en utvecklare är beroende av en enskild leverantör avbryts de. Utan strömbrytare kan upprepade försök krascha programmet.
 
-**How OmniRoute solves it:**
+**Hur OmniRoute löser det:**
 
-- **Cost Analytics Dashboard** — Per-token cost tracking and budget management per provider
-- **Budget Limits per Tier** — Spending ceiling per tier that triggers automatic fallback
-- **Per-Model Pricing Configuration** — Configurable prices per model
-- **Usage Statistics Per API Key** — Request count and last-used timestamp per key
-- **Analytics Dashboard** — Stat cards, model usage chart, provider table with success rates and latency
-
-</details>
-
-<details>
-<summary><b>🐛 10. "I can't diagnose errors and problems in AI calls"</b></summary>
-
-When a call fails, the dev doesn't know if it was a rate limit, expired token, wrong format, or provider error. Fragmented logs across different terminals. Without observability, debugging is trial-and-error.
-
-**How OmniRoute solves it:**
-
-- **Unified Logs Dashboard** — 4 tabs: Request Logs, Proxy Logs, Audit Logs, Console
-- **Console Log Viewer** — Real-time terminal-style viewer with color-coded levels, auto-scroll, search, filter
-- **SQLite Proxy Logs** — Persistent logs that survive server restarts
-- **Translator Playground** — 4 debugging modes: Playground (format translation), Chat Tester (round-trip), Test Bench (batch), Live Monitor (real-time)
-- **Request Telemetry** — p50/p95/p99 latency + X-Request-Id tracing
-- **File-Based Logging with Rotation** — Console interceptor captures everything to JSON log with size-based rotation
+- **Circuit Breaker per leverantör** — Autoöppning/stängning med konfigurerbara trösklar och nedkylning (stängd/öppen/halvöppen)
+- **Exponentiell backoff** — Progressiva fördröjningar igen
+- **Anti-Thundering Herd** — Mutex + semaforskydd mot samtidiga stormar igen
+- **Combo reservkedjor** — Om den primära leverantören misslyckas, faller den automatiskt genom kedjan utan ingrepp
+- **Combo Circuit Breaker** - Inaktiverar automatiskt felande leverantörer inom en kombinationskedja
+- **Health Dashboard** — Drifttidsövervakning, strömbrytartillstånd, låsningar, cachestatistik, p50/p95/p99 latens
 
 </details>
 
 <details>
-<summary><b>🏗️ 11. "Deploying and maintaining the gateway is complex"</b></summary>
+<summary><b>🔧 7. "Att konfigurera varje AI-verktyg är tråkigt och repetitivt" </b></summary>
 
-Installing, configuring, and maintaining an AI proxy across different environments (local, VPS, Docker, cloud) is labor-intensive. Problems like hardcoded paths, `EACCES` on directories, port conflicts, and cross-platform builds add friction.
+Utvecklare använder Cursor, Claude Code, Codex CLI, OpenClaw, Gemini CLI, Kilo Code... Varje verktyg behöver en annan konfiguration (API-slutpunkt, nyckel, modell). Att konfigurera om när man byter leverantör eller modell är ett slöseri med tid.
 
-**How OmniRoute solves it:**
+**Hur OmniRoute löser det:**
 
-- **npm global install** — `npm install -g omniroute && omniroute` — done
-- **Docker Multi-Platform** — AMD64 + ARM64 native (Apple Silicon, AWS Graviton, Raspberry Pi)
-- **Docker Compose Profiles** — `base` (no CLI tools) and `cli` (with Claude Code, Codex, OpenClaw)
-- **Electron Desktop App** — Native app for Windows/macOS/Linux with system tray, auto-start, offline mode
-- **Split-Port Mode** — API and Dashboard on separate ports for advanced scenarios (reverse proxy, container networking)
-- **Cloud Sync** — Config synchronization across devices via Cloudflare Workers
-- **DB Backups** — Automatic backup, restore, export and import of all settings
+- **CLI Tools Dashboard** — Dedikerad sida med ett-klicksinställningar för Claude Code, Codex CLI, OpenClaw, Kilo Code, Antigravity, Cline
+- **GitHub Copilot Config Generator** — Genererar `chatLanguageModels.json` för VS-kod med bulkmodellval
+- **Onboarding Wizard** — Guidad 4-stegs installation för förstagångsanvändare
+- **En slutpunkt, alla modeller** — Konfigurera `http://localhost:20128/v1` en gång, få tillgång till 36+ leverantörer
 
 </details>
 
 <details>
-<summary><b>🌍 12. "The interface is English-only and my team doesn't speak English"</b></summary>
+<summary><b>🔑 8. "Hantera OAuth-tokens från flera leverantörer är ett helvete" </b></summary>
 
-Teams in non-English-speaking countries, especially in Latin America, Asia, and Europe, struggle with English-only interfaces. Language barriers reduce adoption and increase configuration errors.
+Claude Code, Codex, Gemini CLI, Copilot — alla använder OAuth 2.0 med utgående tokens. Utvecklare måste autentisera på nytt hela tiden, hantera `client_secret is missing`, `redirect_uri_mismatch` och fel på fjärrservrar. OAuth på LAN/VPS är särskilt problematiskt.
 
-**How OmniRoute solves it:**
+**Hur OmniRoute löser det:**
 
-- **Dashboard i18n — 30 Languages** — All 500+ keys translated including Arabic, Bulgarian, Danish, German, Spanish, Finnish, French, Hebrew, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Malay, Dutch, Norwegian, Polish, Portuguese (PT/BR), Romanian, Russian, Slovak, Swedish, Thai, Ukrainian, Vietnamese, Chinese, Filipino, English
-- **RTL Support** — Right-to-left support for Arabic and Hebrew
-- **Multi-Language READMEs** — 30 complete documentation translations
-- **Language Selector** — Globe icon in header for real-time switching
-
-</details>
-
-<details>
-<summary><b>🔄 13. "I need more than chat — I need embeddings, images, audio"</b></summary>
-
-AI isn't just chat completion. Devs need to generate images, transcribe audio, create embeddings for RAG, rerank documents, and moderate content. Each API has a different endpoint and format.
-
-**How OmniRoute solves it:**
-
-- **Embeddings** — `/v1/embeddings` with 6 providers and 9+ models
-- **Image Generation** — `/v1/images/generations` with 4 providers and 9+ models
-- **Audio Transcription** — `/v1/audio/transcriptions` — Whisper-compatible
-- **Text-to-Speech** — `/v1/audio/speech` — Multi-provider audio synthesis
-- **Moderations** — `/v1/moderations` — Content safety checks
-- **Reranking** — `/v1/rerank` — Document relevance reranking
-- **Responses API** — Full `/v1/responses` support for Codex
+- **Automatisk uppdatering av token** — OAuth-tokens uppdateras i bakgrunden innan de löper ut
+- **OAuth 2.0 (PKCE) Inbyggd** — Automatiskt flöde för Claude Code, Codex, Gemini CLI, Copilot, Kiro, Qwen, iFlow
+- **Multi-Account OAuth** — Flera konton per leverantör via JWT/ID-tokenextraktion
+- **OAuth LAN/Remote Fix** — Privat IP-detektering för `redirect_uri` + manuellt URL-läge för fjärrservrar
+- **OAuth Behind Nginx** — Använder `window.location.origin` för omvänd proxykompatibilitet
+- **Remote OAuth Guide** — Steg-för-steg-guide för Google Cloud-uppgifter på VPS/Docker
 
 </details>
 
 <details>
-<summary><b>🧪 14. "I have no way to test and compare quality across models"</b></summary>
+<summary><b>📊 9. "Jag vet inte hur mycket jag spenderar eller var" </b></summary>
 
-Developers want to know which model is best for their use case — code, translation, reasoning — but comparing manually is slow. No integrated eval tools exist.
+Utvecklare använder flera betalleverantörer men har ingen enhetlig syn på utgifter. Varje leverantör har sin egen faktureringspanel, men det finns ingen konsoliderad vy. Oväntade kostnader kan hopa sig.
 
-**How OmniRoute solves it:**
+**Hur OmniRoute löser det:**
 
-- **LLM Evaluations** — Golden set testing with 10 pre-loaded cases covering greetings, math, geography, code generation, JSON compliance, translation, markdown, safety refusal
-- **4 Match Strategies** — `exact`, `contains`, `regex`, `custom` (JS function)
-- **Translator Playground Test Bench** — Batch testing with multiple inputs and expected outputs, cross-provider comparison
-- **Chat Tester** — Full round-trip with visual response rendering
-- **Live Monitor** — Real-time stream of all requests flowing through the proxy
-
-</details>
-
-<details>
-<summary><b>📈 15. "I need to scale without losing performance"</b></summary>
-
-As request volume grows, without caching the same questions generate duplicate costs. Without idempotency, duplicate requests waste processing. Per-provider rate limits must be respected.
-
-**How OmniRoute solves it:**
-
-- **Semantic Cache** — Two-tier cache (signature + semantic) reduces cost and latency
-- **Request Idempotency** — 5s deduplication window for identical requests
-- **Rate Limit Detection** — Per-provider RPM, min gap, and max concurrent tracking
-- **Editable Rate Limits** — Configurable defaults in Settings → Resilience with persistence
-- **API Key Validation Cache** — 3-tier cache for production performance
-- **Health Dashboard with Telemetry** — p50/p95/p99 latency, cache stats, uptime
+- **Kostnadsanalysinstrumentpanel** — Kostnadsspårning per token och budgethantering per leverantör
+- **Budgetgränser per nivå** — Utgiftstak per nivå som utlöser automatisk reserv
+- **Priskonfiguration per modell** — Konfigurerbara priser per modell
+- **Användningsstatistik per API-nyckel** — Antal förfrågningar och senast använda tidsstämpel per nyckel
+- **Analytics Dashboard** — Statistikkort, modellanvändningsdiagram, leverantörstabell med framgångsfrekvens och latens
 
 </details>
 
 <details>
-<summary><b>🤖 16. "I want to control model behavior globally"</b></summary>
+<summary><b>🐛 10. "Jag kan inte diagnostisera fel och problem i AI-samtal" </b></summary>
 
-Developers who want all responses in a specific language, with a specific tone, or want to limit reasoning tokens. Configuring this in every tool/request is impractical.
+När ett samtal misslyckas vet inte utvecklaren om det var en hastighetsgräns, utgången token, fel format eller leverantörsfel. Fragmenterade loggar över olika terminaler. Utan observerbarhet är felsökning att trial-and-error.
 
-**How OmniRoute solves it:**
+**Hur OmniRoute löser det:**
 
-- **System Prompt Injection** — Global prompt applied to all requests
+- **Unified Logs Dashboard** — 4 flikar: Request Logs, Proxy Logs, Audit Logs, Console
+- **Console Log Viewer** — Viewer i realtid i terminalstil med färgkodade nivåer, automatisk rullning, sökning, filtrering
+- **SQLite Proxy-loggar** — Beständiga loggar som överlever serverstarter
+- **Translator Playground** — 4 felsökningslägen: Playground (formatöversättning), Chat Tester (tur och retur), Testbänk (batch), Live Monitor (realtid)
+- **Request Telemetri** — p50/p95/p99 latens + X-Request-Id-spårning
+- **Filbaserad loggning med rotation** — Konsolinterceptor fångar allt till JSON-logg med storleksbaserad rotation
+
+</details>
+
+<details>
+<summary><b>🏗️ 11. "Det är komplext att distribuera och underhålla gatewayen" </b></summary>
+
+Att installera, konfigurera och underhålla en AI-proxy i olika miljöer (lokalt, VPS, Docker, moln) är arbetskrävande. Problem som hårdkodade sökvägar, `EACCES` på kataloger, portkonflikter och plattformsoberoende konstruktioner ger friktion.
+
+**Hur OmniRoute löser det:**
+
+- **npm global installation** — `npm install -g omniroute && omniroute` — klar
+- **Docker Multi-Platform** — AMD64 + ARM64 inbyggt (Apple Silicon, AWS Graviton, Raspberry Pi)
+- **Docker Compose Profiles** — `base` (inga CLI-verktyg) och `cli` (med Claude Code, Codex, OpenClaw)
+- **Electron Desktop App** — Inbyggd app för Windows/macOS/Linux med systemfältet, autostart, offlineläge
+- **Split-Port Mode** — API och Dashboard på separata portar för avancerade scenarier (omvänd proxy, containernätverk)
+- **Cloud Sync** — Konfigurera synkronisering mellan enheter via Cloudflare Workers
+- **DB-säkerhetskopior** — Automatisk säkerhetskopiering, återställning, export och import av alla inställningar
+
+</details>
+
+<details>
+<summary><b>🌍 12. "Gränssnittet är endast engelska och mitt team talar inte engelska" </b></summary>
+
+Lag i icke-engelsktalande länder, särskilt i Latinamerika, Asien och Europa, kämpar med enbart engelska gränssnitt. Språkbarriärer minskar användningen och ökar konfigurationsfelen.
+
+**Hur OmniRoute löser det:**
+
+- **Dashboard i18n — 30 språk** — Alla 500+ nycklar översatta, inklusive arabiska, bulgariska, danska, tyska, spanska, finska, franska, hebreiska, hindi, ungerska, indonesiska, italienska, japanska, koreanska, malaysiska, holländska, norska, polska, portugisiska (PT/BR), rumänska, ryska, thailändska, ukrainska, ukrainska, kinesiska, engelska, ukrainska, vietnamesiska, ukrainska, svenska, ukrainska
+- **RTL-stöd** — Höger-till-vänster-stöd för arabiska och hebreiska
+- **Multi-Language READMEs** — 30 fullständiga dokumentationsöversättningar
+- **Språkväljare** — Globikon i rubriken för växling i realtid
+
+</details>
+
+<details>
+<summary><b>🔄 13. "Jag behöver mer än chatt — jag behöver inbäddningar, bilder, ljud"</b></summary>
+
+AI är inte bara att slutföra chatt. Utvecklare måste generera bilder, transkribera ljud, skapa inbäddningar för RAG, ranka om dokument och moderera innehåll. Varje API har olika slutpunkt och format.
+
+**Hur OmniRoute löser det:**
+
+- **Inbäddningar** — `/v1/embeddings` med 6 leverantörer och 9+ modeller
+- **Bildgenerering** — `/v1/images/generations` med 10 leverantörer och 20+ modeller (OpenAI, xAI, Together, Fireworks, Nebius, Hyperbolic, NanoBanana, Antigravity, SD WebUI, ComfyUI)
+- **Text-till-video** — `/v1/videos/generations` — ComfyUI (AnimateDiff, SVD) och SD WebUI
+- **Text-to-Music** — `/v1/music/generations` — ComfyUI (Stable Audio Open, MusicGen)
+- **Ljudtranskription** — `/v1/audio/transcriptions` — Whisper + Nvidia NIM, HuggingFace, Qwen3
+- **Text-till-tal** — `/v1/audio/speech` — ElevenLabs, Nvidia NIM, HuggingFace, Coqui, Tortoise, Qwen3, + befintliga leverantörer
+- **Moderationer** — `/v1/moderations` — Innehållssäkerhetskontroller
+- **Omrankning** — `/v1/rerank` — Omrankning av dokumentrelevans
+- **Responses API** — Fullständigt `/v1/responses`-stöd för Codex
+
+</details>
+
+<details>
+<summary><b>🧪 14. "Jag har inget sätt att testa och jämföra kvalitet mellan olika modeller" </b></summary>
+
+Utvecklare vill veta vilken modell som är bäst för deras användningsfall - kod, översättning, resonemang - men det går långsamt att jämföra manuellt. Det finns inga integrerade utvärderingsverktyg.
+
+**Hur OmniRoute löser det:**
+
+- **LLM-utvärderingar** — Golden set-testning med 10 förinstallerade fall som täcker hälsningar, matematik, geografi, kodgenerering, JSON-efterlevnad, översättning, markdown, säkerhetsvägran
+- **4 matchningsstrategier** — `exact`, `contains`, `regex`, `custom` (JS-funktion)
+- **Translator Playground Test Bench** — Batchtestning med flera ingångar och förväntade utgångar, jämförelse mellan olika leverantörer
+- **Chatttestare** — Fullständig tur och retur med visuell responsåtergivning
+- **Live Monitor** — Realtidsström av alla förfrågningar som flödar genom proxyn
+
+</details>
+
+<details>
+<summary><b>📈 15. "Jag behöver skala utan att förlora prestanda" </b></summary>
+
+När förfrågningsvolymen ökar, utan att cachelagra genererar samma frågor dubbla kostnader. Utan idempotens, dubbletter begär avfallshantering. Prisgränser per leverantör måste respekteras.
+
+**Hur OmniRoute löser det:**
+
+- **Semantisk cache** — Tvåskiktscache (signatur + semantisk) minskar kostnaden och fördröjningen
+- **Request Idempotency** — 5s dedupliceringsfönster för identiska förfrågningar
+- **Rate Limit Detection** — RPM per leverantör, min gap och max samtidig spårning
+- **Redigerbara hastighetsgränser** — Konfigurerbara standardinställningar i Inställningar → Motståndskraft med uthållighet
+- **API Key Validation Cache** — 3-lagers cache för produktionsprestanda
+- **Hälsoinstrumentpanel med telemetri** — p50/p95/p99 latens, cachestatistik, drifttid
+
+</details>
+
+<details>
+<summary><b>🤖 16. "Jag vill kontrollera modellens beteende globalt" </b></summary>
+
+Utvecklare som vill ha alla svar på ett specifikt språk, med en specifik ton, eller som vill begränsa resonemangstokens. Att konfigurera detta i varje verktyg/förfrågan är opraktiskt.
+
+**Hur OmniRoute löser det:**
+
+- **System Prompt Injection** — Global prompt tillämpas på alla förfrågningar
 - **Thinking Budget Validation** — Reasoning token allocation control per request (passthrough, auto, custom, adaptive)
-- **6 Routing Strategies** — Global strategies that determine how requests are distributed
-- **Wildcard Router** — `provider/*` patterns route dynamically to any provider
-- **Combo Enable/Disable Toggle** — Toggle combos directly from the dashboard
-- **Provider Toggle** — Enable/disable all connections for a provider with one click
-- **Blocked Providers** — Exclude specific providers from `/v1/models` listing
+- **6 routingstrategier** — Globala strategier som avgör hur förfrågningar distribueras
+- **Wildcard Router** — `provider/*`-mönster dirigerar dynamiskt till vilken leverantör som helst
+- **Kombo Aktivera/Inaktivera Växla** — Växla kombinationer direkt från instrumentpanelen
+- **Visa leverantör** — Aktivera/inaktivera alla anslutningar för en leverantör med ett klick
+- **Blockerade leverantörer** — Uteslut specifika leverantörer från `/v1/models`-listan
 
 </details>
+
+<details>
+<summary><b>🧰 17. "Jag behöver MCP-verktyg som förstklassiga produktegenskaper" </b></summary>
+
+Många AI-gateways exponerar MCP endast som en dold implementeringsdetalj. Team behöver ett synligt, hanterbart driftlager.
+
+**Hur OmniRoute löser det:**
+
+- MCP visas på navigeringspanelen och fliken för slutpunktsprotokoll
+- Dedikerad MCP-hanteringssida med process, verktyg, omfattningar och revision
+- Inbyggd snabbstart för `omniroute --mcp` och klientintroduktion
+
+</details>
+
+<details>
+<summary><b>🧠 18. "Jag behöver A2A-orkestrering med synkronisering + strömningsuppgiftsvägar" </b></summary>
+
+Agentarbetsflöden kräver både direkta svar och långvarig streamad exekvering med livscykelkontroll.
+
+**Hur OmniRoute löser det:**
+
+- A2A JSON-RPC-ändpunkt (`POST /a2a`) med `message/send` och `message/stream`
+- SSE-strömning med terminaltillståndspridning
+- Task lifecycle API:er för `tasks/get` och `tasks/cancel`
+
+</details>
+
+<details>
+<summary><b>🛰️ 19. "Jag behöver riktig MCP-processhälsa, inte gissad status" </b></summary>
+
+Operativa team måste veta om MCP faktiskt lever, inte bara om ett API är tillgängligt.
+
+**Hur OmniRoute löser det:**
+
+- Runtime heartbeat-fil med PID, tidsstämplar, transport, verktygsräkning och scope-läge
+- MCP status API som kombinerar hjärtslag + senaste aktivitet
+- UI-statuskort för process/upptid/hjärtslagsnyhet
+
+</details>
+
+<details>
+<summary><b>📋 20. "Jag behöver revisionsbart MCP-verktygsexekvering" </b></summary>
+
+När verktyg muterar konfiguration eller utlöser operationsåtgärder behöver team rättsmedicinsk spårbarhet.
+
+**Hur OmniRoute löser det:**
+
+- SQLite-stödd revisionsloggning för MCP-verktygsanrop
+- Filtrerar efter verktyg, framgång/misslyckande, API-nyckel och paginering
+- Dashboard revisionstabell + statistikslutpunkter för automatisering
+
+</details>
+
+<details>
+<summary><b>🔐 21. "Jag behöver scoped MCP-behörigheter per integration" </b></summary>
+
+Olika klienter bör ha minst privilegierad åtkomst till verktygskategorier.
+
+**Hur OmniRoute löser det:**
+
+- 9 granulära MCP-scopes för kontrollerad verktygsåtkomst
+- Tillämpning av omfattning och synlighet i MCP-hanteringsgränssnitt
+- Säker standardställning för operativa verktyg
+
+</details>
+
+<details>
+<summary><b>⚙️ 22. "Jag behöver driftskontroller utan att omdistribuera" </b></summary>
+
+Team behöver snabba körtidsförändringar under incidenter eller kostnadshändelser.
+
+**Hur OmniRoute löser det:**
+
+- Växla kombinationsaktivering direkt från MCP-instrumentpanelen
+- Tillämpa motståndskraftsprofiler från fördefinierade policypaket
+- Återställ strömbrytarens tillstånd från samma manöverpanel
+
+</details>
+
+<details>
+<summary><b>🔄 23. "I need live A2A task lifecycle synibility and cancellation"</b></summary>
+
+Utan livscykelsynlighet blir uppgiftsincidenter svåra att triage.
+
+**Hur OmniRoute löser det:**
+
+- Uppgiftslista/filtrering efter stat/färdighet med sidnumrering
+- Drill down på uppgiftens metadata, händelser och artefakter
+- Slutpunkt för annullering av uppgifter och gränssnittsåtgärd med bekräftelse
+
+</details>
+
+<details>
+<summary><b>🌊 24. "Jag behöver mätvärden för aktiv strömning för A2A-laddning" </b></summary>
+
+Strömmande arbetsflöden kräver operativ insikt i samtidighet och direktanslutningar.
+
+**Hur OmniRoute löser det:**
+
+- Aktiva strömräknare integrerade i A2A-status
+- Tidsstämpel för senaste uppgift och antal per stat
+- A2A instrumentpanelskort för operationsövervakning i realtid
+
+</details>
+
+<details>
+<summary><b>🪪 25. "Jag behöver standardagentupptäckt för klienter" </b></summary>
+
+Externa klienter och orkestratorer behöver maskinläsbar metadata för onboarding.
+
+**Hur OmniRoute löser det:**
+
+- Agentkort exponerat på `/.well-known/agent.json`
+- Förmåga och färdigheter som visas i ledningsgränssnittet
+- A2A status API inkluderar upptäcktsmetadata för automatisering
+
+</details>
+
+<details>
+<summary><b>🧭 26. "Jag behöver protokollupptäckbarhet i produktens UX" </b></summary>
+
+Om användare inte kan upptäcka protokollytor, sjunker kvaliteten på adoption och support.
+
+**Hur OmniRoute löser det:**
+
+- Sidofältsposter för MCP och A2A
+- Slutpunktssida Protokoll-fliken med snabbstart och status
+- Länkar från översikt till dedikerade hanteringspaneler
+
+</details>
+
+<details>
+<summary><b>🧪 27. "Jag behöver end-to-end protokollvalidering med riktiga klienter" </b></summary>
+
+Mock-tester räcker inte för att validera protokollkompatibilitet före release.
+
+**Hur OmniRoute löser det:**
+
+- E2E-svit som startar appen och använder riktig MCP SDK-klienttransport
+- A2A-klient testar för upptäckt, skicka, streama, hämta och avbryta flöden
+- Korskontrollera påståenden mot MCP-revision och A2A-uppgifter API:er
+
+</details>
+
+<details>
+<summary><b>📡 28. "Jag behöver enhetlig observerbarhet över alla gränssnitt" </b></summary>
+
+Att dela upp observerbarheten enligt protokoll skapar blinda fläckar och längre MTTR.
+
+**Hur OmniRoute löser det:**
+
+- Enhetliga instrumentpaneler/loggar/analyser i en produkt
+- Hälsa + revision + begäran om telemetri över OpenAI-, MCP- och A2A-lager
+- Operativa API:er för status och automatisering
+
+</details>
+
+<details>
+<summary><b>💼 29. "Jag behöver en körtid för proxy + verktyg + agentorkestrering" </b></summary>
+
+Att köra många separata tjänster ökar driftskostnaderna och fellägen.
+
+**Hur OmniRoute löser det:**
+
+- OpenAI-kompatibel proxy, MCP-server och A2A-server i en stack
+- Delad autentisering, resiliens, datalagring och observerbarhet
+- Konsekvent policymodell över alla interaktionsytor
+
+</details>
+
+<details>
+<summary><b>🚀 30. "Jag behöver skicka agentiska arbetsflöden utan limkodsprawl" </b></summary>
+
+Lag tappar hastighet när de sammanfogar flera ad-hoc-tjänster och skript.
+
+**Hur OmniRoute löser det:**
+
+- Enhetlig slutpunktsstrategi för kunder och agenter
+- Inbyggda gränssnitt för protokollhantering och rökvalideringsvägar
+- Produktionsfärdiga grunder (säkerhet, loggning, resiliens, backup)
+
+</details>
+
+### Exempel på Playbooks (integrerade användningsfall)
+
+**Playbook A: Maximera betald prenumeration + billig backup**
+
+```txt
+Combo: "maximize-claude"
+  1. cc/claude-opus-4-6
+  2. glm/glm-4.7
+  3. if/kimi-k2-thinking
+
+Monthly cost: $20 + small backup spend
+Outcome: higher quality, near-zero interruption
+```
+
+**Playbook B: Noll-kostnad kodningsstack**
+
+```txt
+Combo: "free-forever"
+  1. gc/gemini-3-flash
+  2. if/kimi-k2-thinking
+  3. qw/qwen3-coder-plus
+
+Monthly cost: $0
+Outcome: stable free coding workflow
+```
+
+**Playbook C: 24/7 alltid-på reservkedja**
+
+```txt
+Combo: "always-on"
+  1. cc/claude-opus-4-6
+  2. cx/gpt-5.2-codex
+  3. glm/glm-4.7
+  4. minimax/MiniMax-M2.1
+  5. if/kimi-k2-thinking
+
+Outcome: deep fallback depth for deadline-critical workloads
+```
+
+**Playbook D: Agent ops med MCP + A2A**
+
+```txt
+1) Start MCP transport (`omniroute --mcp`) for tool-driven operations
+2) Run A2A tasks via `message/send` and `message/stream`
+3) Observe via /dashboard/mcp and /dashboard/a2a
+4) Control incidents with resilience profile + task cancellation
+```
+
+---
 
 ## ⚡ Snabbstart
 
@@ -506,7 +781,7 @@ docker compose --profile cli up -d
 
 ---
 
-## 🖥️ Desktop App — Offline & Always-On
+## 🖥️
 
 > 🆕 **NEW!** OmniRoute is now available as a **native desktop application** for Windows, macOS, and Linux.
 
@@ -715,66 +990,26 @@ OmniRoute inkluderar en kraftfull inbyggd översättarlekplats med **4 lägen** 
 
 </details>
 
----
+## 🧪 Utvärderingar (Evals)
 
-## 🎯 Användningsfall
+OmniRoute inkluderar ett inbyggt utvärderingsramverk för att testa LLM-svarskvalitet mot en gyllene uppsättning. Få åtkomst till det via **Analytics → Evals** i instrumentpanelen.
 
-### Fall 1: "Jag har Claude Pro-abonnemang"
+### Inbyggt gyllene set
 
-**Problem:** Kvoten går ut oanvänd, hastighetsgränser under tung kodning
+Det förinstallerade "OmniRoute Golden Set" innehåller 10 testfall som täcker:
 
-```
-Combo: "maximize-claude"
-  1. cc/claude-opus-4-6        (use subscription fully)
-  2. glm/glm-4.7               (cheap backup when quota out)
-  3. if/kimi-k2-thinking       (free emergency fallback)
+- Hälsningar, matematik, geografi, kodgenerering
+- JSON-formatöverensstämmelse, översättning, markdown
+- Säkerhetsvägran (skadligt innehåll), räkning, boolesk logik
 
-Monthly cost: $20 (subscription) + ~$5 (backup) = $25 total
-vs. $20 + hitting limits = frustration
-```
+### Utvärderingsstrategier
 
-### Fall 2: "Jag vill ha noll kostnad"
-
-**Problem:** Har inte råd med prenumerationer, behöver pålitlig AI-kodning
-
-```
-Combo: "free-forever"
-  1. gc/gemini-3-flash         (180K free/month)
-  2. if/kimi-k2-thinking       (unlimited free)
-  3. qw/qwen3-coder-plus       (unlimited free)
-
-Monthly cost: $0
-Quality: Production-ready models
-```
-
-### Fall 3: "Jag behöver kodning dygnet runt, inga avbrott"
-
-**Problem:** Deadlines, har inte råd med driftstopp
-
-```
-Combo: "always-on"
-  1. cc/claude-opus-4-6        (best quality)
-  2. cx/gpt-5.2-codex          (second subscription)
-  3. glm/glm-4.7               (cheap, resets daily)
-  4. minimax/MiniMax-M2.1      (cheapest, 5h reset)
-  5. if/kimi-k2-thinking       (free unlimited)
-
-Result: 5 layers of fallback = zero downtime
-```
-
-### Fall 4: "Jag vill ha GRATIS AI i OpenClaw"
-
-**Problem:** Behöver AI-assistent i meddelandeappar, helt gratis
-
-```
-Combo: "openclaw-free"
-  1. if/glm-4.7                (unlimited free)
-  2. if/minimax-m2.1           (unlimited free)
-  3. if/kimi-k2-thinking       (unlimited free)
-
-Monthly cost: $0
-Access via: WhatsApp, Telegram, Slack, Discord, iMessage, Signal...
-```
+| Strategi   | Beskrivning                                          | Exempel                          |
+| ---------- | ---------------------------------------------------- | -------------------------------- |
+| `exact`    | Utdata måste matcha exakt                            | `"4"`                            |
+| `contains` | Utdata måste innehålla delsträng (skiftlägeskänslig) | `"Paris"`                        |
+| `regex`    | Utdata måste matcha regexmönster                     | `"1.*2.*3"`                      |
+| `custom`   | Anpassad JS-funktion returnerar true/false           | `(output) => output.length > 10` |
 
 ---
 
@@ -1058,29 +1293,6 @@ Settings → API Configuration:
 
 ---
 
-## 🧪 Utvärderingar (Evals)
-
-OmniRoute inkluderar ett inbyggt utvärderingsramverk för att testa LLM-svarskvalitet mot en gyllene uppsättning. Få åtkomst till det via **Analytics → Evals** i instrumentpanelen.
-
-### Inbyggt gyllene set
-
-Det förinstallerade "OmniRoute Golden Set" innehåller 10 testfall som täcker:
-
-- Hälsningar, matematik, geografi, kodgenerering
-- JSON-formatöverensstämmelse, översättning, markdown
-- Säkerhetsvägran (skadligt innehåll), räkning, boolesk logik
-
-### Utvärderingsstrategier
-
-| Strategi   | Beskrivning                                          | Exempel                          |
-| ---------- | ---------------------------------------------------- | -------------------------------- |
-| `exact`    | Utdata måste matcha exakt                            | `"4"`                            |
-| `contains` | Utdata måste innehålla delsträng (skiftlägeskänslig) | `"Paris"`                        |
-| `regex`    | Utdata måste matcha regexmönster                     | `"1.*2.*3"`                      |
-| `custom`   | Anpassad JS-funktion returnerar true/false           | `(output) => output.length > 10` |
-
----
-
 ## 🐛 Felsökning
 
 <details>
@@ -1132,7 +1344,7 @@ Det förinstallerade "OmniRoute Golden Set" innehåller 10 testfall som täcker:
 - OmniRoute v1.0.6+ inkluderar reservvalidering via chattslutföranden
 - Se till att baswebbadressen innehåller suffixet `/v1`
 
-### 🔐 OAuth em Servidor Remoto (Remote OAuth Setup)
+### 🔐 OAuth
 
 <a name="oauth-em-servidor-remoto"></a>
 
@@ -1227,7 +1439,7 @@ Se não quiser criar credenciais próprias agora, ainda é possível usar o flux
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️
 
 - **Körtid**: Node.js 18–22 LTS (⚠️ Node.js 24+ stöds **inte** — `better-sqlite3` inbyggda binärer är inkompatibla)
 - **Språk**: TypeScript 5.9 — **100 % TypeScript** över `src/` och `open-sse/` (v1.0.6)
@@ -1279,7 +1491,7 @@ Se não quiser criar credenciais próprias agora, ainda é possível usar o flux
 
 ---
 
-## 🗺️ Färdkarta
+## 🗺️
 
 OmniRoute har **210+ funktioner planerade** över flera utvecklingsfaser. Här är nyckelområdena:
 
@@ -1301,18 +1513,6 @@ OmniRoute har **210+ funktioner planerade** över flera utvecklingsfaser. Här �
 - 💰 **Lägsta kostnadsstrategi** — Välj automatiskt den billigaste tillgängliga leverantören
 
 > 📝 Fullständiga funktionsspecifikationer tillgängliga i [link](docs/new-features/) (217 detaljerade specifikationer)
-
----
-
-## 📧 Support
-
-> 💬 **Gå med i vår community!** [WhatsApp Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t) — Få hjälp, dela tips och håll dig uppdaterad.
-
-- **Webbplats**: [omniroute.online](https://omniroute.online)
-- **GitHub**: [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)
-- **Frågor**: [github.com/diegosouzapw/OmniRoute/issues](https://github.com/diegosouzapw/OmniRoute/issues)
-- **WhatsApp**: [Community Group](https://chat.whatsapp.com/JI7cDQ1GyaiDHhVBpLxf8b?mode=gi_t)
-- **Originalprojekt**: [9router by decolua](https://github.com/decolua/9router)
 
 ---
 

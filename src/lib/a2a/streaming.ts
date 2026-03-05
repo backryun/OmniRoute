@@ -92,12 +92,17 @@ export function createA2AStream(
   executeSkill: (
     task: A2ATask
   ) => Promise<{ artifacts: Array<{ content: string }>; metadata: Record<string, unknown> }>,
-  abortSignal?: AbortSignal
+  abortSignal?: AbortSignal,
+  lifecycle?: {
+    onStart?: () => void;
+    onEnd?: () => void;
+  }
 ): ReadableStream<Uint8Array> {
   const encoder = new TextEncoder();
 
   return new ReadableStream({
     async start(controller) {
+      lifecycle?.onStart?.();
       // Heartbeat interval
       const heartbeatInterval = setInterval(() => {
         try {
@@ -136,6 +141,7 @@ export function createA2AStream(
         controller.enqueue(encoder.encode(createFailureEvent(task.id, msg)));
       } finally {
         clearInterval(heartbeatInterval);
+        lifecycle?.onEnd?.();
         controller.close();
       }
     },
