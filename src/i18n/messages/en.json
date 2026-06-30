@@ -4818,8 +4818,6 @@
     "checkWebToken": "Check token",
     "huggingchatLabel": "HuggingChat (Free)",
     "huggingchatDesc": "Free LLM chat via huggingface.co/chat",
-    "phindLabel": "Phind (Free)",
-    "phindDesc": "Free dev-focused AI chat",
     "poeWebLabel": "Poe Web",
     "poeWebDesc": "Multi-model chat via poe.com",
     "veniceWebLabel": "Venice Web",
