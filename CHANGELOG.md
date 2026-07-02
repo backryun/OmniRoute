@@ -6,6 +6,8 @@
 
 - **fix(kiro):** bound the Claude model-id dash→dot normalization to a 1–2 digit minor so date-suffixed ids (e.g. claude-opus-4-20250514) are no longer corrupted. (thanks @voravitl)
 
+- **fix(usage):** preserve (bounded) tool definitions in request logs even when the request body is truncated, so the request-details view can still show available tools. (thanks @noir017)
+
 ---
 
 ## [3.8.43] — TBD
