@@ -1,0 +1,24 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "strict": false,
+    "strictNullChecks": true,
+    "noImplicitAny": false,
+    "noEmit": true,
+    "incremental": false,
+    "plugins": []
+  },
+  "include": ["open-sse/**/*.ts", "src/lib/**/*.ts", "src/shared/**/*.ts", "src/domain/**/*.ts"],
+  "exclude": [
+    "node_modules",
+    ".next",
+    ".ts7-local",
+    "app.__qa_backup",
+    "vscode-extension",
+    "**/__tests__/**",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "electron",
+    "tests"
+  ]
+}

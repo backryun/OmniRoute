@@ -234,3 +234,7 @@ omniroute.md
 mise.toml
 _artifacts/
 .claude-flow/
+
+# Local TypeScript 7 prefix install for pilot benches
+.ts7-local/
+
