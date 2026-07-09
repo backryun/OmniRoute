@@ -9,9 +9,12 @@ const HUB_RE = /(setupPolyfill|tsconfig|package\.json|package-lock\.json|\.env|v
 // step can actually run via `node --test` — i.e. it mirrors the `npm run test:unit` glob.
 // This EXCLUDES vitest files (`.test.tsx`, `tests/unit/autoCombo/**`), e2e and integration
 // tests, and `src/**/__tests__`/`open-sse/**/__tests__`, which can't run under node:test.
+// Keep in sync with package.json test:unit* braces + serial + dashboard + *.test.mjs.
 const UNIT_SUBDIRS =
-  "api|auth|authz|build|cli|cli-helper|compression|correctness|cors|dashboard|db|db-adapters|docs|gamification|guardrails|lib|mcp|runtime|security|services|settings|shared|ui";
-const TEST_RE = new RegExp(`^tests/unit/([^/]+\\.test\\.ts$|(${UNIT_SUBDIRS})/.*\\.test\\.ts$)`);
+  "api|auth|authz|build|cli|cli-helper|combo|compression|correctness|cors|dashboard|db|db-adapters|docs|gamification|guardrails|lib|mcp|memory|runtime|security|services|settings|shared|ui|usage|serial";
+const TEST_RE = new RegExp(
+  `^tests/unit/([^/]+\\.test\\.(ts|mjs)$|(${UNIT_SUBDIRS})/.*\\.test\\.(ts|mjs)$)`
+);
 
 export function selectImpacted({ changed, map }) {
   const out = new Set();
@@ -21,11 +24,10 @@ export function selectImpacted({ changed, map }) {
       out.add(f);
       continue;
     }
-    const isSource =
-      f.startsWith("src/") ||
-      f.startsWith("open-sse/") ||
-      f.startsWith("electron/") ||
-      f.startsWith("bin/");
+    // Impact map only indexes imports under src/ + open-sse/. electron/ and bin/
+    // are not unit-mapped; treating them as unmapped used to force __RUN_ALL__ and
+    // a full unit suite for pure CLI/desktop PRs. Package/smoke jobs cover those.
+    const isSource = f.startsWith("src/") || f.startsWith("open-sse/");
     if (!isSource) continue;
     const hits = map.sources[f];
     if (!hits) return ["__RUN_ALL__"];
