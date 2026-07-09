@@ -213,7 +213,10 @@
     "release:contributors": "node scripts/release/gen-contributors.mjs",
     "release:uncovered": "node scripts/release/list-uncovered-commits.mjs",
     "test:coverage:runner": "node --max-old-space-size=8192 --import tsx/esm --import ./open-sse/utils/setupPolyfill.ts --import ./tests/_setup/isolateDataDir.ts --test --test-force-exit --test-concurrency=8 tests/unit/*.test.ts \"tests/unit/{api,auth,authz,build,cli,cli-helper,combo,compression,correctness,cors,db,db-adapters,docs,gamification,guardrails,lib,mcp,memory,runtime,security,services,settings,shared,ui,usage}/**/*.test.ts\" \"tests/unit/**/*.test.mjs\" && cross-env DISABLE_SQLITE_AUTO_BACKUP=true NODE_OPTIONS=--max-old-space-size=8192 c8 --merge-async --output-dir coverage --exclude=tests/** --exclude=**/*.test.* --reporter=text-summary --reporter=html --reporter=json-summary --reporter=lcov --check-coverage --statements 60 --lines 60 --functions 60 --branches 60 node --max-old-space-size=8192 --import tsx --import ./open-sse/utils/setupPolyfill.ts --import ./tests/_setup/isolateDataDir.ts --test --test-force-exit --test-concurrency=8 \"tests/unit/dashboard/**/*.test.ts\" && npm run test:unit:serial",
-    "test:unit:serial": "cross-env DISABLE_SQLITE_AUTO_BACKUP=true node --max-old-space-size=4096 --import tsx/esm --import ./open-sse/utils/setupPolyfill.ts --import ./tests/_setup/isolateDataDir.ts --test --test-force-exit --test-concurrency=1 \"tests/unit/serial/**/*.test.ts\""
+    "test:unit:serial": "cross-env DISABLE_SQLITE_AUTO_BACKUP=true node --max-old-space-size=4096 --import tsx/esm --import ./open-sse/utils/setupPolyfill.ts --import ./tests/_setup/isolateDataDir.ts --test --test-force-exit --test-concurrency=1 \"tests/unit/serial/**/*.test.ts\"",
+    "typecheck:core:ts7": "npx --yes -p typescript@7.0.2 tsc --pretty false -p tsconfig.typecheck-core.json",
+    "typecheck:noimplicit:core:ts7": "npx --yes -p typescript@7.0.2 tsc --pretty false -p tsconfig.typecheck-noimplicit-core.json",
+    "typecheck:bench:ts7": "node scripts/dev/bench-ts7.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-bedrock-runtime": "^3.1073.0",
@@ -345,7 +348,8 @@
     "typescript-eslint": "^8.59.4",
     "vitest": "^4.1.7",
     "wait-on": "^9.0.10",
-    "wtfnode": "^0.10.1"
+    "wtfnode": "^0.10.1",
+    "typescript-7": "npm:typescript@7.0.2"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,mjs}": [
