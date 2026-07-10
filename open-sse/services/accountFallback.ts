@@ -35,6 +35,7 @@ import { getQuotaScopedModelForProvider } from "./antigravityQuotaFamily.ts";
 import { isRpdExhausted, isRpmExhausted } from "./geminiRateLimitTracker.ts";
 import { setConnectionRateLimitUntil } from "@/lib/db/providers";
 import { parseRetryHintFromJsonBody } from "./retryAfterJson.ts";
+import { parseDayGranularityResetMs, shouldPreserveQuotaSignals } from "./quotaResetParsing.ts";
 
 export type ProviderProfile = {
   baseCooldownMs: number;
@@ -364,11 +365,6 @@ export function getProviderProfile(provider: string): ProviderProfile {
   return buildProviderProfile(category);
 }
 
-function shouldPreserveQuotaSignalsFor429(provider: string | null | undefined): boolean {
-  if (!provider) return true;
-  return getProviderCategory(provider) === "oauth";
-}
-
 export async function getRuntimeProviderProfile(provider: string | null | undefined) {
   try {
     const { getCachedSettings } = await import("@/lib/db/readCache");
@@ -676,7 +672,7 @@ export function shouldMarkAccountExhaustedFrom429(
   // without making this one look quota-depleted for 5 minutes.
   if (failureKind === "rate_limit" || failureKind === "transient") return false;
   return (
-    shouldPreserveQuotaSignalsFor429(provider) &&
+    shouldPreserveQuotaSignals(provider) &&
     !hasPerModelQuota(provider, model, connectionPassthroughModels)
   );
 }
@@ -1071,7 +1067,7 @@ export function parseRetryFromErrorText(errorText: unknown): number | null {
     return computeDurationMs(resetsInMatch);
   }
 
-  return null;
+  return parseDayGranularityResetMs(msg, MAX_PROVIDER_COOLDOWN_MS);
 }
 
 /**
@@ -1417,7 +1413,7 @@ export function checkFallbackError(
   }
 
   const isRateLimitStatus = status === HTTP_STATUS.RATE_LIMITED;
-  const preserveQuota429 = shouldPreserveQuotaSignalsFor429(provider);
+  const preserveQuota429 = shouldPreserveQuotaSignals(provider, errorText);
   const shouldUseQuotaSignal = !isRateLimitStatus || preserveQuota429;
 
   // Check error message FIRST - specific patterns take priority over status codes
