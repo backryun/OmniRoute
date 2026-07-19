@@ -88,7 +88,7 @@ export function supportsNativeWebFetchFallbackBypass({
 }: {
   provider?: string | null;
   sourceFormat?: string | null;
-  targetFormat: string | null | undefined;
+  targetFormat?: string | null;
   nativeCodexPassthrough: boolean;
   // Per-model rule (#3384/#7339) — resolveInterceptFetch() in src/lib/db/interceptionRules.ts.
   // true = force interception; anything else (false/undefined, i.e. no operator
@@ -165,12 +165,10 @@ export function prepareWebFetchFallbackBody<T extends JsonRecord>(
     tools: preservedTools as T["tools"],
   };
 
-  if (isBuiltInWebFetchToolChoice(body.tool_choice)) {
-    nextBody.tool_choice = (
-      isResponsesTarget
-        ? { type: "function", name: OMNIROUTE_WEB_FETCH_FALLBACK_TOOL_NAME }
-        : { type: "function", function: { name: OMNIROUTE_WEB_FETCH_FALLBACK_TOOL_NAME } }
-    ) as T["tool_choice"];
+  if (isBuiltInWebFetchToolChoice((body as JsonRecord).tool_choice)) {
+    (nextBody as JsonRecord).tool_choice = isResponsesTarget
+      ? { type: "function", name: OMNIROUTE_WEB_FETCH_FALLBACK_TOOL_NAME }
+      : { type: "function", function: { name: OMNIROUTE_WEB_FETCH_FALLBACK_TOOL_NAME } };
   }
 
   return {

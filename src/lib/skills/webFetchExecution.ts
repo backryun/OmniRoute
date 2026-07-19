@@ -65,7 +65,20 @@ async function resolveCredentials(
   providerId: WebFetchProviderId
 ): Promise<WebFetchCredentials | null> {
   try {
-    return (await getProviderCredentialsWithQuotaPreflight(providerId)) ?? null;
+    const credentials = await getProviderCredentialsWithQuotaPreflight(providerId);
+    if (!credentials) return null;
+    if (
+      ("allRateLimited" in credentials && credentials.allRateLimited) ||
+      ("allExpired" in credentials && credentials.allExpired)
+    ) {
+      return null;
+    }
+    return {
+      apiKey:
+        "apiKey" in credentials && typeof credentials.apiKey === "string"
+          ? credentials.apiKey
+          : undefined,
+    };
   } catch {
     return null;
   }

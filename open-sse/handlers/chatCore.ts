@@ -309,6 +309,8 @@ import type {
   CompressionPipelineStep,
   CompressionResult,
 } from "../services/compression/types.ts";
+import { DEFAULT_COMPRESSION_CONFIG } from "../services/compression/types.ts";
+import type { ExecutorResult, ProviderCredentials } from "../executors/base.ts";
 import { generateSessionId } from "../services/sessionManager.ts";
 import { prepareWebSearchFallbackBody } from "../services/webSearchFallback.ts";
 import { prepareWebFetchFallbackBody } from "../services/webFetchInterception.ts";
@@ -337,6 +339,15 @@ import {
   getModelScopeRetryDelayMs,
   isModelScopeProvider,
 } from "../services/modelscopePolicy.ts";
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return !!value && typeof value === "object" && !Array.isArray(value);
+}
+
+type ChatCoreExecutionResult = ReturnType<typeof normalizeExecutorResult> & {
+  _executionCredentials?: ProviderCredentials;
+  _accountSemaphoreRelease?: () => void;
+};
 import { incrementRequestCount } from "../services/geminiRateLimitTracker.ts";
 
 // ── Global memory pressure guard ────────────────────────────────────────
@@ -471,7 +482,7 @@ export async function handleChatCore({
     apiKeyInfo,
     log,
   });
-  if (pluginGate.blocked) {
+  if (pluginGate.blocked === true) {
     return {
       success: false,
       status: 403,
@@ -485,7 +496,7 @@ export async function handleChatCore({
       response: pluginGate.response,
     };
   }
-  if (pluginGate.body) {
+  if (pluginGate.blocked === false && pluginGate.body) {
     body = pluginGate.body;
   }
   // Per-API-key device/connection tracking (port of upstream 9router#931,
@@ -1088,11 +1099,8 @@ export async function handleChatCore({
       } = await import("../services/compression/strategySelector.ts");
       const { trackCompressionStats } = await import("../services/compression/stats.ts");
       let config: CompressionConfig = compressionSettings ?? {
-        enabled: false,
-        defaultMode: "off",
-        autoTriggerTokens: 0,
-        cacheMinutes: 5,
-        preserveSystemPrompt: true,
+        ...DEFAULT_COMPRESSION_CONFIG,
+        engines: { ...DEFAULT_COMPRESSION_CONFIG.engines },
         comboOverrides: {},
       };
       if (!promptCompressionEnabled || !compressionSettings) {
@@ -1762,7 +1770,7 @@ export async function handleChatCore({
     finalContextLimit,
     targetFormat === FORMATS.CLAUDE && sourceFormat !== FORMATS.CLAUDE ? DEFAULT_MAX_TOKENS : 0
   );
-  if (!outputBudget.ok) {
+  if (outputBudget.ok === false) {
     const message =
       `Input exceeds the context window for ${provider}/${effectiveModel}: ` +
       `estimated ${outputBudget.estimatedInputTokens} input tokens, limit ${outputBudget.contextLimit}. ` +
@@ -2408,7 +2416,11 @@ export async function handleChatCore({
         });
       }
 
-      if (decision.kind === "allow" && decision.deprioritize) {
+      if (
+        decision.kind === "allow" &&
+        "deprioritize" in decision &&
+        decision.deprioritize === true
+      ) {
         quotaSoftDeprioritize = true;
         log?.info?.(
           "QUOTA_SHARE",
@@ -2510,7 +2522,7 @@ export async function handleChatCore({
 
       let releaseRawResultAccountSemaphore = () => {};
       try {
-        const rawResult = await (async () => {
+        const rawResult = await (async (): Promise<ChatCoreExecutionResult> => {
           let attempts = 0;
           const isModelScopeForRequest = isModelScope();
           const maxAttempts = isModelScopeForRequest ? 3 : provider === "codex" ? 3 : 1;
@@ -2562,7 +2574,7 @@ export async function handleChatCore({
 
             try {
               trace("pre_rate_limit", { connectionId: attemptConnectionId });
-              const rawExecutorResult = await withRateLimit(
+              const rawExecutorResult = await withRateLimit<ExecutorResult>(
                 provider,
                 attemptConnectionId,
                 modelToCall,
@@ -2798,7 +2810,7 @@ export async function handleChatCore({
                     body: unknown
                   ): Promise<ReadableStream<Uint8Array> | null> => {
                     try {
-                      const retryRaw = await executeWithUpstreamStartTimeout({
+                      const retryRaw = await executeWithUpstreamStartTimeout<ExecutorResult>({
                         executor,
                         provider,
                         model: modelToCall,
@@ -3279,22 +3291,24 @@ export async function handleChatCore({
       // stay aligned if this block ever runs after a path that mutates body.model (e.g. fallback).
       try {
         const retryModelId = String(translatedBody.model || effectiveModel);
-        const retryResult = await runWithCapture(providerRequestCapture, () =>
-          executor.execute({
-            model: retryModelId,
-            body: translatedBody,
-            stream: upstreamStream,
-            credentials: getExecutionCredentials(),
-            signal: streamController.signal,
-            log,
-            extendedContext,
-            upstreamExtraHeaders: buildUpstreamHeadersForExecute(retryModelId),
-            clientHeaders: buildExecutorClientHeaders(clientRawRequest?.headers, userAgent),
-            clientResponseFormat,
-            onCredentialsRefreshed,
-            skipUpstreamRetry: isCombo,
-            contextEditing: { enabled: contextEditingEnabled },
-          })
+        const retryResult = normalizeExecutorResult(
+          await runWithCapture(providerRequestCapture, () =>
+            executor.execute({
+              model: retryModelId,
+              body: translatedBody,
+              stream: upstreamStream,
+              credentials: getExecutionCredentials(),
+              signal: streamController.signal,
+              log,
+              extendedContext,
+              upstreamExtraHeaders: buildUpstreamHeadersForExecute(retryModelId),
+              clientHeaders: buildExecutorClientHeaders(clientRawRequest?.headers, userAgent),
+              clientResponseFormat,
+              onCredentialsRefreshed,
+              skipUpstreamRetry: isCombo,
+              contextEditing: { enabled: contextEditingEnabled },
+            })
+          )
         );
 
         if (retryResult.response.ok) {
@@ -3335,7 +3349,9 @@ export async function handleChatCore({
         if (typeof connectionId === "string" && connectionId && attemptedRefreshToken) {
           try {
             const latest = await getProviderConnectionById(connectionId);
-            if (wasRefreshTokenRotated(attemptedRefreshToken, latest?.refreshToken)) {
+            const latestRefreshToken =
+              typeof latest?.refreshToken === "string" ? latest.refreshToken : null;
+            if (wasRefreshTokenRotated(attemptedRefreshToken, latestRefreshToken)) {
               alreadyRotated = true;
               log?.warn?.(
                 "TOKEN",
@@ -3981,7 +3997,11 @@ export async function handleChatCore({
       (finalBody as Record<string, unknown> | null | undefined) ?? null
     );
 
-    if (sourceFormat === FORMATS.CLAUDE && targetFormat === FORMATS.CLAUDE) {
+    if (
+      sourceFormat === FORMATS.CLAUDE &&
+      targetFormat === FORMATS.CLAUDE &&
+      isRecord(responseBody)
+    ) {
       responseBody = restoreClaudePassthroughToolNames(responseBody, responseToolNameMap);
     }
     reqLogger.logProviderResponse(
@@ -4060,22 +4080,31 @@ export async function handleChatCore({
         )
       : responseBody;
     const memoryExtractionResponse = translatedResponse;
+    const translatedResponseRecord = isRecord(translatedResponse) ? translatedResponse : null;
+    const translatedChoices = Array.isArray(translatedResponseRecord?.choices)
+      ? translatedResponseRecord.choices
+      : [];
+    const firstTranslatedChoice = isRecord(translatedChoices[0]) ? translatedChoices[0] : null;
+    const firstTranslatedMessage = isRecord(firstTranslatedChoice?.message)
+      ? firstTranslatedChoice.message
+      : null;
 
     // T26: Strip markdown code blocks if provider format is Claude
     if (sourceFormat === "claude" && !stream) {
-      if (typeof translatedResponse?.choices?.[0]?.message?.content === "string") {
-        translatedResponse.choices[0].message.content = stripMarkdownCodeFence(
-          translatedResponse.choices[0].message.content
-        ) as string;
+      if (typeof firstTranslatedMessage?.content === "string") {
+        firstTranslatedMessage.content = stripMarkdownCodeFence(firstTranslatedMessage.content);
       }
     }
 
     // T18: Normalize finish_reason to 'tool_calls' if tool calls are present
-    if (translatedResponse?.choices) {
-      for (const choice of translatedResponse.choices) {
+    if (translatedChoices.length > 0) {
+      for (const value of translatedChoices) {
+        if (!isRecord(value)) continue;
+        const choice = value;
+        const message = isRecord(choice.message) ? choice.message : null;
         if (
-          choice.message?.tool_calls &&
-          choice.message.tool_calls.length > 0 &&
+          Array.isArray(message?.tool_calls) &&
+          message.tool_calls.length > 0 &&
           choice.finish_reason !== "tool_calls"
         ) {
           choice.finish_reason = "tool_calls";
@@ -4086,9 +4115,7 @@ export async function handleChatCore({
     // Reasoning Replay Cache (#1628): Capture reasoning_content from non-streaming responses
     // with tool_calls so it can be replayed on subsequent turns (DeepSeek V4, Kimi K2, etc.)
     try {
-      const firstChoice = translatedResponse?.choices?.[0];
-      const msg = firstChoice?.message;
-      cacheReasoningFromAssistantMessage(msg, provider, model, {
+      cacheReasoningFromAssistantMessage(firstTranslatedMessage, provider, model, {
         requestId: skillRequestId,
         messageIndex: 0,
       });
@@ -4167,13 +4194,18 @@ export async function handleChatCore({
     );
     translatedResponse = postCallGuardrails.response;
 
+    const translatedResponseAfterGuardrails = isRecord(translatedResponse)
+      ? translatedResponse
+      : null;
     const responseUsage =
       (usage && typeof usage === "object" ? usage : null) ||
-      (translatedResponse?.usage && typeof translatedResponse.usage === "object"
-        ? translatedResponse.usage
+      (isRecord(translatedResponseAfterGuardrails?.usage)
+        ? translatedResponseAfterGuardrails.usage
         : null);
     const estimatedCost = responseUsage
-      ? await calculateCost(provider, model, responseUsage, { serviceTier: effectiveServiceTier })
+      ? await calculateCost(provider, model, responseUsage as Record<string, number | undefined>, {
+          serviceTier: effectiveServiceTier,
+        })
       : 0;
 
     if (postCallGuardrails.blocked) {

@@ -20,6 +20,8 @@ import { resolveComboTargets } from "@omniroute/open-sse/services/combo.ts";
 import { getComboByName, getCombos } from "@/lib/db/combos";
 import { getCachedProviderNodes } from "@/lib/localDb";
 
+type CompatibleProviderNode = { id: string; prefix?: string };
+
 /**
  * Rewrite a `prefix/model` custom image model to its internal `<nodeId>/<model>` form.
  * Returns the original string when no openai-compatible node prefix matches (so built-in
@@ -36,10 +38,12 @@ export async function resolveImageModelPrefix(modelStr: string): Promise<string>
   if (!rest) return modelStr;
 
   try {
-    const nodes = await getCachedProviderNodes({ type: "openai-compatible" });
+    const nodes = (await getCachedProviderNodes({
+      type: "openai-compatible",
+    })) as CompatibleProviderNode[];
     // node.id (internal UUID) is already a valid internal id; only rewrite when a
     // user-defined prefix differs from the node id.
-    const matched = nodes.find((node: { prefix?: unknown }) => node.prefix === prefixPart);
+    const matched = nodes.find((node) => node.prefix === prefixPart);
     if (matched && typeof matched.id === "string" && matched.id && matched.id !== prefixPart) {
       return `${matched.id}/${rest}`;
     }

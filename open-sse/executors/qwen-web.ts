@@ -94,7 +94,7 @@ export class QwenWebExecutor extends BaseExecutor {
     super("qwen-web", { id: "qwen-web", baseUrl: BASE_URL });
   }
 
-  private buildHeaders(
+  private buildWebHeaders(
     token: string,
     cookieHeader: string,
     chatId?: string
@@ -139,7 +139,7 @@ export class QwenWebExecutor extends BaseExecutor {
     try {
       const newChatRes = await fetch(CHATS_NEW_URL, {
         method: "POST",
-        headers: this.buildHeaders(token, cookieHeader),
+        headers: this.buildWebHeaders(token, cookieHeader),
         body: JSON.stringify({
           title: "New Chat",
           models: [modelId],
@@ -186,7 +186,7 @@ export class QwenWebExecutor extends BaseExecutor {
     try {
       upstream = await fetch(completionUrl, {
         method: "POST",
-        headers: this.buildHeaders(token, cookieHeader, chatId),
+        headers: this.buildWebHeaders(token, cookieHeader, chatId),
         body: JSON.stringify(msgPayload),
         signal,
       });
@@ -251,7 +251,7 @@ export class QwenWebExecutor extends BaseExecutor {
         },
       }),
       url: completionUrl,
-      headers: this.buildHeaders(token, cookieHeader, chatId),
+      headers: this.buildWebHeaders(token, cookieHeader, chatId),
       transformedBody: msgPayload,
     };
   }

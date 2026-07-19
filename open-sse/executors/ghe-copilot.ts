@@ -1,5 +1,5 @@
 import { GithubExecutor } from "./github.ts";
-import type { ProviderCredentials, ExecuteInput, ExecutorLog } from "./base.ts";
+import type { ProviderConfig, ProviderCredentials, ExecuteInput, ExecutorLog } from "./base.ts";
 import { getModelTargetFormat } from "../config/providerModels.ts";
 
 /** Result of a successful GHE Copilot internal token exchange. */
@@ -10,7 +10,7 @@ type CopilotTokenResult = {
 };
 
 export class GheCopilotExecutor extends GithubExecutor {
-  constructor(config?: Record<string, unknown>) {
+  constructor(config?: Partial<ProviderConfig>) {
     super("ghe-copilot", {
       format: "openai",
       baseUrl: "https://api.githubcopilot.com/chat/completions",
@@ -59,7 +59,12 @@ export class GheCopilotExecutor extends GithubExecutor {
       : model;
   }
 
-  override buildUrl(model: string, stream: boolean, urlIndex = 0, credentials: ProviderCredentials | null = null): string {
+  override buildUrl(
+    model: string,
+    stream: boolean,
+    urlIndex = 0,
+    credentials: ProviderCredentials | null = null
+  ): string {
     // GHE Copilot proxy only reliably serves /chat/completions. Route every
     // model there (including ones flagged openai-responses) and let the
     // Responses→Chat transformer handle the format. Going to /responses on the
@@ -145,13 +150,13 @@ export class GheCopilotExecutor extends GithubExecutor {
       // GHE OAuth token endpoint
       const baseUrl = gheUrl.replace(/\/chat\/completions\/?$/, "").replace(/\/responses\/?$/, "");
       const tokenUrl = `${baseUrl}/login/oauth/access_token`;
-      
+
       const params = new URLSearchParams({
         grant_type: "refresh_token",
         refresh_token: refreshToken,
         client_id: this.config.clientId,
       });
-      
+
       if (this.config.clientSecret) {
         params.set("client_secret", this.config.clientSecret);
       }
@@ -164,7 +169,7 @@ export class GheCopilotExecutor extends GithubExecutor {
         },
         body: params,
       });
-      
+
       if (!response.ok) return null;
       const tokens = await response.json();
       log?.info?.("TOKEN", "GHE GitHub token refreshed");
@@ -212,7 +217,11 @@ export class GheCopilotExecutor extends GithubExecutor {
     );
     if (!githubTokens?.accessToken) return null;
 
-    const copilotResult = await this.refreshCopilotToken(githubTokens.accessToken, log, credentials);
+    const copilotResult = await this.refreshCopilotToken(
+      githubTokens.accessToken,
+      log,
+      credentials
+    );
     if (!copilotResult) return githubTokens;
 
     return {
@@ -229,7 +238,11 @@ export class GheCopilotExecutor extends GithubExecutor {
    * buildUrl routes chat/responses traffic to the correct enterprise host.
    */
   override async refreshCredentials(credentials: ProviderCredentials, log?: ExecutorLog | null) {
-    const copilotResult = await this.refreshCopilotToken(credentials?.accessToken, log, credentials);
+    const copilotResult = await this.refreshCopilotToken(
+      credentials?.accessToken,
+      log,
+      credentials
+    );
 
     if (!copilotResult && credentials?.refreshToken) {
       return this.refreshViaGitHubToken(credentials, log);

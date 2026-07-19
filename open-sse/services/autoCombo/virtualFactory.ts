@@ -22,6 +22,7 @@ import { filterPaidOnlyCandidates } from "./paidModelFilter";
 import { isModelExcludedByConnection } from "@/domain/connectionModelRules";
 import { filterExcludedCandidates } from "./candidateOverrides";
 import { getExcludedConnectionIds } from "@/lib/db/autoCandidateOverrides";
+import type { AutoVariant } from "./autoPrefix";
 
 /** #4235 Phase B: optional category/tier overlay for `auto/<category>:<tier>` combos.
  * #6453: optional `family` overlay for `auto/<family>` combos (e.g. `auto/glm`) —
@@ -60,8 +61,8 @@ export interface VirtualAutoComboCandidate {
   costPer1MTokens: number; // from providerRegistry
 }
 
-type VirtualAutoCombo = AutoComboConfig & {
-  strategy: "auto";
+type VirtualAutoCombo = Omit<AutoComboConfig, "strategy"> & {
+  strategy: "auto" | "fusion";
   models: Array<{
     id: string;
     kind: "model";
@@ -89,6 +90,11 @@ type VirtualAutoCombo = AutoComboConfig & {
       weights: ScoringWeights;
       explorationRate: number;
       routerStrategy: string;
+    };
+    chaos?: {
+      enabled: true;
+      panelSize: number;
+      judgeModel?: string;
     };
   };
 };

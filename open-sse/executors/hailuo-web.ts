@@ -31,7 +31,10 @@
  */
 import { createHash } from "node:crypto";
 import { BaseExecutor, type ExecuteInput } from "./base.ts";
-import { makeExecutorErrorResult as makeErrorResult, sanitizeErrorMessage } from "../utils/error.ts";
+import {
+  makeExecutorErrorResult as makeErrorResult,
+  sanitizeErrorMessage,
+} from "../utils/error.ts";
 
 const BASE_URL = "https://www.hailuo.ai";
 const API_PATH = "/v4/api/chat/msg";
@@ -201,9 +204,7 @@ export function extractHailuoMessageDelta(content: string, state: HailuoStreamSt
 }
 
 export type HailuoSseLine =
-  | { type: "event"; value: string }
-  | { type: "data"; value: unknown }
-  | null;
+  { type: "event"; value: string } | { type: "data"; value: unknown } | null;
 
 /** Parse a single raw SSE line. Malformed/truncated `data:` lines are swallowed, not thrown. */
 export function parseHailuoLine(line: string): HailuoSseLine {
@@ -238,7 +239,12 @@ function openAiChunk(id: string, created: number, modelId: string, content: stri
   };
 }
 
-function openAiCompletion(id: string, created: number, modelId: string, content: string): JsonRecord {
+function openAiCompletion(
+  id: string,
+  created: number,
+  modelId: string,
+  content: string
+): JsonRecord {
   return {
     id,
     object: "chat.completion",
@@ -253,7 +259,7 @@ export class HailuoWebExecutor extends BaseExecutor {
     super("hailuo-web", { id: "hailuo-web", baseUrl: BASE_URL });
   }
 
-  private buildHeaders(token: string, yy: string): Record<string, string> {
+  private buildHailuoHeaders(token: string, yy: string): Record<string, string> {
     return {
       Accept: "text/event-stream",
       "User-Agent": USER_AGENT,
@@ -357,7 +363,7 @@ export class HailuoWebExecutor extends BaseExecutor {
     form.set("chatID", chatID);
     form.set("searchMode", "0");
 
-    return { url: `${BASE_URL}${pathAndQuery}`, headers: this.buildHeaders(token, yy), form };
+    return { url: `${BASE_URL}${pathAndQuery}`, headers: this.buildHailuoHeaders(token, yy), form };
   }
 
   /** POST the signed multipart request and normalize both network + upstream-status errors. */
@@ -511,11 +517,11 @@ export class HailuoWebExecutor extends BaseExecutor {
       return makeErrorResult(400, prepared.error, body, BASE_URL);
     }
 
-    const { url, headers: reqHeaders, form } = this.buildSignedRequest(
-      token,
-      credentials?.providerSpecificData,
-      prepared.msgContent
-    );
+    const {
+      url,
+      headers: reqHeaders,
+      form,
+    } = this.buildSignedRequest(token, credentials?.providerSpecificData, prepared.msgContent);
 
     const dispatched = await this.dispatch(url, reqHeaders, form, signal, body, bodyObj);
     if ("errorResult" in dispatched) return dispatched.errorResult;
@@ -541,6 +547,15 @@ export class HailuoWebExecutor extends BaseExecutor {
       };
     }
 
-    return this.buildNonStreamingResponse(upstream, id, created, modelId, url, reqHeaders, body, bodyObj);
+    return this.buildNonStreamingResponse(
+      upstream,
+      id,
+      created,
+      modelId,
+      url,
+      reqHeaders,
+      body,
+      bodyObj
+    );
   }
 }

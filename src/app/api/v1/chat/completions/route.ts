@@ -72,7 +72,7 @@ export async function POST(request) {
   // BEFORE JSON parsing. Missing or dishonest Content-Length values cannot bypass
   // the actual-byte limit. Capacity exhaustion is retryable rather than process-fatal.
   const admission = await admitChatRequest(request);
-  if (!admission.admit) return admission.response;
+  if (admission.admit === false) return admission.response;
   request = admission.request;
   const finishAdmission = (response: Response) =>
     releaseChatAdmissionWhenDone(response, admission.lease);

@@ -133,6 +133,8 @@ export type ProviderConfig = {
   tokenUrl?: string;
   refreshUrl?: string;
   authUrl?: string;
+  authType?: string;
+  authHeader?: string;
   headers?: Record<string, string>;
   requestDefaults?: ProviderRequestDefaults;
   timeoutMs?: number;
@@ -144,6 +146,9 @@ export type ProviderCredentials = {
   refreshToken?: string;
   apiKey?: string;
   email?: string | null;
+  cookie?: string;
+  copilotToken?: string | null;
+  copilotTokenExpiresAt?: string | number | null;
   projectId?: string | null;
   expiresAt?: string;
   connectionId?: string; // T07: used for API key rotation index
@@ -190,6 +195,15 @@ export type ExecuteInput = {
    * tool-use blocks server-side. Honored only on the genuine `claude` path. */
   contextEditing?: { enabled: boolean } | null;
 };
+
+export type ExecutorResult =
+  | Response
+  | {
+      response: Response;
+      url?: string;
+      headers?: Record<string, string>;
+      transformedBody?: unknown;
+    };
 
 export type CountTokensInput = {
   body: Record<string, unknown>;
@@ -581,7 +595,7 @@ export class BaseExecutor {
     }
   }
 
-  async execute(input: ExecuteInput) {
+  async execute(input: ExecuteInput): Promise<ExecutorResult> {
     const {
       model,
       body,

@@ -595,14 +595,15 @@ export function openaiResponsesToOpenAIRequest(
         );
       }
 
-      result.tools = chatTools.filter((toolValue) =>
+      const filteredTools = chatTools.filter((toolValue) =>
         allowedNames.has(toString(toRecord(toRecord(toolValue).function).name))
       );
-      if (result.tools.length === 0) {
+      if (filteredTools.length === 0) {
         throw unsupportedFeature(
           "Unsupported Responses API feature: allowed_tools resolved to zero Chat Completions function tools"
         );
       }
+      result.tools = filteredTools;
       result.tool_choice = mode;
     } else if (tcType && tcType !== "function") {
       // Built-in tool types (web_search_preview, file_search, etc.) have no Chat equivalent

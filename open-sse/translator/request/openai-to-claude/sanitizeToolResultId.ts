@@ -6,6 +6,6 @@ import { sanitizeToolId } from "../../helpers/schemaCoercion.ts";
 // sanitizeToolId() mints a fresh random id for falsy input, which would otherwise defeat
 // that guard and silently fabricate a tool_result that can never match a tool_use.
 export function sanitizeToolResultId(rawId: unknown): string | null {
-  if (!rawId) return null;
+  if (typeof rawId !== "string" || !rawId) return null;
   return sanitizeToolId(rawId);
 }

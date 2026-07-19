@@ -1,7 +1,4 @@
 {
-  "open-sse/services/payloadRules.ts": {
-    "TS2677": 1
-  },
   "src/app/(dashboard)/dashboard/HomePageClient.tsx": {
     "TS2339": 16
   },
@@ -199,9 +196,6 @@
   "src/lib/combos/builderDraft.ts": {
     "TS2741": 1
   },
-  "src/lib/providers/codexFastTier.ts": {
-    "TS2367": 1
-  },
   "src/lib/services/htmlRewriter.ts": {
     "TS2322": 2,
     "TS2345": 2
@@ -227,10 +221,6 @@
   },
   "src/shared/hooks/useElectron.ts": {
     "TS2339": 19
-  },
-  "src/shared/providers/webSessionCredentials.ts": {
-    "TS2353": 1,
-    "TS2322": 1
   },
   "src/shared/schemas/cliCatalog.ts": {
     "TS2554": 2

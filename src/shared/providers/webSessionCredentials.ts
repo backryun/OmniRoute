@@ -295,7 +295,7 @@ export const WEB_SESSION_CREDENTIAL_REQUIREMENTS = {
     hintFallback:
       "Open arena.ai, sign in, then copy the full Cookie header from a Network request. Include arena-auth-prod-v1.0 and arena-auth-prod-v1.1 (and further chunks if present), preferably with cf_clearance. Do not paste only the empty arena-auth-prod-v1 cookie. Optional: providerSpecificData.recaptchaV3Token if create-evaluation still returns 403.",
   },
-  "promptql": {
+  promptql: {
     kind: "token",
     credentialName: "Bearer JWT (optional: projectId, session Cookie)",
     placeholder: "eyJ...  (Authorization Bearer from prompt.ql.app)",
@@ -313,7 +313,8 @@ export const WEB_SESSION_CREDENTIAL_REQUIREMENTS = {
     acceptsFullCookieHeader: true,
     storageKeys: ["cookie", "token", "access_token", "accessToken"],
   },
-} satisfies Record<keyof typeof WEB_COOKIE_PROVIDERS, WebSessionCredentialRequirement>;
+} satisfies Record<keyof typeof WEB_COOKIE_PROVIDERS, WebSessionCredentialRequirement> &
+  Record<string, WebSessionCredentialRequirement>;
 
 export function getWebSessionCredentialRequirement(
   providerId: unknown

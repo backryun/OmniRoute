@@ -43,7 +43,10 @@ export async function handleResponsesCore({
   const convertedBody = convertResponsesApiFormat(body, credentials);
 
   // Ensure stream is enabled
-  convertedBody.stream = true;
+  if (!convertedBody || typeof convertedBody !== "object" || Array.isArray(convertedBody)) {
+    return { success: false, status: 400, error: "Invalid Responses API request body" };
+  }
+  (convertedBody as Record<string, unknown>).stream = true;
 
   // Call chat core handler
   const result = await handleChatCore({
@@ -53,6 +56,7 @@ export async function handleResponsesCore({
     log,
     onCredentialsRefreshed,
     onRequestSuccess,
+    onStreamFailure: null,
     onDisconnect,
     clientRawRequest: null,
     connectionId,
@@ -60,7 +64,11 @@ export async function handleResponsesCore({
     comboName: null,
   });
 
-  if (!result.success || !result.response) {
+  if (result instanceof Response) {
+    return { success: result.ok, response: result };
+  }
+
+  if (result.success === false || !result.response) {
     return result;
   }
 

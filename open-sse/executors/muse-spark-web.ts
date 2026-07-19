@@ -1313,7 +1313,7 @@ export class MuseSparkWebExecutor extends BaseExecutor {
       "Warmup",
       signal
     );
-    if (!warmupResult.ok) {
+    if (warmupResult.ok === false) {
       evictContinuationIfNeeded(cached, continuationCacheKey);
       log?.error?.("MUSE-SPARK-WEB", `Warmup failed: ${warmupResult.error}`);
       return errorResult(502, warmupResult.error, "meta_ai_warmup_failed", {}, body);
@@ -1327,7 +1327,7 @@ export class MuseSparkWebExecutor extends BaseExecutor {
       "Mode switch",
       signal
     );
-    if (!modeResult.ok) {
+    if (modeResult.ok === false) {
       evictContinuationIfNeeded(cached, continuationCacheKey);
       log?.error?.("MUSE-SPARK-WEB", `Mode switch failed: ${modeResult.error}`);
       return errorResult(502, modeResult.error, "meta_ai_mode_switch_failed", {}, body);

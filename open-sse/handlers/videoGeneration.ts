@@ -8,7 +8,7 @@
  */
 
 import { getVideoProvider, parseVideoModel } from "../config/videoRegistry.ts";
-import { kieExecutor } from "../executors/kie.ts";
+import { getKieTaskId, kieExecutor } from "../executors/kie.ts";
 import { vertexGenerateVideo } from "../executors/vertexMedia.ts";
 import { handleGoogleFlowVideoGeneration } from "./videoGeneration/googleFlowHandler.ts";
 import { handleDeepinfraVideoGeneration } from "./videoGeneration/deepinfraHandler.ts";
@@ -540,7 +540,7 @@ async function handleKieVideoGeneration({
 
   try {
     const createData = await kieExecutor.createTask({ baseUrl, token, payload });
-    const taskId = createData?.data?.taskId || createData?.taskId;
+    const taskId = getKieTaskId(createData);
     if (!taskId) {
       const errorMessage =
         createData?.msg ||
@@ -630,7 +630,7 @@ async function handleRunwayVideoGeneration({
   );
   const headers = buildRunwayHeaders(token);
 
-  const upstreamBody = {
+  const upstreamBody: Record<string, unknown> = {
     model,
     promptText: body.prompt,
     ratio,

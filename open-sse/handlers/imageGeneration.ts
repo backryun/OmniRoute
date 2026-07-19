@@ -20,7 +20,7 @@ import { getImageProvider, parseImageModel } from "../config/imageRegistry.ts";
 import { HTTP_STATUS } from "../config/constants.ts";
 import { applyAntigravityClientProfileHeaders } from "../services/antigravityClientProfile.ts";
 import { getAntigravityEnvelopeUserAgent } from "../services/antigravityIdentity.ts";
-import { kieExecutor } from "../executors/kie.ts";
+import { getKieTaskId, kieExecutor } from "../executors/kie.ts";
 import { mapImageSize } from "../translator/image/sizeMapper.ts";
 import { getCodexClientVersion, getCodexUserAgent } from "../config/codexClient.ts";
 import { ChatGptWebExecutor } from "../executors/chatgpt-web.ts";
@@ -42,7 +42,11 @@ import {
   resolveComfyUiBaseUrl,
 } from "../utils/comfyuiClient.ts";
 import { fetchRemoteImage } from "@/shared/network/remoteImageFetch";
-import { FetchTimeoutError, fetchWithTimeout, getConfiguredTimeout } from "@/shared/utils/fetchTimeout";
+import {
+  FetchTimeoutError,
+  fetchWithTimeout,
+  getConfiguredTimeout,
+} from "@/shared/utils/fetchTimeout";
 import { sanitizeErrorMessage, sanitizeUpstreamDetails } from "../utils/error.ts";
 
 // --- Per-provider handlers (extracted to co-located files in PR-#4582-batch) ---
@@ -73,7 +77,6 @@ import {
   applyPollinationsAnonymousFallback,
   reportPollinationsAnonOutcome,
 } from "./imageGeneration/pollinationsAnonAuth.ts";
-
 
 interface KieImageOptions {
   model: string;
@@ -139,9 +142,7 @@ const IMAGE_ASPECT_RATIO_PATTERN = /^\d+:\d+$/;
  */
 export function resolveImageBaseUrl(
   credentials:
-    | { baseUrl?: unknown; providerSpecificData?: { baseUrl?: unknown } | null }
-    | null
-    | undefined,
+    { baseUrl?: unknown; providerSpecificData?: { baseUrl?: unknown } | null } | null | undefined,
   fallback: string,
   endpoint: "generations" | "edits" = "generations"
 ): string {
@@ -696,7 +697,7 @@ async function handleKieImageGeneration({
     baseUrl = `${providerConfig.baseUrl.replace(/\/$/, "")}/api/v1/jobs/createTask`;
     const input: Record<string, unknown> = {
       prompt,
-      aspect_ratio: mapImageSize(size, "1:1"),
+      aspect_ratio: mapImageSize(size),
     };
     if (imageUrl) {
       input.image_url = imageUrl;
@@ -714,7 +715,7 @@ async function handleKieImageGeneration({
 
     payload = {
       prompt,
-      size: mapImageSize(size, "1:1"),
+      size: mapImageSize(size),
       nVariants: body.n || 1,
     };
   }
@@ -736,7 +737,7 @@ async function handleKieImageGeneration({
       payload,
       endpoint,
     });
-    const taskId = createData?.data?.taskId || createData?.taskId;
+    const taskId = getKieTaskId(createData);
 
     if (!taskId) {
       const errorMessage =
@@ -1209,7 +1210,10 @@ export async function handleOpenAIImageEdit({
   if (token) headers["Authorization"] = `Bearer ${token}`;
 
   if (log) {
-    log.info("IMAGE", `${provider}/${model} (edit) | prompt: "${prompt.slice(0, 60)}..." -> ${url}`);
+    log.info(
+      "IMAGE",
+      `${provider}/${model} (edit) | prompt: "${prompt.slice(0, 60)}..." -> ${url}`
+    );
   }
 
   const result = await fetchImageEndpoint(
@@ -1927,7 +1931,9 @@ async function handleTopazImageGeneration({
   try {
     const imageSource = await resolveImageSource(imageUrl);
     const formData = new FormData();
-    const blob = new Blob([imageSource.buffer], { type: imageSource.contentType || "image/png" });
+    const blob = new Blob([new Uint8Array(imageSource.buffer)], {
+      type: imageSource.contentType || "image/png",
+    });
     formData.append("image", blob, "image.png");
 
     if (typeof body.size === "string" && body.size.includes("x")) {
@@ -2527,7 +2533,14 @@ export function saveImageSuccessResult({
   };
 }
 
-export function saveImageErrorResult({ provider, model, status, startTime, error, requestBody = null }) {
+export function saveImageErrorResult({
+  provider,
+  model,
+  status,
+  startTime,
+  error,
+  requestBody = null,
+}) {
   saveCallLog({
     method: "POST",
     path: "/v1/images/generations",

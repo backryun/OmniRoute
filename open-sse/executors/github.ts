@@ -1,4 +1,10 @@
-import { BaseExecutor, ExecuteInput, type ProviderCredentials } from "./base.ts";
+import {
+  BaseExecutor,
+  ExecuteInput,
+  type ExecutorLog,
+  type ProviderConfig,
+  type ProviderCredentials,
+} from "./base.ts";
 import { PROVIDERS, OAUTH_ENDPOINTS } from "../config/constants.ts";
 import { getModelTargetFormat } from "../config/providerModels.ts";
 import {
@@ -9,8 +15,8 @@ import { sanitizeResponsesInputItems } from "../services/responsesInputSanitizer
 import { stripUnsupportedParams } from "../translator/paramSupport.ts";
 
 export class GithubExecutor extends BaseExecutor {
-  constructor() {
-    super("github", PROVIDERS.github);
+  constructor(provider = "github", config: ProviderConfig = PROVIDERS.github) {
+    super(provider, config);
   }
 
   getCopilotToken(credentials: Record<string, any> | null | undefined) {
@@ -250,7 +256,7 @@ export class GithubExecutor extends BaseExecutor {
 
   async execute(input: ExecuteInput) {
     const result = await super.execute(input);
-    if (!result || !result.response) return result;
+    if (result instanceof Response) return result;
 
     if (!input.stream) {
       // wreq-js clone/text semantics consume the original response body. Materialize
@@ -364,7 +370,10 @@ export class GithubExecutor extends BaseExecutor {
     }
   }
 
-  async refreshCredentials(credentials, log) {
+  async refreshCredentials(
+    credentials: ProviderCredentials,
+    log: ExecutorLog | null
+  ): Promise<Partial<ProviderCredentials> | null> {
     let copilotResult = await this.refreshCopilotToken(credentials.accessToken, log);
 
     if (!copilotResult && credentials.refreshToken) {

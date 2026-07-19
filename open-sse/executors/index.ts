@@ -68,8 +68,9 @@ import { ZenmuxFreeExecutor } from "./zenmux-free.ts";
 import { HyperAgentExecutor } from "./hyperagent.ts";
 import { XaiExecutor } from "./xai.ts";
 import { PromptQlExecutor } from "./promptql.ts";
+import type { BaseExecutor } from "./base.ts";
 
-const executors = {
+const executors: Record<string, BaseExecutor> = {
   antigravity: new AntigravityExecutor(),
   agy: new AntigravityExecutor(),
   github: new GithubExecutor(),
@@ -194,7 +195,7 @@ const executors = {
   xao: new XaiExecutor("xai-oauth"),
 };
 
-const defaultCache = new Map();
+const defaultCache = new Map<string, BaseExecutor>();
 
 // #6699 — providers that exist ONLY as Cloud Agent task-API entries
 // (CLOUD_AGENT_PROVIDERS / staticModels "Available Models" catalog) and have no
@@ -207,7 +208,7 @@ const defaultCache = new Map();
 // follow-up once their own chat-routing behavior is confirmed.
 const CHAT_UNSUPPORTED_CLOUD_AGENT_PROVIDERS = new Set(["jules"]);
 
-export function getExecutor(provider) {
+export function getExecutor(provider: string): BaseExecutor {
   if (executors[provider]) return executors[provider];
   if (CHAT_UNSUPPORTED_CLOUD_AGENT_PROVIDERS.has(provider)) {
     const err = new Error(
@@ -220,7 +221,7 @@ export function getExecutor(provider) {
   return defaultCache.get(provider);
 }
 
-export function hasSpecializedExecutor(provider) {
+export function hasSpecializedExecutor(provider: string) {
   return !!executors[provider];
 }
 

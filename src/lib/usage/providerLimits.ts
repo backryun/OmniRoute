@@ -251,8 +251,15 @@ export async function refreshAndUpdateCredentials(
     refreshToken: connection.refreshToken,
     expiresAt: connection.tokenExpiresAt || connection.expiresAt || null,
     providerSpecificData: connection.providerSpecificData,
-    copilotToken: connection.providerSpecificData?.copilotToken,
-    copilotTokenExpiresAt: connection.providerSpecificData?.copilotTokenExpiresAt,
+    copilotToken:
+      typeof connection.providerSpecificData?.copilotToken === "string"
+        ? connection.providerSpecificData.copilotToken
+        : null,
+    copilotTokenExpiresAt:
+      typeof connection.providerSpecificData?.copilotTokenExpiresAt === "string" ||
+      typeof connection.providerSpecificData?.copilotTokenExpiresAt === "number"
+        ? connection.providerSpecificData.copilotTokenExpiresAt
+        : null,
   };
 
   // `force` is used ONLY on the reactive 401 recovery path (a usage fetch came
