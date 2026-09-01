@@ -446,6 +446,12 @@ export class DefaultExecutor extends BaseExecutor {
           : this.config.baseUrl;
       case "gemini":
         return `${this.config.baseUrl}/${model}:${stream ? "streamGenerateContent?alt=sse" : "generateContent"}`;
+      case "clova-studio": {
+        // Chat Completions v3 carries the model in the URL path rather than the
+        // body: `/v3/chat-completions/{modelName}`. Streaming is selected by the
+        // `Accept` header, so the URL is identical in both modes.
+        return `${this.config.baseUrl}/${encodeURIComponent(model)}`;
+      }
       default: {
         // Honor a user-supplied custom base URL (providerSpecificData.baseUrl) for
         // OpenAI-format providers (e.g. the built-in "openai" provider pointed at a
