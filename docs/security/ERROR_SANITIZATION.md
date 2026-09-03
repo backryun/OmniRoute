@@ -7,7 +7,7 @@ lastUpdated: 2026-06-28
 # Error Message Sanitization
 
 > **Source of truth:** `open-sse/utils/error.ts` — `sanitizeErrorMessage`, `buildErrorBody`, `createErrorResult`
-> **Tests:** `tests/unit/error-message-sanitization.test.ts`
+> **Tests:** `tests/unit/error/error-message-sanitization.test.ts`
 > **Last updated:** 2026-06-28 — v3.8.40
 > **Audience:** Any engineer touching error responses (HTTP routes, SSE streams, executors, MCP handlers).
 > **Status:** **MANDATORY** for every code path that returns an error message to a client.
@@ -116,7 +116,7 @@ const safe = String(err).split("\n")[0];
 
 ## Coverage in CI
 
-`tests/unit/error-message-sanitization.test.ts` enforces:
+`tests/unit/error/error-message-sanitization.test.ts` enforces:
 
 - Every route under `/api/model-combo-mappings/*` returns sanitized bodies on 4xx/5xx.
 - `sanitizeErrorMessage` strips multi-line stack traces.
@@ -168,7 +168,7 @@ This means callsites that demonstrably sanitize via this module — for example 
 **How to handle a new occurrence:**
 
 1. Confirm the callsite actually routes the message through `sanitizeErrorMessage` / `buildErrorBody` / one of the wrappers documented above (read the call chain end-to-end — don't trust a comment).
-2. Confirm `tests/unit/error-message-sanitization.test.ts` exercises the path (or add coverage).
+2. Confirm `tests/unit/error/error-message-sanitization.test.ts` exercises the path (or add coverage).
 3. Dismiss the alert via `gh api ... -X PATCH state=dismissed -f 'dismissed_reason=false positive'` referencing this doc.
 4. Do **not** "fix" by inlining `.split("\n")[0]` everywhere — the helper is the single source of truth; duplicating the pattern weakens the sanitizer (loses path scrubbing, length cap, type coercion) for the appearance of placating the scanner.
 
