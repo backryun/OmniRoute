@@ -128,14 +128,18 @@ test("agy live discovery only accepts the explicit shared catalog", () => {
 
 const quotaNormalize = await import("../../src/lib/usage/providerLimits/quotaNormalize.ts");
 
-test("test 9: agy live catalog is authoritative; quota keys use discoverable denylist", () => {
+test("test 9: live catalogs stay authoritative within the shared public model allowlist", () => {
   assert.equal(REGISTRY.agy.liveCatalogAuthoritative, true);
   assert.equal(REGISTRY.antigravity.liveCatalogAuthoritative, true);
   const { isUsageQuotaKeyAllowed } = quotaNormalize;
-  assert.equal(isDiscoverableAgyModelId("gemini-new-live-tier"), true);
-  assert.equal(isUsageQuotaKeyAllowed("agy", "gemini-new-live-tier"), true);
+  assert.equal(isDiscoverableAgyModelId("gemini-new-live-tier"), false);
   assert.equal(isUserCallableAgyModelId("gemini-new-live-tier"), false);
-  assert.equal(isUsageQuotaKeyAllowed("agy", "tab_flash_lite_preview"), false);
+  for (const provider of ["agy", "antigravity"]) {
+    assert.equal(isUsageQuotaKeyAllowed(provider, "gemini-3.8-flash-high"), true);
+    assert.equal(isUsageQuotaKeyAllowed(provider, "gemini-new-live-tier"), false);
+    assert.equal(isUsageQuotaKeyAllowed(provider, "tab_flash_lite_preview"), false);
+    assert.equal(isUsageQuotaKeyAllowed(provider, "credits"), true);
+  }
 });
 
 test("agy token refresh is wired on the Google (non-rotating) refresh path", () => {
