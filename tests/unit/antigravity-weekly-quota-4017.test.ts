@@ -148,7 +148,7 @@ test("parseAntigravityWeeklyQuotas returns {} for missing/malformed data (best-e
 
 test("getUsageForProvider(antigravity) merges weekly quotas with the selected CLI identity", async () => {
   core.resetDbInstance();
-  seedAntigravityCliVersionCache("1.1.5");
+  seedAntigravityCliVersionCache("1.2.0");
 
   globalThis.fetch = (async (input: RequestInfo | URL, init?: RequestInit) => {
     const url = requestUrl(input);
