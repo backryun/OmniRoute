@@ -47,11 +47,11 @@ test("T28: antigravity static catalog exposes only callable Gemini tier IDs", ()
   assert.ok(!staticIds.includes("gemini-claude-opus-4-5-thinking"));
 });
 
-test("T28: agy free-model metadata labels upstream Gemini 3.8 tier IDs", () => {
+test("T28: antigravity free-model metadata labels upstream Gemini 3.8 tier IDs", () => {
   const flashNames = Object.fromEntries(
     FREE_MODEL_BUDGETS.filter(
       (entry) =>
-        entry.provider === "agy" &&
+        entry.provider === "antigravity" &&
         ["gemini-3.8-flash-low", "gemini-3.8-flash-medium", "gemini-3.8-flash-high"].includes(
           entry.modelId
         )

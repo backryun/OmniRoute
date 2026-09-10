@@ -24,11 +24,17 @@ process.env.API_KEY_SECRET = "test-ag-weekly-secret";
 const core = await import("../../src/lib/db/core.ts");
 const { parseAntigravityWeeklyQuotas } =
   await import("../../open-sse/services/usage/antigravityWeeklyQuota.ts");
+const { clearAntigravityVersionCaches, seedAntigravityCliVersionCache } =
+  await import("../../open-sse/services/antigravityVersion.ts");
 // Load usage.ts up-front (its index.ts proxyFetch patch runs at module eval) before mocks.
 const usageModule = await import("../../open-sse/services/usage.ts");
 const { getUsageForProvider } = usageModule;
 
 const originalFetch = globalThis.fetch;
+
+test.afterEach(() => {
+  clearAntigravityVersionCaches();
+});
 
 test.after(() => {
   globalThis.fetch = originalFetch;
@@ -142,6 +148,7 @@ test("parseAntigravityWeeklyQuotas returns {} for missing/malformed data (best-e
 
 test("getUsageForProvider(antigravity) merges weekly quotas with the selected CLI identity", async () => {
   core.resetDbInstance();
+  seedAntigravityCliVersionCache("1.1.5");
 
   globalThis.fetch = (async (input: RequestInfo | URL, init?: RequestInit) => {
     const url = requestUrl(input);

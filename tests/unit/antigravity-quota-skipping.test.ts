@@ -15,7 +15,7 @@ test.after(() => {
   fs.rmSync(TEST_DATA_DIR, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 });
 });
 
-test("isQuotaExhaustedForRequest isolates Claude and Gemini quota families for antigravity & agy", () => {
+test("isQuotaExhaustedForRequest isolates Claude and Gemini quota families for antigravity", () => {
   const connectionId = "conn-antigravity-test";
 
   // Simulate Claude Opus being exhausted, while Gemini is NOT.
@@ -64,22 +64,21 @@ test("isQuotaExhaustedForRequest isolates Claude and Gemini quota families for a
     "Gemini Pro should share Gemini family quota and NOT be exhausted"
   );
 
-  // Test that 'agy' spelling behaves the exact same way.
-  const connectionIdAgy = "conn-agy-test";
-  quotaCache.setQuotaCache(connectionIdAgy, "agy", {
+  // The removed agy provider id must not map onto the Antigravity quota family.
+  const connectionIdLegacy = "conn-agy-test";
+  quotaCache.setQuotaCache(connectionIdLegacy, "agy", {
     "claude-opus-4-6-thinking": { remainingPercentage: 0, resetAt: null },
     "gemini-3.8-flash-high": { remainingPercentage: 100, resetAt: null },
   });
 
   assert.equal(
-    quotaCache.isQuotaExhaustedForRequest(connectionIdAgy, "agy", "agy/claude-opus-4-6-thinking"),
-    true,
-    "Claude Opus under 'agy' should be exhausted"
-  );
-  assert.equal(
-    quotaCache.isQuotaExhaustedForRequest(connectionIdAgy, "agy", "agy/gemini-3.8-flash-high"),
+    quotaCache.isQuotaExhaustedForRequest(
+      connectionIdLegacy,
+      "agy",
+      "agy/claude-opus-4-6-thinking"
+    ),
     false,
-    "Gemini Flash under 'agy' should NOT be exhausted"
+    "the removed agy provider is not family-scoped anymore"
   );
 
   // Test that unknown models (family 'other') preserve exact-model scoping.
