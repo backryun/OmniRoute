@@ -138,7 +138,7 @@ describe("ensureAntigravityProjectAssigned", () => {
 
   test("uses the official CLI content headers when requested", async () => {
     let capturedHeaders: Headers | null = null;
-    seedAntigravityCliVersionCache("1.1.5");
+    seedAntigravityCliVersionCache("1.2.0");
 
     const mockFetch = async (_url: string, init?: RequestInit): Promise<Response> => {
       capturedHeaders = new Headers(init?.headers);
@@ -160,7 +160,7 @@ describe("ensureAntigravityProjectAssigned", () => {
 
   test("uses the official CLI content headers by default (no IDE identity remains)", async () => {
     let capturedHeaders: Headers | null = null;
-    seedAntigravityCliVersionCache("1.1.5");
+    seedAntigravityCliVersionCache("1.2.0");
     const mockFetch = async (_url: string, init?: RequestInit): Promise<Response> => {
       capturedHeaders = new Headers(init?.headers);
       return Response.json({ cloudaicompanionProject: "proj-cli-default" });
@@ -170,7 +170,7 @@ describe("ensureAntigravityProjectAssigned", () => {
 
     assert.match(
       capturedHeaders?.get("User-Agent") || "",
-      /^antigravity\/cli\/1\.1\.5 \(aidev_client; os_type=.+; arch=.+; auth_method=consumer\)$/
+      /^antigravity\/cli\/1\.2\.0 \(aidev_client; os_type=.+; arch=.+; auth_method=consumer\)$/
     );
     assert.doesNotMatch(capturedHeaders?.get("User-Agent") || "", /antigravity\/ide\//);
     assert.equal(capturedHeaders?.get("X-Goog-Api-Client"), null);
