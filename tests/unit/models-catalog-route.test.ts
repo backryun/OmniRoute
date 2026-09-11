@@ -1326,8 +1326,6 @@ test("v1 models catalog lets provider-specific synced limits beat global static 
     assert.equal(response.status, 200);
     assert.ok(model);
     assert.equal(model.context_length, 400000);
-    // The registry's explicit 922k input cap takes precedence over synced input,
-    // then clamps to the provider-specific total window.
     assert.equal(model.max_input_tokens, 400000);
     assert.equal(model.max_output_tokens, 128000);
   } finally {
