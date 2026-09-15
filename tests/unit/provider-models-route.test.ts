@@ -976,14 +976,14 @@ test("provider models route retries Antigravity discovery endpoints before retur
     "https://cloudcode-pa.googleapis.com/v1internal:fetchAvailableModels",
   ]);
   assert.deepEqual(body.models, [
-    // Discovery is an explicit allowlist. Callable compatibility aliases and retired
-    // upstream echoes do not become selectable model cards.
+    // #9106: callable alias ids keep their upstream echo; retired 3.7 tiers stay filtered.
+    { id: "gemini-3.1-pro-high", name: "Gemini 3.1 Pro (High)" },
     { id: "gemini-pro-agent", name: "Gemini 3.1 Pro (High)" },
     { id: "gemini-3.8-flash-high", name: "Gemini 3.8 Flash (High)" },
   ]);
 });
 
-test("provider models route exposes only allowlisted Antigravity models", async () => {
+test("provider models route discovers new Antigravity chat models while hiding internal ones", async () => {
   const connection = await seedConnection("antigravity", {
     providerSpecificData: { autoFetchModels: true },
     authType: "oauth",
@@ -1011,7 +1011,10 @@ test("provider models route exposes only allowlisted Antigravity models", async 
 
   assert.equal(response.status, 200);
   assert.equal(body.source, "api");
-  assert.deepEqual(body.models, [{ id: "gemini-3.8-flash-high", name: "Gemini 3.8 Flash (High)" }]);
+  assert.deepEqual(body.models, [
+    { id: "gemini-3.8-flash-high", name: "Gemini 3.8 Flash (High)" },
+    { id: "gemini-new-live-tier", name: "Gemini New Live Tier" },
+  ]);
 });
 
 test("provider models route falls back through all Antigravity discovery endpoints when needed", async () => {

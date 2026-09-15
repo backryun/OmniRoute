@@ -94,7 +94,7 @@ test("antigravity model helpers resolve catalog ids and display names", () => {
   assert.equal(isUserCallableAntigravityModelId("claude-opus-4-6-thinking"), true);
   assert.equal(isUserCallableAntigravityModelId("gemini-2.5-pro"), false);
   assert.equal(isUserCallableAntigravityModelId("gemini-2.5-flash"), false);
-  assert.equal(isUserCallableAntigravityModelId("gemini-3.1-pro-high"), false);
+  assert.equal(isUserCallableAntigravityModelId("gemini-3.1-pro-high"), true);
   assert.equal(isUserCallableAntigravityModelId("gemini-pro-agent"), true);
   assert.equal(isUserCallableAntigravityModelId("gemini-3.8-flash-low"), true);
   assert.equal(isUserCallableAntigravityModelId("gemini-3.8-flash-medium"), true);
@@ -131,9 +131,9 @@ test("antigravity model helpers resolve catalog ids and display names", () => {
   assert.equal(getClientVisibleAntigravityModelName("unknown-model", "Fallback"), "Fallback");
 });
 
-test("antigravity live discovery only accepts the explicit shared catalog", () => {
+test("antigravity live discovery accepts new chat models while excluding retired and non-chat models", () => {
   assert.equal(isDiscoverableAntigravityModelId("gemini-3.8-flash-high"), true);
-  assert.equal(isDiscoverableAntigravityModelId("gemini-new-live-tier"), false);
+  assert.equal(isDiscoverableAntigravityModelId("gemini-new-live-tier"), true);
   assert.equal(isDiscoverableAntigravityModelId("gemini-3.7-flash-tiered"), false);
   assert.equal(isDiscoverableAntigravityModelId("gemini-3.7-flash-high"), false);
   assert.equal(isDiscoverableAntigravityModelId("gemini-3.6-flash-high"), false);
@@ -150,7 +150,7 @@ const quotaNormalize = await import("../../src/lib/usage/providerLimits/quotaNor
 test("test 9: live catalogs stay authoritative within the shared public model allowlist", () => {
   assert.equal(REGISTRY.antigravity.liveCatalogAuthoritative, true);
   const { isUsageQuotaKeyAllowed } = quotaNormalize;
-  assert.equal(isDiscoverableAntigravityModelId("gemini-new-live-tier"), false);
+  assert.equal(isDiscoverableAntigravityModelId("gemini-new-live-tier"), true);
   assert.equal(isUserCallableAntigravityModelId("gemini-new-live-tier"), false);
   assert.equal(isUsageQuotaKeyAllowed("antigravity", "gemini-3.8-flash-high"), true);
   assert.equal(isUsageQuotaKeyAllowed("antigravity", "gemini-new-live-tier"), false);

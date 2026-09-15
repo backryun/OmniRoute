@@ -1,5 +1,5 @@
-// #12724 — agy and antigravity catalogs must be derived from the shared base
-// and stay identical until a per-surface delta is introduced.
+// #12724 — the consolidated antigravity surface must stay derived from the
+// shared catalog base, with per-surface deltas applied through buildSurfaceCatalog.
 
 import test from "node:test";
 import assert from "node:assert/strict";
@@ -8,7 +8,6 @@ import {
   ANTIGRAVITY_SHARED_MODELS,
   buildSurfaceCatalog,
 } from "../../open-sse/config/antigravitySharedModels.ts";
-import { AGY_PUBLIC_MODELS } from "../../open-sse/config/agyModels.ts";
 import { ANTIGRAVITY_PUBLIC_MODELS } from "../../open-sse/config/antigravityModelAliases.ts";
 
 const serial = { concurrency: false };
@@ -30,16 +29,8 @@ test("#12724 — shared base is non-empty with unique ids", serial, () => {
   }
 });
 
-test("#12724 — agy catalog equals shared base (empty deltas)", serial, () => {
-  assert.deepEqual([...AGY_PUBLIC_MODELS], [...ANTIGRAVITY_SHARED_MODELS]);
-});
-
 test("#12724 — antigravity catalog equals shared base (empty deltas)", serial, () => {
   assert.deepEqual([...ANTIGRAVITY_PUBLIC_MODELS], [...ANTIGRAVITY_SHARED_MODELS]);
-});
-
-test("#12724 — agy and antigravity catalogs are byte-identical", serial, () => {
-  assert.deepEqual([...AGY_PUBLIC_MODELS], [...ANTIGRAVITY_PUBLIC_MODELS]);
 });
 
 test("#12724 — buildSurfaceCatalog remove delta works", serial, () => {

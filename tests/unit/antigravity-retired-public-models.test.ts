@@ -93,7 +93,7 @@ test("Antigravity applies one shared discovery visibility policy", () => {
     assert.equal(isDiscoverableAntigravityModelId(modelId), false, `${modelId} must stay hidden`);
   }
 
-  assert.equal(isDiscoverableAntigravityModelId("gemini-future-chat"), false);
+  assert.equal(isDiscoverableAntigravityModelId("gemini-future-chat"), true);
 });
 
 test("Antigravity free-model metadata excludes unavailable Gemini 2.5 Pro", () => {
@@ -103,14 +103,14 @@ test("Antigravity free-model metadata excludes unavailable Gemini 2.5 Pro", () =
   );
 });
 
-test("Antigravity exposes only gemini-pro-agent as callable Gemini 3.1 Pro High", () => {
+test("Antigravity exposes gemini-pro-agent and the gemini-3.1-pro-high alias as callable Gemini 3.1 Pro High ids", () => {
   const antigravityModels = new Map(
     ANTIGRAVITY_PUBLIC_MODELS.map((model) => [model.id, model.name])
   );
   const antigravityFree = antigravityFreeModels();
 
   assert.equal(antigravityModels.has("gemini-3.1-pro-high"), false);
-  assert.equal(isUserCallableAntigravityModelId("gemini-3.1-pro-high"), false);
+  assert.equal(isUserCallableAntigravityModelId("gemini-3.1-pro-high"), true);
   assert.deepEqual(getAntigravityModelFallbacks("gemini-3.1-pro-high"), []);
   assert.equal(
     antigravityFree.some((model) => model.modelId === "gemini-3.1-pro-high"),
