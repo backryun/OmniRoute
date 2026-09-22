@@ -1,4 +1,4 @@
--- 176_merge_agy_into_antigravity.sql
+-- 190_merge_agy_into_antigravity.sql
 -- The standalone `agy` provider was consolidated into `antigravity`: both clients
 -- authenticate against the same Google consumer-OAuth client and share the same Cloud
 -- Code backend, model catalog, and quota. Rewrite stored rows so existing CLI
