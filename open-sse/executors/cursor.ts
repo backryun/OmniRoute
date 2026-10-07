@@ -43,7 +43,7 @@ import {
 } from "../utils/usageTracking.ts";
 import {
   formatCursorAgentClientVersion,
-  getCursorAgentCliVersion,
+  getCursorAgentCliVersionSync,
 } from "../utils/cursorAgentCliVersion.ts";
 import { sanitizeErrorMessage } from "../utils/error.ts";
 import { generateToolCallId } from "../translator/helpers/toolCallHelper.ts";
@@ -1027,6 +1027,7 @@ export class CursorExecutor extends BaseExecutor {
     const cleanToken = stripCursorOAuthTokenPrefix(credentials.accessToken ?? "");
     const requestId = crypto.randomUUID();
     const traceParent = `00-${crypto.randomBytes(16).toString("hex")}-${crypto.randomBytes(8).toString("hex")}-01`;
+    const clientVersion = formatCursorAgentClientVersion(getCursorAgentCliVersionSync());
 
     // Mirrors cursor-agent's actual headers for agent.v1.AgentService/Run.
     // Notably: no x-cursor-checksum, no machineId, no x-amzn-trace-id.
@@ -1041,7 +1042,7 @@ export class CursorExecutor extends BaseExecutor {
       traceparent: traceParent,
       "user-agent": "connect-es/1.6.1",
       "x-cursor-client-type": "cli",
-      "x-cursor-client-version": formatCursorAgentClientVersion(getCursorAgentCliVersion()),
+      "x-cursor-client-version": clientVersion,
       "x-ghost-mode": ghostMode ? "true" : "false",
       "x-original-request-id": requestId,
       "x-request-id": requestId,
