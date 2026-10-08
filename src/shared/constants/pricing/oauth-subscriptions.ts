@@ -8,6 +8,7 @@ import {
   CLAUDE_OPUS_5_5_PRICING,
   CLAUDE_OPUS_5_PRICING,
   GEMINI_3_7_FLASH_PROMO_PRICING,
+  GEMINI_3_8_FLASH_PRICING,
   GPT_5_3_CODEX_PRICING,
   GPT_5_5_PRICING,
   GPT_5_6_LUNA_PRICING,
@@ -15,10 +16,15 @@ import {
   GPT_5_6_TERRA_PRICING,
 } from "./shared-tiers";
 
-const ANTIGRAVITY_GEMINI_3_8_PRICING = {
-  "gemini-3.8-flash-low": GEMINI_3_7_FLASH_PROMO_PRICING,
-  "gemini-3.8-flash-medium": GEMINI_3_7_FLASH_PROMO_PRICING,
-  "gemini-3.8-flash-high": GEMINI_3_7_FLASH_PROMO_PRICING,
+// 3.7 stays priced: its shared "-tiered" id is still served live and the per-tier display ids
+// alias onto it. 3.8 uses its own constant (see GEMINI_3_8_FLASH_PRICING).
+const ANTIGRAVITY_GEMINI_FLASH_PRICING = {
+  "gemini-3.7-flash-low": GEMINI_3_7_FLASH_PROMO_PRICING,
+  "gemini-3.7-flash-medium": GEMINI_3_7_FLASH_PROMO_PRICING,
+  "gemini-3.7-flash-high": GEMINI_3_7_FLASH_PROMO_PRICING,
+  "gemini-3.8-flash-low": GEMINI_3_8_FLASH_PRICING,
+  "gemini-3.8-flash-medium": GEMINI_3_8_FLASH_PRICING,
+  "gemini-3.8-flash-high": GEMINI_3_8_FLASH_PRICING,
 };
 
 // Codex Standard: 250 / 25 / 1250 credits per MTok, at 25 credits per USD.
@@ -350,7 +356,7 @@ export const DEFAULT_PRICING_OAUTH = {
       reasoning: 27.0,
       cache_creation: 4.0,
     },
-    ...ANTIGRAVITY_GEMINI_3_8_PRICING,
+    ...ANTIGRAVITY_GEMINI_FLASH_PRICING,
     "claude-sonnet-4-6": {
       input: 3.0,
       output: 15.0,
@@ -373,8 +379,8 @@ export const DEFAULT_PRICING_OAUTH = {
       cache_creation: 0.5,
     },
   },
-  antigravity: ANTIGRAVITY_GEMINI_3_8_PRICING,
-  agy: ANTIGRAVITY_GEMINI_3_8_PRICING,
+  antigravity: ANTIGRAVITY_GEMINI_FLASH_PRICING,
+  agy: ANTIGRAVITY_GEMINI_FLASH_PRICING,
   gh: {
     "claude-opus-5": CLAUDE_OPUS_5_PRICING,
     "gpt-5": {

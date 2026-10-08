@@ -8,6 +8,7 @@
 // To add a model to CLI only: add an entry to `add` below.
 // To hide a model from CLI only: add its id to `remove` below.
 
+import { ANTIGRAVITY_QUOTA_VISIBLE_NON_CHAT_MODEL_IDS } from "./antigravityModelAliases.ts";
 import { ANTIGRAVITY_SHARED_MODELS, buildSurfaceCatalog } from "./antigravitySharedModels.ts";
 
 export const AGY_PUBLIC_MODELS = buildSurfaceCatalog(ANTIGRAVITY_SHARED_MODELS, {
@@ -22,14 +23,13 @@ const AGY_NON_CHAT_MODEL_PATTERN =
 const AGY_RETIRED_MODEL_IDS = new Set([
   "gemini-3-pro-preview",
   "gemini-3.1-pro",
-  "gemini-3.6-flash-tiered",
-  "gemini-3-flash",
-  // 3.7-era tiers replaced by the 3.8 catalog; stale live entries stay hidden.
+  // Per-tier 3.7 ids are absent from the live roster (discussion #15568) and alias onto the
+  // shared "-tiered" id. `gemini-3.7-flash-tiered`, `gemini-3.6-flash-tiered` and
+  // `gemini-3-flash` ARE still served live, so they are deliberately NOT retired here.
   "gemini-3.7-flash",
   "gemini-3.7-flash-high",
   "gemini-3.7-flash-medium",
   "gemini-3.7-flash-low",
-  "gemini-3.7-flash-tiered",
   "gemini-3.6-flash-high",
   "gemini-3.6-flash-medium",
   "gemini-3.6-flash-low",
@@ -69,4 +69,15 @@ export function isDiscoverableAgyModelId(modelId: string): boolean {
     !AGY_RETIRED_MODEL_IDS.has(modelId) &&
     !AGY_NON_CHAT_MODEL_PATTERN.test(modelId)
   );
+}
+
+/**
+ * Quota visibility is broader than chat discovery (same rule as Antigravity): image-only models
+ * keep their live quota buckets in Provider Limits even though they are not chat models, so
+ * `AGY_NON_CHAT_MODEL_PATTERN` must not hide them.
+ */
+export function isUserVisibleAgyQuotaModelId(modelId: string): boolean {
+  const id = modelId.trim();
+  if (!id) return false;
+  return isDiscoverableAgyModelId(id) || ANTIGRAVITY_QUOTA_VISIBLE_NON_CHAT_MODEL_IDS.has(id);
 }

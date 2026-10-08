@@ -70,6 +70,13 @@ export const GEMINI_3_7_FLASH_PROMO_PRICING = {
   cache_creation: 0.75,
 };
 
+// Gemini 3.8 Flash rates are not published anywhere this repo can cite yet. They deliberately
+// mirror the 3.7 promo rates (same Flash tier family) as a distinct constant, so the 3.8 rates
+// can be corrected without touching 3.7 pricing and the assumption stays visible in review.
+export const GEMINI_3_8_FLASH_PRICING = {
+  ...GEMINI_3_7_FLASH_PROMO_PRICING,
+};
+
 export const CLAUDE_FABLE_5_PRICING = {
   input: 15.0,
   output: 75.0,

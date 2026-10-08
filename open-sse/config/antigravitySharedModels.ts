@@ -34,6 +34,17 @@ export const ANTIGRAVITY_SHARED_MODELS = Object.freeze([
     supportsVision: true,
     toolCalling: true,
   },
+  // Gemini 3.7 Flash shared tier. Still served live (discussion #15568 roster); the per-tier
+  // 3.7 display ids alias onto it (ANTIGRAVITY_MODEL_ALIASES), so only this id is public.
+  {
+    id: "gemini-3.7-flash-tiered",
+    name: "Gemini 3.7 Flash (Tiered)",
+    contextLength: 1048576,
+    maxOutputTokens: 65536,
+    supportsReasoning: true,
+    supportsVision: true,
+    toolCalling: true,
+  },
   // Gemini 3.1 Pro budget tiers. Live streamGenerateContent validation uses
   // `gemini-pro-agent` for High; the separately advertised `gemini-3.1-pro-high`
   // discovery slot currently returns HTTP 400 and is intentionally not public.
